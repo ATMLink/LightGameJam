@@ -9,4 +9,5 @@
 *.csproj
 *.sln
 *.userprefs
-UserSettings/*
+UserSettings/
+
