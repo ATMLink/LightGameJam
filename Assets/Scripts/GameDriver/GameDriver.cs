@@ -8,8 +8,8 @@ public class GameDriver : MonoBehaviour
     // 各个系统引用
     [Header("Managers")] 
     [SerializeField] private CameraController _cameraController;
-    [SerializeField] private InputManager _inputManager;
-    [SerializeField] private ConstructManager _constructManager;
+    // [SerializeField] private InputManager _inputManager;
+    // [SerializeField] private ConstructManager _constructManager;
     
     // 游戏状态变量
     private bool gameIsRunning = true;
@@ -32,14 +32,14 @@ public class GameDriver : MonoBehaviour
     private void StartGame()
     {
         _cameraController.Initialize();
-        _inputManager.Initialize();
-        _constructManager.Initialize();
+        // _inputManager.Initialize();
+        // _constructManager.Initialize();
     }
 
     private void UpdateSystems()
     {
         _cameraController.HandleCameraMovement();
-        _inputManager.HandleInput();
+        // _inputManager.HandleInput();
     }
 
     public void EndGame()
