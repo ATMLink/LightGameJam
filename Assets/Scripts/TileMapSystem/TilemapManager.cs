@@ -24,7 +24,7 @@ public class TilemapManager : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+    public void Initialize()
     {
         // 检查引用是否设置
         if (tileMap != null && tile != null)
@@ -84,10 +84,10 @@ public class TilemapManager : MonoBehaviour
         TileBase tile = tileMap.GetTile(position);
         return tile;
     }
-    void SetblockTile(Tile tile,Vector3Int position) {
+    public void SetblockTile(Tile tile,Vector3Int position) {
         tileMap.SetTile(position, tile);
     }
-    void FillTile(Tile tile,Vector3Int startposition,Vector3Int endposition) {
+    public void FillTile(Tile tile,Vector3Int startposition,Vector3Int endposition) {
         int xtempmin = (startposition.x < endposition.x) ? startposition.x : endposition.x; 
         int xtempmax = (startposition.x > endposition.x) ? startposition.x : endposition.x; 
         int ytempmin = (startposition.y < endposition.y) ? startposition.y : endposition.y; 
@@ -102,12 +102,4 @@ public class TilemapManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-
-
-    }
 }

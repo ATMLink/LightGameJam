@@ -45,6 +45,7 @@ public class CameraController : MonoBehaviour
     {
         HandleCameraMovement();
         HandleCameraZoom();
+        ResetCameraPosition();
     }
 
     public void HandleCameraMovement()
@@ -69,9 +70,10 @@ public class CameraController : MonoBehaviour
     public void ResetCameraPosition()
     {
         // Reset the camera to its initial position on middle mouse button click
-        if (Input.GetMouseButton(2))
+        if (Input.GetButtonDown("Fire3"))
         {
             camera.transform.position = initialPosition;
+            Debug.Log("Camera position reset to initial position.");
         }
     }
 

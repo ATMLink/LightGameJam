@@ -10,6 +10,7 @@ public class GameDriver : MonoBehaviour
     [SerializeField] private CameraController _cameraController;
     // [SerializeField] private InputManager _inputManager;
     // [SerializeField] private ConstructManager _constructManager;
+    [SerializeField] private TilemapManager _tilemapManager;
     
     // 游戏状态变量
     private bool gameIsRunning = true;
@@ -34,6 +35,7 @@ public class GameDriver : MonoBehaviour
         _cameraController.Initialize();
         // _inputManager.Initialize();
         // _constructManager.Initialize();
+        _tilemapManager.Initialize();
     }
 
     private void UpdateSystems()

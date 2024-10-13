@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraController: {fileID: 1912484481}
+  _tilemapManager: {fileID: 1936767272}
 --- !u!4 &1168804922
 Transform:
   m_ObjectHideFlags: 0
