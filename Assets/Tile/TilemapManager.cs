@@ -6,17 +6,22 @@ using UnityEngine.Tilemaps;
 
 public class TilemapManager : MonoBehaviour
 {
-    [SerializeField] private Tilemap tileMap;
-    [SerializeField] private List<TileType> tileSetblockData;
-    [SerializeField] private List<TileTypeFill> tileFillData;
-    [SerializeField] private Tile tile;
-    private List<Tile> tileSetblockList;
-    private List<Tile> tileFillList;
-    private List<Vector3Int> tilePositionList;
-    private List<Vector3Int> tileFillPositionStartList;
-    private List<Vector3Int> tileFillPositionEndList;
+    [Header("Scale(规模)")]
     public int width;
     public int height;
+    [Header("Initialise(初始化)")]
+    [SerializeField] private Tilemap tileMap;
+    [SerializeField] private Tile tile;
+    [Header("Modification(修改)")]
+    [SerializeField] private List<TileType> tileSetblockData;
+    [SerializeField] private List<TileTypeFill> tileFillData;
+    [Header("RelevantParameter(相关参数)")]
+    [SerializeField] private List<Tile> tileSetblockList;
+    [SerializeField] private List<Tile> tileFillList;
+    [SerializeField] private List<Vector3Int> tilePositionList;
+    [SerializeField] private List<Vector3Int> tileFillPositionStartList;
+    [SerializeField] private List<Vector3Int> tileFillPositionEndList;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -73,9 +78,9 @@ public class TilemapManager : MonoBehaviour
         int xtempmax = (startposition.x > endposition.x) ? startposition.x : endposition.x; 
         int ytempmin = (startposition.y < endposition.y) ? startposition.y : endposition.y; 
         int ytempmax = (startposition.y > endposition.y) ? startposition.y : endposition.y;
-        for (int x = xtempmin; x < xtempmax; x++)
+        for (int x = xtempmin; x <= xtempmax; x++)
         {
-            for (int y = ytempmin; y < ytempmax; y++)
+            for (int y = ytempmin; y <= ytempmax; y++)
             {
                 // 设置瓦片地图中每个位置的瓦片
                 tileMap.SetTile(new Vector3Int(x, y, 0), tile);
@@ -86,6 +91,7 @@ public class TilemapManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         for (int i = 0; i < tileSetblockList.Count; i++)
         {
             if (tileSetblockList[i] != null && tilePositionList[i] != null)

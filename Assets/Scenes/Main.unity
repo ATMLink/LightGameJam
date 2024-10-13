@@ -535,13 +535,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c706cbf3d857545b796879c64d84cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileMap: {fileID: 401158777}
-  tileSetblockData: []
-  tileFillData:
-  - {fileID: 11400000, guid: 7df5e89d33379e34fb8aea938b9dd8e6, type: 2}
-  tile: {fileID: 11400000, guid: ffb1f8b628521c94fbc8385846675156, type: 2}
   width: 43
   height: 46
+  tileMap: {fileID: 401158777}
+  tile: {fileID: 11400000, guid: ffb1f8b628521c94fbc8385846675156, type: 2}
+  tileSetblockData: []
+  tileFillData: []
+  tileSetblockList: []
+  tileFillList: []
+  tilePositionList: []
+  tileFillPositionStartList: []
+  tileFillPositionEndList: []
 --- !u!4 &1936767273
 Transform:
   m_ObjectHideFlags: 0
