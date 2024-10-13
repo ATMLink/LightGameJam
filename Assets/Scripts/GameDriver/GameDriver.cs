@@ -38,7 +38,7 @@ public class GameDriver : MonoBehaviour
 
     private void UpdateSystems()
     {
-        _cameraController.HandleCameraMovement();
+        _cameraController.UpdateState();
         // _inputManager.HandleInput();
     }
 
