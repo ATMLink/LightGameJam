@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "E:\\LightGameJam\\LightGameJam\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\tile\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\tile\\tilemapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\tile\\tilemapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\tile\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\tile\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\tile\\watertiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\tile\\watertiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\tile\\watertiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "TilemapManager.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Tile\\TilemapManager.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs",
+              "RelativeToolTip": "Assets\\Tile\\TilemapManager.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvxEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T13:29:42.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "WaterTileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs",
               "RelativeDocumentMoniker": "Assets\\Tile\\WaterTileType.cs",
@@ -46,12 +63,11 @@
               "RelativeToolTip": "Assets\\Tile\\WaterTileType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T08:49:26.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T08:49:26.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MiningTileType1.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType1.cs",
               "RelativeDocumentMoniker": "Assets\\Tile\\MiningTileType1.cs",
@@ -59,12 +75,11 @@
               "RelativeToolTip": "Assets\\Tile\\MiningTileType1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T08:49:01.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T08:49:01.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MiningTileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs",
               "RelativeDocumentMoniker": "Assets\\Tile\\MiningTileType.cs",
@@ -76,20 +91,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs",
               "RelativeDocumentMoniker": "Assets\\Tile\\TileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs",
               "RelativeToolTip": "Assets\\Tile\\TileType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T08:34:30.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainResourceManagement.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs",
               "RelativeDocumentMoniker": "Assets\\ResourceManagement\\MainResourceManagement.cs",
