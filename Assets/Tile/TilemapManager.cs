@@ -62,6 +62,20 @@ public class TilemapManager : MonoBehaviour
                 tileFillPositionEndList.Add(tileFillData[i].endTilePosition);
             }
         }
+        for (int i = 0; i < tileSetblockList.Count; i++)
+        {
+            if (tileSetblockList[i] != null && tilePositionList[i] != null)
+            {
+                SetblockTile(tileSetblockList[i], tilePositionList[i]);
+            }
+        }
+        for (int i = 0; i < tileFillList.Count; i++)
+        {
+            if (tileFillList[i] != null && tileFillPositionStartList[i] != null && tileFillPositionEndList[i] != null)
+            {
+                FillTile(tileFillList[i], tileFillPositionStartList[i], tileFillPositionEndList[i]);
+            }
+        }
     }
     /// <summary>
     /// 输入一个vector3Int,返回对应位置的瓦片
@@ -92,20 +106,7 @@ public class TilemapManager : MonoBehaviour
     void Update()
     {
         
-        for (int i = 0; i < tileSetblockList.Count; i++)
-        {
-            if (tileSetblockList[i] != null && tilePositionList[i] != null)
-            {
-                SetblockTile(tileSetblockList[i], tilePositionList[i]);
-            }
-        }
-        for (int i = 0; i < tileFillList.Count; i++)
-        {
-            if (tileFillList[i] != null && tileFillPositionStartList[i] != null && tileFillPositionEndList[i] != null)
-            {
-                FillTile(tileFillList[i], tileFillPositionStartList[i],tileFillPositionEndList[i]);
-            }
-        }
+        
 
 
     }
