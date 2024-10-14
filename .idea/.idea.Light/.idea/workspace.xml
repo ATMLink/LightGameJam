@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f422f141-b2fa-482e-9ee3-310637e11600" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/CameraMoveSpeed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/CameraMoveSpeed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MaxZoom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MaxZoom.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MinZoom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MinZoom.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/ZoomSpeed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/ZoomSpeed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="f422f141-b2fa-482e-9ee3-310637e11600" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,10 +16,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84fae633fb384fae986669d4f013e8a4176600/32/8c91827e/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TileMapSystem/WaterTileTypeFill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Variables/GameEventFloat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Variables/GameEventFloatListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Variables/GameEventVector2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Variables/Vector2Variable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -43,7 +38,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "GameDriver",
+    "git-widget-placeholder": "PlayerInteraction",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,6 +102,7 @@
       <updated>1728800950864</updated>
       <workItem from="1728800952771" duration="68000" />
       <workItem from="1728801029320" duration="13145000" />
+      <workItem from="1728833436896" duration="2498000" />
     </task>
     <servers />
   </component>
