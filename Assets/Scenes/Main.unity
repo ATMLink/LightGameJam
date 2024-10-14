@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraController: {fileID: 1912484481}
+  _resourceManagement: {fileID: 1936767275}
   _tilemapManager: {fileID: 1936767272}
 --- !u!4 &1168804922
 Transform:
@@ -580,7 +581,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1936767273}
+  - component: {fileID: 1936767274}
   - component: {fileID: 1936767272}
+  - component: {fileID: 1936767275}
   m_Layer: 0
   m_Name: TilemapManager
   m_TagString: Untagged
@@ -600,8 +603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c706cbf3d857545b796879c64d84cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 43
-  height: 46
+  width: 10
+  height: 11
   tileMap: {fileID: 401158777}
   tile: {fileID: 11400000, guid: ffb1f8b628521c94fbc8385846675156, type: 2}
   tileSetblockData: []
@@ -626,6 +629,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1936767274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936767271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 36f73b0ac368eef47a0da73a67d4c99f, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1936767275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936767271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7a1c81e924d6746bc6158e51ae61f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  siNumber: {fileID: 11400000, guid: 7da3b5874d2baf24784610b265e1ea99, type: 2}
+  kNumber: {fileID: 11400000, guid: a2fea832188a25f47bd4d24d715b142a, type: 2}
+  naNumber: {fileID: 11400000, guid: ff656ec29a380e041981d87bd6cd5d1b, type: 2}
+  cuNumber: {fileID: 11400000, guid: 47297225aeeda3249b8fced97aa607ff, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

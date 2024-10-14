@@ -5,7 +5,8 @@ using UnityEngine;
 public class TileTypeFill : ScriptableObject
 {
     public Sprite Sprite;
-    public bool through;
+    public bool canThrough;
+    public bool canConstruct;
     public Vector3Int startTilePosition;
     public Vector3Int endTilePosition;
     public Vector3 tileSize;
