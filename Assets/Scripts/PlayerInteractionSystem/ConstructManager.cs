@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ConstructManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Initialize()
     {
-        
+        throw new System.NotImplementedException();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaceTower(Vector3 hitPoint)
     {
-        
+        throw new System.NotImplementedException();
     }
 }

@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f422f141-b2fa-482e-9ee3-310637e11600" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/CameraMoveSpeed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/CameraMoveSpeed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MaxZoom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MaxZoom.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MinZoom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MinZoom.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/ZoomSpeed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/ZoomSpeed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameDriver/GameDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameDriver/GameDriver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionSystem/ConstructManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionSystem/ConstructManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionSystem/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionSystem/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileMapSystem/TilemapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileMapSystem/TilemapManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84fae633fb384fae986669d4f013e8a4176600/32/8c91827e/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/aa65d1b903e049ef8ab89c4f238bcaf8a000/53/c65fea2e/Tile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Variables/GameEventFloat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Variables/GameEventFloatListener.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,7 +43,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "GameDriver",
+    "git-widget-placeholder": "PlayerInteraction",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,6 +107,7 @@
       <updated>1728800950864</updated>
       <workItem from="1728800952771" duration="68000" />
       <workItem from="1728801029320" duration="13145000" />
+      <workItem from="1728867974810" duration="1389000" />
     </task>
     <servers />
   </component>

@@ -8,8 +8,8 @@ public class GameDriver : MonoBehaviour
     // 各个系统引用
     [Header("Managers")] 
     [SerializeField] private CameraController _cameraController;
-    // [SerializeField] private InputManager _inputManager;
-    // [SerializeField] private ConstructManager _constructManager;
+    [SerializeField] private InputManager _inputManager;
+    [SerializeField] private ConstructManager _constructManager;
     [SerializeField] private TilemapManager _tilemapManager;
     
     // 游戏状态变量
@@ -33,8 +33,7 @@ public class GameDriver : MonoBehaviour
     private void StartGame()
     {
         _cameraController.Initialize();
-        // _inputManager.Initialize();
-        // _constructManager.Initialize();
+        _constructManager.Initialize();
         _tilemapManager.Initialize();
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class InputManager : MonoBehaviour
 {
@@ -28,11 +29,12 @@ public class InputManager : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                // Tile tile = hit.collider.GetComponent<Tile>();
-                // if (tile != null && tile.canBuild)
-                // {
-                //     constructManager.PlaceTower(hit.point);
-                // }
+                Tile tile = hit.collider.GetComponent<Tile>();
+                // if (tile != null && tile.canConstruct)
+                if(tile != null)
+                {
+                    constructManager.PlaceTower(hit.point);
+                }
             }
         }
     }

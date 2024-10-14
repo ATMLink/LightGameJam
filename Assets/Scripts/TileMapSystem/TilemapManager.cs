@@ -6,16 +6,16 @@ using UnityEngine.Tilemaps;
 
 public class TilemapManager : MonoBehaviour
 {
-    [Header("Scale(¹æÄ£)")]
+    [Header("Scale(è§„æ¨¡)")]
     public int width;
     public int height;
-    [Header("Initialise(³õÊ¼»¯)")]
+    [Header("Initialise(åˆå§‹åŒ–)")]
     [SerializeField] private Tilemap tileMap;
     [SerializeField] private Tile tile;
-    [Header("Modification(ĞŞ¸Ä)")]
+    [Header("Modification(ä¿®æ”¹)")]
     [SerializeField] private List<TileType> tileSetblockData;
     [SerializeField] private List<TileTypeFill> tileFillData;
-    [Header("RelevantParameter(Ïà¹Ø²ÎÊı)")]
+    [Header("RelevantParameter(ç›¸å…³å‚æ•°)")]
     [SerializeField] private List<Tile> tileSetblockList;
     [SerializeField] private List<Tile> tileFillList;
     [SerializeField] private List<Vector3Int> tilePositionList;
@@ -26,17 +26,17 @@ public class TilemapManager : MonoBehaviour
     // Start is called before the first frame update
     public void Initialize()
     {
-        // ¼ì²éÒıÓÃÊÇ·ñÉèÖÃ
+        // æ£€æŸ¥å¼•ç”¨æ˜¯å¦è®¾ç½®
         if (tileMap != null && tile != null)
         {
-            // ´´½¨Ò»¸öÍßÆ¬Ìî³ä£¬ÕâÀïÊ¹ÓÃ¹Ì¶¨´óĞ¡£¬Äã¿ÉÒÔ¸ù¾İĞèÒªµ÷Õû
+            // åˆ›å»ºä¸€ä¸ªç“¦ç‰‡å¡«å……ï¼Œè¿™é‡Œä½¿ç”¨å›ºå®šå¤§å°ï¼Œä½ å¯ä»¥æ ¹æ®éœ€è¦è°ƒæ•´
             Vector3Int size = new Vector3Int(width, height, 1);
 
             for (int x = 0; x < size.x; x++)
             {
                 for (int y = 0; y < size.y; y++)
                 {
-                    // ÉèÖÃÍßÆ¬µØÍ¼ÖĞÃ¿¸öÎ»ÖÃµÄÍßÆ¬
+                    // è®¾ç½®ç“¦ç‰‡åœ°å›¾ä¸­æ¯ä¸ªä½ç½®çš„ç“¦ç‰‡
                     tileMap.SetTile(new Vector3Int(x, y, 0), tile);
                 }
             }
@@ -78,7 +78,7 @@ public class TilemapManager : MonoBehaviour
         }
     }
     /// <summary>
-    /// ÊäÈëÒ»¸övector3Int,·µ»Ø¶ÔÓ¦Î»ÖÃµÄÍßÆ¬
+    /// è¾“å…¥ä¸€ä¸ªvector3Int,è¿”å›å¯¹åº”ä½ç½®çš„ç“¦ç‰‡
     /// </summary>
     public TileBase GetTile(Vector3Int position) {
         TileBase tile = tileMap.GetTile(position);
@@ -96,7 +96,7 @@ public class TilemapManager : MonoBehaviour
         {
             for (int y = ytempmin; y <= ytempmax; y++)
             {
-                // ÉèÖÃÍßÆ¬µØÍ¼ÖĞÃ¿¸öÎ»ÖÃµÄÍßÆ¬
+                // è®¾ç½®ç“¦ç‰‡åœ°å›¾ä¸­æ¯ä¸ªä½ç½®çš„ç“¦ç‰‡
                 tileMap.SetTile(new Vector3Int(x, y, 0), tile);
             }
         }
