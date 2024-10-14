@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ConstructManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Initialize()
     {
-        
+        // resourceManager = FindObjectOfType<ResourceManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaceTower(Vector3 hitPoint)
     {
-        
+        // build a tower if afford
+        Debug.Log($"built a tower at {hitPoint}");
     }
 }
