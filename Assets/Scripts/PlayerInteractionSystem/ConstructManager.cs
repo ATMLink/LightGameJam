@@ -6,11 +6,12 @@ public class ConstructManager : MonoBehaviour
 {
     public void Initialize()
     {
-        throw new System.NotImplementedException();
+        // resourceManager = FindObjectOfType<ResourceManager>();
     }
 
     public void PlaceTower(Vector3 hitPoint)
     {
-        throw new System.NotImplementedException();
+        // build a tower if afford
+        Debug.Log($"built a tower at {hitPoint}");
     }
 }

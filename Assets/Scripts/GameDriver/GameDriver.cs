@@ -40,7 +40,7 @@ public class GameDriver : MonoBehaviour
     private void UpdateSystems()
     {
         _cameraController.UpdateState();
-        // _inputManager.HandleInput();
+        _inputManager.UpdateState();
     }
 
     public void EndGame()

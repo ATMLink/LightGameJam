@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9e0a57807e75045a26f28d5f7a5f1e, type: 3}
   m_Name: MinBounds
   m_EditorClassIdentifier: 
-  Value: {x: 0, y: 0}
+  Value: {x: -10, y: -10}
   valueChangedEvent: {fileID: 11400000, guid: cca291425688d3843b95c0059c62a9f7, type: 2}
