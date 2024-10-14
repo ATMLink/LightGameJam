@@ -31,13 +31,14 @@ public class TilemapManager : MonoBehaviour
         {
             // 创建一个瓦片填充，这里使用固定大小，你可以根据需要调整
             Vector3Int size = new Vector3Int(width, height, 1);
-
+            int midx = width / 2;
+            int midy = height / 2;
             for (int x = 0; x < size.x; x++)
             {
                 for (int y = 0; y < size.y; y++)
                 {
                     // 设置瓦片地图中每个位置的瓦片
-                    tileMap.SetTile(new Vector3Int(x, y, 0), tile);
+                    tileMap.SetTile(new Vector3Int(x-midx, y-midy, 0), tile);
                 }
             }
         }
