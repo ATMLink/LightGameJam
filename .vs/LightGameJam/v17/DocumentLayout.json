@@ -1,0 +1,242 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Project\\GameJam\\LightGameJam\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scipts\\enemy\\enemyeventsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\enemyeventsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scipts\\enemy\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scipts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scipts\\enemy\\enemypool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\enemypool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\resources\\enemy\\levelmanager\\level1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\enemy\\levelmanager\\level1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\data\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\data\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scipts\\enemy\\roadpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\roadpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scipts\\enemy\\enemygeneratefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\enemygeneratefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B157672-AC39-C276-A667-B5DCB5695CF1}|Assembly-CSharp-Editor.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\editor\\enemyeditor\\roadeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B157672-AC39-C276-A667-B5DCB5695CF1}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\enemyeditor\\roadeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scipts\\enemy\\enemysight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\enemysight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scipts\\enemy\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scipts\\enemy\\levelparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scipts\\enemy\\levelparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B157672-AC39-C276-A667-B5DCB5695CF1}|Assembly-CSharp-Editor.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\editor\\enemyeditor\\enemymanagereditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B157672-AC39-C276-A667-B5DCB5695CF1}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\enemyeditor\\enemymanagereditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Level1.txt",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Resources\\Enemy\\LevelManager\\Level1.txt",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Enemy\\LevelManager\\Level1.txt",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Resources\\Enemy\\LevelManager\\Level1.txt",
+              "RelativeToolTip": "Assets\\Resources\\Enemy\\LevelManager\\Level1.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-14T16:13:48.145Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnemyPool.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyPool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\EnemyPool.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyPool.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\EnemyPool.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAQwE0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T10:17:39.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyManager.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\EnemyManager.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyManager.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\EnemyManager.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAwDAAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T08:33:26.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EnemyGenerateField.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyGenerateField.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\EnemyGenerateField.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyGenerateField.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\EnemyGenerateField.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAgwHAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T11:13:28.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyData.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Data\\EnemyData.cs",
+              "RelativeDocumentMoniker": "Assets\\Data\\EnemyData.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Data\\EnemyData.cs",
+              "RelativeToolTip": "Assets\\Data\\EnemyData.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAUwD8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T15:57:54.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LevelParser.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\LevelParser.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\LevelParser.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\LevelParser.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\LevelParser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T16:17:13.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RoadPoint.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\RoadPoint.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\RoadPoint.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\RoadPoint.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\RoadPoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T06:49:43.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RoadEditor.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Editor\\EnemyEditor\\RoadEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\EnemyEditor\\RoadEditor.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Editor\\EnemyEditor\\RoadEditor.cs",
+              "RelativeToolTip": "Assets\\Editor\\EnemyEditor\\RoadEditor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T07:01:10.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EnemyManagerEditor.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Editor\\EnemyEditor\\EnemyManagerEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\EnemyEditor\\EnemyManagerEditor.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Editor\\EnemyEditor\\EnemyManagerEditor.cs",
+              "RelativeToolTip": "Assets\\Editor\\EnemyEditor\\EnemyManagerEditor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T10:16:57.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyEventSystem.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyEventSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\EnemyEventSystem.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyEventSystem.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\EnemyEventSystem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T08:50:39.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EnemyBase.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyBase.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\EnemyBase.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemyBase.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\EnemyBase.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T16:49:04.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\Enemy.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\Enemy.cs",
+              "ViewState": "AQIAAPQAAAAAAAAAAADwvwEBAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T16:53:34.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EnemySight.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemySight.cs",
+              "RelativeDocumentMoniker": "Assets\\Scipts\\Enemy\\EnemySight.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scipts\\Enemy\\EnemySight.cs",
+              "RelativeToolTip": "Assets\\Scipts\\Enemy\\EnemySight.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T18:08:24.92Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
