@@ -8,8 +8,14 @@ public class GameDriver : MonoBehaviour
     // 各个系统引用
     [Header("Managers")] 
     [SerializeField] private CameraController _cameraController;
+<<<<<<< HEAD
     [SerializeField] private InputManager _inputManager;
     [SerializeField] private ConstructManager _constructManager;
+=======
+    [SerializeField] private MainResourceManagement _resourceManagement;
+    // [SerializeField] private InputManager _inputManager;
+    // [SerializeField] private ConstructManager _constructManager;
+>>>>>>> ResourceManagement
     [SerializeField] private TilemapManager _tilemapManager;
     
     // 游戏状态变量
