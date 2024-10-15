@@ -8,6 +8,8 @@ MonoImporter:
   - kNumber: {fileID: 11400000, guid: a2fea832188a25f47bd4d24d715b142a, type: 2}
   - naNumber: {fileID: 11400000, guid: ff656ec29a380e041981d87bd6cd5d1b, type: 2}
   - cuNumber: {fileID: 11400000, guid: 47297225aeeda3249b8fced97aa607ff, type: 2}
+  - caNumber: {fileID: 11400000, guid: 75ce8a664506a2a488a05fd87c9ad0d4, type: 2}
+  - liNumber: {fileID: 11400000, guid: 5280d69ea470df34894911d6248beeca, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

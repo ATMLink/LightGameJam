@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public enum element {k,si,cu,na }
+public enum element {k,si,cu,na,li,ca }
 public class MainResourceManagement : MonoBehaviour
 {
     [SerializeField] private FloatVariable siNumber;
     [SerializeField] private FloatVariable kNumber;
     [SerializeField] private FloatVariable naNumber;
     [SerializeField] private FloatVariable cuNumber;
+    [SerializeField] private FloatVariable caNumber;
+    [SerializeField] private FloatVariable liNumber;
     /// <summary>
     /// 将所有元素数量重新设为0
     /// </summary>
@@ -17,7 +20,23 @@ public class MainResourceManagement : MonoBehaviour
         siNumber.SetValue(0);
         kNumber.SetValue(0);            
         naNumber.SetValue(0);
-        cuNumber.SetValue(0);      
+        cuNumber.SetValue(0);
+        liNumber.SetValue(0);
+        caNumber.SetValue(0);
+    }
+    public void Initialize(element element)
+    {
+        FloatVariable _element = null;
+        switch (element)
+        {
+            case element.si: _element = siNumber; break;
+            case element.k: _element = kNumber; break;
+            case element.cu: _element = cuNumber; break;
+            case element.na: _element = naNumber; break;
+            case element.li: _element = liNumber; break;
+            case element.ca: _element = caNumber; break;
+        }
+        _element.SetValue(0);
     }
     /// <summary>
     /// 输入需要判断的元素及其数量，返回true和false
@@ -29,7 +48,9 @@ public class MainResourceManagement : MonoBehaviour
             case element.si:elementNumber = siNumber.Value; break;            
             case element.k:elementNumber = kNumber.Value; break;        
             case element.cu:elementNumber = cuNumber.Value; break;     
-            case element.na:elementNumber = naNumber.Value; break;             
+            case element.na:elementNumber = naNumber.Value; break;
+            case element.li:elementNumber = liNumber.Value; break;
+            case element.ca:elementNumber = caNumber.Value; break;
         }
         bool isAfford = ( elementNumber > number )?  true : false;
         return isAfford;
@@ -47,10 +68,11 @@ public class MainResourceManagement : MonoBehaviour
                 case element.k: _element = kNumber; break;
                 case element.cu: _element = cuNumber; break;
                 case element.na: _element = naNumber; break;
+                case element.li:_element = liNumber; break;
+                case element.ca:_element = caNumber; break;
             }
             _element.SetValue(_element.Value-number);
-        }
-        else return;
+        }        
     }
     /// <summary>
     /// 输入元素种类，返回相对应元素的数量
@@ -63,6 +85,8 @@ public class MainResourceManagement : MonoBehaviour
             case element.k: elementNumber = kNumber.Value; break;
             case element.cu: elementNumber = cuNumber.Value; break;
             case element.na: elementNumber = naNumber.Value; break;
+            case element.li: elementNumber = liNumber.Value;break;
+            case element.ca: elementNumber = caNumber.Value; break; 
         }
         return elementNumber;
     }
@@ -75,6 +99,8 @@ public class MainResourceManagement : MonoBehaviour
             case element.k: _element = kNumber; break;
             case element.cu: _element = cuNumber; break;
             case element.na: _element = naNumber; break;
+            case element.li:_element = liNumber; break;
+            case element.ca:_element = caNumber; break;
         }
         _element.SetValue(_element.Value + number);
 
