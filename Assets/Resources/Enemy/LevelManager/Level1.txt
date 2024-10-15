@@ -1,0 +1,4 @@
+1;10;enemy_Small*10
+2;12;enemy_Small*20;enemy_Medium*4
+3;30;enemy_Small*50;enemy_Medium*16
+4;30;enemy_Small*120;enemy_Medium*50
