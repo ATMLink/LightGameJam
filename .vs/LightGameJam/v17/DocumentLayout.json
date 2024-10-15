@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Github lib\\LightGameJam\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\github lib\\lightgamejam\\assets\\ui\\uiscripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\ui\\uiscripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\ui\\uiscripts\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\ui\\uiscripts\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UiManager.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\UiManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Ui\\UiScripts\\UiManager.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\UiManager.cs",
+              "RelativeToolTip": "Assets\\Ui\\UiScripts\\UiManager.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAYwMkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T19:13:43.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TowerShowInformation.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\TowerShowInformation.cs",
+              "RelativeDocumentMoniker": "Assets\\Ui\\UiScripts\\TowerShowInformation.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\TowerShowInformation.cs",
+              "RelativeToolTip": "Assets\\Ui\\UiScripts\\TowerShowInformation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T19:07:05.505Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
