@@ -11,7 +11,8 @@ public class TileType : ScriptableObject
     public Vector3Int tilePosition;
     public Vector3 tileSize;
     public Vector3 tileScale;
-    public Vector3 tileColor;  
+    public Vector3 tileColor;
+    public string tileName;
     
     
 }

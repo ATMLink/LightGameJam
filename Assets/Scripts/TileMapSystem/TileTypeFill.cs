@@ -12,5 +12,5 @@ public class TileTypeFill : ScriptableObject
     public Vector3 tileSize;
     public Vector3 tileScale;
     public Vector3 tileColor;    
-    
+    public string tileName;
 }
