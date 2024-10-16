@@ -9,9 +9,7 @@ public class TileType : ScriptableObject
     public bool canThrough;
     public bool canConstruct;
     public Vector3Int tilePosition;
-    public Vector3 tileSize;
-    public Vector3 tileScale;
-    public Vector3 tileColor;  
+    public string tileName;
     
     
 }
