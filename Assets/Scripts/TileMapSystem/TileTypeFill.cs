@@ -8,9 +8,6 @@ public class TileTypeFill : ScriptableObject
     public bool canThrough;
     public bool canConstruct;
     public Vector3Int startTilePosition;
-    public Vector3Int endTilePosition;
-    public Vector3 tileSize;
-    public Vector3 tileScale;
-    public Vector3 tileColor;    
+    public Vector3Int endTilePosition;   
     public string tileName;
 }

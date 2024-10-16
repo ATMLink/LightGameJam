@@ -75,8 +75,11 @@ public class TilemapManager : MonoBehaviour
                         tile.sprite = tiles[(int)c - 48].Sprite;
                         tileMap.SetTile(new Vector3Int(x - midx, y - midy, 0), tile);
                         if ((int)c-48 != 0) {
-                           Instantiate(prefabs[(int)c - 48],new Vector3(x - midx + 0.5f, y - midy + 0.5f,0),Quaternion.identity,dad.transform);
-                           
+                           TilemapWithEnemy temp = Instantiate(prefabs[(int)c - 48],new Vector3(x - midx + 0.5f, y - midy + 0.5f,0),Quaternion.identity,dad.transform).GetComponent<TilemapWithEnemy>();
+                            temp.Sprite = tiles[(int)c - 48].Sprite;
+                            temp.tileName = tiles[(int)c - 48].tileName;
+                            temp.canConstruct = tiles[(int)c - 48].canConstruct;
+                            temp.canThrough = tiles[(int)c - 48].canThrough;
                         }
                     }
                 }
