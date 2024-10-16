@@ -570,7 +570,7 @@ MonoBehaviour:
   _cameraController: {fileID: 1912484481}
   _inputManager: {fileID: 1967238063}
   _constructManager: {fileID: 913605974}
-  _tilemapManager: {fileID: 0}
+  _tilemapManager: {fileID: 1424931871}
 --- !u!4 &1168804922
 Transform:
   m_ObjectHideFlags: 0
