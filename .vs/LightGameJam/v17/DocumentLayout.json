@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\ui\\uiscripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|e:\\github lib\\lightgamejam\\assets\\ui\\uiscripts\\button information show.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\ui\\uiscripts\\button information show.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\ui\\uiscripts\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\ui\\uiscripts\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|e:\\github lib\\lightgamejam\\assets\\ui\\uiscripts\\buttonshowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\ui\\uiscripts\\buttonshowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ButtonShowInformation.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\ButtonShowInformation.cs",
+              "RelativeDocumentMoniker": "Assets\\Ui\\UiScripts\\ButtonShowInformation.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\ButtonShowInformation.cs",
+              "RelativeToolTip": "Assets\\Ui\\UiScripts\\ButtonShowInformation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T09:20:14.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Button Information Show.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\Button Information Show.cs",
+              "RelativeDocumentMoniker": "Assets\\Ui\\UiScripts\\Button Information Show.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\Button Information Show.cs",
+              "RelativeToolTip": "Assets\\Ui\\UiScripts\\Button Information Show.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T09:04:26.619Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,20 +60,20 @@
               "RelativeDocumentMoniker": "Assets\\Ui\\UiScripts\\UiManager.cs",
               "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\UiManager.cs",
               "RelativeToolTip": "Assets\\Ui\\UiScripts\\UiManager.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAYwMkAAAAAAAAA",
+              "ViewState": "AQIAAPEAAAAAAAAAAAAAACIBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T19:13:43.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TowerShowInformation.cs",
               "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\TowerShowInformation.cs",
               "RelativeDocumentMoniker": "Assets\\Ui\\UiScripts\\TowerShowInformation.cs",
               "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\TowerShowInformation.cs",
               "RelativeToolTip": "Assets\\Ui\\UiScripts\\TowerShowInformation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T19:07:05.505Z"
             }
