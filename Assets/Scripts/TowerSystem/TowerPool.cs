@@ -9,7 +9,7 @@ public class TowerPool : MonoBehaviour
     private int initialCapacity = 10; // 初始容量
     private int maxCapacity = 50;     // 最大容量
 
-    void Start()
+    public void Initialize()
     {
         // 初始化对象池
         for (int i = 0; i < initialCapacity; i++)

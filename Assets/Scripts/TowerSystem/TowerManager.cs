@@ -7,6 +7,11 @@ public class TowerManager : MonoBehaviour
     public TowerPool towerPool;
     private List<Tower> towers = new List<Tower>();
 
+    public void Initialize()
+    {
+        towerPool.Initialize();
+    }
+
     public void UpdateState()
     {
         // 批量更新塔的状态，例如攻击逻辑等

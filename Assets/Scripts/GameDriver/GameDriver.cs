@@ -51,6 +51,7 @@ public class GameDriver : MonoBehaviour
         gameTime = 0f;
         _cameraController.Initialize();
         _tilemapManager.Initialize();
+        _towerManager.Initialize();
     }
 
     private void UpdateGameTime()
