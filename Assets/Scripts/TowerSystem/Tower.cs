@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public TowerAttributes attributes; // 共享的塔属性（ScriptableObject）
+    public TowerAttributes attributes;
 
     private float health;
     private float damage;
@@ -13,23 +13,29 @@ public class Tower : MonoBehaviour
 
     public void Initialize()
     {
-        // 初始化塔的属性
         health = attributes.health.Value;
         damage = attributes.damage.Value;
         attackSpeed = attributes.attackSpeed.Value;
         attackRange = attributes.attackRange.Value;
-        
+
         gameObject.SetActive(true);
     }
 
-    // 升级塔的方法
+    // 重置塔的属性，方便对象池回收
+    public void ResetAttributes()
+    {
+        health = 0;
+        damage = 0;
+        attackSpeed = 0;
+        attackRange = 0;
+    }
+
     public void Upgrade()
     {
         if (attributes.nextLevelAttributes != null)
         {
-            // 升级到下一级塔的属性
             attributes = attributes.nextLevelAttributes;
-            Initialize(); // 使用新的属性重新初始化塔
+            Initialize();
         }
         else
         {
@@ -37,10 +43,13 @@ public class Tower : MonoBehaviour
         }
     }
 
-    // 摧毁塔的方法
     public void DestroyTower()
     {
-        // 将塔移回对象池
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); // 将塔移回对象池
+    }
+
+    public void Attack()
+    {
+        // attack logic
     }
 }

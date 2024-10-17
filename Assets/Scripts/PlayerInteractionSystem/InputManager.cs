@@ -8,8 +8,10 @@ public class InputManager : MonoBehaviour
     [SerializeField] private CameraController cameraController;
     [SerializeField] private ConstructManager constructManager;
 
-    private bool isDraggingTower = false; // 是否正在拖拽塔
-    private TowerAttributes currentDraggedTower; // 当前拖拽的塔属性
+    private bool isDraggingTower = false;
+    private TowerAttributes currentDraggedTower;
+    private GameObject towerPreview;
+
     public void UpdateState()
     {
         CaptureInput();
@@ -18,14 +20,12 @@ public class InputManager : MonoBehaviour
 
     public void CaptureInput()
     {
-        // Logic for capturing user input 
         cameraController.UpdateState();
     }
 
     public void HandleInput()
     {
-        // 处理左键点击以放置塔
-        if (isDraggingTower && Input.GetMouseButtonUp(0))
+        if (isDraggingTower)
         {
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mouseWorldPos2D = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
@@ -40,22 +40,36 @@ public class InputManager : MonoBehaviour
                     Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPos);
                     Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cellPosition);
 
-                    // 放置塔在地图上
-                    constructManager.PlaceTower(cellCenterPos);
+                    // 更新预览塔的位置
+                    if (towerPreview != null)
+                    {
+                        towerPreview.transform.position = cellCenterPos;
+                    }
 
-                    // 放置完成，取消拖拽状态
-                    isDraggingTower = false;
-                    currentDraggedTower = null;
+                    // 放置塔的逻辑
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        constructManager.PlaceTower(cellCenterPos);
+                        isDraggingTower = false;
+                        currentDraggedTower = null;
+                        Destroy(towerPreview);
+                    }
                 }
             }
         }
     }
-    
+
     public void StartDraggingTower(TowerAttributes towerAttributes)
     {
         isDraggingTower = true;
         currentDraggedTower = towerAttributes;
         constructManager.SelectTower(towerAttributes);
+
+        // 创建预览塔
+        towerPreview = new GameObject("TowerPreview");
+        SpriteRenderer renderer = towerPreview.AddComponent<SpriteRenderer>();
+        renderer.sprite = towerAttributes.towerSprite; // 设置预览塔的图片
+        renderer.color = new Color(1, 1, 1, 0.5f); // 半透明显示
     }
     
 }

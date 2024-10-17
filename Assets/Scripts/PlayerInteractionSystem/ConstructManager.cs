@@ -5,9 +5,9 @@ using UnityEngine;
 public class ConstructManager : MonoBehaviour
 {
     [SerializeField] private TowerPool towerPool;
-    private TowerAttributes selectedTowerAttributes; // 当前选择的塔属性
+    private TowerAttributes selectedTowerAttributes;
 
-    // 方法用于设置当前选择的塔
+    // 设置当前选择的塔
     public void SelectTower(TowerAttributes towerAttributes)
     {
         selectedTowerAttributes = towerAttributes;
@@ -17,10 +17,35 @@ public class ConstructManager : MonoBehaviour
     {
         if (selectedTowerAttributes != null)
         {
-            Tower newTower = towerPool.GetTower();
-            newTower.transform.position = position;
-            newTower.attributes = selectedTowerAttributes;
-            newTower.Initialize();
+            if (CanPlaceTower(position)) // 检查是否可以放置塔
+            {
+                Tower newTower = towerPool.GetTower();
+                if (newTower != null) // 确保池子未满
+                {
+                    newTower.transform.position = position;
+                    newTower.attributes = selectedTowerAttributes;
+                    newTower.Initialize();
+                }
+            }
+            else
+            {
+                Debug.Log("无法在此位置放置塔。");
+            }
         }
+    }
+
+    // 检查指定位置是否允许放置塔
+    private bool CanPlaceTower(Vector3 position)
+    {
+        // 检查是否已有塔
+        Tower existingTower = FindObjectOfType<TowerManager>().GetTowerAt(position);
+        if (existingTower != null)
+        {
+            return false; // 已有塔，不能放置
+        }
+
+        // 可以添加其他条件检查
+
+        return true; // 可以放置
     }
 }

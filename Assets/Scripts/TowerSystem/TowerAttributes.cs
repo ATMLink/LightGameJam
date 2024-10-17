@@ -12,6 +12,7 @@ public class TowerAttributes : ScriptableObject
     public FloatVariable damage;
     public FloatVariable attackSpeed;
     public FloatVariable attackRange;
+    public Sprite towerSprite;
 
     public TowerAttributes nextLevelAttributes;
 }

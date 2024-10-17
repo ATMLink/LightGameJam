@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TowerPool : MonoBehaviour
 {
-    public Tower towerPrefab; // 塔的预制件
+    public Tower towerPrefab;
     private List<Tower> pool = new List<Tower>();
     private int initialCapacity = 10; // 初始容量
+    private int maxCapacity = 50;     // 最大容量
 
     void Start()
     {
@@ -19,6 +20,12 @@ public class TowerPool : MonoBehaviour
 
     private Tower CreateNewTower()
     {
+        if (pool.Count >= maxCapacity)
+        {
+            Debug.LogWarning("TowerPool has reached its maximum capacity.");
+            return null;
+        }
+
         Tower newTower = Instantiate(towerPrefab);
         newTower.gameObject.SetActive(false);
         pool.Add(newTower);
@@ -40,6 +47,7 @@ public class TowerPool : MonoBehaviour
 
     public void ReturnTower(Tower tower)
     {
+        tower.ResetAttributes(); // 重置塔的属性
         tower.gameObject.SetActive(false); // 将塔标记为不可见
     }
 }
