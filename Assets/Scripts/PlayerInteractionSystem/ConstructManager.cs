@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class ConstructManager : MonoBehaviour
 {
-    public void Initialize()
+    [SerializeField] private TowerPool towerPool;
+    private TowerAttributes selectedTowerAttributes; // 当前选择的塔属性
+
+    // 方法用于设置当前选择的塔
+    public void SelectTower(TowerAttributes towerAttributes)
     {
-        // resourceManager = FindObjectOfType<ResourceManager>();
+        selectedTowerAttributes = towerAttributes;
     }
 
-    public void PlaceTower(Vector3 hitPoint)
+    public void PlaceTower(Vector3 position)
     {
-        // build a tower if afford
-        Debug.Log($"built a tower at {hitPoint}");
+        if (selectedTowerAttributes != null)
+        {
+            Tower newTower = towerPool.GetTower();
+            newTower.transform.position = position;
+            newTower.attributes = selectedTowerAttributes;
+            newTower.Initialize();
+        }
     }
 }

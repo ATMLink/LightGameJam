@@ -51,7 +51,7 @@ public class CameraController : MonoBehaviour
     public void HandleCameraMovement()
     {
         // Logic for dragging the camera with the left mouse button
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             Vector3 delta = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
             camera.transform.Translate(-delta * moveSpeed.Value, Space.World);

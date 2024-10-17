@@ -4,43 +4,43 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public FloatVariable health;
-    public FloatVariable damage;
-    public FloatVariable shootSpeed;
-    public FloatVariable range;  // 攻击范围
-    public bool needsLaser;
-    public FloatVariable laserPower;
+    public TowerAttributes attributes; // 共享的塔属性（ScriptableObject）
 
-    //private Laser laser;  // 如果塔使用激光
+    private float health;
+    private float damage;
+    private float attackSpeed;
+    private float attackRange;
 
-    public void Initialize(Vector3 position, FloatVariable health, FloatVariable damage, FloatVariable shootSpeed, FloatVariable range, bool needsLaser, FloatVariable laserPower)
+    public void Initialize()
     {
-        this.transform.position = position;
-        this.health = health;
-        this.damage = damage;
-        this.shootSpeed = shootSpeed;
-        this.range = range;
-        this.needsLaser = needsLaser;
-        this.laserPower = laserPower;
+        // 初始化塔的属性
+        health = attributes.health.Value;
+        damage = attributes.damage.Value;
+        attackSpeed = attributes.attackSpeed.Value;
+        attackRange = attributes.attackRange.Value;
+        
+        gameObject.SetActive(true);
+    }
 
-        if (needsLaser)
+    // 升级塔的方法
+    public void Upgrade()
+    {
+        if (attributes.nextLevelAttributes != null)
         {
-      //      laser = new Laser();
-            // 初始化激光
+            // 升级到下一级塔的属性
+            attributes = attributes.nextLevelAttributes;
+            Initialize(); // 使用新的属性重新初始化塔
+        }
+        else
+        {
+            Debug.Log("已经达到最高等级，无法继续升级。");
         }
     }
 
-    public void Upgrade()
-    {
-        // 提升塔的属性，如增加攻击力、范围等
-        // damage.Value += 10;
-        // health.Value += 20;
-        // Debug.Log("Tower upgraded.");
-    }
-
+    // 摧毁塔的方法
     public void DestroyTower()
     {
-        Destroy(gameObject);
-        Debug.Log("Tower destroyed.");
+        // 将塔移回对象池
+        gameObject.SetActive(false);
     }
 }
