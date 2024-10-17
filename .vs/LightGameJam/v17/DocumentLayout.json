@@ -1,102 +1,98 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\LightGameJam\\LightGameJam\\",
+  "WorkspaceRootPath": "E:\\Github lib\\LightGameJam\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\tilemapsystem\\tilemapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\github lib\\lightgamejam\\assets\\ui\\uiscripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\ui\\uiscripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\github lib\\lightgamejam\\assets\\scripts\\tilemapsystem\\tilemapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilemapsystem\\tilemapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\scripts\\tilemapsystem\\tiletypefill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\tilemapsystem\\tiletypefill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilemapsystem\\tiletypefill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\tilemapsystem\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\tilemapsystem\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilemapsystem\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\scripts\\tilemapsystem\\tilemapwithenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\tilemapsystem\\tilemapwithenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilemapsystem\\tilemapwithenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ResourcesManagement\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\resourcesmanagement\\mainresourcemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\resourcesmanagement\\mainresourcemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resourcesmanagement\\mainresourcemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\gamedriver\\gamedriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\gamedriver\\gamedriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamedriver\\gamedriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\tilemapsystem\\tilemaptrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\tilemapsystem\\tilemaptrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilemapsystem\\tilemaptrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\variables\\gameeventfloatlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\variables\\gameeventfloatlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\variables\\gameeventfloatlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\variables\\gameeventvector2listener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\variables\\gameeventvector2listener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\variables\\gameeventvector2listener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\camerasystem\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\camerasystem\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerasystem\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Github lib\\LightGameJam\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\variables\\floatvariable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\variables\\floatvariable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\variables\\floatvariable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\variables\\vector2variable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\variables\\vector2variable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\variables\\vector2variable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\variables\\gameeventvector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\variables\\gameeventvector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\variables\\gameeventvector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\variables\\gameeventfloat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\variables\\gameeventfloat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\variables\\gameeventfloat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Tile\\TilemapManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\tilemapsystem\\miningtiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\tilemapsystem\\miningtiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilemapsystem\\miningtiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|e:\\lightgamejam\\lightgamejam\\assets\\tile\\miningtiletype1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\tile\\miningtiletype1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|e:\\lightgamejam\\lightgamejam\\assets\\tile\\miningtiletype1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Tile\\WaterTileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Tile\\MiningTileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Tile\\TileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ResourceManagement\\MainResourceManagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,72 +102,78 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "GameDriver.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\GameDriver\\GameDriver.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\GameDriver\\GameDriver.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameDriver\\GameDriver.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\GameDriver\\GameDriver.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\GameDriver\\GameDriver.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameDriver\\GameDriver.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T12:36:34.238Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainResourceManagement.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
               "RelativeToolTip": "Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAYwFwAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T12:33:24.639Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "test.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\test.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ResourcesManagement\\test.cs",
+              "RelativeDocumentMoniker": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\test.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\test.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ResourcesManagement\\test.cs",
+              "RelativeToolTip": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\test.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T10:06:04.71Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TilemapWithEnemy.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAjAAAA",
+              "DocumentIndex": 0,
+              "Title": "UiManager.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\UiManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Ui\\UiScripts\\UiManager.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\UiManager.cs",
+              "RelativeToolTip": "Assets\\Ui\\UiScripts\\UiManager.cs",
+              "ViewState": "AQIAAPQAAAAAAAAAAAAAAB0BAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T12:37:48.096Z",
+              "WhenOpened": "2024-10-16T15:59:44.166Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TilemapWithEnemy.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T12:37:48.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TilemapManager.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapManager.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TilemapManager.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapManager.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\TileMapSystem\\TilemapManager.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAmwFEAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -180,24 +182,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TileType.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileType.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileType.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TileType.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileType.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileType.cs",
               "RelativeToolTip": "Assets\\Scripts\\TileMapSystem\\TileType.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAswAoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T14:12:03.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T14:12:03.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "GameEventVector2Listener.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2Listener.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2Listener.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\GameEventVector2Listener.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2Listener.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2Listener.cs",
               "RelativeToolTip": "Assets\\Scripts\\Variables\\GameEventVector2Listener.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAADwvwUAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -205,11 +206,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "GameEventFloatListener.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloatListener.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloatListener.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\GameEventFloatListener.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloatListener.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloatListener.cs",
               "RelativeToolTip": "Assets\\Scripts\\Variables\\GameEventFloatListener.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAADwvxkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -217,11 +218,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TilemapTrigger.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapTrigger.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TilemapTrigger.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapTrigger.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapTrigger.cs",
               "RelativeToolTip": "Assets\\Scripts\\TileMapSystem\\TilemapTrigger.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -229,24 +230,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TileTypeFill.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileTypeFill.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileTypeFill.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TileTypeFill.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileTypeFill.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileTypeFill.cs",
               "RelativeToolTip": "Assets\\Scripts\\TileMapSystem\\TileTypeFill.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T14:12:39.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T14:12:39.649Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "FloatVariable.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\FloatVariable.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\FloatVariable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\FloatVariable.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\FloatVariable.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\FloatVariable.cs",
               "RelativeToolTip": "Assets\\Scripts\\Variables\\FloatVariable.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -254,11 +254,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CameraController.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\CameraSystem\\CameraController.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\CameraSystem\\CameraController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraSystem\\CameraController.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\CameraSystem\\CameraController.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\CameraSystem\\CameraController.cs",
               "RelativeToolTip": "Assets\\Scripts\\CameraSystem\\CameraController.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAADwvxMAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -266,11 +266,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Vector2Variable.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\Vector2Variable.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\Vector2Variable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\Vector2Variable.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\Vector2Variable.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\Vector2Variable.cs",
               "RelativeToolTip": "Assets\\Scripts\\Variables\\Vector2Variable.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -278,22 +278,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "test.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\test.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\test.cs",
+              "RelativeDocumentMoniker": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Scripts\\test.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\test.cs",
-              "RelativeToolTip": "Assets\\Scripts\\test.cs",
+              "RelativeToolTip": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Scripts\\test.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T13:26:21.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UniversalRenderPipeline.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs",
               "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs",
               "ViewState": "AQIAAEQCAAAAAAAAAAAqwJ0CAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -301,11 +301,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "GameEventVector2.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\GameEventVector2.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2.cs",
               "RelativeToolTip": "Assets\\Scripts\\Variables\\GameEventVector2.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -313,11 +313,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "GameEventFloat.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloat.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloat.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\GameEventFloat.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloat.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloat.cs",
               "RelativeToolTip": "Assets\\Scripts\\Variables\\GameEventFloat.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAwwBIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -325,11 +325,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "MiningTileType.cs",
-              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\MiningTileType.cs",
+              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\MiningTileType.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\MiningTileType.cs",
-              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\MiningTileType.cs",
+              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\MiningTileType.cs",
               "RelativeToolTip": "Assets\\Scripts\\TileMapSystem\\MiningTileType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -337,71 +337,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "TilemapManager.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Tile\\TilemapManager.cs",
+              "RelativeDocumentMoniker": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs",
-              "RelativeToolTip": "Assets\\Tile\\TilemapManager.cs",
+              "RelativeToolTip": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T13:29:42.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "WaterTileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs",
-              "RelativeDocumentMoniker": "Assets\\Tile\\WaterTileType.cs",
+              "RelativeDocumentMoniker": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs",
-              "RelativeToolTip": "Assets\\Tile\\WaterTileType.cs",
+              "RelativeToolTip": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T08:49:26.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "MiningTileType1.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType1.cs",
-              "RelativeDocumentMoniker": "Assets\\Tile\\MiningTileType1.cs",
+              "RelativeDocumentMoniker": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType1.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType1.cs",
-              "RelativeToolTip": "Assets\\Tile\\MiningTileType1.cs",
+              "RelativeToolTip": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T08:49:01.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "MiningTileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs",
-              "RelativeDocumentMoniker": "Assets\\Tile\\MiningTileType.cs",
+              "RelativeDocumentMoniker": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs",
-              "RelativeToolTip": "Assets\\Tile\\MiningTileType.cs",
+              "RelativeToolTip": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T08:40:04.989Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "TileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs",
-              "RelativeDocumentMoniker": "Assets\\Tile\\TileType.cs",
+              "RelativeDocumentMoniker": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs",
-              "RelativeToolTip": "Assets\\Tile\\TileType.cs",
+              "RelativeToolTip": "..\\..\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T08:34:30.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "MainResourceManagement.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs",
-              "RelativeDocumentMoniker": "Assets\\ResourceManagement\\MainResourceManagement.cs",
+              "RelativeDocumentMoniker": "..\\..\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs",
-              "RelativeToolTip": "Assets\\ResourceManagement\\MainResourceManagement.cs",
+              "RelativeToolTip": "..\\..\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T15:30:30.211Z"
