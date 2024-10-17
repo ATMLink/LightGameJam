@@ -28,11 +28,21 @@ public class GameDriver : MonoBehaviour
     }
     
     // main loop
-    private void Update()
+    private void Update()// 不依赖物理逻辑相关的更新
+    {
+        if (gameIsRunning && !isPaused)
+        {
+            _inputManager.UpdateState();
+            _cameraController.UpdateState();
+        }
+    }
+
+    private void FixedUpdate()// 依赖物理逻辑相关的更新
     {
         if (gameIsRunning)
         {
-            UpdateSystems();
+            UpdateGameTime();
+            _towerManager.UpdateState();
         }
     }
 
@@ -43,13 +53,9 @@ public class GameDriver : MonoBehaviour
         _tilemapManager.Initialize();
     }
 
-    private void UpdateSystems()
+    private void UpdateGameTime()
     {
         gameTime += Time.deltaTime * gameSpeed;
-        
-        _cameraController.UpdateState();
-        _inputManager.UpdateState();
-        _towerManager.UpdateState();
     }
 
     public void PauseGame()

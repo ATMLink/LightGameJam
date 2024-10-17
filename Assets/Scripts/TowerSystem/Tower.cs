@@ -10,6 +10,12 @@ public class Tower : MonoBehaviour
     private float damage;
     private float attackSpeed;
     private float attackRange;
+    private Sprite sprite;
+
+    private float attackCooldown;
+    private float attackTimer;
+    
+    private List<Enemy> enemiesInRange;
 
     public void Initialize()
     {
@@ -17,6 +23,10 @@ public class Tower : MonoBehaviour
         damage = attributes.damage.Value;
         attackSpeed = attributes.attackSpeed.Value;
         attackRange = attributes.attackRange.Value;
+        sprite = attributes.towerSprite;
+
+        attackCooldown = 1f / attackSpeed;
+        attackTimer = 0f;
 
         gameObject.SetActive(true);
     }
@@ -28,6 +38,7 @@ public class Tower : MonoBehaviour
         damage = 0;
         attackSpeed = 0;
         attackRange = 0;
+        enemiesInRange.Clear();
     }
 
     public void Upgrade()
@@ -50,6 +61,52 @@ public class Tower : MonoBehaviour
 
     public void Attack()
     {
-        // attack logic
+        if (attackTimer >= attackCooldown && enemiesInRange.Count > 0)
+        {
+            // 攻击最近的敌人
+            Enemy target = FindClosestEnemy();
+            if (target != null)
+            {
+                target.OnHit(damage); // 对敌人造成伤害
+                attackTimer = 0f; // 重置攻击计时器
+            }
+        }
+        else
+        {
+            attackTimer += Time.deltaTime; // 增加计时器
+        }
+    }
+    private Enemy FindClosestEnemy()
+    {
+        Enemy closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (Enemy enemy in enemiesInRange)
+        {
+            float distance = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestEnemy = enemy;
+            }
+        }
+
+        return closestEnemy;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<Enemy>(out Enemy enemy))
+        {
+            enemiesInRange.Add(enemy); // 添加进入范围的敌人
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<Enemy>(out Enemy enemy))
+        {
+            enemiesInRange.Remove(enemy); // 移除离开范围的敌人
+        }
     }
 }
