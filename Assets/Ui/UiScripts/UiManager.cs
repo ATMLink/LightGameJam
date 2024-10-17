@@ -260,10 +260,9 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button deleteButton;
 
     [SerializeField] private Transform testobject;
+    [SerializeField] private Camera mainCamera;
 
-
-
-
+    Vector2 localPoint;
 
 
     void ShowTowerMenu()
@@ -271,25 +270,20 @@ public class UiManager : MonoBehaviour
         if (testobject != null && Camera.main != null)
         {
             // 获取游戏对象的世界坐标  
-            Vector3 worldPosition = testobject.position;
+            Vector3 worldPosition = testobject.position;//testobject将替换为点击时选中的物体
 
             // 将世界坐标转换为屏幕坐标  
-            Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
-
-            // 屏幕坐标的z分量通常不重要，但在某些情况下可能有用  
-            // 例如，在UI元素的深度排序中  
-            float screenDepth = screenPosition.z;
+            Vector3 screenPosition = mainCamera.WorldToScreenPoint(worldPosition);
 
             // 由于UI元素通常只关心x和y坐标，我们可以创建一个Vector2  
             Vector2 screenPosition2D = new Vector2(screenPosition.x, screenPosition.y);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(showTowerMenuPanel, screenPosition, mainCamera, out localPoint);
+                
 
+               
+            showTowerMenuPanel.anchoredPosition=screenPosition2D;
 
-            // 现在你可以使用screenPosition2D来进行UI定位或其他操作  
-            // 例如，将UI元素移动到屏幕上的这个位置  
-            // 注意：直接设置UI元素的锚点位置可能需要进一步的转换，  
-            // 因为UI元素是相对于它们的父RectTransform定位的。  
-
-            // 这里只是打印出来作为示例  
+            
         }
         else
         {
