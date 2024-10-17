@@ -6,9 +6,47 @@
   <component name="ChangeListManager">
     <list default="true" id="f422f141-b2fa-482e-9ee3-310637e11600" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameDriver/GameDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameDriver/GameDriver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TowerSystem/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TowerSystem/Tower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/CameraSpeedEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/CameraSpeedEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/MaxZoomEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/MaxZoomEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/MinZoomEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/MinZoomEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/ZoomSpeedEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/ZoomSpeedEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/caNumberEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/caNumberEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/cuNumberEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/cuNumberEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/kNumberEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/kNumberEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/liNumberEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/liNumberEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/naNumberEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/naNumberEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/siNumberEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/GameEvents/FloatGameEvents/siNumberEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/CameraMoveSpeed.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/CameraMoveSpeed.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MaxZoom.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MaxZoom.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MinZoom.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/MinZoom.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/ZoomSpeed.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/ZoomSpeed.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/caNumber.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/caNumber.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/cuNumber.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/cuNumber.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/kNumber.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/kNumber.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/liNumber.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/liNumber.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/naNumber.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/naNumber.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/siNumber.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/variables/FloatVariables/siNumber.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +149,7 @@
       <workItem from="1728801029320" duration="13145000" />
       <workItem from="1728833436896" duration="2498000" />
       <workItem from="1729165566969" duration="6845000" />
-      <workItem from="1729173636361" duration="3723000" />
+      <workItem from="1729173636361" duration="5394000" />
     </task>
     <servers />
   </component>
