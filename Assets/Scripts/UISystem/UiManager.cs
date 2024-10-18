@@ -179,7 +179,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button showConstructionMenuButton;
     
     // tower attributes
-    [SerializeField] private TowerAttributes tower1Attribute;
+    [SerializeField] private TowerAttributes tower1Attributes;
     //ShowConstructionMenu相关方法
     void ShowConstructionMenu()
     {
@@ -212,7 +212,7 @@ public class UiManager : MonoBehaviour
     //预留了10种塔的接口
     void OnTower1Clicked()
     {
-        _inputManager.StartDraggingTower(tower1Attribute);
+        _inputManager.StartDraggingTower(tower1Attributes);
     }
     void OnTower2Clicked()
     {

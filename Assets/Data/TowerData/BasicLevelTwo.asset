@@ -17,4 +17,6 @@ MonoBehaviour:
   attackSpeed: {fileID: 11400000, guid: 99cd01bdd27caf5408a686597846dd0e, type: 2}
   attackRange: {fileID: 11400000, guid: 61f8e112413fecb4b8516364da7f8dd5, type: 2}
   towerSprite: {fileID: 21300000, guid: adbbee9ea3ec5894d937d3d849a4e754, type: 3}
+  Prefab: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+  towerName: BasicLevel2
   nextLevelAttributes: {fileID: 0}

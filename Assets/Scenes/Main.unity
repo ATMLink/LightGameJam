@@ -1411,6 +1411,7 @@ MonoBehaviour:
   uiCanvas: {fileID: 1215098550}
   _constructManager: {fileID: 0}
   _inputManager: {fileID: 0}
+  _towerManager: {fileID: 0}
   gameover: {fileID: 2015541861}
   gameoverImg: {fileID: 728571999}
   exitButton: {fileID: 944834024}
@@ -1448,6 +1449,7 @@ MonoBehaviour:
   tower9: {fileID: 82681338}
   tower10: {fileID: 1092552478}
   showConstructionMenuButton: {fileID: 1139301662}
+  tower1Attributes: {fileID: 0}
   showTowerMenu: {fileID: 1213702598}
   showTowerMenuPanel: {fileID: 44910127}
   closeTowerMenu: {fileID: 575471096}
@@ -12481,7 +12483,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraController: {fileID: 1912484481}
+  mainCamera: {fileID: 1912484484}
   constructManager: {fileID: 913605974}
+  towerManager: {fileID: 945080038}
+  uiManager: {fileID: 180441133}
 --- !u!1 &2000502938
 GameObject:
   m_ObjectHideFlags: 0
@@ -12530,6 +12535,7 @@ MonoBehaviour:
   uiCanvas: {fileID: 142993498}
   _constructManager: {fileID: 0}
   _inputManager: {fileID: 0}
+  _towerManager: {fileID: 0}
   gameover: {fileID: 1932260261}
   gameoverImg: {fileID: 288838886}
   exitButton: {fileID: 2083214908}
@@ -12567,6 +12573,7 @@ MonoBehaviour:
   tower9: {fileID: 935743010}
   tower10: {fileID: 1312709953}
   showConstructionMenuButton: {fileID: 236905475}
+  tower1Attributes: {fileID: 0}
   showTowerMenu: {fileID: 259111879}
   showTowerMenuPanel: {fileID: 1512326748}
   closeTowerMenu: {fileID: 750023650}

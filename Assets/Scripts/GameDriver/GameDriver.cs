@@ -15,6 +15,7 @@ public class GameDriver : MonoBehaviour
     [SerializeField] private EnemyManager _enemyManager;
     
     // 游戏状态变量
+    [Header("Variables")]
     [SerializeField] private BoolVariable isPaused;
     private bool gameIsRunning = true;
     private float gameTime = 0f;
@@ -30,7 +31,7 @@ public class GameDriver : MonoBehaviour
     // main loop
     private void Update()// 不依赖物理逻辑相关的更新
     {
-        if (gameIsRunning && !isPaused)
+        if (gameIsRunning && !isPaused.Value)
         {
             _inputManager.UpdateState();
             _cameraController.UpdateState();
@@ -50,6 +51,7 @@ public class GameDriver : MonoBehaviour
     private void StartGame()
     {
         gameTime = 0f;
+        isPaused.SetValue(false);
         _cameraController.Initialize();
         _tilemapManager.Initialize();
         _towerManager.Initialize();

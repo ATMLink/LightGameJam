@@ -6,18 +6,21 @@ using UnityEngine.Tilemaps;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private CameraController cameraController;
+    [SerializeField] private Camera mainCamera;
     [SerializeField] private ConstructManager constructManager;
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private UiManager uiManager;
 
     private bool isDraggingTower = false;
-    private TowerAttributes currentDraggedTower;
+    private TowerAttributes selectedTowerAttributes;
     private GameObject towerPreview;
 
     public void UpdateState()
     {
         CaptureInput();
-        HandleInput();
+        HandleClickedTower();
+        if(isDraggingTower)
+            HandleTowerDragging();
     }
 
     public void CaptureInput()
@@ -25,29 +28,63 @@ public class InputManager : MonoBehaviour
         cameraController.UpdateState();
     }
 
-    public void HandleInput()
+    public void PrepareToDragTower(TowerAttributes towerAttributes)
     {
-        if (isDraggingTower)
+        if (towerAttributes == null)
         {
-            Vector3? position = GetPositionFromInput();
-            if (position.HasValue)
-            {
-                // 更新预览塔的位置
-                if (towerPreview != null)
-                {
-                    towerPreview.transform.position = position.Value;
-                }
+            Debug.LogError("No TowerAttributes provided!");
+            return;
+        }
 
-                // 放置塔的逻辑
-                if (Input.GetMouseButtonUp(0))
-                {
-                    constructManager.PlaceTower(position.Value);
-                    isDraggingTower = false;
-                    currentDraggedTower = null;
-                    Destroy(towerPreview);
-                }
+        selectedTowerAttributes = towerAttributes;
+        isDraggingTower = true;
+
+        // Instantiate a preview of the tower being dragged
+        towerPreview = Instantiate(towerAttributes.Prefab);
+        towerPreview.SetActive(true); // Make sure it's visible
+
+        Debug.Log($"Started dragging tower: {selectedTowerAttributes.towerName}");
+    }
+    public void HandleTowerDragging()
+    {
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            towerPreview.transform.position = hit.point;
+            
+                // When left mouse button is released, build the tower
+            if (Input.GetMouseButtonUp(0))
+            {
+                Debug.Log("Attempting to place tower...");
+                constructManager.SelectTower(selectedTowerAttributes);
+                constructManager.PlaceTower(hit.point);
+                CancelTowerDragging();
             }
         }
+
+        // If right mouse button is clicked, cancel the drag
+        if (Input.GetMouseButtonUp(1))
+        {
+            Debug.Log("Cancelled tower dragging.");
+            CancelTowerDragging();
+        }
+        
+    }
+    
+    private void CancelTowerDragging()
+    {
+        isDraggingTower = false;
+        if (towerPreview != null)
+        {
+            Destroy(towerPreview);
+        }
+
+        Debug.Log("Drag operation finished or cancelled.");
+    }
+
+    public void HandleClickedTower()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             Vector3? position = GetPositionFromInput();
@@ -66,7 +103,7 @@ public class InputManager : MonoBehaviour
     public void StartDraggingTower(TowerAttributes towerAttributes)
     {
         isDraggingTower = true;
-        currentDraggedTower = towerAttributes;
+        selectedTowerAttributes = towerAttributes;
         constructManager.SelectTower(towerAttributes);
 
         // 创建预览塔
@@ -75,7 +112,12 @@ public class InputManager : MonoBehaviour
         renderer.sprite = towerAttributes.towerSprite; // 设置预览塔的图片
         renderer.color = new Color(1, 1, 1, 0.5f); // 半透明显示
     }
-    
+
+    public void StopDragTower()
+    {
+        isDraggingTower = false;
+        Destroy(towerPreview);
+    }
     public Vector3? GetPositionFromInput()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -97,30 +139,3 @@ public class InputManager : MonoBehaviour
     }
     
 }
-// public void HandleInput()
-// {
-//     // Right-click to interact with the map and bring up the construction menu
-//     if (Input.GetMouseButtonDown(1))
-//     {
-//         // 2D Raycast from camera to the mouse position
-//         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-//         Vector2 mouseWorldPos2D = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
-//     
-//         RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos2D, Vector2.zero);
-//     
-//         if (hit.collider != null)
-//         {
-//             // Assuming your tiles are using TilemapCollider2D and have some associated behavior
-//             Tilemap tilemap = hit.collider.GetComponent<Tilemap>();
-//             if (tilemap != null)
-//             {
-//                 // Get the clicked tile's position and round to nearest grid center
-//                 Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPos);
-//                 Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cellPosition);
-//     
-//                 // Pass the cell center position instead of the exact hit point
-//                 constructManager.PlaceTower(cellCenterPos);
-//             }
-//         }
-//     }
-// }
