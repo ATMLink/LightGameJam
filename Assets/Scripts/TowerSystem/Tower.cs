@@ -25,6 +25,8 @@ public class Tower : MonoBehaviour
         attackRange = attributes.attackRange.Value;
         sprite = attributes.towerSprite;
 
+        enemiesInRange = new List<Enemy>();
+
         attackCooldown = 1f / attackSpeed;
         attackTimer = 0f;
 
@@ -96,6 +98,11 @@ public class Tower : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision == null)
+        {
+            Debug.LogError("Collision is null in OnTriggerEnter2D.");
+            return;
+        }
         if (collision.TryGetComponent<Enemy>(out Enemy enemy))
         {
             enemiesInRange.Add(enemy); // 添加进入范围的敌人
@@ -104,9 +111,19 @@ public class Tower : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision == null)
+        {
+            Debug.LogError("Collision is null in OnTriggerExit2D.");
+            return;
+        }
         if (collision.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            enemiesInRange.Remove(enemy); // 移除离开范围的敌人
+            //enemiesInRange.Remove(enemy); // 移除离开范围的敌人
+            if (enemy != null && !enemy.Equals(null)) // 确保 enemy 没有被销毁
+            {
+                enemiesInRange.Remove(enemy);
+                Debug.Log($"Enemy {enemy.name} removed from range.");
+            }
         }
     }
 }

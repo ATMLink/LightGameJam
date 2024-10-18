@@ -14,17 +14,17 @@ public class UiManager : MonoBehaviour
 {
 
 
-    // ÊôĞÔ
-    [SerializeField] private Canvas uiCanvas; // ÒıÓÃCanvas£¬Í¨³£ÓÃÓÚÉèÖÃäÖÈ¾Ä£Ê½»ò²ã¼¶  
+    // å±æ€§
+    [SerializeField] private Canvas uiCanvas; // å¼•ç”¨Canvasï¼Œé€šå¸¸ç”¨äºè®¾ç½®æ¸²æŸ“æ¨¡å¼æˆ–å±‚çº§  
     [SerializeField] private ConstructManager _constructManager;
     [SerializeField] private InputManager _inputManager;
     [SerializeField] private TowerManager _towerManager;
 
     // Start is called before the first frame update
-    void Start()//²âÊÔÓÃ£¬ºóÃæÉ¾³ı
+    void Start()//æµ‹è¯•ç”¨ï¼Œåé¢åˆ é™¤
     {
         // UiInitialization();
-        // //ShowGameOverScreen();//²âÊÔÓÃ
+        // //ShowGameOverScreen();//æµ‹è¯•ç”¨
         // ShowIntroduction();
         // //ShowConstructionMenu();
         // ShowTowerMenu();
@@ -32,12 +32,12 @@ public class UiManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void UpdateState()//ºóÃæÉ¾³ı
+    public void UpdateState()//åé¢åˆ é™¤
     {
         UpdateResources();
     }
 
-    public void Initialize()//UI³õÊ¼»¯
+    public void Initialize()//UIåˆå§‹åŒ–
     {
         introduction.SetActive(false);
         gameover.SetActive(false);
@@ -46,51 +46,51 @@ public class UiManager : MonoBehaviour
         showTowerMenu.SetActive(false); 
         updateResources.SetActive(true);
         expandButton.gameObject.SetActive(false);
-        pauseButton.onClick.AddListener(OnPauseButtonClicked);//ÔİÍ£°´Å¥
-        retractButton.onClick.AddListener(OnRetractButtonClicked);//ÊÕÆğ×ÊÔ´Ãæ°å°´Å¥
-        expandButton.onClick.AddListener(OnExpandButtonClicked);//Õ¹¿ª×ÊÔ´Ãæ°å°´Å¥
-        showConstructionMenuButton.onClick.AddListener(OnShowConstructionMenuButtonClicked);//½¨Öş²Ëµ¥°´Å¥
+        pauseButton.onClick.AddListener(OnPauseButtonClicked);//æš‚åœæŒ‰é’®
+        retractButton.onClick.AddListener(OnRetractButtonClicked);//æ”¶èµ·èµ„æºé¢æ¿æŒ‰é’®
+        expandButton.onClick.AddListener(OnExpandButtonClicked);//å±•å¼€èµ„æºé¢æ¿æŒ‰é’®
+        showConstructionMenuButton.onClick.AddListener(OnShowConstructionMenuButtonClicked);//å»ºç­‘èœå•æŒ‰é’®
 
 
     }
     //****************************************************************
-    //gameoverÏà¹ØÊôĞÔ
-    [Header("gameover")]//ÓÎÏ·½áÊø
-    [SerializeField] private GameObject gameover; //ÕûÌå
-    [SerializeField] private Image gameoverImg;//gameoverÍ¼Æ¬
-    [SerializeField] private Button exitButton;//ÍË³ö
-    [SerializeField] private Button titleButton;//·µ»Ø±êÌâ
-    //gameoverÏà¹Ø·½·¨
-    public void ShowGameOverScreen()//ÓÎÏ·½áÊøÊ±£¬µ÷ÓÃ¸Ã·½·¨
+    //gameoverç›¸å…³å±æ€§
+    [Header("gameover")]//æ¸¸æˆç»“æŸ
+    [SerializeField] private GameObject gameover; //æ•´ä½“
+    [SerializeField] private Image gameoverImg;//gameoverå›¾ç‰‡
+    [SerializeField] private Button exitButton;//é€€å‡º
+    [SerializeField] private Button titleButton;//è¿”å›æ ‡é¢˜
+    //gameoverç›¸å…³æ–¹æ³•
+    public void ShowGameOverScreen()//æ¸¸æˆç»“æŸæ—¶ï¼Œè°ƒç”¨è¯¥æ–¹æ³•
     {
         gameover.SetActive(true);
         titleButton.onClick.AddListener(OnTitleButtonClick);
         exitButton.onClick.AddListener(OnExitButtomClick);
     }
-    void OnExitButtomClick()//ÍË³ö¼ü
+    void OnExitButtomClick()//é€€å‡ºé”®
     {
         Application.Quit();
     }
-    void OnTitleButtonClick()//·µ»Ø±êÌâ¼ü
+    void OnTitleButtonClick()//è¿”å›æ ‡é¢˜é”®
     {
-        SceneManager.LoadScene(2);//¸ù¾İÊµ¼ÊĞŞ¸Ä£º·µ»Ø±êÌâ
+        SceneManager.LoadScene(2);//æ ¹æ®å®é™…ä¿®æ”¹ï¼šè¿”å›æ ‡é¢˜
     }
 
 
 
     //****************************************************************
-    //introductionÏà¹ØÊôĞÔ
-    [Header("introduction")]//ĞÂÊÖ½Ì³Ì
-    [SerializeField] private GameObject introduction;//ÕûÌå
-    [SerializeField] private Image currentImage;// UIÉÏµÄImage×é¼ş  
-    [SerializeField] private Sprite[] images;// ËùÓĞÒªÕ¹Ê¾µÄÍ¼Æ¬Êı×é  
-    [SerializeField] private Button leftPage; // ×ó·­°´Å¥  
-    [SerializeField] private Button rightPage;// ÓÒ·­°´Å¥
-    [SerializeField] private Button closeIntroduction;//¹Ø±Õ°´Å¥
+    //introductionç›¸å…³å±æ€§
+    [Header("introduction")]//æ–°æ‰‹æ•™ç¨‹
+    [SerializeField] private GameObject introduction;//æ•´ä½“
+    [SerializeField] private Image currentImage;// UIä¸Šçš„Imageç»„ä»¶  
+    [SerializeField] private Sprite[] images;// æ‰€æœ‰è¦å±•ç¤ºçš„å›¾ç‰‡æ•°ç»„  
+    [SerializeField] private Button leftPage; // å·¦ç¿»æŒ‰é’®  
+    [SerializeField] private Button rightPage;// å³ç¿»æŒ‰é’®
+    [SerializeField] private Button closeIntroduction;//å…³é—­æŒ‰é’®
     private int currentIndex = 0;
 
-    //introductionÏà¹Ø·½·¨
-    void ShowIntroduction()//ĞèÒª³öÏÖĞÂÊÖ½Ì³ÌÊ±ºòµ÷ÓÃ¸Ã·½·¨
+    //introductionç›¸å…³æ–¹æ³•
+    void ShowIntroduction()//éœ€è¦å‡ºç°æ–°æ‰‹æ•™ç¨‹æ—¶å€™è°ƒç”¨è¯¥æ–¹æ³•
     {
         introduction.SetActive(true);
         leftPage.onClick.AddListener(OnLeftButtonClicked);
@@ -120,7 +120,7 @@ public class UiManager : MonoBehaviour
     }
     void UpdateImage()
     {
-        // ¸üĞÂUIÉÏµÄÍ¼Æ¬ÏÔÊ¾  
+        // æ›´æ–°UIä¸Šçš„å›¾ç‰‡æ˜¾ç¤º  
         if (currentImage != null && images.Length > 0)
         {
             currentImage.sprite = images[currentIndex];
@@ -129,15 +129,15 @@ public class UiManager : MonoBehaviour
 
 
     //***************************************************************
-    //pauseGameÏà¹ØÊôĞÔ
-    [Header("pauseGame")]//ÔİÍ£ÓÎÏ·
-    [SerializeField] private GameObject pauseGame;//ÕûÌå
-    [SerializeField] private Button continueButton; //¼ÌĞø°´Å¥  
-    [SerializeField] private Button titleButton2;//·µ»Ø±êÌâ°´Å¥
-    [SerializeField] private Button exitButton2;//¹Ø±Õ°´Å¥
-    [SerializeField] private Button pauseButton;//ÔİÍ£°´Å¥
+    //pauseGameç›¸å…³å±æ€§
+    [Header("pauseGame")]//æš‚åœæ¸¸æˆ
+    [SerializeField] private GameObject pauseGame;//æ•´ä½“
+    [SerializeField] private Button continueButton; //ç»§ç»­æŒ‰é’®  
+    [SerializeField] private Button titleButton2;//è¿”å›æ ‡é¢˜æŒ‰é’®
+    [SerializeField] private Button exitButton2;//å…³é—­æŒ‰é’®
+    [SerializeField] private Button pauseButton;//æš‚åœæŒ‰é’®
     [SerializeField] private BoolVariable isPause;
-    //pauseGameÏà¹Ø·½·¨
+    //pauseGameç›¸å…³æ–¹æ³•
     void PauseGame()
     {
         pauseGame.SetActive(true);
@@ -162,9 +162,9 @@ public class UiManager : MonoBehaviour
 
 
     //**************************************************************
-    //ShowConstructionMenuÏà¹ØÊôĞÔ
-    [Header("showConstructionMenu")]//Ëş½¨Ôì²Ëµ¥
-    [SerializeField] private GameObject showConstructionMenu;//ÕûÌå
+    //ShowConstructionMenuç›¸å…³å±æ€§
+    [Header("showConstructionMenu")]//å¡”å»ºé€ èœå•
+    [SerializeField] private GameObject showConstructionMenu;//æ•´ä½“
     [SerializeField] private Button closeConstructionMenu;
     [SerializeField] private Button tower1;
     [SerializeField] private Button tower2;
@@ -180,20 +180,20 @@ public class UiManager : MonoBehaviour
     
     // tower attributes
     [SerializeField] private TowerAttributes tower1Attributes;
-    //ShowConstructionMenuÏà¹Ø·½·¨
+    //ShowConstructionMenuç›¸å…³æ–¹æ³•
     void ShowConstructionMenu()
     {
         showConstructionMenu.SetActive(true);
-        tower1.onClick.AddListener(OnTower1Clicked);
-        tower2.onClick.AddListener(OnTower2Clicked);
-        tower3.onClick.AddListener(OnTower3Clicked);
-        tower4.onClick.AddListener(OnTower4Clicked);
-        tower5.onClick.AddListener(OnTower5Clicked);
-        tower6.onClick.AddListener(OnTower6Clicked);
-        tower7.onClick.AddListener(OnTower7Clicked);
-        tower8.onClick.AddListener(OnTower8Clicked);
-        tower9.onClick.AddListener(OnTower9Clicked);
-        tower10.onClick.AddListener(OnTower10Clicked);
+        // tower1.onClick.AddListener(OnTower1Clicked);
+        // tower2.onClick.AddListener(OnTower2Clicked);
+        // tower3.onClick.AddListener(OnTower3Clicked);
+        // tower4.onClick.AddListener(OnTower4Clicked);
+        // tower5.onClick.AddListener(OnTower5Clicked);
+        // tower6.onClick.AddListener(OnTower6Clicked);
+        // tower7.onClick.AddListener(OnTower7Clicked);
+        // tower8.onClick.AddListener(OnTower8Clicked);
+        // tower9.onClick.AddListener(OnTower9Clicked);
+        // tower10.onClick.AddListener(OnTower10Clicked);
         closeConstructionMenu.onClick.AddListener(OnCloseConstructionMenuClicked);
 
 
@@ -203,60 +203,60 @@ public class UiManager : MonoBehaviour
     {
         showConstructionMenu.gameObject.SetActive(false);
         showConstructionMenuButton.gameObject.SetActive(true);
-    }//¹Ø±Õ
+    }//å…³é—­
     void OnShowConstructionMenuButtonClicked()
     {
         showConstructionMenuButton.gameObject.SetActive(false);
         ShowConstructionMenu();
     }
-    //Ô¤ÁôÁË10ÖÖËşµÄ½Ó¿Ú
-    void OnTower1Clicked()
-    {
-        _inputManager.StartDraggingTower(tower1Attributes);
-    }
-    void OnTower2Clicked()
-    {
-
-    }
-    void OnTower3Clicked()
-    {
-
-    }
-    void OnTower4Clicked()
-    {
-
-    }
-    void OnTower5Clicked()
-    {
-
-    }
-    void OnTower6Clicked()
-    {
-
-    }
-    void OnTower7Clicked()
-    {
-
-    }
-    void OnTower8Clicked()
-    {
-
-    }
-    void OnTower9Clicked()
-    {
-
-    }
-    void OnTower10Clicked()
-    {
-
-    }  
+    //é¢„ç•™äº†10ç§å¡”çš„æ¥å£
+    // public void OnTower1Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }
+    // void OnTower2Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }
+    // void OnTower3Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }
+    // void OnTower4Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }
+    // void OnTower5Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }
+    // void OnTower6Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes); 
+    // }
+    // void OnTower7Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }
+    // void OnTower8Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }
+    // void OnTower9Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }
+    // void OnTower10Clicked()
+    // {
+    //     _inputManager.PrepareToDragTower(tower1Attributes);
+    // }  
 
 
     //**************************************************************
-    //ShowTowerMenuÏà¹ØÊôĞÔ
-    [Header("ShowTowerMenu")]//Ëş¸ü¸Ä²Ëµ¥
-    [SerializeField] private GameObject showTowerMenu; //ÕûÌå
-    [SerializeField] private RectTransform showTowerMenuPanel;//²Ëµ¥Ãæ°å
+    //ShowTowerMenuç›¸å…³å±æ€§
+    [Header("ShowTowerMenu")]//å¡”æ›´æ”¹èœå•
+    [SerializeField] private GameObject showTowerMenu; //æ•´ä½“
+    [SerializeField] private RectTransform showTowerMenuPanel;//èœå•é¢æ¿
     [SerializeField] private Button closeTowerMenu;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private Button clockwiseButton;
@@ -285,7 +285,7 @@ public class UiManager : MonoBehaviour
     }
     void OnCloseTowerMenuClicked()
     {
-        showTowerMenu.SetActive(false);//¹Ø±ÕÃæ°å
+        showTowerMenu.SetActive(false);//å…³é—­é¢æ¿
         selectedTower = null;
     }
     void OnUpgradeButtonClicked()
@@ -299,14 +299,14 @@ public class UiManager : MonoBehaviour
     }
     void OnClockwiseButtonClicked()
     {
-        //Ë³Ê±ÕëĞı×ª
+        //é¡ºæ—¶é’ˆæ—‹è½¬
         if (selectedTower != null)
             _towerManager.RotateTower(selectedTower, true);
             
     }
     void OnAnticlockwiseButtonClicked() 
     {
-        //ÄæÊ±ÕëĞı×ªµÄ½Ó¿Ú
+        //é€†æ—¶é’ˆæ—‹è½¬çš„æ¥å£
         if (selectedTower != null)
             _towerManager.RotateTower(selectedTower, false);
     }
@@ -320,27 +320,27 @@ public class UiManager : MonoBehaviour
 
 
     //**************************************************************
-    //UpdateResourcesÏà¹ØÊôĞÔ
-    [Header("UpdateResources")]//×ÊÔ´ĞÅÏ¢¸üĞÂ
-    [SerializeField] private GameObject updateResources; //ÕûÌå
+    //UpdateResourcesç›¸å…³å±æ€§
+    [Header("UpdateResources")]//èµ„æºä¿¡æ¯æ›´æ–°
+    [SerializeField] private GameObject updateResources; //æ•´ä½“
     [SerializeField] private TextMeshProUGUI[] resources;
-    [SerializeField] private Button retractButton;//ÊÕÆğ¡¢
-    [SerializeField] private Button expandButton;//Õ¹¿ª
-    void OnRetractButtonClicked()//ÊÕÆğ
+    [SerializeField] private Button retractButton;//æ”¶èµ·ã€
+    [SerializeField] private Button expandButton;//å±•å¼€
+    void OnRetractButtonClicked()//æ”¶èµ·
     {
         updateResources.SetActive(false);
         expandButton.gameObject.SetActive(true);
     }
-    void OnExpandButtonClicked()//Õ¹¿ª
+    void OnExpandButtonClicked()//å±•å¼€
     {
         updateResources.SetActive(true);
         expandButton.gameObject.SetActive(false);
     }
 
 
-    //²âÊÔÓÃ
+    //æµ‹è¯•ç”¨
     int Sinum=10000;
-    void UpdateResources()//Ã¿Ö¡¸üĞÂ
+    void UpdateResources()//æ¯å¸§æ›´æ–°
     {
         resources[0].text = "Si" + " " + Sinum;
         //resources[1].text = "" + " " + ;
@@ -349,7 +349,7 @@ public class UiManager : MonoBehaviour
         //resources[1].text = "" + " " + ;
         //resources[1].text = "" + " " + ;
 
-        //ÒÔÉÏÔÚÊµ¼ÊÓ¦ÓÃÖĞ´«µİÊıÖµ
+        //ä»¥ä¸Šåœ¨å®é™…åº”ç”¨ä¸­ä¼ é€’æ•°å€¼
 
     }
     
@@ -359,13 +359,13 @@ public class UiManager : MonoBehaviour
 //     selectedTower = tower;
 //     // if (testobject != null && Camera.main != null)
 //     // {
-//     //     // »ñÈ¡ÓÎÏ·¶ÔÏóµÄÊÀ½ç×ø±ê  
-//     //     Vector3 worldPosition = testobject.position;//testobject½«Ìæ»»Îªµã»÷Ê±Ñ¡ÖĞµÄÎïÌå
+//     //     // è·å–æ¸¸æˆå¯¹è±¡çš„ä¸–ç•Œåæ ‡  
+//     //     Vector3 worldPosition = testobject.position;//testobjectå°†æ›¿æ¢ä¸ºç‚¹å‡»æ—¶é€‰ä¸­çš„ç‰©ä½“
 //     //
-//     //     // ½«ÊÀ½ç×ø±ê×ª»»ÎªÆÁÄ»×ø±ê  
+//     //     // å°†ä¸–ç•Œåæ ‡è½¬æ¢ä¸ºå±å¹•åæ ‡  
 //     //     Vector3 screenPosition = mainCamera.WorldToScreenPoint(worldPosition);
 //     //
-//     //     // ÓÉÓÚUIÔªËØÍ¨³£Ö»¹ØĞÄxºÍy×ø±ê£¬ÎÒÃÇ¿ÉÒÔ´´½¨Ò»¸öVector2  
+//     //     // ç”±äºUIå…ƒç´ é€šå¸¸åªå…³å¿ƒxå’Œyåæ ‡ï¼Œæˆ‘ä»¬å¯ä»¥åˆ›å»ºä¸€ä¸ªVector2  
 //     //     Vector2 screenPosition2D = new Vector2(screenPosition.x, screenPosition.y);
 //     //     RectTransformUtility.ScreenPointToLocalPointInRectangle(showTowerMenuPanel, screenPosition, mainCamera, out localPoint);
 //     //         
