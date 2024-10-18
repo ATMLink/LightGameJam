@@ -68,7 +68,6 @@ public class TilemapManager : MonoBehaviour
                 int midx = line.Length/2;   
                 for (int x = 0; x < line.Length; x++) { 
                     char c = line[x];
-                    Debug.Log(tiles[(int)c - 48]);
                     if ((tiles[(int)c - 48] != null && (int)c - 48 == 0) || (tiles[(int)c-48] != null && prefabs[(int)c - 48] != null))
                     {
                         tile = ScriptableObject.CreateInstance<Tile>();
