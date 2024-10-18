@@ -45,6 +45,8 @@ public class TowerManager : MonoBehaviour
 
     public Tower GetTowerAt(Vector3 position)
     {
+        if (position.z != 0)
+            return null;
         return towers.Find(tower => tower.transform.position == position);
     }
 }

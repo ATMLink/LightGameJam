@@ -71,7 +71,7 @@ public class InputManager : MonoBehaviour
         renderer.color = new Color(1, 1, 1, 0.5f); // 半透明显示
     }
     
-    public Vector3? GetPositionFromInput()
+    public Vector3 GetPositionFromInput()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mouseWorldPos2D = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
@@ -88,7 +88,7 @@ public class InputManager : MonoBehaviour
             }
         }
 
-        return null; // 点击的区域无效
+        return new Vector3(0,0,-1); // 点击的区域无效
     }
     
 }

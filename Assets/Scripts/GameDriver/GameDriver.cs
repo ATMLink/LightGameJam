@@ -87,7 +87,7 @@ public class GameDriver : MonoBehaviour
     public void EndGame()
     {
         gameIsRunning = false;
-        //_uiManager.ShowGameOverScreen();
+        _uiManager.ShowGameOverScreen();
         Debug.Log("game over");
     }
 

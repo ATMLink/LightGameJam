@@ -18,6 +18,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Canvas uiCanvas; // 引用Canvas，通常用于设置渲染模式或层级  
     [SerializeField] private ConstructManager _constructManager;
     [SerializeField] private InputManager _inputManager;
+    [SerializeField] private TowerManager _towerManager;
 
     // Start is called before the first frame update
     void Start()//测试用，后面删除
@@ -60,7 +61,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button exitButton;//退出
     [SerializeField] private Button titleButton;//返回标题
     //gameover相关方法
-    void ShowGameOverScreen()//游戏结束时，调用该方法
+    public void ShowGameOverScreen()//游戏结束时，调用该方法
     {
         gameover.SetActive(true);
         titleButton.onClick.AddListener(OnTitleButtonClick);
@@ -137,20 +138,20 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button pauseButton;//暂停按钮
     [SerializeField] private BoolVariable isPause;
     //pauseGame相关方法
-    public void PauseGame()
+    void PauseGame()
     {
         pauseGame.SetActive(true);
         continueButton.onClick.AddListener(OnContinueButtonClicked);
         titleButton2.onClick.AddListener(OnTitleButtonClick);
         exitButton2.onClick.AddListener(OnExitButtomClick);
     }
-    public void OnContinueButtonClicked()
+    void OnContinueButtonClicked()
     {
         isPause.SetValue(false);
         pauseGame.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(true);
     }
-    public void OnPauseButtonClicked()
+    void OnPauseButtonClicked()
     {
         PauseGame();
         isPause.SetValue(true);
@@ -318,7 +319,7 @@ public class UiManager : MonoBehaviour
     }
     void OnDeleteButtonClicked()
     {
-        //删除塔的接口
+        _towerManager.RemoveTower(_towerManager.GetTowerAt(_inputManager.GetPositionFromInput()));
     }
 
 
