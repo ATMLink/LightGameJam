@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField] private CameraController cameraController;
     [SerializeField] private ConstructManager constructManager;
+    [SerializeField] private TowerManager towerManager;
+    [SerializeField] private UiManager uiManager;
 
     private bool isDraggingTower = false;
     private TowerAttributes currentDraggedTower;
@@ -46,14 +48,17 @@ public class InputManager : MonoBehaviour
                 }
             }
         }
-
-        // 右键点击弹出建筑菜单（可选的功能）
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3? position = GetPositionFromInput();
             if (position.HasValue)
             {
-                constructManager.ShowConstructionMenu(position.Value);
+                Tower clickedTower = towerManager.GetTowerAt(position.Value);
+                if (clickedTower != null)
+                {
+                    // 点击到塔，显示 UI 菜单
+                    //uiManager.ShowTowerOptionsUI(clickedTower, position.Value);
+                }
             }
         }
     }
@@ -71,7 +76,7 @@ public class InputManager : MonoBehaviour
         renderer.color = new Color(1, 1, 1, 0.5f); // 半透明显示
     }
     
-    public Vector3 GetPositionFromInput()
+    public Vector3? GetPositionFromInput()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mouseWorldPos2D = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
@@ -88,7 +93,7 @@ public class InputManager : MonoBehaviour
             }
         }
 
-        return new Vector3(0,0,-1); // 点击的区域无效
+        return null; // 点击的区域无效
     }
     
 }

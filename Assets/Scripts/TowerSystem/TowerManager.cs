@@ -33,6 +33,10 @@ public class TowerManager : MonoBehaviour
         }
     }
 
+    public void UpgradeTower(Tower tower)
+    {
+        tower.Upgrade();
+    }
     public void RotateTower(Tower tower)
     {
         //tower.transform.Rotate();
@@ -43,10 +47,10 @@ public class TowerManager : MonoBehaviour
         towers.Remove(tower);
     }
 
-    public Tower GetTowerAt(Vector3 position)
+    public Tower GetTowerAt(Vector3? position)
     {
-        if (position.z != 0)
+        if (!position.HasValue)
             return null;
-        return towers.Find(tower => tower.transform.position == position);
+        return towers.Find(tower => tower.transform.position == position.Value);
     }
 }

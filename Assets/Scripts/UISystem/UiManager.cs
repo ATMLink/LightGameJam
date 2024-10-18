@@ -23,11 +23,11 @@ public class UiManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()//测试用，后面删除
     {
-        UiInitialization();
-        //ShowGameOverScreen();//测试用
-        ShowIntroduction();
-        //ShowConstructionMenu();
-        ShowTowerMenu();
+        // UiInitialization();
+        // //ShowGameOverScreen();//测试用
+        // ShowIntroduction();
+        // //ShowConstructionMenu();
+        // ShowTowerMenu();
 
     }
 
@@ -265,36 +265,15 @@ public class UiManager : MonoBehaviour
 
     Vector2 localPoint;
 
+    private Tower selectedTower;
 
-    void ShowTowerMenu()
+
+    void ShowTowerMenu(Tower tower, Vector3 position)
     {
-        if (testobject != null && Camera.main != null)
-        {
-            // 获取游戏对象的世界坐标  
-            Vector3 worldPosition = testobject.position;//testobject将替换为点击时选中的物体
-
-            // 将世界坐标转换为屏幕坐标  
-            Vector3 screenPosition = mainCamera.WorldToScreenPoint(worldPosition);
-
-            // 由于UI元素通常只关心x和y坐标，我们可以创建一个Vector2  
-            Vector2 screenPosition2D = new Vector2(screenPosition.x, screenPosition.y);
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(showTowerMenuPanel, screenPosition, mainCamera, out localPoint);
-                
-
-               
-            showTowerMenuPanel.anchoredPosition=screenPosition2D;
-
-            
-        }
-        else
-        {
-            Debug.LogWarning("Target object or main camera is missing.");
-        }
-
-
-
-
+        selectedTower = tower;
+        
         showTowerMenu.SetActive(true);
+        showTowerMenu.transform.position = position;
         closeTowerMenu.onClick.AddListener(OnCloseTowerMenuClicked);
         upgradeButton.onClick.AddListener(OnUpgradeButtonClicked);
         clockwiseButton.onClick.AddListener(OnClockwiseButtonClicked);
@@ -307,7 +286,12 @@ public class UiManager : MonoBehaviour
     }
     void OnUpgradeButtonClicked()
     {
-        //升级的接口
+        if (selectedTower != null)
+        {
+            _towerManager.UpgradeTower(selectedTower);
+            showTowerMenu.SetActive(false);
+            selectedTower = null;
+        }
     }
     void OnClockwiseButtonClicked()
     {
@@ -319,7 +303,12 @@ public class UiManager : MonoBehaviour
     }
     void OnDeleteButtonClicked()
     {
-        _towerManager.RemoveTower(_towerManager.GetTowerAt(_inputManager.GetPositionFromInput()));
+        if (selectedTower != null)
+        {
+            _towerManager.RemoveTower(selectedTower);
+            showTowerMenu.SetActive(false);
+            selectedTower = null;
+        }
     }
 
 
@@ -360,3 +349,39 @@ public class UiManager : MonoBehaviour
     }
     
 }
+// void ShowTowerMenu(Tower tower, Vector3 position)
+// {
+//     selectedTower = tower;
+//     // if (testobject != null && Camera.main != null)
+//     // {
+//     //     // 获取游戏对象的世界坐标  
+//     //     Vector3 worldPosition = testobject.position;//testobject将替换为点击时选中的物体
+//     //
+//     //     // 将世界坐标转换为屏幕坐标  
+//     //     Vector3 screenPosition = mainCamera.WorldToScreenPoint(worldPosition);
+//     //
+//     //     // 由于UI元素通常只关心x和y坐标，我们可以创建一个Vector2  
+//     //     Vector2 screenPosition2D = new Vector2(screenPosition.x, screenPosition.y);
+//     //     RectTransformUtility.ScreenPointToLocalPointInRectangle(showTowerMenuPanel, screenPosition, mainCamera, out localPoint);
+//     //         
+//     //
+//     //        
+//     //     showTowerMenuPanel.anchoredPosition=screenPosition2D;
+//     //
+//     //     
+//     // }
+//     // else
+//     // {
+//     //     Debug.LogWarning("Target object or main camera is missing.");
+//     // }
+//         
+//
+//
+//
+//     showTowerMenu.SetActive(true);
+//     closeTowerMenu.onClick.AddListener(OnCloseTowerMenuClicked);
+//     upgradeButton.onClick.AddListener(OnUpgradeButtonClicked);
+//     clockwiseButton.onClick.AddListener(OnClockwiseButtonClicked);
+//     anticlockwiseButton.onClick.AddListener(OnAnticlockwiseButtonClicked);
+//     deleteButton.onClick.AddListener(OnDeleteButtonClicked);
+// }
