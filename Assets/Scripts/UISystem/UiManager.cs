@@ -32,12 +32,12 @@ public class UiManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()//后面删除
+    public void UpdateState()//后面删除
     {
         UpdateResources();
     }
 
-    void UiInitialization()//UI初始化
+    public void Initialize()//UI初始化
     {
         introduction.SetActive(false);
         gameover.SetActive(false);
@@ -177,6 +177,9 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button tower9;
     [SerializeField] private Button tower10;
     [SerializeField] private Button showConstructionMenuButton;
+    
+    // tower attributes
+    [SerializeField] private TowerAttributes tower1Attribute;
     //ShowConstructionMenu相关方法
     void ShowConstructionMenu()
     {
@@ -209,7 +212,7 @@ public class UiManager : MonoBehaviour
     //预留了10种塔的接口
     void OnTower1Clicked()
     {
-
+        _inputManager.StartDraggingTower(tower1Attribute);
     }
     void OnTower2Clicked()
     {
@@ -268,7 +271,7 @@ public class UiManager : MonoBehaviour
     private Tower selectedTower;
 
 
-    void ShowTowerMenu(Tower tower, Vector3 position)
+    public void ShowTowerMenu(Tower tower, Vector3 position)
     {
         selectedTower = tower;
         
@@ -283,6 +286,7 @@ public class UiManager : MonoBehaviour
     void OnCloseTowerMenuClicked()
     {
         showTowerMenu.SetActive(false);//关闭面板
+        selectedTower = null;
     }
     void OnUpgradeButtonClicked()
     {
@@ -295,20 +299,21 @@ public class UiManager : MonoBehaviour
     }
     void OnClockwiseButtonClicked()
     {
-        //顺时针旋转的接口
+        //顺时针旋转
+        if (selectedTower != null)
+            _towerManager.RotateTower(selectedTower, true);
+            
     }
     void OnAnticlockwiseButtonClicked() 
     {
         //逆时针旋转的接口
+        if (selectedTower != null)
+            _towerManager.RotateTower(selectedTower, false);
     }
     void OnDeleteButtonClicked()
     {
         if (selectedTower != null)
-        {
             _towerManager.RemoveTower(selectedTower);
-            showTowerMenu.SetActive(false);
-            selectedTower = null;
-        }
     }
 
 

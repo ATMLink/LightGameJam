@@ -57,7 +57,7 @@ public class InputManager : MonoBehaviour
                 if (clickedTower != null)
                 {
                     // 点击到塔，显示 UI 菜单
-                    //uiManager.ShowTowerOptionsUI(clickedTower, position.Value);
+                    uiManager.ShowTowerMenu(clickedTower, position.Value);
                 }
             }
         }

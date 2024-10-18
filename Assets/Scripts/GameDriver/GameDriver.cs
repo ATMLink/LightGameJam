@@ -34,6 +34,7 @@ public class GameDriver : MonoBehaviour
         {
             _inputManager.UpdateState();
             _cameraController.UpdateState();
+            _uiManager.UpdateState();
         }
     }
 
@@ -52,6 +53,7 @@ public class GameDriver : MonoBehaviour
         _cameraController.Initialize();
         _tilemapManager.Initialize();
         _towerManager.Initialize();
+        _uiManager.Initialize();
     }
 
     private void UpdateGameTime()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class TowerManager : MonoBehaviour
 {
@@ -37,10 +38,17 @@ public class TowerManager : MonoBehaviour
     {
         tower.Upgrade();
     }
-    public void RotateTower(Tower tower)
+    public void RotateTower(Tower tower, bool clockwise = true)
     {
-        //tower.transform.Rotate();
+        if (tower != null)
+        {
+            float angle = clockwise ? 90f : -90f;
+            Vector3 targetRotation = tower.transform.eulerAngles + new Vector3(0, 0, angle);
+
+            tower.transform.DORotate(targetRotation, 0.5f).SetEase(Ease.OutQuad);
+        }
     }
+
     public void RemoveTower(Tower tower)
     {
         towerPool.ReturnTower(tower);
