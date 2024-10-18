@@ -74,7 +74,7 @@ public class GameDriver : MonoBehaviour
 
     public void ResumeGame()
     {
-        if (!isPaused)
+        if (!isPaused.Value)
         {
             Time.timeScale = gameSpeed;
             Debug.Log("Game resumed");

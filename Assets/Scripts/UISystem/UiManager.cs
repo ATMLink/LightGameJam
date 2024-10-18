@@ -136,7 +136,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button titleButton2;//返回标题按钮
     [SerializeField] private Button exitButton2;//关闭按钮
     [SerializeField] private Button pauseButton;//暂停按钮
-    [SerializeField] private BoolVariable isPause;
+    [SerializeField] private BoolVariable isPaused;
     //pauseGame相关方法
     void PauseGame()
     {
@@ -147,14 +147,14 @@ public class UiManager : MonoBehaviour
     }
     void OnContinueButtonClicked()
     {
-        isPause.SetValue(false);
+        isPaused.SetValue(false);
         pauseGame.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(true);
     }
     void OnPauseButtonClicked()
     {
         PauseGame();
-        isPause.SetValue(true);
+        isPaused.SetValue(true);
         pauseButton.gameObject.SetActive(false);
     }
 

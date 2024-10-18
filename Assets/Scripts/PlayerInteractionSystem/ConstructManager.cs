@@ -15,6 +15,7 @@ public class ConstructManager : MonoBehaviour
 
     public void PlaceTower(Vector3 position)
     {
+        Debug.Log($"Placing tower at position: {position}");
         if (selectedTowerAttributes != null)
         {
             if (CanPlaceTower(position)) // 检查是否可以放置塔

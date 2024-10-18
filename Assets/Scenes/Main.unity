@@ -809,7 +809,7 @@ MonoBehaviour:
   titleButton2: {fileID: 441936466}
   exitButton2: {fileID: 458671261}
   pauseButton: {fileID: 1861878037}
-  isPause: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
+  isPaused: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
   showConstructionMenu: {fileID: 110017498}
   closeConstructionMenu: {fileID: 940794147}
   tower1: {fileID: 0}
@@ -2775,7 +2775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 708461170}
   - component: {fileID: 708461169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2974,7 +2974,7 @@ GameObject:
   - component: {fileID: 740886561}
   - component: {fileID: 740886560}
   - component: {fileID: 740886559}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7258,6 +7258,9 @@ MonoBehaviour:
   constructManager: {fileID: 913605974}
   towerManager: {fileID: 945080038}
   uiManager: {fileID: 180441133}
+  tilemapLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2015541861
 GameObject:
   m_ObjectHideFlags: 0
@@ -7663,10 +7666,10 @@ SceneRoots:
   - {fileID: 1912484485}
   - {fileID: 619394802}
   - {fileID: 1168804922}
+  - {fileID: 708461170}
   - {fileID: 1510343054}
   - {fileID: 1424931873}
   - {fileID: 1202425555}
-  - {fileID: 708461170}
-  - {fileID: 221854544}
   - {fileID: 369856519}
   - {fileID: 802670699}
+  - {fileID: 221854544}
