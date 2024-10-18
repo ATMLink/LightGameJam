@@ -48,4 +48,9 @@ public class ConstructManager : MonoBehaviour
 
         return true; // 可以放置
     }
+
+    public void ShowConstructionMenu(Vector3 position)
+    {
+        throw new System.NotImplementedException();
+    }
 }

@@ -33,6 +33,10 @@ public class TowerManager : MonoBehaviour
         }
     }
 
+    public void RotateTower(Tower tower)
+    {
+        //tower.transform.Rotate();
+    }
     public void RemoveTower(Tower tower)
     {
         towerPool.ReturnTower(tower);

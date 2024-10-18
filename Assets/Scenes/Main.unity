@@ -1409,6 +1409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCanvas: {fileID: 1215098550}
+  _constructManager: {fileID: 0}
+  _inputManager: {fileID: 0}
   gameover: {fileID: 2015541861}
   gameoverImg: {fileID: 728571999}
   exitButton: {fileID: 944834024}
@@ -1432,6 +1434,7 @@ MonoBehaviour:
   titleButton2: {fileID: 441936466}
   exitButton2: {fileID: 458671261}
   pauseButton: {fileID: 1861878037}
+  isPause: {fileID: 0}
   showConstructionMenu: {fileID: 110017498}
   closeConstructionMenu: {fileID: 940794147}
   tower1: {fileID: 783167581}
@@ -7641,6 +7644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1168804922}
   - component: {fileID: 1168804921}
+  - component: {fileID: 1168804923}
   m_Layer: 0
   m_Name: GameDriver
   m_TagString: Untagged
@@ -7666,6 +7670,7 @@ MonoBehaviour:
   _towerManager: {fileID: 945080038}
   _uiManager: {fileID: 180441133}
   _enemyManager: {fileID: 659915092}
+  isPaused: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
 --- !u!4 &1168804922
 Transform:
   m_ObjectHideFlags: 0
@@ -7681,6 +7686,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168804923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168804920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0908bb8ec0098fc42b1deeca4651bca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 273be6add6dd0e048b1d4dfa8d89c1e1, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1168804921}
+        m_TargetAssemblyTypeName: GameDriver, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1168804921}
+        m_TargetAssemblyTypeName: GameDriver, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1175248834
 GameObject:
   m_ObjectHideFlags: 0
@@ -12483,6 +12528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCanvas: {fileID: 142993498}
+  _constructManager: {fileID: 0}
+  _inputManager: {fileID: 0}
   gameover: {fileID: 1932260261}
   gameoverImg: {fileID: 288838886}
   exitButton: {fileID: 2083214908}
@@ -12506,6 +12553,7 @@ MonoBehaviour:
   titleButton2: {fileID: 1126626561}
   exitButton2: {fileID: 1668601250}
   pauseButton: {fileID: 703240959}
+  isPause: {fileID: 0}
   showConstructionMenu: {fileID: 114034794}
   closeConstructionMenu: {fileID: 871828455}
   tower1: {fileID: 1175248839}

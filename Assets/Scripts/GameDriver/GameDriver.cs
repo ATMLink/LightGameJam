@@ -15,8 +15,8 @@ public class GameDriver : MonoBehaviour
     [SerializeField] private EnemyManager _enemyManager;
     
     // 游戏状态变量
+    [SerializeField] private BoolVariable isPaused;
     private bool gameIsRunning = true;
-    private bool isPaused = false;
     private float gameTime = 0f;
     private float gameSpeed = 1f;
     private float gameTwiceFastSpeed = 2f;
@@ -61,21 +61,25 @@ public class GameDriver : MonoBehaviour
 
     public void PauseGame()
     {
-        isPaused = true;
-        Time.timeScale = 0f;
-        Debug.Log("game paused");
+        if (isPaused.Value)
+        {
+            Time.timeScale = 0f;
+            Debug.Log("game paused");
+        }
     }
 
     public void ResumeGame()
     {
-        isPaused = false;
-        Time.timeScale = gameSpeed;
-        Debug.Log("Game resumed");
+        if (!isPaused)
+        {
+            Time.timeScale = gameSpeed;
+            Debug.Log("Game resumed");
+        }
     }
 
     public void TwiceFastGame()
     {
-        isPaused = false;
+        //isPaused = false;
         Time.timeScale = gameTwiceFastSpeed;
         Debug.Log("Game twice as fast");
     }

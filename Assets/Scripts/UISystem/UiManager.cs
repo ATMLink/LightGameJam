@@ -16,7 +16,8 @@ public class UiManager : MonoBehaviour
 
     // 属性
     [SerializeField] private Canvas uiCanvas; // 引用Canvas，通常用于设置渲染模式或层级  
-
+    [SerializeField] private ConstructManager _constructManager;
+    [SerializeField] private InputManager _inputManager;
 
     // Start is called before the first frame update
     void Start()//测试用，后面删除
@@ -134,26 +135,25 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button titleButton2;//返回标题按钮
     [SerializeField] private Button exitButton2;//关闭按钮
     [SerializeField] private Button pauseButton;//暂停按钮
-    static public bool isPause;
+    [SerializeField] private BoolVariable isPause;
     //pauseGame相关方法
-    void PauseGame()
+    public void PauseGame()
     {
         pauseGame.SetActive(true);
         continueButton.onClick.AddListener(OnContinueButtonClicked);
         titleButton2.onClick.AddListener(OnTitleButtonClick);
         exitButton2.onClick.AddListener(OnExitButtomClick);
-        
     }
-    void OnContinueButtonClicked()
+    public void OnContinueButtonClicked()
     {
-        isPause = false;
+        isPause.SetValue(false);
         pauseGame.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(true);
     }
-    void OnPauseButtonClicked()
+    public void OnPauseButtonClicked()
     {
         PauseGame();
-        isPause = true;
+        isPause.SetValue(true);
         pauseButton.gameObject.SetActive(false);
     }
 

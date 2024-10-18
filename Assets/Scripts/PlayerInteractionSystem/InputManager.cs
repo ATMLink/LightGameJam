@@ -27,34 +27,33 @@ public class InputManager : MonoBehaviour
     {
         if (isDraggingTower)
         {
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mouseWorldPos2D = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
-
-            RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos2D, Vector2.zero);
-
-            if (hit.collider != null)
+            Vector3? position = GetPositionFromInput();
+            if (position.HasValue)
             {
-                Tilemap tilemap = hit.collider.GetComponent<Tilemap>();
-                if (tilemap != null)
+                // 更新预览塔的位置
+                if (towerPreview != null)
                 {
-                    Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPos);
-                    Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cellPosition);
-
-                    // 更新预览塔的位置
-                    if (towerPreview != null)
-                    {
-                        towerPreview.transform.position = cellCenterPos;
-                    }
-
-                    // 放置塔的逻辑
-                    if (Input.GetMouseButtonUp(0))
-                    {
-                        constructManager.PlaceTower(cellCenterPos);
-                        isDraggingTower = false;
-                        currentDraggedTower = null;
-                        Destroy(towerPreview);
-                    }
+                    towerPreview.transform.position = position.Value;
                 }
+
+                // 放置塔的逻辑
+                if (Input.GetMouseButtonUp(0))
+                {
+                    constructManager.PlaceTower(position.Value);
+                    isDraggingTower = false;
+                    currentDraggedTower = null;
+                    Destroy(towerPreview);
+                }
+            }
+        }
+
+        // 右键点击弹出建筑菜单（可选的功能）
+        if (Input.GetMouseButtonDown(1))
+        {
+            Vector3? position = GetPositionFromInput();
+            if (position.HasValue)
+            {
+                constructManager.ShowConstructionMenu(position.Value);
             }
         }
     }
@@ -70,6 +69,26 @@ public class InputManager : MonoBehaviour
         SpriteRenderer renderer = towerPreview.AddComponent<SpriteRenderer>();
         renderer.sprite = towerAttributes.towerSprite; // 设置预览塔的图片
         renderer.color = new Color(1, 1, 1, 0.5f); // 半透明显示
+    }
+    
+    public Vector3? GetPositionFromInput()
+    {
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mouseWorldPos2D = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos2D, Vector2.zero);
+        if (hit.collider != null)
+        {
+            Tilemap tilemap = hit.collider.GetComponent<Tilemap>();
+            if (tilemap != null)
+            {
+                Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPos);
+                Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cellPosition);
+                return cellCenterPos;
+            }
+        }
+
+        return null; // 点击的区域无效
     }
     
 }
