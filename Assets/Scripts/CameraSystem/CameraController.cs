@@ -48,7 +48,7 @@ public class CameraController : MonoBehaviour
         ResetCameraPosition();
     }
 
-    public void HandleCameraMovement()
+    public void HandleCameraMovement()// speed should not be absoluted
     {
         // Logic for dragging the camera with the left mouse button
         if (Input.GetMouseButton(1))
