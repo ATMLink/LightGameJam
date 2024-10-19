@@ -2,3 +2,12 @@
 2;12;enemy_Small*20;enemy_Medium*4
 3;30;enemy_Small*50;enemy_Medium*16
 4;30;enemy_Small*120;enemy_Medium*50
+5;40;enemy_Small*240;enemy_Medium*100
+6;40;enemy_Small*240;enemy_Medium*100
+7;40;enemy_Small*240;enemy_Medium*100
+8;40;enemy_Small*240;enemy_Medium*100
+9;40;enemy_Small*240;enemy_Medium*100
+10;40;enemy_Small*240;enemy_Medium*100
+11;40;enemy_Small*240;enemy_Medium*100
+12;40;enemy_Small*240;enemy_Medium*100
+13;40;enemy_Small*240;enemy_Medium*100
