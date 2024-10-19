@@ -6,10 +6,15 @@ public class TilemapWithEnemy : MonoBehaviour
 {
     public string tileName;
     public Sprite Sprite;
-    public bool canThrough;
+    public bool canLightThrough;
+    public bool canEnemyThrough;
     public bool canConstruct;
-    public Vector3Int tilePosition;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public Vector3 tilePosition;
+    private void Start()
+    {
+        tilePosition = transform.position;
+    }
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag =="Enemy") { }
     }

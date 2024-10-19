@@ -87,6 +87,7 @@ public class MainResourceManagement : MonoBehaviour
             case element.na: elementNumber = naNumber.Value; break;
             case element.li: elementNumber = liNumber.Value;break;
             case element.ca: elementNumber = caNumber.Value; break; 
+            
         }
         return elementNumber;
     }

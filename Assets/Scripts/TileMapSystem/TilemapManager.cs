@@ -54,21 +54,35 @@ public class TilemapManager : MonoBehaviour
         }
         else if (URL != null)
         {
-            FileStream txt = new FileStream(URL, FileMode.Open);
-            tileData = new byte[txt.Length];
-            txt.Read(tileData);
-            txtcontain = System.Text.Encoding.Default.GetString(tileData);
-            txt.Close();
-            string filePath = URL;
-            string[] lines = File.ReadAllLines(filePath);
-            int midy = lines.Length/2;
-            int y = lines.Length-1;
+            TextAsset textAsset = Resources.Load<TextAsset>("tilemaptxt");//这里不要加文件扩展名
+            if (textAsset != null)
+            {
+                string text = textAsset.text;
+                Debug.Log(text);
+            }
+            else
+            {
+                Debug.LogError("Text file not found in Resources!");
+            }
+            //FileStream txt = new FileStream(URL, FileMode.Open);
+            //tileData = new byte[txt.Length];
+            //txt.Read(tileData);
+            //txtcontain = System.Text.Encoding.Default.GetString(tileData);
+            //txt.Close();
+            //string filePath = URL;
+            string[] lines = textAsset.text.Split('\n');
+            int midy = lines.Length / 2;
+            int y = lines.Length - 1;
             foreach (string line in lines)
             {
-                int midx = line.Length/2;   
-                for (int x = 0; x < line.Length; x++) { 
+                Debug.Log(line);
+                int midx = line.Length / 2;
+                for (int x = 0; x < line.Length; x++)
+                {
                     char c = line[x];
-                    if ((tiles[(int)c - 48] != null && (int)c - 48 == 0) || (tiles[(int)c-48] != null && prefabs[(int)c - 48] != null))
+                    if ((int)c - 48 < 0 || (int)c - 48 > 9) continue;
+                    Debug.Log((int)c - 48);
+                    if ((tiles[(int)c - 48] != null && (int)c - 48 == 0) || (tiles[(int)c - 48] != null && prefabs[(int)c - 48] != null))
                     {
                         tile = ScriptableObject.CreateInstance<Tile>();
                         tile.sprite = tiles[(int)c - 48].Sprite;
@@ -77,8 +91,10 @@ public class TilemapManager : MonoBehaviour
                            TilemapWithEnemy temp = Instantiate(prefabs[(int)c - 48],new Vector3(x - midx + 0.5f, y - midy + 0.5f,0),Quaternion.identity,dad.transform).GetComponent<TilemapWithEnemy>();
                             temp.Sprite = tiles[(int)c - 48].Sprite;
                             temp.tileName = tiles[(int)c - 48].tileName;
+                            temp.gameObject.name = tiles[(int)c - 48].tileName;
                             temp.canConstruct = tiles[(int)c - 48].canConstruct;
-                            temp.canThrough = tiles[(int)c - 48].canThrough;
+                            temp.canLightThrough = tiles[(int)c - 48].canLightThrough;
+                            temp.canEnemyThrough = tiles[(int)c - 48].canEnemyThrough;
                         }
                     }
                 }

@@ -6,7 +6,8 @@ using UnityEngine;
 public class TileType : ScriptableObject
 {
     public Sprite Sprite;
-    public bool canThrough;
+    public bool canLightThrough;
+    public bool canEnemyThrough;
     public bool canConstruct;
     public Vector3Int tilePosition;
     public string tileName;
