@@ -16,15 +16,15 @@ public class TilemapManager : MonoBehaviour
     [Header("Initialise1(初始化1)")]
     [SerializeField] private Tile tile;
     [Header("Initialise2(初始化2)")]
-    [SerializeField] private string URL;
+    //[SerializeField] private string URL;
     [SerializeField] private List<TileType> tiles;
     [SerializeField] private List<GameObject> prefabs;
     [Header("Modification(修改)")]
     [SerializeField] private List<TileType> tileSetblockData;
     [SerializeField] private List<TileTypeFill> tileFillData;
     [Header("RelevantParameter(相关参数)")]
-    [SerializeField] private string txtcontain;
-    [SerializeField] private byte[] tileData;
+    //[SerializeField] private string txtcontain;
+    //[SerializeField] private byte[] tileData;
     [SerializeField] private List<Tile> tileSetblockList;
     [SerializeField] private List<Tile> tileFillList;
     [SerializeField] private List<Vector3Int> tilePositionList;
@@ -52,13 +52,12 @@ public class TilemapManager : MonoBehaviour
                 }
             }
         }
-        else if (URL != null)
+        else //(URL != null)
         {
             TextAsset textAsset = Resources.Load<TextAsset>("tilemaptxt");//这里不要加文件扩展名
             if (textAsset != null)
             {
                 string text = textAsset.text;
-                Debug.Log(text);
             }
             else
             {
@@ -75,13 +74,11 @@ public class TilemapManager : MonoBehaviour
             int y = lines.Length - 1;
             foreach (string line in lines)
             {
-                Debug.Log(line);
                 int midx = line.Length / 2;
                 for (int x = 0; x < line.Length; x++)
                 {
                     char c = line[x];
                     if ((int)c - 48 < 0 || (int)c - 48 > 9) continue;
-                    Debug.Log((int)c - 48);
                     if ((tiles[(int)c - 48] != null && (int)c - 48 == 0) || (tiles[(int)c - 48] != null && prefabs[(int)c - 48] != null))
                     {
                         tile = ScriptableObject.CreateInstance<Tile>();
@@ -152,10 +149,10 @@ public class TilemapManager : MonoBehaviour
         TileBase tile = tileMap.GetTile(tilePosition);
         return tile;
     }
-    public void SetblockTile(Tile tile,Vector3Int position) {
+    void SetblockTile(Tile tile,Vector3Int position) {
         tileMap.SetTile(position, tile);
     }
-    public void FillTile(Tile tile,Vector3Int startposition,Vector3Int endposition) {
+    void FillTile(Tile tile,Vector3Int startposition,Vector3Int endposition) {
         int xtempmin = (startposition.x < endposition.x) ? startposition.x : endposition.x; 
         int xtempmax = (startposition.x > endposition.x) ? startposition.x : endposition.x; 
         int ytempmin = (startposition.y < endposition.y) ? startposition.y : endposition.y; 

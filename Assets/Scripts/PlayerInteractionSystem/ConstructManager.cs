@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ConstructManager : MonoBehaviour
 {
@@ -44,10 +45,24 @@ public class ConstructManager : MonoBehaviour
         {
             return false; // 已有塔，不能放置
         }
-
-        // 可以添加其他条件检查
-
+        float radius = 0.25f;
+        TilemapWithEnemy temp;
+        Collider2D collider = Physics2D.OverlapCircle(position, radius, 1);
+        if (collider != null)
+        {
+            GameObject foundObject = collider.gameObject;
+            if (foundObject != null)
+            {
+                temp = foundObject.GetComponent<TilemapWithEnemy>();
+                if (!temp.canConstruct)
+                {
+                    return false;
+                }
+            }
+        }
         return true; // 可以放置
     }
+        
+        
     
 }

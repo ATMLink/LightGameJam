@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb93a9816f1eeae458f4984159e47340, type: 3}
   m_Name: New Tile
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 6f71906dc824103468b2a42aaef9a3c8, type: 3}
+  Sprite: {fileID: 21300000, guid: b361ae6830524a94f9ad72ded79fd80f, type: 3}
   canLightThrough: 0
   canEnemyThrough: 0
   canConstruct: 0

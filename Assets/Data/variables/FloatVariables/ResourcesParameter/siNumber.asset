@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aaa40c8c3afbd44896ffe0be7f46222, type: 3}
   m_Name: siNumber
   m_EditorClassIdentifier: 
-  Value: 0
+  Value: 11111
   valueChangedEvent: {fileID: 11400000, guid: 36f73b0ac368eef47a0da73a67d4c99f, type: 2}

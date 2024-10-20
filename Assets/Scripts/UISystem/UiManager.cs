@@ -19,6 +19,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private ConstructManager _constructManager;
     [SerializeField] private InputManager _inputManager;
     [SerializeField] private TowerManager _towerManager;
+    [SerializeField] private MainResourceManagement _resourceManager;
 
     // Start is called before the first frame update
     void Start()//测试用，后面删除
@@ -32,10 +33,10 @@ public class UiManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void UpdateState()//后面删除
-    {
-        UpdateResources();
-    }
+    //public void UpdateState()//后面删除
+    //{
+    //    UpdateResources();
+    //}
 
     public void Initialize()//UI初始化
     {
@@ -50,7 +51,7 @@ public class UiManager : MonoBehaviour
         retractButton.onClick.AddListener(OnRetractButtonClicked);//收起资源面板按钮
         expandButton.onClick.AddListener(OnExpandButtonClicked);//展开资源面板按钮
         showConstructionMenuButton.onClick.AddListener(OnShowConstructionMenuButtonClicked);//建筑菜单按钮
-
+        UpdateResources();
 
     }
     //****************************************************************
@@ -338,16 +339,14 @@ public class UiManager : MonoBehaviour
     }
 
 
-    //测试用
-    int Sinum=10000;
-    void UpdateResources()//每帧更新
+    public void UpdateResources()//每帧更新
     {
-        resources[0].text = "Si" + " " + Sinum;
-        //resources[1].text = "" + " " + ;
-        //resources[1].text = "" + " " + ;
-        //resources[1].text = "" + " " + ;
-        //resources[1].text = "" + " " + ;
-        //resources[1].text = "" + " " + ;
+        resources[0].text = "Si" + " " + _resourceManager.GetResourceNumber(element.si);
+        resources[1].text = "K" + " " + _resourceManager.GetResourceNumber(element.k);
+        resources[2].text = "Na" + " " + _resourceManager.GetResourceNumber(element.na);
+        resources[3].text = "Cu" + " " + _resourceManager.GetResourceNumber(element.cu);
+        resources[4].text = "Li" + " " + _resourceManager.GetResourceNumber(element.li);
+        resources[5].text = "Cs" + " " + _resourceManager.GetResourceNumber(element.cs);
 
         //以上在实际应用中传递数值
 

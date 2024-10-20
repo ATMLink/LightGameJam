@@ -35,7 +35,7 @@ public class GameDriver : MonoBehaviour
         {
             _inputManager.UpdateState();
             _cameraController.UpdateState();
-            _uiManager.UpdateState();
+            //_uiManager.UpdateState();
         }
     }
 

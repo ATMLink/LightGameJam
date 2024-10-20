@@ -786,6 +786,7 @@ MonoBehaviour:
   _constructManager: {fileID: 913605974}
   _inputManager: {fileID: 1967238063}
   _towerManager: {fileID: 945080038}
+  _resourceManager: {fileID: 1202425554}
   gameover: {fileID: 2015541861}
   gameoverImg: {fileID: 728571999}
   exitButton: {fileID: 944834024}
@@ -2672,7 +2673,7 @@ MonoBehaviour:
   fieldList:
   - {fileID: 1331573788}
   difficultLevel: 1
-  maxRestCD: 30
+  maxRestCD: 0.01
 --- !u!114 &659915093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3670,7 +3671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &802670699
 Transform:
   m_ObjectHideFlags: 0
@@ -4908,7 +4909,19 @@ MonoBehaviour:
   eventFloat: {fileID: 11400000, guid: d9ef59e8c0e97194ab11660896676431, type: 2}
   response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 180441133}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: UpdateResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1202425549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4924,7 +4937,19 @@ MonoBehaviour:
   eventFloat: {fileID: 11400000, guid: f6cad8343be12e44b9700c8a14e12b2c, type: 2}
   response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 180441133}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: UpdateResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1202425550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4940,7 +4965,19 @@ MonoBehaviour:
   eventFloat: {fileID: 11400000, guid: 26233a8ad635fd84089c338302bc374f, type: 2}
   response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 180441133}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: UpdateResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1202425551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4956,7 +4993,19 @@ MonoBehaviour:
   eventFloat: {fileID: 11400000, guid: 3a2d9438beb959645adb98939a7ce235, type: 2}
   response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 180441133}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: UpdateResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1202425552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4972,7 +5021,19 @@ MonoBehaviour:
   eventFloat: {fileID: 11400000, guid: 75eb0a29fcffdd844a25adca3d8da598, type: 2}
   response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 180441133}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: UpdateResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1202425553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4988,7 +5049,19 @@ MonoBehaviour:
   eventFloat: {fileID: 11400000, guid: 36f73b0ac368eef47a0da73a67d4c99f, type: 2}
   response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 180441133}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: UpdateResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1202425554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5005,7 +5078,7 @@ MonoBehaviour:
   kNumber: {fileID: 11400000, guid: a2fea832188a25f47bd4d24d715b142a, type: 2}
   naNumber: {fileID: 11400000, guid: ff656ec29a380e041981d87bd6cd5d1b, type: 2}
   cuNumber: {fileID: 11400000, guid: 47297225aeeda3249b8fced97aa607ff, type: 2}
-  caNumber: {fileID: 11400000, guid: 75ce8a664506a2a488a05fd87c9ad0d4, type: 2}
+  csNumber: {fileID: 11400000, guid: 75ce8a664506a2a488a05fd87c9ad0d4, type: 2}
   liNumber: {fileID: 11400000, guid: 5280d69ea470df34894911d6248beeca, type: 2}
 --- !u!4 &1202425555
 Transform:
@@ -5523,7 +5596,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424931873}
-  - component: {fileID: 1424931872}
   - component: {fileID: 1424931871}
   m_Layer: 0
   m_Name: TilemapManager
@@ -5547,36 +5619,21 @@ MonoBehaviour:
   tileMap: {fileID: 740886562}
   width: 28
   height: 24
-  tile: {fileID: 11400000, guid: ffb1f8b628521c94fbc8385846675156, type: 2}
-  URL: Assets\Data\Tile\TileTxt\tilemaptxt.txt
-  tiles: []
-  prefabs: []
+  tile: {fileID: 0}
+  tiles:
+  - {fileID: 11400000, guid: a01518d29c9d72348b441cd7bbd956e5, type: 2}
+  - {fileID: 11400000, guid: d5818bc04117e7f4b815783a6a4bf000, type: 2}
+  prefabs:
+  - {fileID: 0}
+  - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
   tileSetblockData: []
   tileFillData: []
-  txtcontain: 
-  tileData: 
   tileSetblockList: []
   tileFillList: []
   tilePositionList: []
   tileFillPositionStartList: []
   tileFillPositionEndList: []
   dad: {fileID: 708461168}
---- !u!114 &1424931872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424931870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventFloat: {fileID: 11400000, guid: 36f73b0ac368eef47a0da73a67d4c99f, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &1424931873
 Transform:
   m_ObjectHideFlags: 0

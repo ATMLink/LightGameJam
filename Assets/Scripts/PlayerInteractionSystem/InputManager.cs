@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
 
     public void UpdateState()
     {
-        Debug.Log("InputManager UpdateState called.");
+        //Debug.Log("InputManager UpdateState called.");
         CaptureInput();
         HandleClickedTower();
         if(isDraggingTower)
@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
 
     public void CaptureInput()
     {
-        Debug.Log("CaptureInput called.");
+        //Debug.Log("CaptureInput called.");
         cameraController.UpdateState();
     }
 

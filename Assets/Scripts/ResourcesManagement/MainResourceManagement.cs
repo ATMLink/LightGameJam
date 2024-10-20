@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public enum element {k,si,cu,na,li,ca }
+public enum element {k,si,cu,na,li,cs }
 public class MainResourceManagement : MonoBehaviour
 {
     [SerializeField] private FloatVariable siNumber;
     [SerializeField] private FloatVariable kNumber;
     [SerializeField] private FloatVariable naNumber;
     [SerializeField] private FloatVariable cuNumber;
-    [SerializeField] private FloatVariable caNumber;
+    [SerializeField] private FloatVariable csNumber;
     [SerializeField] private FloatVariable liNumber;
     /// <summary>
     /// 将所有元素数量重新设为0
@@ -22,8 +22,11 @@ public class MainResourceManagement : MonoBehaviour
         naNumber.SetValue(0);
         cuNumber.SetValue(0);
         liNumber.SetValue(0);
-        caNumber.SetValue(0);
+        csNumber.SetValue(0);
     }
+    /// <summary>
+    /// 将某一元素数量重新设为0
+    /// </summary>
     public void Initialize(element element)
     {
         FloatVariable _element = null;
@@ -34,7 +37,7 @@ public class MainResourceManagement : MonoBehaviour
             case element.cu: _element = cuNumber; break;
             case element.na: _element = naNumber; break;
             case element.li: _element = liNumber; break;
-            case element.ca: _element = caNumber; break;
+            case element.cs: _element = csNumber; break;
         }
         _element.SetValue(0);
     }
@@ -50,7 +53,7 @@ public class MainResourceManagement : MonoBehaviour
             case element.cu:elementNumber = cuNumber.Value; break;     
             case element.na:elementNumber = naNumber.Value; break;
             case element.li:elementNumber = liNumber.Value; break;
-            case element.ca:elementNumber = caNumber.Value; break;
+            case element.cs:elementNumber = csNumber.Value; break;
         }
         bool isAfford = ( elementNumber > number )?  true : false;
         return isAfford;
@@ -69,7 +72,7 @@ public class MainResourceManagement : MonoBehaviour
                 case element.cu: _element = cuNumber; break;
                 case element.na: _element = naNumber; break;
                 case element.li:_element = liNumber; break;
-                case element.ca:_element = caNumber; break;
+                case element.cs:_element = csNumber; break;
             }
             _element.SetValue(_element.Value-number);
         }        
@@ -86,13 +89,13 @@ public class MainResourceManagement : MonoBehaviour
             case element.cu: elementNumber = cuNumber.Value; break;
             case element.na: elementNumber = naNumber.Value; break;
             case element.li: elementNumber = liNumber.Value;break;
-            case element.ca: elementNumber = caNumber.Value; break; 
+            case element.cs: elementNumber = csNumber.Value; break; 
             
         }
         return elementNumber;
     }
     public void CollectResource(element element, float number) {
-        if (number <= 0) { Debug.LogError("collect number must bigger than 0");return; };
+        if (number <= 0) { Debug.LogError("collect number must bigger than 0");return; }
         FloatVariable _element = null;
         switch (element)
         {
@@ -101,7 +104,7 @@ public class MainResourceManagement : MonoBehaviour
             case element.cu: _element = cuNumber; break;
             case element.na: _element = naNumber; break;
             case element.li:_element = liNumber; break;
-            case element.ca:_element = caNumber; break;
+            case element.cs:_element = csNumber; break;
         }
         _element.SetValue(_element.Value + number);
 
