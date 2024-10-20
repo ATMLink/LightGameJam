@@ -59,6 +59,13 @@ public class TowerManager : MonoBehaviour
     {
         if (!position.HasValue)
             return null;
-        return towers.Find(tower => tower.transform.position == position.Value);
+        // Debug.Log($"get {towers.Find(tower => IsPositionApproximatelyEqual(tower.transform.position, position.Value)).name}" +
+        //           $" at {position.Value}");
+        return towers.Find(tower => IsPositionApproximatelyEqual(tower.transform.position, position.Value));
     }
+    private bool IsPositionApproximatelyEqual(Vector3 pos1, Vector3 pos2, float tolerance = 1f)
+    {
+        return Vector3.Distance(new Vector3(pos1.x, 0, pos1.z), new Vector3(pos2.x, 0, pos2.z)) < tolerance;
+    }
+
 }

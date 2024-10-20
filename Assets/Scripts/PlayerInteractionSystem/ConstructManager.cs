@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ConstructManager : MonoBehaviour
 {
+    [SerializeField] private TowerManager towerManager;
     [SerializeField] private TowerPool towerPool;
     private TowerAttributes selectedTowerAttributes;
 
@@ -28,6 +29,7 @@ public class ConstructManager : MonoBehaviour
                     newTower.transform.position = position;
                     newTower.attributes = selectedTowerAttributes;
                     newTower.Initialize();
+                    towerManager.AddTower(position, selectedTowerAttributes);
                 }
             }
             else
@@ -41,11 +43,14 @@ public class ConstructManager : MonoBehaviour
     private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)
     {
         // 检查是否已有塔
-        Tower existingTower = FindObjectOfType<TowerManager>().GetTowerAt(position);
+        Tower existingTower = towerManager.GetTowerAt(position);
         if (existingTower != null)
-        {
             return false; // 已有塔，不能放置
+        else
+        {
+            Debug.Log("null");
         }
+        // detect is normal tile or not
         float radius = 0.25f;
         TilemapFeature temp;
         Collider2D collider = Physics2D.OverlapCircle(position, radius, 1);
