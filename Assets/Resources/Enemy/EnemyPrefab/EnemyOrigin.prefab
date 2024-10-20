@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4105675029589839320}
   - component: {fileID: 4249724185880215071}
   - component: {fileID: 7393548402856993311}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 8658373259892508517}
   - component: {fileID: 2650699530531593539}
   - component: {fileID: 7958084622437523464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyOrigin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
