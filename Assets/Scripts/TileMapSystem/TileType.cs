@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-[CreateAssetMenu(fileName = "New Tile", menuName = "TileType", order = 1)]
+[CreateAssetMenu(fileName = "New Tile", menuName = "TileType/TileType", order = 1)]
 public class TileType : ScriptableObject
 {
     [Header("Name")]
     public string tileName;
     [Header("Sprite")]
-    public Sprite Sprite;
+    public List<Sprite> sprites;
     [Header("CanThrough")]
     public bool canLightThrough;
     public bool canEnemyThrough;

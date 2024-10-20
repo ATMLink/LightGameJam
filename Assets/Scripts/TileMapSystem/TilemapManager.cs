@@ -13,9 +13,9 @@ public class TilemapManager : MonoBehaviour
     [Header("Scale(规模)")]
     public int width;
     public int height;
-    [Header("Initialise1(初始化1)")]
-    [SerializeField] private Tile tile;
-    [Header("Initialise2(初始化2)")]
+    [Header("Initialise1(初始化)")]
+    [SerializeField] private TileTypeRandom tileBase;
+    private Tile tile;
     //[SerializeField] private string URL;
     [SerializeField] private List<TileType> tiles;
     [SerializeField] private List<GameObject> prefabs;
@@ -77,24 +77,29 @@ public class TilemapManager : MonoBehaviour
                 for (int x = 0; x < line.Length; x++)
                 {
                     char c = line[x];
-                    if ((int)c - 48 < 0 || (int)c - 48 > 9) continue;
-                    if ((tiles[(int)c - 48] != null && (int)c - 48 == 0) || (tiles[(int)c - 48] != null && prefabs[(int)c - 48] != null))
+                    if ((int)c == 97)
                     {
                         tile = ScriptableObject.CreateInstance<Tile>();
-                        tile.sprite = tiles[(int)c - 48].Sprite;
+                        tile.sprite = tileBase.sprites[Random.Range(0, tileBase.sprites.Count)];
                         tileMap.SetTile(new Vector3Int(x - midx, y - midy, 0), tile);
-                        if ((int)c-48 != 0) {
-                           TilemapFeature temp = Instantiate(prefabs[(int)c - 48],new Vector3(x - midx + 0.5f, y - midy + 0.5f,0),Quaternion.identity,dad.transform).GetComponent<TilemapFeature>();
-                            temp.Sprite = tiles[(int)c - 48].Sprite;
-                            temp.tileName = tiles[(int)c - 48].tileName;
-                            temp.gameObject.name = tiles[(int)c - 48].tileName;
-                            temp.canConstruct = tiles[(int)c - 48].canConstruct;
-                            temp.canLightThrough = tiles[(int)c - 48].canLightThrough;
-                            temp.canSlowEnemy = tiles[(int)c - 48].canSlowEnemy;
-                            temp.canEnemyThrough = tiles[(int)c - 48].canEnemyThrough;
-                            temp.canAttackTowerConstruct = tiles[(int)c - 48].canAttackTowerConstruct;
-                            temp.canMinerConstruct = tiles[(int)c - 48].canMinerConstruct;
-                        }
+                    }
+                    else if ((int)c - 48 < 0 || (int)c - 48 > 9) continue;
+                    else if (tiles[(int)c - 48] != null && prefabs[(int)c - 48] != null)
+                    {
+                        tile = ScriptableObject.CreateInstance<Tile>();
+                        tile.sprite = tiles[(int)c - 48].sprites[0];
+                        tileMap.SetTile(new Vector3Int(x - midx, y - midy, 0), tile);
+                        TilemapFeature temp = Instantiate(prefabs[(int)c - 48], new Vector3(x - midx + 0.5f, y - midy + 0.5f, 0), Quaternion.identity, dad.transform).GetComponent<TilemapFeature>();
+                        temp.sprites = tiles[(int)c - 48].sprites;
+                        temp.tileName = tiles[(int)c - 48].tileName;
+                        temp.gameObject.name = tiles[(int)c - 48].tileName;
+                        temp.canConstruct = tiles[(int)c - 48].canConstruct;
+                        temp.canLightThrough = tiles[(int)c - 48].canLightThrough;
+                        temp.canSlowEnemy = tiles[(int)c - 48].canSlowEnemy;
+                        temp.canEnemyThrough = tiles[(int)c - 48].canEnemyThrough;
+                        temp.canAttackTowerConstruct = tiles[(int)c - 48].canAttackTowerConstruct;
+                        temp.canMinerConstruct = tiles[(int)c - 48].canMinerConstruct;
+
                     }
                 }
                 y--;

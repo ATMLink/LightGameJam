@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191a4dabd0993444aa087f23b5fe405b, type: 3}
-  m_Name: New Tile 1
+  m_Script: {fileID: 11500000, guid: cd4a304d62940384f87cc1e2b86156d1, type: 3}
+  m_Name: New Tile
   m_EditorClassIdentifier: 
-  tileName: 1111
+  tileName: 
   sprites:
   - {fileID: 21300000, guid: b361ae6830524a94f9ad72ded79fd80f, type: 3}
-  canLightThrough: 1
-  canEnemyThrough: 1
-  canSlowEnemy: 1
-  canConstruct: 0
-  canAttackTowerConstruct: 1
-  canMinerConstruct: 0
+  - {fileID: 21300000, guid: 4296d33fc4b8d1244938b2aec815297c, type: 3}
+  - {fileID: 21300000, guid: 21e299ed0d3e92d478b0b343b2b476bb, type: 3}

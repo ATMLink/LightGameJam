@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3913020415979627564}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -173,15 +173,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
-  Sprite: {fileID: 0}
+  tilePosition: {x: 0, y: 0, z: 0}
+  sprites: []
   canLightThrough: 0
   canEnemyThrough: 0
   canConstruct: 0
   canSlowEnemy: 0
-  tilePosition: {x: 0, y: 0, z: 0}
   canAttackTowerConstruct: 0
   canMinerConstruct: 0
   shadowCaster: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!114 &3913020415979627564
 MonoBehaviour:
   m_ObjectHideFlags: 0
