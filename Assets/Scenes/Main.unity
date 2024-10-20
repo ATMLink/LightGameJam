@@ -3779,6 +3779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474e201309e1afb478253de8235c6be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerManager: {fileID: 945080038}
   towerPool: {fileID: 864061134}
 --- !u!1 &940794145
 GameObject:
