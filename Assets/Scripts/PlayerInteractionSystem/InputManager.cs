@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
         HandleClickedTower();
         if(isDraggingTower)
         {
-            Debug.Log("Currently dragging a tower.");
+            //Debug.Log("Currently dragging a tower.");
             HandleTowerDragging();
         }
     }
@@ -93,7 +93,7 @@ public class InputManager : MonoBehaviour
                 Vector3Int cellPosition = tilemap.WorldToCell(hit.point);
                 Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cellPosition);
                 towerPreview.transform.position = cellCenterPos;
-                Debug.Log($"Tower preview moved to position: {cellCenterPos}");
+                //Debug.Log($"Tower preview moved to position: {cellCenterPos}");
 
                 if (Input.GetMouseButtonUp(0))
                 {

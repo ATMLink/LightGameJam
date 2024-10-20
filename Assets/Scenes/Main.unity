@@ -5621,18 +5621,13 @@ MonoBehaviour:
   height: 24
   tile: {fileID: 0}
   tiles:
-  - {fileID: 11400000, guid: a01518d29c9d72348b441cd7bbd956e5, type: 2}
   - {fileID: 11400000, guid: d5818bc04117e7f4b815783a6a4bf000, type: 2}
+  - {fileID: 11400000, guid: 14a2c3e1125f1074f84f60b388f97f2e, type: 2}
+  - {fileID: 11400000, guid: 2765e45ebc62d024aa1196dc58ad2c39, type: 2}
   prefabs:
   - {fileID: 0}
   - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
-  tileSetblockData: []
-  tileFillData: []
-  tileSetblockList: []
-  tileFillList: []
-  tilePositionList: []
-  tileFillPositionStartList: []
-  tileFillPositionEndList: []
+  - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
   dad: {fileID: 708461168}
 --- !u!4 &1424931873
 Transform:
@@ -7710,8 +7705,8 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1168804922}
   - {fileID: 708461170}
-  - {fileID: 1510343054}
   - {fileID: 1424931873}
+  - {fileID: 1510343054}
   - {fileID: 1202425555}
   - {fileID: 369856519}
   - {fileID: 802670699}

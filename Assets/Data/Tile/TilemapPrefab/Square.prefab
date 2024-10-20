@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1436528272425262671
@@ -177,7 +177,11 @@ MonoBehaviour:
   canLightThrough: 0
   canEnemyThrough: 0
   canConstruct: 0
+  canSlowEnemy: 0
   tilePosition: {x: 0, y: 0, z: 0}
+  canAttackTowerConstruct: 0
+  canMinerConstruct: 0
+  shadowCaster: {fileID: 0}
 --- !u!114 &3913020415979627564
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,10 +11,10 @@ public class TilemapTrigger : MonoBehaviour
         Vector3Int tilePosition = tilemap.WorldToCell(other.transform.position);
         TileBase tile = tilemap.GetTile(tilePosition);
         if (tile != null) {
-            switch (tile.name) { 
+            //switch (tile.name) { 
             
             
-            }
+            //}
         
         }
     }

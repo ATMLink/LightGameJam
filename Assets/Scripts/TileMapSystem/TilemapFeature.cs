@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
-public class TilemapWithEnemy : MonoBehaviour
+public class TilemapFeature : MonoBehaviour
 {
     public string tileName;
+    public Vector3 tilePosition;
     public Sprite Sprite;
     public bool canLightThrough;
     public bool canEnemyThrough;
     public bool canConstruct;
-    public Vector3 tilePosition;
+    public bool canSlowEnemy;
+    public bool canAttackTowerConstruct;
+    public bool canMinerConstruct;
+    [SerializeField]private ShadowCaster2D shadowCaster;
     private void Start()
     {
+        shadowCaster = GetComponent<ShadowCaster2D>();
         tilePosition = transform.position;
+        if (!canLightThrough)shadowCaster.enabled = false;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
