@@ -261,8 +261,6 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button clockwiseButton;
     [SerializeField] private Button anticlockwiseButton;
     [SerializeField] private Button deleteButton;
-
-    [SerializeField] private Transform testobject;
     [SerializeField] private Camera mainCamera;
 
     Vector2 localPoint;
@@ -270,17 +268,47 @@ public class UiManager : MonoBehaviour
     private Tower selectedTower;
 
 
-    public void ShowTowerMenu(Tower tower, Vector3 position)
+    public void ShowTowerMenu(Tower tower)
     {
         selectedTower = tower;
+        if (selectedTower != null && Camera.main != null)
+        {
+            // 获取游戏对象的世界坐标  
+            Vector3 worldPosition = selectedTower.transform.position;
+
+            // 将世界坐标转换为屏幕坐标  
+            Vector3 screenPosition = mainCamera.WorldToScreenPoint(worldPosition);
+
+            // 计算本地坐标
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(showTowerMenuPanel, screenPosition, mainCamera, out localPoint);
+
+            // 使用计算得出的本地点来设置菜单的位置
+            showTowerMenuPanel.anchoredPosition = localPoint;
+
+            // Debugging
+            Debug.Log($"World Position: {worldPosition}");
+            Debug.Log($"Screen Position: {screenPosition}");
+            Debug.Log($"Local Point: {localPoint}");
+        }
+        else
+        {
+            Debug.LogWarning("Target object or main camera is missing.");
+        }
         
-        showTowerMenu.SetActive(true);
-        showTowerMenu.transform.position = position;
+        // 在添加之前移除现有监听器
+        closeTowerMenu.onClick.RemoveAllListeners();
+        upgradeButton.onClick.RemoveAllListeners();
+        clockwiseButton.onClick.RemoveAllListeners();
+        anticlockwiseButton.onClick.RemoveAllListeners();
+        deleteButton.onClick.RemoveAllListeners();
+
+        // 然后添加新的监听器
         closeTowerMenu.onClick.AddListener(OnCloseTowerMenuClicked);
         upgradeButton.onClick.AddListener(OnUpgradeButtonClicked);
         clockwiseButton.onClick.AddListener(OnClockwiseButtonClicked);
         anticlockwiseButton.onClick.AddListener(OnAnticlockwiseButtonClicked);
         deleteButton.onClick.AddListener(OnDeleteButtonClicked);
+        showTowerMenu.SetActive(true);
     }
     void OnCloseTowerMenuClicked()
     {
@@ -300,19 +328,24 @@ public class UiManager : MonoBehaviour
     {
         //顺时针旋转
         if (selectedTower != null)
-            _towerManager.RotateTower(selectedTower, true);
+            _towerManager.RotateTower(selectedTower, false);
             
     }
     void OnAnticlockwiseButtonClicked() 
     {
         //逆时针旋转的接口
         if (selectedTower != null)
-            _towerManager.RotateTower(selectedTower, false);
+            _towerManager.RotateTower(selectedTower, true);
     }
     void OnDeleteButtonClicked()
     {
         if (selectedTower != null)
+        {
             _towerManager.RemoveTower(selectedTower);
+            showTowerMenu.SetActive(false);
+            selectedTower = null;
+        }
+            
     }
 
 

@@ -23,14 +23,15 @@ public class ConstructManager : MonoBehaviour
         {
             if (CanPlaceTower(selectedTowerAttributes,position)) // 检查是否可以放置塔
             {
-                Tower newTower = towerPool.GetTower();
-                if (newTower != null) // 确保池子未满
-                {
-                    newTower.transform.position = position;
-                    newTower.attributes = selectedTowerAttributes;
-                    newTower.Initialize();
-                    towerManager.AddTower(position, selectedTowerAttributes);
-                }
+                towerManager.AddTower(position, selectedTowerAttributes);
+                // Tower newTower = towerPool.GetTower();
+                // if (newTower != null) // 确保池子未满
+                // {
+                //     // newTower.transform.position = position;
+                //     // newTower.attributes = selectedTowerAttributes;
+                //     // newTower.Initialize();
+                //     towerManager.AddTower(position, selectedTowerAttributes);
+                // }
             }
             else
             {

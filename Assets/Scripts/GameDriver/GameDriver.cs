@@ -13,6 +13,7 @@ public class GameDriver : MonoBehaviour
     [SerializeField] private TowerManager _towerManager;
     [SerializeField] private UiManager _uiManager;
     [SerializeField] private EnemyManager _enemyManager;
+    [SerializeField] private LaserManager _laserManager;
     
     // 游戏状态变量
     [Header("Variables")]
@@ -35,7 +36,8 @@ public class GameDriver : MonoBehaviour
         {
             _inputManager.UpdateState();
             _cameraController.UpdateState();
-            //_uiManager.UpdateState();
+            _laserManager.UpdateState();
+            // _uiManager.UpdateState();
         }
     }
 
@@ -45,6 +47,7 @@ public class GameDriver : MonoBehaviour
         {
             UpdateGameTime();
             _towerManager.UpdateState();
+            _laserManager.UpdateState();
         }
     }
 
@@ -56,6 +59,7 @@ public class GameDriver : MonoBehaviour
         _tilemapManager.Initialize();
         _towerManager.Initialize();
         _uiManager.Initialize();
+        _laserManager.Initialize();
     }
 
     private void UpdateGameTime()
