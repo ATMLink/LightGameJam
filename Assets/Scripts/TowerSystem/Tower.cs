@@ -45,11 +45,6 @@ public class Tower : MonoBehaviour
         
         gameObject.SetActive(true);
     }
-
-    public void RenderPreview()
-    {
-        spriteRenderer.sprite = attributes.towerSprite;
-    }
     
     // 重置塔的属性，方便对象池回收
     public void ResetAttributes()
