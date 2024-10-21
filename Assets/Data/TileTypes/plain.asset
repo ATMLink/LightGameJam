@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd4a304d62940384f87cc1e2b86156d1, type: 3}
-  m_Name: New Tile
+  m_Name: plain
   m_EditorClassIdentifier: 
-  tileName: 
+  tileName: plain
   sprites:
-  - {fileID: 21300000, guid: b361ae6830524a94f9ad72ded79fd80f, type: 3}
-  - {fileID: 21300000, guid: 4296d33fc4b8d1244938b2aec815297c, type: 3}
-  - {fileID: 21300000, guid: 21e299ed0d3e92d478b0b343b2b476bb, type: 3}
+  - {fileID: 21300000, guid: 9998886a4270a1f4d9a7712c19f6c94a, type: 3}

@@ -42,32 +42,34 @@ public class ConstructManager : MonoBehaviour
     // 检查指定位置是否允许放置塔
     private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)
     {
-        // 检查是否已有塔
-        Tower existingTower = towerManager.GetTowerAt(position);
-        if (existingTower != null)
-            return false; // 已有塔，不能放置
-        else
-        {
-            Debug.Log("null");
-        }
-        // detect is normal tile or not
+        int count = 0;
         float radius = 0.25f;
         TilemapFeature temp;
-        Collider2D collider = Physics2D.OverlapCircle(position, radius, 1);
-        if (collider != null)
-        {
-            GameObject foundObject = collider.gameObject;
-            if (foundObject != null)
+        Collider2D[] collider = Physics2D.OverlapCircleAll(position, radius);
+        Debug.LogWarning(collider);
+        if (collider.Length == 1) return true;
+        else foreach (Collider2D col in collider)
             {
-                temp = foundObject.GetComponent<TilemapFeature>();
-                if (!temp.canConstruct)
+
+                GameObject foundObject = col.gameObject;
+                if (foundObject.tag == "Tilemap") continue;
+                else if (foundObject.tag == "Tile")
                 {
-                    Debug.Log(towerAttributes.name);
-                    if (towerAttributes.name=="Basic" && temp.canMinerConstruct)return true;
-                    return false;
+                    temp = foundObject.GetComponent<TilemapFeature>();
+                    if (!temp.canConstruct)
+                    {
+                        Debug.Log(towerAttributes.name);
+                        if (towerAttributes.name == "Basic" && temp.canMinerConstruct) return true;
+                        return false;
+                    }
                 }
+                else if (foundObject.tag == "Tower")
+                {
+                    count++;
+                    if (count == 2) return false;
+                }
+
             }
-        }
         return true; // 可以放置
     }
         

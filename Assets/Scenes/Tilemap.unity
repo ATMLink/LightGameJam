@@ -680,7 +680,7 @@ MonoBehaviour:
   kNumber: {fileID: 11400000, guid: a2fea832188a25f47bd4d24d715b142a, type: 2}
   naNumber: {fileID: 11400000, guid: ff656ec29a380e041981d87bd6cd5d1b, type: 2}
   cuNumber: {fileID: 11400000, guid: 47297225aeeda3249b8fced97aa607ff, type: 2}
-  caNumber: {fileID: 11400000, guid: 75ce8a664506a2a488a05fd87c9ad0d4, type: 2}
+  csNumber: {fileID: 0}
   liNumber: {fileID: 11400000, guid: 5280d69ea470df34894911d6248beeca, type: 2}
 --- !u!4 &1808641897
 Transform:
@@ -887,23 +887,19 @@ MonoBehaviour:
   tileMap: {fileID: 401158777}
   width: 4
   height: 24
-  tile: {fileID: 0}
-  URL: Assets\Data\Tile\TileTxt\tilemaptxt.txt
+  tileBase: {fileID: 11400000, guid: 7f8e09bf6aa31ec4f8b5b0183d5ffd66, type: 2}
   tiles:
-  - {fileID: 11400000, guid: a01518d29c9d72348b441cd7bbd956e5, type: 2}
-  - {fileID: 11400000, guid: d5818bc04117e7f4b815783a6a4bf000, type: 2}
+  - {fileID: 11400000, guid: 75c00bb7ffdcee344b4c98d4a2c7755d, type: 2}
+  - {fileID: 11400000, guid: 3d0050cf920907c47ba851a8f25c608b, type: 2}
+  - {fileID: 11400000, guid: 0e998691e835c7e4299880dd4f5f25fa, type: 2}
+  - {fileID: 11400000, guid: 588c739a00414c64f8ede368b01044e3, type: 2}
+  - {fileID: 11400000, guid: 94fab1bd80430764792ce1c8a6a0894a, type: 2}
   prefabs:
-  - {fileID: 0}
   - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
-  tileSetblockData: []
-  tileFillData: []
-  txtcontain: 
-  tileData: 
-  tileSetblockList: []
-  tileFillList: []
-  tilePositionList: []
-  tileFillPositionStartList: []
-  tileFillPositionEndList: []
+  - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
+  - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
+  - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
+  - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
   dad: {fileID: 2099328875}
 --- !u!4 &1936767273
 Transform:
@@ -945,7 +941,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1936767271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96405669e4080bd40add89107dc71d68, type: 3}
+  m_Script: {fileID: 11500000, guid: 1de956408b132c94d964c071cd39f620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TilemapManager: {fileID: 1936767272}

@@ -20,7 +20,10 @@ public class TilemapFeature : MonoBehaviour
     {
         shadowCaster = GetComponent<ShadowCaster2D>();
         tilePosition = transform.position;
-        if (!canLightThrough)shadowCaster.enabled = false;
+        sprite = GetComponent<SpriteRenderer>();
+        if (sprites[0]!=null)
+        sprite.sprite = sprites[0];
+        if (canLightThrough)shadowCaster.enabled = false;
     }
     public void ChangeSprite(int number) { 
         sprite.sprite = sprites[number];

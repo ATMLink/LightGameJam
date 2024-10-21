@@ -19,7 +19,7 @@ public class TowerManager : MonoBehaviour
         foreach (Tower tower in towers)
         {
             // 执行塔的攻击逻辑或其他需要定期更新的操作
-            tower.Attack();
+            //tower.Attack();
         }
     }
 
