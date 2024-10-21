@@ -21,7 +21,6 @@ public class Laser : MonoBehaviour
         lineRenderer.endColor = Color.red;
         lineRenderer.positionCount = 2;
         
-        SetLaserActive(false);
     }
 
     public void UpdateState()
