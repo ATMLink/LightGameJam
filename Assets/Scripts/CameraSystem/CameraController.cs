@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Vector2Variable maxBounds;
     private Camera camera;
     private Vector3 initialPosition;
+    private Vector3 lastMouseWorldPosition;
 
     public void Initialize()
     {
@@ -26,12 +27,12 @@ public class CameraController : MonoBehaviour
         }
 
         // Set initial data
-        moveSpeed.SetValue(5f);
-        zoomSpeed.SetValue(2f);
-        minZoom.SetValue(5f);
-        maxZoom.SetValue(20f);
-        minBounds.SetValue(new (-10f, -10f));
-        maxBounds.SetValue(new (10f, 10f));
+        // moveSpeed.SetValue(5f);
+        // zoomSpeed.SetValue(2f);
+        // minZoom.SetValue(5f);
+        // maxZoom.SetValue(20f);
+        // minBounds.SetValue(new (-10f, -10f));
+        // maxBounds.SetValue(new (10f, 10f));
         initialPosition = new(0,0, -1);
 
         camera.transform.position = initialPosition;
@@ -50,7 +51,7 @@ public class CameraController : MonoBehaviour
 
     public void HandleCameraMovement()// speed should not be absoluted
     {
-        // Logic for dragging the camera with the left mouse button
+        // Logic for dragging the camera with the right mouse button
         if (Input.GetMouseButton(1))
         {
             Vector3 delta = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);

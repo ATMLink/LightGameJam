@@ -31,6 +31,7 @@ public class TowerManager : MonoBehaviour
             newTower.transform.position = position;
             newTower.attributes = towerAttributes;
             towers.Add(newTower);
+            newTower.Initialize();
         }
     }
 
@@ -38,11 +39,11 @@ public class TowerManager : MonoBehaviour
     {
         tower.Upgrade();
     }
-    public void RotateTower(Tower tower, bool clockwise = true)
+    public void RotateTower(Tower tower, bool antiClockwise = true)
     {
         if (tower != null)
         {
-            float angle = clockwise ? 90f : -90f;
+            float angle = antiClockwise ? 45f : -45f;
             Vector3 targetRotation = tower.transform.eulerAngles + new Vector3(0, 0, angle);
 
             tower.transform.DORotate(targetRotation, 0.5f).SetEase(Ease.OutQuad);

@@ -46,39 +46,19 @@ public class InputManager : MonoBehaviour
         selectedTowerAttributes = towerAttributes;
         isDraggingTower = true;
 
-        // Instantiate a preview of the tower being dragged
-        towerPreview = Instantiate(towerAttributes.Prefab);
+        towerPreview = new GameObject("TowerPreview");
+
+        // Add a SpriteRenderer to show the tower's sprite
+        SpriteRenderer spriteRenderer = towerPreview.AddComponent<SpriteRenderer>();
+        spriteRenderer.sprite = towerAttributes.towerSprite;
+        
+        spriteRenderer.sortingOrder = 8;  // Ensure the preview appears above other objects if needed.
+
         towerPreview.SetActive(true); // Make sure it's visible
 
         Debug.Log($"Started dragging tower: {selectedTowerAttributes.towerName}");
     }
 
-    // public void HandleTowerDragging()
-    // {
-    //     Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-    //     RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-    //     if (hit.collider != null)
-    //     {
-    //         towerPreview.transform.position = hit.point;
-    //         Debug.Log($"Tower preview moved to position: {hit.point}");
-    //
-    //         if (Input.GetMouseButtonUp(0))
-    //         {
-    //             Debug.Log("Left mouse button released, attempting to place tower...");
-    //             constructManager.SelectTower(selectedTowerAttributes);
-    //             constructManager.PlaceTower(hit.point);
-    //             Debug.Log($"Tower placed at position: {hit.point}");
-    //             CancelTowerDragging();
-    //         }
-    //     }
-    //
-    //     // If right mouse button is clicked, cancel the drag
-    //     if (Input.GetMouseButtonUp(1))
-    //     {
-    //         Debug.Log("Right mouse button released, cancelling tower dragging.");
-    //         CancelTowerDragging();
-    //     }
-    // }
 
     public void HandleTowerDragging()
     {
@@ -138,35 +118,28 @@ public class InputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Left mouse button clicked.");
-            Vector3? position = GetPositionFromInput();
-            if (position.HasValue)
-            {
-                Debug.Log($"Mouse clicked at world position: {position.Value}");
 
-                // 射线检测以确定点击的对象
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-                if (hit.collider != null)
+            // 射线检测以确定点击的对象
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+
+            if (hit.collider != null)
+            {
+                // 检查点击到的物体是否是塔
+                Tower clickedTower = hit.collider.GetComponent<Tower>();
+                if (clickedTower != null)
                 {
-                    Tower clickedTower = towerManager.GetTowerAt(hit.point);
-                    if (clickedTower != null)
-                    {
-                        Debug.Log($"Tower clicked at position: {position.Value}. Showing tower menu.");
-                        uiManager.ShowTowerMenu(clickedTower, position.Value);
-                    }
-                    else
-                    {
-                        Debug.Log("No tower found at clicked position.");
-                    }
+                    Debug.Log($"Tower clicked at position: {hit.point}. Showing tower menu.");
+                    uiManager.ShowTowerMenu(clickedTower);
                 }
                 else
                 {
-                    Debug.Log("No collider hit detected.");
+                    Debug.Log("No tower found at clicked position.");
                 }
             }
             else
             {
-                Debug.Log("Invalid click position.");
+                Debug.Log("No collider hit detected.");
             }
         }
     }

@@ -10,12 +10,13 @@ public class Tower : MonoBehaviour
     private float damage;
     private float attackSpeed;
     private float attackRange;
-    private Sprite sprite;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     private float attackCooldown;
     private float attackTimer;
     
     private List<Enemy> enemiesInRange;
+    [SerializeField] private CircleCollider2D rangeCollider;
 
     public void Initialize()
     {
@@ -23,16 +24,33 @@ public class Tower : MonoBehaviour
         damage = attributes.damage.Value;
         attackSpeed = attributes.attackSpeed.Value;
         attackRange = attributes.attackRange.Value;
-        sprite = attributes.towerSprite;
+        
+        // set tower sprite
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+        // if (spriteRenderer == null)
+        //     spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
+        spriteRenderer.sprite = attributes.towerSprite;
 
         enemiesInRange = new List<Enemy>();
 
         attackCooldown = 1f / attackSpeed;
         attackTimer = 0f;
 
+        // set tower circle collider
+        // rangeCollider = GetComponent<CircleCollider2D>();
+        // if (rangeCollider == null)
+        //     rangeCollider = gameObject.AddComponent<CircleCollider2D>();
+        // rangeCollider.isTrigger = true;
+        rangeCollider.radius = attackRange;
+        
         gameObject.SetActive(true);
     }
 
+    public void RenderPreview()
+    {
+        spriteRenderer.sprite = attributes.towerSprite;
+    }
+    
     // 重置塔的属性，方便对象池回收
     public void ResetAttributes()
     {
@@ -78,6 +96,14 @@ public class Tower : MonoBehaviour
             attackTimer += Time.deltaTime; // 增加计时器
         }
     }
+
+    public void OnHit(int damage)
+    {
+        if(health - damage <= 0)
+            DestroyTower();
+        health -= damage;
+    }
+    
     private Enemy FindClosestEnemy()
     {
         Enemy closestEnemy = null;
