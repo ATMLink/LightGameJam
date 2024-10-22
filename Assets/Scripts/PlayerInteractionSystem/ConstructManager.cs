@@ -48,10 +48,9 @@ public class ConstructManager : MonoBehaviour
         float radius = 0f;
         TilemapFeature temp;
         Collider2D[] collider = Physics2D.OverlapCircleAll(position, radius);
-        if (collider.Length == 1) { return (towerAttributes.name == "Miner")?false:true; }
+        if (collider.Length == 1) { return (towerAttributes.name == "Miner") ? false : true; }
         else foreach (Collider2D col in collider)
-        {
-
+            {
                 GameObject foundObject = col.gameObject;
                 Debug.LogWarning(foundObject.transform.position);
                 if (foundObject.tag == "Tilemap") continue;
@@ -66,20 +65,19 @@ public class ConstructManager : MonoBehaviour
                         return false;
                     }
                 }
-            }
-            else if (foundObject.tag == "Tower")
-            {
-                if (foundObject.transform.position == position)
+
+                else if (foundObject.tag == "Tower")
                 {
                     if (foundObject.transform.position == position)
                     {
-                        count++;
+                        if (foundObject.transform.position == position)
+                        {
+                            count++;
+                        }
+                        if (count == 1) { Debug.LogWarning(2); return false; }
                     }
-                    if (count == 1) { Debug.LogWarning(2); return false; }
                 }
             }
-
-        }
         return true; // 可以放置
     }
     // private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)
