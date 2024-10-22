@@ -6,6 +6,7 @@ using DG.Tweening;
 public class TowerManager : MonoBehaviour
 {
     public TowerPool towerPool;
+    [SerializeField] private LaserManager laserManager;
     private List<Tower> towers = new List<Tower>();
 
     public void Initialize()
@@ -69,4 +70,24 @@ public class TowerManager : MonoBehaviour
         return Vector3.Distance(new Vector3(pos1.x, 0, pos1.z), new Vector3(pos2.x, 0, pos2.z)) < tolerance;
     }
 
+    private void StartRotate(Tower tower)
+    {
+        laserManager.SetLaserActiveForTower(tower, false);
+    }
+
+    private void EndRotate(Tower tower)
+    {
+        laserManager.SetLaserActiveForTower(tower, true);
+        UpdateLaserPositionAndDirection(tower);
+    }
+    
+    private void UpdateLaserPositionAndDirection(Tower tower)
+    {
+        if (laserManager.GetLaserForTower(tower) != null)
+        {
+            Vector3 newDirection = transform.forward; // 根据塔的前方向更新激光方向
+            Vector3 newPosition = transform.position; // 更新激光起点为塔的当前位置
+            laserManager.GetLaserForTower(tower).UpdateLaserPositionAndDirection(newPosition, newDirection);
+        }
+    }
 }

@@ -4242,6 +4242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPool: {fileID: 864061134}
+  laserManager: {fileID: 415967692}
 --- !u!1 &1005225518
 GameObject:
   m_ObjectHideFlags: 0

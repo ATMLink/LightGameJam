@@ -55,6 +55,16 @@ public class Laser : MonoBehaviour
 
         Attack();
     }
+    
+    /// <summary>
+    /// 更新激光的起点和方向
+    /// </summary>
+    public void UpdateLaserPositionAndDirection(Vector3 newPosition, Vector3 newDirection)
+    {
+        transform.position = newPosition;
+        direction = newDirection;
+        UpdateLaser();
+    }
 
     private Vector3 GetAdjustedLaserEndPoint(Vector3 intendedEndPoint)
     {

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    [SerializeField] private LaserManager laserManager;
+    private Laser attachedLaser;
+    
     public TowerAttributes attributes;
 
     private float health;
@@ -147,4 +150,5 @@ public class Tower : MonoBehaviour
             }
         }
     }
+    
 }
