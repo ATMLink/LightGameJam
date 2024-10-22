@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LaserManager : MonoBehaviour
 {
-    public LaserPool laserPool; // ¼¤¹â³ØÒıÓÃ
-    private Dictionary<Tower, Laser> towerLaserMap = new Dictionary<Tower, Laser>(); // ´æ´¢ËşÓë¼¤¹âµÄÓ³Éä¹ØÏµ
+    public LaserPool laserPool; // æ¿€å…‰æ± å¼•ç”¨
+    private Dictionary<Tower, List<Laser>> towerLaserMap = new Dictionary<Tower, List<Laser>>(); // å­˜å‚¨å¡”ä¸æ¿€å…‰çš„æ˜ å°„å…³ç³»
 
     public void Initialize()
     {
@@ -14,15 +14,18 @@ public class LaserManager : MonoBehaviour
 
     public void UpdateState()
     {
-        // ¸üĞÂËùÓĞ¼¤»îµÄ¼¤¹â×´Ì¬
-        foreach (Laser laser in towerLaserMap.Values)
+        // æ›´æ–°æ‰€æœ‰æ¿€æ´»çš„æ¿€å…‰çŠ¶æ€
+        foreach (List<Laser> laserList in towerLaserMap.Values)
         {
-            laser.UpdateState();
+            foreach (Laser laser in laserList)
+            {
+                laser.UpdateState();
+            }
         }
     }
 
     /// <summary>
-    /// ´´½¨¼¤¹â°ó¶¨ËşºÍ¼¤¹â
+    /// åˆ›å»ºæ¿€å…‰ç»‘å®šå¡”å’Œæ¿€å…‰
     /// </summary>
     /// <param name="position"></param>
     /// <param name="direction"></param>
@@ -30,11 +33,14 @@ public class LaserManager : MonoBehaviour
     /// <returns></returns>
     public Laser CreateLaser(Tower tower, Vector3 position, Vector3 direction, float intensity)
     {
-        // ´Ó¶ÔÏó³Ø»ñÈ¡¼¤¹â
+        // ä»å¯¹è±¡æ± è·å–æ¿€å…‰
         Laser laser = laserPool.GetLaser(position, direction, intensity);
         if (laser != null)
         {
-            towerLaserMap[tower] = laser; // °ó¶¨ËşºÍ¼¤¹â
+            if (!towerLaserMap.ContainsKey(tower))
+                towerLaserMap[tower] = new List<Laser>();
+            
+            towerLaserMap[tower].Add(laser); // ç»‘å®šå¡”å’Œæ¿€å…‰
             laser.Initialize();
             laser.SetLaserActive(true);
         }
@@ -45,16 +51,24 @@ public class LaserManager : MonoBehaviour
     {
         if (towerLaserMap.ContainsKey(tower))
         {
-            Laser laser = towerLaserMap[tower];
-            laserPool.ReturnLaser(laser); // ½«¼¤¹â·µ»Ø³ØÖĞ
-            towerLaserMap.Remove(tower); // ´ÓÓ³Éä¹ØÏµÖĞÒÆ³ı¼¤¹â
+            // è·å–å¡”å¯¹åº”çš„æ¿€å…‰åˆ—è¡¨
+            List<Laser> laserList = towerLaserMap[tower];
+        
+            // å°†æ‰€æœ‰æ¿€å…‰è¿”å›åˆ°å¯¹è±¡æ± ä¸­
+            foreach (Laser laser in laserList)
+            {
+                laserPool.ReturnLaser(laser);
+            }
+        
+            // æ¸…ç©ºè¯¥å¡”çš„æ¿€å…‰åˆ—è¡¨
+            towerLaserMap.Remove(tower);
         }
     }
     
     /// <summary>
-    /// »ñÈ¡Ö¸¶¨ËşµÄ¼¤¹â
+    /// è·å–æŒ‡å®šå¡”çš„æ¿€å…‰
     /// </summary>
-    public Laser GetLaserForTower(Tower tower)
+    public List<Laser> GetLaserForTower(Tower tower)
     {
         if (towerLaserMap.ContainsKey(tower))
         {
@@ -64,14 +78,46 @@ public class LaserManager : MonoBehaviour
     }
     
     /// <summary>
-    /// ÉèÖÃÖ¸¶¨ËşµÄ¼¤¹âµÄ¼¤»î×´Ì¬
+    /// è®¾ç½®æŒ‡å®šå¡”çš„æ¿€å…‰çš„æ¿€æ´»çŠ¶æ€
     /// </summary>
     public void SetLaserActiveForTower(Tower tower, bool isActive)
     {
-        Laser laser = GetLaserForTower(tower);
-        if (laser != null)
+        List<Laser> lasers = GetLaserForTower(tower);
+        if (lasers != null)
         {
-            laser.SetLaserActive(isActive);
+            foreach (Laser laser in lasers)
+            {
+                laser.SetLaserActive(isActive);
+            }
+            
+        }
+    }
+
+    public void RotateLaser(Tower tower, bool antiClockwise = true)
+    {
+        if (tower != null && towerLaserMap.ContainsKey(tower))
+        {
+            // è·å–è¯¥å¡”å¯¹åº”çš„æ‰€æœ‰æ¿€å…‰
+            List<Laser> lasers = towerLaserMap[tower];
+
+            // æ—‹è½¬è§’åº¦ï¼Œé€†æ—¶é’ˆä¸ºæ­£ï¼Œé¡ºæ—¶é’ˆä¸ºè´Ÿ
+            float angle = antiClockwise ? 45f : -45f;
+
+            // éå†æ‰€æœ‰æ¿€å…‰ï¼Œæ›´æ–°æ¯ä¸ªæ¿€å…‰çš„æ–¹å‘
+            foreach (Laser laser in lasers)
+            {
+                if (laser != null)
+                {
+                    // è·å–æ¿€å…‰å½“å‰çš„æ–¹å‘
+                    Vector3 currentDirection = laser.direction;
+
+                    // è®¡ç®—æ–°çš„æ—‹è½¬è§’åº¦ï¼ˆç»•Zè½´æ—‹è½¬2Då¹³é¢ä¸­çš„æ–¹å‘ï¼‰
+                    Vector3 newDirection = Quaternion.Euler(0, 0, angle) * currentDirection;
+
+                    // æ›´æ–°æ¿€å…‰çš„æ–¹å‘
+                    laser.UpdateLaserPositionAndDirection(laser.transform.position, newDirection);
+                }
+            }
         }
     }
 }

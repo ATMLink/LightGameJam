@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aaa40c8c3afbd44896ffe0be7f46222, type: 3}
   m_Name: MinZoom
   m_EditorClassIdentifier: 
-  Value: 5
+  Value: 3
   valueChangedEvent: {fileID: 11400000, guid: 2799d5100d112af47a152f0a028b1a51, type: 2}

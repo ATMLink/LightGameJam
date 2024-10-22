@@ -44,15 +44,18 @@ public class TowerManager : MonoBehaviour
     {
         if (tower != null)
         {
+            StartRotate(tower);
             float angle = antiClockwise ? 45f : -45f;
             Vector3 targetRotation = tower.transform.eulerAngles + new Vector3(0, 0, angle);
 
             tower.transform.DORotate(targetRotation, 0.5f).SetEase(Ease.OutQuad);
+            EndRotate(tower, antiClockwise);
         }
     }
 
     public void RemoveTower(Tower tower)
     {
+        laserManager.RemoveLaser(tower);
         towerPool.ReturnTower(tower);
         towers.Remove(tower);
     }
@@ -75,19 +78,10 @@ public class TowerManager : MonoBehaviour
         laserManager.SetLaserActiveForTower(tower, false);
     }
 
-    private void EndRotate(Tower tower)
+    private void EndRotate(Tower tower, bool antiClockwise)
     {
         laserManager.SetLaserActiveForTower(tower, true);
-        UpdateLaserPositionAndDirection(tower);
+        laserManager.RotateLaser(tower,antiClockwise);
     }
     
-    private void UpdateLaserPositionAndDirection(Tower tower)
-    {
-        if (laserManager.GetLaserForTower(tower) != null)
-        {
-            Vector3 newDirection = transform.forward; // 根据塔的前方向更新激光方向
-            Vector3 newPosition = transform.position; // 更新激光起点为塔的当前位置
-            laserManager.GetLaserForTower(tower).UpdateLaserPositionAndDirection(newPosition, newDirection);
-        }
-    }
 }
