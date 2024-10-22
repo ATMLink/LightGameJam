@@ -43,37 +43,74 @@ public class ConstructManager : MonoBehaviour
     // 检查指定位置是否允许放置塔
     private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)
     {
+        //bool canConstruct = false;
         int count = 0;
-        float radius = 0.25f;
+        float radius = 0f;
         TilemapFeature temp;
         Collider2D[] collider = Physics2D.OverlapCircleAll(position, radius);
-        Debug.LogWarning(collider);
-        if (collider.Length == 1) return true;
+        if (collider.Length == 1) { return (towerAttributes.name == "Miner")?false:true; }
         else foreach (Collider2D col in collider)
-            {
+        {
 
-                GameObject foundObject = col.gameObject;
-                if (foundObject.tag == "Tilemap") continue;
-                else if (foundObject.tag == "Tile")
+            GameObject foundObject = col.gameObject;
+            Debug.LogWarning(foundObject.transform.position);
+            if (foundObject.tag == "Tilemap") continue;
+            else if (foundObject.tag == "Tile")
+            {
+                temp = foundObject.GetComponent<TilemapFeature>();
+                if (towerAttributes.name == "Miner" && temp.canMinerConstruct) return true;
+                if (!temp.canConstruct)
                 {
-                    temp = foundObject.GetComponent<TilemapFeature>();
-                    if (!temp.canConstruct)
-                    {
-                        Debug.Log(towerAttributes.name);
-                        if (towerAttributes.name == "Basic" && temp.canMinerConstruct) return true;
-                        return false;
-                    }
+                    Debug.Log(towerAttributes.name);
+                    Debug.LogWarning(1);
+                    return false;
                 }
-                else if (foundObject.tag == "Tower")
+            }
+            else if (foundObject.tag == "Tower")
+            {
+                if (foundObject.transform.position == position)
                 {
                     count++;
-                    if (count == 2) return false;
                 }
-
+                if (count == 1) { Debug.LogWarning(2); return false; }
             }
+
+        }
         return true; // 可以放置
     }
+    // private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)
+    // {
+    //     int count = 0;
+    //     float radius = 0.25f;
+    //     TilemapFeature temp;
+    //     Collider2D[] collider = Physics2D.OverlapCircleAll(position, radius);
+    //     Debug.LogWarning(collider);
+    //     if (collider.Length == 1) return true;
+    //     else foreach (Collider2D col in collider)
+    //         {
+    //
+    //             GameObject foundObject = col.gameObject;
+    //             if (foundObject.tag == "Tilemap") continue;
+    //             else if (foundObject.tag == "Tile")
+    //             {
+    //                 temp = foundObject.GetComponent<TilemapFeature>();
+    //                 if (!temp.canConstruct)
+    //                 {
+    //                     Debug.Log(towerAttributes.name);
+    //                     if (towerAttributes.name == "Basic" && temp.canMinerConstruct) return true;
+    //                     return false;
+    //                 }
+    //             }
+    //             else if (foundObject.tag == "Tower")
+    //             {
+    //                 count++;
+    //                 if (count == 2) return false;
+    //             }
+    //
+    //         }
+    //     return true; // 可以放置
+    // }
         
-        
+    
     
 }
