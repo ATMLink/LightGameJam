@@ -36,6 +36,7 @@ public class EnemyManager : MonoBehaviour
     private float restCD = 30;
     private bool trigger = false;
     //当前回合
+    [SerializeField]
     private int currentTurn = 0;
     private float currentTurnCD = 0;
 
@@ -65,6 +66,7 @@ public class EnemyManager : MonoBehaviour
                 {
                     SetDifficultLevel();
                     currentTurn += 1;
+                    Debug.Log($"进入轮次{currentTurn}");
                     //获取所有场地刷新时间中最长的那个作为波次的持续时间
                     float maxTurnCD = 0;
                     foreach (var field in fieldList)
@@ -122,6 +124,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (state == GameState.None) GameStart();
         if (state == GameState.outTurn) NextTurn();
+
     }
 
     public void SetLevelTable(int count,string levelName)

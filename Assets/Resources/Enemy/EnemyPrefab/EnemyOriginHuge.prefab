@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 2650699530531593539}
   - component: {fileID: 7958084622437523464}
   m_Layer: 8
-  m_Name: EnemyOriginMedium
+  m_Name: EnemyOriginHuge
   m_TagString: Enemy
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -111,7 +111,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4105675029589839320}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab3895eba98ab2499e886ca3d3dbe91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: enemy_Medium
+  enemyName: enemy_Huge
   enemyType: 1
   maxGenerateOffset: 100
 --- !u!50 &2650699530531593539
@@ -255,7 +255,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0024344623, y: 0.21829641}
-      - {x: -0.19390106, y: -0.11359891}
-      - {x: 0.18962258, y: -0.10807982}
+    - - {x: -0.002197207, y: 0.22340843}
+      - {x: -0.20751157, y: -0.11731365}
+      - {x: 0.19529146, y: -0.12349288}
   m_UseDelaunayMesh: 0

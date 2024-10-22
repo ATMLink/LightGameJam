@@ -250,10 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9419fc99d210c004d94d2d347dd67941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  road:
-  - {fileID: 250412798}
-  - {fileID: 1499381090}
-  - {fileID: 1672492897}
   StartPos: {fileID: 250412799}
 --- !u!4 &386517367
 Transform:
@@ -304,7 +300,7 @@ MonoBehaviour:
   fieldList:
   - {fileID: 386517366}
   difficultLevel: 1
-  maxRestCD: 30
+  maxRestCD: 60
 --- !u!114 &517513778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +316,13 @@ MonoBehaviour:
   enemyPrefabList:
   - {fileID: 2992511581504372685, guid: 0fee2a4ae5a05b3498f7aa3e66dfb100, type: 3}
   - {fileID: 2992511581504372685, guid: a494ce03da6304c4daa45fe741ca70e3, type: 3}
+  - {fileID: 2992511581504372685, guid: ec67cf560d495b242adc778affe378f8, type: 3}
+  - {fileID: 2992511581504372685, guid: 36691c27156238a4583580624cfdbe35, type: 3}
+  - {fileID: 2992511581504372685, guid: 287cd4a2d1e59524282559a34c0a9367, type: 3}
+  - {fileID: 2992511581504372685, guid: 616f6f114e388f34da4b55545fc8b108, type: 3}
+  - {fileID: 2992511581504372685, guid: 30136da475ba5bb42b3ae71c728e91a9, type: 3}
+  - {fileID: 2992511581504372685, guid: 94b87408d56f75b4c94dc022dcef8f47, type: 3}
+  - {fileID: 2992511581504372685, guid: 677556ba615490443b4acecb4f120abe, type: 3}
   originPoolSize: 5
 --- !u!4 &517513780
 Transform:

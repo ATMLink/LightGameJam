@@ -6,10 +6,14 @@ using UnityEngine.Rendering;
 public class Enemy : EnemyBase
 {
 
+    private bool firstInit = true;
+
+    private Material material;
+    private float flashDuration = 0.1f;
 
     protected Rigidbody2D rigid;
     protected new PolygonCollider2D collider;
-    protected EnemySight sight1;
+    protected EnemySight sight1;    
 
     #region generate
     private bool init = false;
@@ -19,11 +23,15 @@ public class Enemy : EnemyBase
     //值固定在0-100内，分布策略为二次反比。
     //理论上大怪这个值更小，因为需要使其尽量分布在怪潮中心位置，看起来舒服一点。
 
+    private float minRotationSpeed = 25f; // 最小旋转速度
+    private float maxRotationSpeed = 50f; // 最大旋转速度
+    private float currentRotationSpeed = 0;
+
     #endregion
 
     #region enemyState
 
-    enum EnemyState
+    protected enum EnemyState
     {
         idle,//待机
         attack,
@@ -31,9 +39,9 @@ public class Enemy : EnemyBase
         skill,
         stun
     }
-    EnemyState enemyState;
+    protected EnemyState enemyState;
 
-    private RoadPoint targetPoint;
+    protected RoadPoint targetPoint;
     private float minMoveOffset = 0.2f;
     //只需到达目标点附近就可以向新目标移动了
     private float stunCD = 0;
@@ -42,25 +50,39 @@ public class Enemy : EnemyBase
 
     #region enemyAttack
 
-    private float attackCD = 0;
+    protected float attackCD = 0;
 
     #endregion
 
 
+    private float environmentSpeed = 1f;
 
-    private void Start()
+
+    protected virtual void Start()
     {
+        //shader
+        material = GetComponent<Renderer>().material;
+
         rigid = GetComponent<Rigidbody2D>();
         //自身触发器
         collider = GetComponent<PolygonCollider2D>();
         //视野触发器
         sight1 = gameObject.transform.GetChild(0).GetComponent<EnemySight>();
         enemyState = EnemyState.move;
+
+        firstInit = false;
+        EnableSet();
     }
 
 
     private void OnEnable()
     {
+        EnableSet();
+    }
+
+    protected void EnableSet()
+    {
+        if (firstInit) return;
         if (init == false)
         {
             if (EnemyData.enemyDic.TryGetValue(enemyName, out saving))
@@ -74,38 +96,61 @@ public class Enemy : EnemyBase
             }
         }
 
+        enemyState = EnemyState.move;
+        // 旋转效果
+        float randomRotation = Random.Range(0f, 360f);
+        transform.rotation = Quaternion.Euler(0, 0, randomRotation);
+        currentRotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
+
+        CopyData();
+        ExtraEnableSet();
+        RefreshOffsetToCenter();
+    }
+
+    protected virtual void CopyData()
+    {
         currentAttackDamage = saving.attack;
         currentHealth = saving.health;
         currentAttackRange = saving.attackRange;
         currentAttackSpeed = saving.attackSpeed;
         currentMoveSpeed = saving.moveSpeed;
         currentPriority = saving.priority;
-
-        RefreshOffsetToCenter();    
     }
 
+    protected virtual void ExtraEnableSet()
+    {
+
+    }
 
     private void OnDisable()
     {
         targetPoint = null;
+        ExtraDisableSet();
+    }
+
+    protected virtual void ExtraDisableSet()
+    {
+
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            OnHit(5);
+            OnHit(1);
         }
         EnemyAction();
     }
 
     private void FixedUpdate()
     {
+        rigid.angularVelocity = currentRotationSpeed;
         MoveController();
     }
 
     protected virtual void EnemyAction()
     {
+        GlobleSkill();
         switch (enemyState)
         {
             case EnemyState.idle:
@@ -127,6 +172,13 @@ public class Enemy : EnemyBase
         }
     }
     #region enemyStatePlan
+
+    protected virtual void GlobleSkill()
+    {
+
+    }
+
+
     protected virtual void MovePlan()
     {
         if (targetPoint != null)
@@ -161,13 +213,30 @@ public class Enemy : EnemyBase
         }
         else
         {
-            //Tower temp;
+            Tower temp = GetTowerInSight();
+            if (temp == null) enemyState = EnemyState.move;
 
-            //这里写个从多个目标中选取优先攻击目标的函数
-
-            Attack();
+            Attack(temp);
             CaculateAttackCD();
         }
+    }
+
+    protected virtual Tower GetTowerInSight()
+    {
+        Tower temp = null;
+        foreach(var tower in sight1.towerInSight)
+        {
+            if (tower == null) continue;
+            if (temp == null) temp = tower;
+            else
+            {
+                if (Vector3.Distance(tower.transform.position, transform.position) < Vector3.Distance(temp.transform.position, transform.position))
+                {
+                    temp = tower;
+                }
+            }
+        }
+        return temp;
     }
 
     protected virtual void SkillPlan()
@@ -183,12 +252,12 @@ public class Enemy : EnemyBase
     }
 
 
-    protected virtual void Attack(/*Tower tower*/)
+    protected virtual void Attack(Tower tower)
     {
         //这个函数调用被攻击的塔的受伤函数
     }
 
-    private void CaculateAttackCD()
+    protected void CaculateAttackCD()
     {
         attackCD = 1 / currentAttackSpeed;
     }
@@ -201,19 +270,19 @@ public class Enemy : EnemyBase
         switch (enemyState)
         {
             case EnemyState.idle:
-                rigid.velocity = Vector2.zero;
+                SetMainVelocity(0);
                 break;
             case EnemyState.move:
                 FixMove();
                 break;
             case EnemyState.attack:
-                rigid.velocity = Vector2.zero;
+                FixAttack();
                 break;
             case EnemyState.skill:
-                rigid.velocity = Vector2.zero;
+                SetMainVelocity(0);
                 break;
             case EnemyState.stun:
-                rigid.velocity = Vector2.zero;
+                SetMainVelocity(0);
                 break;
         }
 
@@ -221,14 +290,18 @@ public class Enemy : EnemyBase
 
     #region EnemyMoveController
 
-    private void FixMove()
+    protected virtual void FixMove()
     {
         if (targetPoint != null)
         {
-            rigid.velocity = 18 * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized * currentMoveSpeed * Time.fixedDeltaTime;
+            SetMainVelocity(1);
         }
     }
 
+    protected virtual void FixAttack()
+    {
+        SetMainVelocity(0);
+    }
 
     private void RefreshOffsetToCenter()
     {
@@ -242,9 +315,16 @@ public class Enemy : EnemyBase
         offset *= offsetToCenter;
     }
 
+
+
+
+    protected virtual void SetMainVelocity(float v)
+    {
+        if (v == 0) rigid.velocity = Vector3.zero;
+        else rigid.velocity = v * environmentSpeed * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized * currentMoveSpeed;
+    }
+
     #endregion
-
-
 
 
     protected virtual void Destroy()
@@ -254,12 +334,12 @@ public class Enemy : EnemyBase
         ReturnToPool();
     }
 
-    private void ReturnToPool()
+    protected void ReturnToPool()
     {
         EnemyEventSystem.instance.EnemyDestroy(this, enemyName);
     }
 
-    public void SetMap(RoadPoint roadPoint)
+    public void SetMap(RoadPoint roadPoint) 
     {
         targetPoint = roadPoint;
     }
@@ -277,11 +357,38 @@ public class Enemy : EnemyBase
     public virtual void OnHit(float damage/*,伤害类型*/)
     {
         currentHealth -= damage;
+        StartCoroutine(OnHitShow());
+    }
+
+    public virtual void OnHeal(float heal)
+    {
+        currentHealth += heal;
+        if (currentHealth > saving.health) currentHealth = saving.health;
+    }
+
+    protected virtual IEnumerator OnHitShow()
+    {
+        float elapsed = 0f;
+        material.SetFloat("_FlashAmount", 1);
+        while (elapsed < flashDuration)
+        {
+            elapsed += Time.deltaTime;
+            material.SetFloat("_FlashAmount", Mathf.Lerp(1, 0, elapsed / flashDuration));
+            yield return null;
+        }
+        material.SetFloat("_FlashAmount", 0);
         if (currentHealth <= 0)
         {
             Destroy();
         }
     }
+
+
+    public virtual void SetSpeed(float environmentEffect)
+    {
+        environmentSpeed = environmentEffect;
+    }
+
 
     public virtual void OnStun(float stunTime)
     {
