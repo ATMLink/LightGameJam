@@ -18,6 +18,6 @@ MonoBehaviour:
   canLightThrough: 1
   canEnemyThrough: 1
   canSlowEnemy: 0
-  canConstruct: 0
+  canConstruct: 1
   canAttackTowerConstruct: 0
   canMinerConstruct: 1
