@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LaserManager : MonoBehaviour
 {
-    public LaserPool laserPool; // ¼¤¹â³ØÒıÓÃ
-    private Dictionary<Tower, Laser> towerLaserMap = new Dictionary<Tower, Laser>(); // ´æ´¢ËşÓë¼¤¹âµÄÓ³Éä¹ØÏµ
+    public LaserPool laserPool; // æ¿€å…‰æ± å¼•ç”¨
+    private Dictionary<Tower, Laser> towerLaserMap = new Dictionary<Tower, Laser>(); // å­˜å‚¨å¡”ä¸æ¿€å…‰çš„æ˜ å°„å…³ç³»
 
     public void Initialize()
     {
@@ -14,7 +14,7 @@ public class LaserManager : MonoBehaviour
 
     public void UpdateState()
     {
-        // ¸üĞÂËùÓĞ¼¤»îµÄ¼¤¹â×´Ì¬
+        // æ›´æ–°æ‰€æœ‰æ¿€æ´»çš„æ¿€å…‰çŠ¶æ€
         foreach (Laser laser in towerLaserMap.Values)
         {
             laser.UpdateState();
@@ -22,7 +22,7 @@ public class LaserManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ´´½¨¼¤¹â°ó¶¨ËşºÍ¼¤¹â
+    /// åˆ›å»ºæ¿€å…‰ç»‘å®šå¡”å’Œæ¿€å…‰
     /// </summary>
     /// <param name="position"></param>
     /// <param name="direction"></param>
@@ -30,11 +30,11 @@ public class LaserManager : MonoBehaviour
     /// <returns></returns>
     public Laser CreateLaser(Tower tower, Vector3 position, Vector3 direction, float intensity)
     {
-        // ´Ó¶ÔÏó³Ø»ñÈ¡¼¤¹â
+        // ä»å¯¹è±¡æ± è·å–æ¿€å…‰
         Laser laser = laserPool.GetLaser(position, direction, intensity);
         if (laser != null)
         {
-            towerLaserMap[tower] = laser; // °ó¶¨ËşºÍ¼¤¹â
+            towerLaserMap[tower] = laser; // ç»‘å®šå¡”å’Œæ¿€å…‰
             laser.Initialize();
             laser.SetLaserActive(true);
         }
@@ -46,13 +46,13 @@ public class LaserManager : MonoBehaviour
         if (towerLaserMap.ContainsKey(tower))
         {
             Laser laser = towerLaserMap[tower];
-            laserPool.ReturnLaser(laser); // ½«¼¤¹â·µ»Ø³ØÖĞ
-            towerLaserMap.Remove(tower); // ´ÓÓ³Éä¹ØÏµÖĞÒÆ³ı¼¤¹â
+            laserPool.ReturnLaser(laser); // å°†æ¿€å…‰è¿”å›æ± ä¸­
+            towerLaserMap.Remove(tower); // ä»æ˜ å°„å…³ç³»ä¸­ç§»é™¤æ¿€å…‰
         }
     }
     
     /// <summary>
-    /// »ñÈ¡Ö¸¶¨ËşµÄ¼¤¹â
+    /// è·å–æŒ‡å®šå¡”çš„æ¿€å…‰
     /// </summary>
     public Laser GetLaserForTower(Tower tower)
     {
@@ -64,7 +64,7 @@ public class LaserManager : MonoBehaviour
     }
     
     /// <summary>
-    /// ÉèÖÃÖ¸¶¨ËşµÄ¼¤¹âµÄ¼¤»î×´Ì¬
+    /// è®¾ç½®æŒ‡å®šå¡”çš„æ¿€å…‰çš„æ¿€æ´»çŠ¶æ€
     /// </summary>
     public void SetLaserActiveForTower(Tower tower, bool isActive)
     {

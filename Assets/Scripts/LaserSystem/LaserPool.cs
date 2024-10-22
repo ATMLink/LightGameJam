@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LaserPool : MonoBehaviour
 {
-    public GameObject laserPrefab; // ¼¤¹âÔ¤ÖÆÌå
-    public int initialPoolSize = 8; // ³õÊ¼¼¤¹â³ØµÄ´óĞ¡
-    private List<Laser> laserPool; // ¼¤¹â³Ø
+    public GameObject laserPrefab; // æ¿€å…‰é¢„åˆ¶ä½“
+    public int initialPoolSize = 8; // åˆå§‹æ¿€å…‰æ± çš„å¤§å°
+    private List<Laser> laserPool; // æ¿€å…‰æ± 
 
     public void Initialize()
     {
@@ -17,7 +17,7 @@ public class LaserPool : MonoBehaviour
             GameObject laserObject = Instantiate(laserPrefab);
             Laser laser = laserObject.GetComponent<Laser>();
             laserPool.Add(laser);
-            laser.SetLaserActive(false); // ³õÊ¼»¯Ê±Òş²Ø¼¤¹â
+            laser.SetLaserActive(false); // åˆå§‹åŒ–æ—¶éšè—æ¿€å…‰
             laser.gameObject.SetActive(false);
         }
     }
@@ -26,18 +26,18 @@ public class LaserPool : MonoBehaviour
     {
         foreach (Laser laser in laserPool)
         {
-            if (!laser.gameObject.activeInHierarchy) // Èç¹û¼¤¹âÎ´¼¤»î£¬ÔòÖØÓÃ
+            if (!laser.gameObject.activeInHierarchy) // å¦‚æœæ¿€å…‰æœªæ¿€æ´»ï¼Œåˆ™é‡ç”¨
             {
                 laser.transform.position = position;
                 laser.SetLaserProperties(intensity, direction);
-                laser.SetLaserActive(true); // ¼¤»î¼¤¹â
+                laser.SetLaserActive(true); // æ¿€æ´»æ¿€å…‰
                 return laser;
             }
         }
 
-        // Èç¹ûÃ»ÓĞ¿ÉÓÃµÄ¼¤¹â£¬À©Èİ³Ø
+        // å¦‚æœæ²¡æœ‰å¯ç”¨çš„æ¿€å…‰ï¼Œæ‰©å®¹æ± 
         ExpandPool(1);
-        return GetLaser(position, direction, intensity); // µİ¹éµ÷ÓÃÒÔ»ñÈ¡ĞÂµÄ¼¤¹â
+        return GetLaser(position, direction, intensity); // é€’å½’è°ƒç”¨ä»¥è·å–æ–°çš„æ¿€å…‰
     }
 
     private void ExpandPool(int amount)
@@ -46,7 +46,7 @@ public class LaserPool : MonoBehaviour
         {
             GameObject laserObject = Instantiate(laserPrefab);
             Laser laser = laserObject.GetComponent<Laser>();
-            laser.SetLaserActive(false); // ³õÊ¼»¯Ê±Òş²Ø¼¤¹â
+            laser.SetLaserActive(false); // åˆå§‹åŒ–æ—¶éšè—æ¿€å…‰
             laserPool.Add(laser);
         }
 
@@ -56,6 +56,6 @@ public class LaserPool : MonoBehaviour
     public void ReturnLaser(Laser laser)
     {
         laser.ResetLaser();
-        laser.SetLaserActive(false); // Òş²Ø¼¤¹â
+        laser.SetLaserActive(false); // éšè—æ¿€å…‰
     }
 }

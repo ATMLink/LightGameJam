@@ -8,25 +8,25 @@ public class TowerShowInformation : MonoBehaviour, IPointerEnterHandler, IPointe
 {
 
 
-    public Image displayImage; // ÓÃÓÚÏÔÊ¾µÄImage¶ÔÏó
-    public Sprite hoverSprite; // ĞüÍ£Ê±ÏÔÊ¾µÄÍ¼Æ¬
-    private Sprite originalSprite; // Ô­Ê¼Í¼Æ¬
+    public Image displayImage; // ç”¨äºæ˜¾ç¤ºçš„Imageå¯¹è±¡
+    public Sprite hoverSprite; // æ‚¬åœæ—¶æ˜¾ç¤ºçš„å›¾ç‰‡
+    private Sprite originalSprite; // åŸå§‹å›¾ç‰‡
 
     void Start()
     {
-        // ±£´æÔ­Ê¼Í¼Æ¬
+        // ä¿å­˜åŸå§‹å›¾ç‰‡
         originalSprite = displayImage.sprite;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Êó±êĞüÍ£Ê±¸ü¸ÄÍ¼Æ¬
+        // é¼ æ ‡æ‚¬åœæ—¶æ›´æ”¹å›¾ç‰‡
         displayImage.sprite = hoverSprite;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Êó±êÀë¿ªÊ±»Ö¸´Ô­Ê¼Í¼Æ¬
+        // é¼ æ ‡ç¦»å¼€æ—¶æ¢å¤åŸå§‹å›¾ç‰‡
         displayImage.sprite = originalSprite;
     }
 }
