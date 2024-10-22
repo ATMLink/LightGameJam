@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    public float intensity; // ¼¤¹âÇ¿¶È
-    public Vector3 direction; // ¼¤¹â·¢Éä·½Ïò
-    public float damage; // ¼¤¹â¶ÔµĞÈËÔì³ÉµÄÉËº¦
-    public float maxDistance = 20f; // ¼¤¹â×î´ó¾àÀë
-    [SerializeField] private LineRenderer lineRenderer; // ÓÃÓÚ¿ÉÊÓ»¯¼¤¹â
-    [SerializeField] private ParticleSystem hitEffect; // ¼¤¹â»÷ÖĞĞ§¹ûµÄÁ£×ÓÏµÍ³
+    public float intensity; // æ¿€å…‰å¼ºåº¦
+    public Vector3 direction; // æ¿€å…‰å‘å°„æ–¹å‘
+    public float damage; // æ¿€å…‰å¯¹æ•Œäººé€ æˆçš„ä¼¤å®³
+    public float maxDistance = 20f; // æ¿€å…‰æœ€å¤§è·ç¦»
+    [SerializeField] private LineRenderer lineRenderer; // ç”¨äºå¯è§†åŒ–æ¿€å…‰
+    [SerializeField] private ParticleSystem hitEffect; // æ¿€å…‰å‡»ä¸­æ•ˆæœçš„ç²’å­ç³»ç»Ÿ
 
-    private bool isActive = true; // ¼¤¹âÊÇ·ñÓĞĞ§
+    private bool isActive = true; // æ¿€å…‰æ˜¯å¦æœ‰æ•ˆ
 
     public void Initialize()
     {
@@ -17,7 +17,7 @@ public class Laser : MonoBehaviour
         lineRenderer.startWidth = 0.1f;
         lineRenderer.endWidth = 0.1f;
         lineRenderer.material = new Material(Shader.Find("Unlit/Color"));
-        lineRenderer.startColor = Color.red; // ¸ù¾İÇ¿¶ÈÉèÖÃÑÕÉ«
+        lineRenderer.startColor = Color.red; // æ ¹æ®å¼ºåº¦è®¾ç½®é¢œè‰²
         lineRenderer.endColor = Color.red;
         lineRenderer.positionCount = 2;
         
@@ -31,7 +31,7 @@ public class Laser : MonoBehaviour
         }
         else
         {
-            // Èç¹û¼¤¹âÊ§Ğ§£¬¿ÉÒÔÒş²Ø»òÇå³ı¼¤¹â
+            // å¦‚æœæ¿€å…‰å¤±æ•ˆï¼Œå¯ä»¥éšè—æˆ–æ¸…é™¤æ¿€å…‰
             lineRenderer.enabled = false;
         }
     }
@@ -41,15 +41,15 @@ public class Laser : MonoBehaviour
         intensity = 0;
         direction = Vector3.zero;
         damage = 0;
-        SetLaserActive(false); // Òş²Ø¼¤¹â
+        SetLaserActive(false); // éšè—æ¿€å…‰
     }
 
     void UpdateLaser()
     {
-        Vector3 endPoint = transform.position + direction.normalized * maxDistance; // ·½Ïò±ê×¼»¯
+        Vector3 endPoint = transform.position + direction.normalized * maxDistance; // æ–¹å‘æ ‡å‡†åŒ–
         lineRenderer.SetPosition(0, transform.position);
 
-        // ¸üĞÂ¼¤¹âÖÕµã£¬´¦ÀíµĞÈËÕÚµ²Çé¿ö
+        // æ›´æ–°æ¿€å…‰ç»ˆç‚¹ï¼Œå¤„ç†æ•Œäººé®æŒ¡æƒ…å†µ
         endPoint = GetAdjustedLaserEndPoint(endPoint);
         lineRenderer.SetPosition(1, endPoint);
 
@@ -57,7 +57,7 @@ public class Laser : MonoBehaviour
     }
     
     /// <summary>
-    /// ¸üĞÂ¼¤¹âµÄÆğµãºÍ·½Ïò
+    /// æ›´æ–°æ¿€å…‰çš„èµ·ç‚¹å’Œæ–¹å‘
     /// </summary>
     public void UpdateLaserPositionAndDirection(Vector3 newPosition, Vector3 newDirection)
     {
@@ -69,56 +69,56 @@ public class Laser : MonoBehaviour
     private Vector3 GetAdjustedLaserEndPoint(Vector3 intendedEndPoint)
     {
         RaycastHit hit;
-        // ¼ì²é¼¤¹âÊÇ·ñ»÷ÖĞµĞÈË
+        // æ£€æŸ¥æ¿€å…‰æ˜¯å¦å‡»ä¸­æ•Œäºº
         if (Physics.Raycast(transform.position, direction, out hit, maxDistance))
         {
             if (hit.collider.CompareTag("Enemy"))
             {
-                // ¼ÆËãµĞÈËÇ°ÃæµÄÎ»ÖÃ
-                Vector3 hitPoint = hit.point; // ¼¤¹â»÷ÖĞµÄÎ»ÖÃ
-                Vector3 laserOrigin = transform.position; // ¼¤¹âÆğÊ¼Î»ÖÃ
-                Vector3 laserDirection = direction.normalized; // ¼¤¹â·½Ïò
+                // è®¡ç®—æ•Œäººå‰é¢çš„ä½ç½®
+                Vector3 hitPoint = hit.point; // æ¿€å…‰å‡»ä¸­çš„ä½ç½®
+                Vector3 laserOrigin = transform.position; // æ¿€å…‰èµ·å§‹ä½ç½®
+                Vector3 laserDirection = direction.normalized; // æ¿€å…‰æ–¹å‘
 
-                // ¼ÆËãµĞÈËÇ°·½µÄµã£¨°´±ê×¼»¯·½ÏòËõ¶Ì¼¤¹â³¤¶È£©
+                // è®¡ç®—æ•Œäººå‰æ–¹çš„ç‚¹ï¼ˆæŒ‰æ ‡å‡†åŒ–æ–¹å‘ç¼©çŸ­æ¿€å…‰é•¿åº¦ï¼‰
                 float distanceToEnemy = Vector3.Distance(laserOrigin, hitPoint);
-                float offsetDistance = 0.1f; // È·±£¼¤¹â²»ÓëµĞÈËÖØµş
+                float offsetDistance = 0.1f; // ç¡®ä¿æ¿€å…‰ä¸ä¸æ•Œäººé‡å 
 
-                // Èç¹û¾àÀëĞ¡ÓÚoffsetDistance£¬·µ»ØÆğÊ¼µã
+                // å¦‚æœè·ç¦»å°äºoffsetDistanceï¼Œè¿”å›èµ·å§‹ç‚¹
                 if (distanceToEnemy <= offsetDistance)
                 {
-                    return laserOrigin; // ·µ»ØÆğÊ¼µã£¬¼¤¹âÍêÈ«Ëõ¶Ì
+                    return laserOrigin; // è¿”å›èµ·å§‹ç‚¹ï¼Œæ¿€å…‰å®Œå…¨ç¼©çŸ­
                 }
                 
-                // ·µ»Ø±ê×¼»¯·½Ïò¼ÆËãµÄµĞÈËÇ°·½Î»ÖÃ
+                // è¿”å›æ ‡å‡†åŒ–æ–¹å‘è®¡ç®—çš„æ•Œäººå‰æ–¹ä½ç½®
                 return hitPoint - laserDirection * offsetDistance;
             }
         }
 
-        return intendedEndPoint; // Èç¹ûÃ»ÓĞ»÷ÖĞµĞÈË£¬·µ»ØÔ­¶¨ÖÕµã
+        return intendedEndPoint; // å¦‚æœæ²¡æœ‰å‡»ä¸­æ•Œäººï¼Œè¿”å›åŸå®šç»ˆç‚¹
     }
     private void Attack()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, direction, out hit, maxDistance))
         {
-            // ¼ì²é¼¤¹âÊÇ·ñ»÷ÖĞµĞÈË
+            // æ£€æŸ¥æ¿€å…‰æ˜¯å¦å‡»ä¸­æ•Œäºº
             if (hit.collider.CompareTag("Enemy"))
             {
-                // Ôì³ÉÉËº¦
+                // é€ æˆä¼¤å®³
                 hit.collider.GetComponent<Enemy>().OnHit(damage);
-                TriggerHitEffect(hit.point); // ´¥·¢»÷ÖĞĞ§¹û
+                TriggerHitEffect(hit.point); // è§¦å‘å‡»ä¸­æ•ˆæœ
             }
         }
     }
 
     private void TriggerHitEffect(Vector3 position)
     {
-        // ÔÚ¼¤¹â»÷ÖĞÎ»ÖÃ²¥·ÅÁ£×ÓĞ§¹û
+        // åœ¨æ¿€å…‰å‡»ä¸­ä½ç½®æ’­æ”¾ç²’å­æ•ˆæœ
         if (hitEffect != null)
         {
             ParticleSystem effect = Instantiate(hitEffect, position, Quaternion.identity);
             effect.Play();
-            Destroy(effect.gameObject, effect.main.duration); // ²¥·ÅÍê³ÉºóÏú»ÙÁ£×ÓĞ§¹û
+            Destroy(effect.gameObject, effect.main.duration); // æ’­æ”¾å®Œæˆåé”€æ¯ç²’å­æ•ˆæœ
         }
     }
 
@@ -129,11 +129,11 @@ public class Laser : MonoBehaviour
         UpdateLaser();
     }
 
-    // ¿ØÖÆ¼¤¹âµÄÓĞĞ§ĞÔ
+    // æ§åˆ¶æ¿€å…‰çš„æœ‰æ•ˆæ€§
     public void SetLaserActive(bool active)
     {
         isActive = active;
-        lineRenderer.enabled = active; // ¸ù¾İ¼¤¹â×´Ì¬À´ÏÔÊ¾»òÒş²Ø¼¤¹â
-        Debug.Log($"Laser {gameObject.name} active: {active}"); // Êä³ö¼¤¹âµÄ¼¤»î×´Ì¬
+        lineRenderer.enabled = active; // æ ¹æ®æ¿€å…‰çŠ¶æ€æ¥æ˜¾ç¤ºæˆ–éšè—æ¿€å…‰
+        Debug.Log($"Laser {gameObject.name} active: {active}"); // è¾“å‡ºæ¿€å…‰çš„æ¿€æ´»çŠ¶æ€
     }
 }
