@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
@@ -47,6 +46,7 @@ public class CameraController : MonoBehaviour
         HandleCameraMovement();
         HandleCameraZoom();
         ResetCameraPosition();
+        ChangeBounds();
     }
 
     public void HandleCameraMovement()// speed should not be absoluted
@@ -85,5 +85,14 @@ public class CameraController : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x, minBounds.Value.x, maxBounds.Value.x);
         pos.y = Mathf.Clamp(pos.y, minBounds.Value.y, maxBounds.Value.y);
         camera.transform.position = pos;
+    }
+    public void ChangeBounds() { 
+        minBounds.SetValue(new Vector2(-(25.2f-camera.orthographicSize*1.8f), -(23.9f - camera.orthographicSize * 1f)));
+        maxBounds.SetValue(new Vector2(25.2f - camera.orthographicSize * 1.8f, 25.9f - camera.orthographicSize * 1f));
+        ClampCameraPosition();
+    
+    
+    
+    
     }
 }

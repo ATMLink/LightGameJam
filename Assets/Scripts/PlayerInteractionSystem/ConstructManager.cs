@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class ConstructManager : MonoBehaviour
 {
+    public Light2D _light;
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private TowerPool towerPool;
+    //[SerializeField] private LightSystem lightSystem;
     private TowerAttributes selectedTowerAttributes;
-
+    private void Start()
+    {
+        LightSystem.Instance.AddLight(_light);
+    }
     // 设置当前选择的塔
     public void SelectTower(TowerAttributes towerAttributes)
     {
@@ -43,6 +49,7 @@ public class ConstructManager : MonoBehaviour
     // 检查指定位置是否允许放置塔
     private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)
     {
+        if(!LightSystem.Instance.IsIrradiated(new Vector2(position.x, position.y)))return false;
         //bool canConstruct = false;
         int count = 0;
         float radius = 0f;
@@ -65,7 +72,6 @@ public class ConstructManager : MonoBehaviour
                         return false;
                     }
                 }
-
                 else if (foundObject.tag == "Tower")
                 {
                     if (foundObject.transform.position == position)

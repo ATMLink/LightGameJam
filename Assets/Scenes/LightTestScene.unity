@@ -259,7 +259,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!43 &505687491
+--- !u!43 &107603257
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb1604e85bc2d9429f2911f9a057980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightdd: {fileID: 0}
+  lightdd: {fileID: 1447687033}
 --- !u!212 &551137684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -548,8 +548,8 @@ MonoBehaviour:
   - {x: 0.5000038, y: 0.5, z: 0}
   - {x: 0.5000038, y: -0.5, z: 0}
   m_ShapePathHash: 0
-  m_Mesh: {fileID: 505687491}
-  m_InstanceId: -56030
+  m_Mesh: {fileID: 107603257}
+  m_InstanceId: 33222
   m_LocalBounds:
     m_Center: {x: 0.0000019073486, y: 0, z: 0}
     m_Extent: {x: 0.5000019, y: 0.5, z: 0}

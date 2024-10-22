@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class Test : MonoBehaviour
+public class Light: MonoBehaviour
 {
     public Light2D lightdd;
     // Start is called before the first frame update
