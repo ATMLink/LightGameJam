@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: mountain
   sprites:
-  - {fileID: 21300000, guid: 3aa5692bbbbd82b4f9c571cdc3df72ea, type: 3}
+  - {fileID: 21300000, guid: 61225f824b47d75449cd183300aaa5ff, type: 3}
   canLightThrough: 0
   canEnemyThrough: 0
   canSlowEnemy: 0

@@ -48,34 +48,36 @@ public class ConstructManager : MonoBehaviour
         float radius = 0f;
         TilemapFeature temp;
         Collider2D[] collider = Physics2D.OverlapCircleAll(position, radius);
-        if (collider.Length == 1) { return (towerAttributes.name == "Miner")?false:true; }
+        if (collider.Length == 1) { return (towerAttributes.name == "Miner") ? false : true; }
         else foreach (Collider2D col in collider)
-        {
-
-            GameObject foundObject = col.gameObject;
-            Debug.LogWarning(foundObject.transform.position);
-            if (foundObject.tag == "Tilemap") continue;
-            else if (foundObject.tag == "Tile")
             {
-                temp = foundObject.GetComponent<TilemapFeature>();
-                if (towerAttributes.name == "Miner" && temp.canMinerConstruct) return true;
-                if (!temp.canConstruct)
+                GameObject foundObject = col.gameObject;
+                Debug.LogWarning(foundObject.transform.position);
+                if (foundObject.tag == "Tilemap") continue;
+                else if (foundObject.tag == "Tile")
                 {
-                    Debug.Log(towerAttributes.name);
-                    Debug.LogWarning(1);
-                    return false;
+                    temp = foundObject.GetComponent<TilemapFeature>();
+                    if (towerAttributes.name == "Miner" && temp.canMinerConstruct) return true;
+                    if (!temp.canConstruct)
+                    {
+                        Debug.LogWarning(towerAttributes.name);
+                        Debug.LogWarning(1);
+                        return false;
+                    }
+                }
+
+                else if (foundObject.tag == "Tower")
+                {
+                    if (foundObject.transform.position == position)
+                    {
+                        if (foundObject.transform.position == position)
+                        {
+                            count++;
+                        }
+                        if (count == 1) { Debug.LogWarning(2); return false; }
+                    }
                 }
             }
-            else if (foundObject.tag == "Tower")
-            {
-                if (foundObject.transform.position == position)
-                {
-                    count++;
-                }
-                if (count == 1) { Debug.LogWarning(2); return false; }
-            }
-
-        }
         return true; // 可以放置
     }
     // private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)

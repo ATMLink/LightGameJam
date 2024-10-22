@@ -77,7 +77,7 @@ public class TilemapManager : MonoBehaviour
                 for (int x = 0; x < line.Length; x++)
                 {
                     char c = line[x];
-                    if ((int)c == 97)
+                    if ((int)c == 32)
                     {
                         tile = ScriptableObject.CreateInstance<Tile>();
                         tile.sprite = tileBase.sprites[Random.Range(0, tileBase.sprites.Count)];

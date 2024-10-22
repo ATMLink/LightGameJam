@@ -31,7 +31,6 @@ public class TilemapFeature : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(111);
         if (collision.tag =="Enemy") { }
     }
     private void OnTriggerExit2D(Collider2D collision)
