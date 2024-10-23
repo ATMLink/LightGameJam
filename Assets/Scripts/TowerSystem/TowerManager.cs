@@ -55,6 +55,7 @@ public class TowerManager : MonoBehaviour
 
     public void RemoveTower(Tower tower)
     {
+        Debug.Log($"Removing tower: {tower.name}, at position: {tower.transform.position}");
         laserManager.RemoveLaser(tower);
         towerPool.ReturnTower(tower);
         towers.Remove(tower);

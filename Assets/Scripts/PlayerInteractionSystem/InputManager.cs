@@ -130,6 +130,7 @@ public class InputManager : MonoBehaviour
                 if (clickedTower != null)
                 {
                     Debug.Log($"Tower clicked at position: {hit.point}. Showing tower menu.");
+                    
                     uiManager.ShowTowerMenu(clickedTower);
                 }
                 else

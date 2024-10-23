@@ -9,6 +9,8 @@ public class Tower : MonoBehaviour
     
     public TowerAttributes attributes;
 
+    private int towerID;
+    private static int towerIDCounter = 0;
     private float health;
     private float damage;
     private float attackSpeed;
@@ -45,6 +47,7 @@ public class Tower : MonoBehaviour
         //     rangeCollider = gameObject.AddComponent<CircleCollider2D>();
         // rangeCollider.isTrigger = true;
         rangeCollider.radius = attackRange;
+        towerID = towerIDCounter++;
         
         gameObject.SetActive(true);
     }
