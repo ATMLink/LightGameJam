@@ -40,7 +40,7 @@ public class InputManager : MonoBehaviour
     {
         if (towerAttributes == null)
         {
-            Debug.LogError("No TowerAttributes provided! Aborting drag operation.");
+            // Debug.LogError("No TowerAttributes provided! Aborting drag operation.");
             return;
         }
 
@@ -57,7 +57,7 @@ public class InputManager : MonoBehaviour
 
         towerPreview.SetActive(true); // Make sure it's visible
 
-        Debug.Log($"Started dragging tower: {selectedTowerAttributes.towerName}");
+        // Debug.Log($"Started dragging tower: {selectedTowerAttributes.towerName}");
     }
 
 
@@ -78,11 +78,11 @@ public class InputManager : MonoBehaviour
 
                 if (Input.GetMouseButtonUp(0))
                 {
-                    Debug.Log("Left mouse button released, attempting to place tower...");
+                    // Debug.Log("Left mouse button released, attempting to place tower...");
                     constructManager.SelectTower(selectedTowerAttributes);
 
                         constructManager.PlaceTower(cellCenterPos);
-                        Debug.Log($"Tower placed at position: {cellCenterPos}");
+                        // Debug.Log($"Tower placed at position: {cellCenterPos}");
 
                     CancelTowerDragging();
                 }
@@ -91,7 +91,7 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetMouseButtonUp(1))
         {
-            Debug.Log("Right mouse button released, cancelling tower dragging.");
+            // Debug.Log("Right mouse button released, cancelling tower dragging.");
             CancelTowerDragging();
         }
     }
@@ -108,17 +108,17 @@ public class InputManager : MonoBehaviour
         if (towerPreview != null)
         {
             Destroy(towerPreview);
-            Debug.Log("Tower preview destroyed.");
+            // Debug.Log("Tower preview destroyed.");
         }
 
-        Debug.Log("Drag operation finished or cancelled.");
+        // Debug.Log("Drag operation finished or cancelled.");
     }
 
     public void HandleClickedTower()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Left mouse button clicked.");
+            // Debug.Log("Left mouse button clicked.");
             
             if (EventSystem.current.IsPointerOverGameObject())
             {
@@ -136,19 +136,19 @@ public class InputManager : MonoBehaviour
                 Tower clickedTower = hit.collider.GetComponent<Tower>();
                 if (clickedTower != null)
                 {
-                    Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
+                    // Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
                     
                     uiManager.ShowTowerMenu(clickedTower);
                 }
-                else
-                {
-                    Debug.Log("No tower found at clicked position.");
-                }
+                // else
+                // {
+                    // Debug.Log("No tower found at clicked position.");
+                // }
             }
-            else
-            {
-                Debug.Log("No collider hit detected.");
-            }
+            // else
+            // {
+            //     Debug.Log("No collider hit detected.");
+            // }
         }
     }
 
@@ -165,18 +165,18 @@ public class InputManager : MonoBehaviour
             {
                 Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPos);
                 Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cellPosition);
-                Debug.Log($"Mouse clicked on tile at cell position: {cellPosition}, cell center position: {cellCenterPos}");
+                // Debug.Log($"Mouse clicked on tile at cell position: {cellPosition}, cell center position: {cellCenterPos}");
                 return cellCenterPos;
             }
-            else
-            {
-                Debug.Log("Hit collider does not have a Tilemap component.");
-            }
+            // else
+            // {
+            //     Debug.Log("Hit collider does not have a Tilemap component.");
+            // }
         }
-        else
-        {
-            Debug.Log("No collider hit detected.");
-        }
+        // else
+        // {
+        //     Debug.Log("No collider hit detected.");
+        // }
 
         return null; // 点击的区域无效
     }

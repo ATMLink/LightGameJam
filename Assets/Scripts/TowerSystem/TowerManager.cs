@@ -8,6 +8,7 @@ public class TowerManager : MonoBehaviour
     public TowerPool towerPool;
     [SerializeField] private LaserManager laserManager;
     private List<Tower> towers = new List<Tower>();
+    private bool isRotating = false;
 
     public void Initialize()
     {
@@ -42,14 +43,22 @@ public class TowerManager : MonoBehaviour
     }
     public void RotateTower(Tower tower, bool antiClockwise = true)
     {
-        if (tower != null)
+        if (tower != null && !isRotating)
         {
+            isRotating = true;  // 标记为旋转中
+
             StartRotate(tower);
+
             float angle = antiClockwise ? 45f : -45f;
             Vector3 targetRotation = tower.transform.eulerAngles + new Vector3(0, 0, angle);
 
-            tower.transform.DORotate(targetRotation, 0.5f).SetEase(Ease.OutQuad);
-            EndRotate(tower, antiClockwise);
+            tower.transform.DORotate(targetRotation, 0.5f)
+                .SetEase(Ease.OutQuad)
+                .OnComplete(() => 
+                {
+                    EndRotate(tower, antiClockwise);
+                    isRotating = false;  // 旋转结束后，允许新的旋转
+                });  
         }
     }
 
