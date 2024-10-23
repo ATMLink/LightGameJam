@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private FloatVariable maxZoom;
     [SerializeField] private Vector2Variable minBounds;
     [SerializeField] private Vector2Variable maxBounds;
+    [SerializeField] private TilemapManager tilemapManager;
     private Camera camera;
     private Vector3 initialPosition;
     private Vector3 lastMouseWorldPosition;
@@ -86,13 +87,14 @@ public class CameraController : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, minBounds.Value.y, maxBounds.Value.y);
         camera.transform.position = pos;
     }
-    public void ChangeBounds() { 
-        minBounds.SetValue(new Vector2(-(25.2f-camera.orthographicSize*1.8f), -(23.9f - camera.orthographicSize * 1f)));
-        maxBounds.SetValue(new Vector2(25.2f - camera.orthographicSize * 1.8f, 25.9f - camera.orthographicSize * 1f));
+    public void ChangeBounds()
+    {
+        Vector3 viewportPoint = new Vector3(0, 0, 0);
+        Vector3 worldPoint = camera.ViewportToWorldPoint(viewportPoint);
+        float BorderX = camera.transform.position.x - worldPoint.x;
+        float BorderY = camera.transform.position.y - worldPoint.y;
+        minBounds.SetValue(new Vector2(-(tilemapManager.width / 2 - BorderX), -(tilemapManager.height / 2 - BorderY)));
+        maxBounds.SetValue(new Vector2((tilemapManager.width / 2 - BorderX), tilemapManager.height / 2 - BorderY));
         ClampCameraPosition();
-    
-    
-    
-    
     }
 }

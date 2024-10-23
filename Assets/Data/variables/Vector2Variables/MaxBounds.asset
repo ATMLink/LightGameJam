@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9e0a57807e75045a26f28d5f7a5f1e, type: 3}
   m_Name: MaxBounds
   m_EditorClassIdentifier: 
-  Value: {x: 3.6000013, y: 13.9}
+  Value: {x: 5.066668, y: 13.9}
   valueChangedEvent: {fileID: 11400000, guid: 15d19e6de3386484fa9d7c7f60d919ed, type: 2}

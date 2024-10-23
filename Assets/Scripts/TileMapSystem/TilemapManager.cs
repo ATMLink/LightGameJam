@@ -70,7 +70,7 @@ public class TilemapManager : MonoBehaviour
             //string filePath = URL;
             string[] lines = textAsset.text.Split('\n');
             int midy = lines.Length / 2;
-            int y = lines.Length - 1;
+            int y = lines.Length-2;
             foreach (string line in lines)
             {
                 int midx = line.Length / 2;

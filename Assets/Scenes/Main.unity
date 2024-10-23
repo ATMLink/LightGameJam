@@ -5855,8 +5855,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileMap: {fileID: 740886562}
-  width: 28
-  height: 24
+  width: 50
+  height: 50
   tileBase: {fileID: 11400000, guid: 7f8e09bf6aa31ec4f8b5b0183d5ffd66, type: 2}
   tiles:
   - {fileID: 11400000, guid: 75c00bb7ffdcee344b4c98d4a2c7755d, type: 2}
@@ -7212,6 +7212,7 @@ GameObject:
   - component: {fileID: 1912484483}
   - component: {fileID: 1912484482}
   - component: {fileID: 1912484481}
+  - component: {fileID: 1912484486}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7237,6 +7238,7 @@ MonoBehaviour:
   maxZoom: {fileID: 11400000, guid: 72b97e4716e7bd64bb650cbb9a74b174, type: 2}
   minBounds: {fileID: 11400000, guid: 01edf8910f9d34f4196c91f3cb6c8357, type: 2}
   maxBounds: {fileID: 11400000, guid: 72846aaef60511f46a3744d5eb96a6da, type: 2}
+  tilemapManager: {fileID: 1424931871}
 --- !u!114 &1912484482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7355,6 +7357,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912484486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912484480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9835ed867c6274fb205de80b339d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1953277574
 GameObject:
   m_ObjectHideFlags: 0
