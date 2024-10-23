@@ -19,7 +19,7 @@ public struct EnemyInfo
 
     public EnemyInfo(float attack, float health, float attackSpeed, float attackRange, float moveSpeed, int priority = 100)
     {
-        this.attack = attack * EnemyData.globleGenerateOffset;
+        this.attack = attack * EnemyData.globleAttackValue;
         this.health = health * EnemyData.globleHealthValue;
         this.attackSpeed = attackSpeed * EnemyData.globleAttackSpeedValue;
         this.attackRange = attackRange * EnemyData.globleAttackRangeValue;
@@ -29,7 +29,7 @@ public struct EnemyInfo
     }
     public EnemyInfo(float attack, float health, float attackSpeed, float attackRange, float moveSpeed, List<float> specialAbility)
     {
-        this.attack = attack * EnemyData.globleGenerateOffset;
+        this.attack = attack * EnemyData.globleAttackValue;
         this.health = health * EnemyData.globleHealthValue;
         this.attackSpeed = attackSpeed * EnemyData.globleAttackSpeedValue;
         this.attackRange = attackRange * EnemyData.globleAttackRangeValue;
@@ -39,7 +39,7 @@ public struct EnemyInfo
     }
     public EnemyInfo(float attack, float health, float attackSpeed, float attackRange, float moveSpeed, int priority, List<float> specialAbility)
     {
-        this.attack = attack * EnemyData.globleGenerateOffset;
+        this.attack = attack * EnemyData.globleAttackValue;
         this.health = health * EnemyData.globleHealthValue;
         this.attackSpeed = attackSpeed * EnemyData.globleAttackSpeedValue;
         this.attackRange = attackRange * EnemyData.globleAttackRangeValue;
@@ -110,11 +110,11 @@ public static class EnemyData
     //enemy_Skeleton
     //理论上攻击时应该会停下来,但是目前没有攻击间隔和攻击花费时间的区别,因此随便定一个攻击花费时间
     static List<float> sp5 = new List<float>() { 0.2f };//攻击花费时间
-    static EnemyInfo enemy_5 = new EnemyInfo(3, 15, 1f, 4, 4, sp5);
+    static EnemyInfo enemy_5 = new EnemyInfo(3, 15, 1f, 4, 0.2f, sp5);
 
     //enemy_Witch
     static List<float> sp6 = new List<float>() { 0.2f, 10, 0.2f, 10f };//攻击花费时间,召唤衍生物数量,召唤多个衍生物间隔,与下一次召唤衍生物间隔
-    static EnemyInfo enemy_6 = new EnemyInfo(10, 200, 0.5f, 3.5f, 2, 110, sp6);
+    static EnemyInfo enemy_6 = new EnemyInfo(10, 200, 0.5f, 3.5f, 1, 110, sp6);
 
     //enemy_Creation
     //Witch衍生物

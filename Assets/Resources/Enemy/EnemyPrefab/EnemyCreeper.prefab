@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4105675029589839320}
   - component: {fileID: 4249724185880215071}
   - component: {fileID: 7393548402856993311}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: sight1
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: -4411266424625430632}
   - component: {fileID: 2650699530531593539}
   - component: {fileID: 7958084622437523464}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: EnemyCreeper
   m_TagString: Enemy
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -240,7 +240,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 83b2545da1f3be64e9c5e963d4149e99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

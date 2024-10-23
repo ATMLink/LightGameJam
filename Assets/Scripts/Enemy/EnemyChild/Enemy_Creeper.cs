@@ -25,6 +25,12 @@ public class Enemy_Creeper : Enemy
         sight2.enabled = false;
     }
 
+    protected override void ExtraDisableSet()
+    {
+        base.ExtraDisableSet();
+        sight1 = null;
+    }
+
 
     protected override void CopyData()
     {
@@ -45,7 +51,7 @@ public class Enemy_Creeper : Enemy
         {
             foreach (var tower in sight2.towerInSight)
             {
-                //‘Ï≥……À∫¶
+                tower.OnHit((int)boomDamage);
             }
 
             foreach (var enemy in sight2.enemyInSight)

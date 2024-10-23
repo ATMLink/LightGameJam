@@ -21,7 +21,14 @@ public class Tower : MonoBehaviour
     private float attackTimer;
     
     private List<Enemy> enemiesInRange;
-    [SerializeField] private CircleCollider2D rangeCollider;
+
+    private TowerSight sight1;
+
+
+    private void Start()
+    {
+        sight1 = transform.GetChild(0).GetComponent<TowerSight>();
+    }
 
     public void Initialize()
     {
@@ -29,7 +36,6 @@ public class Tower : MonoBehaviour
         damage = attributes.damage.Value;
         attackSpeed = attributes.attackSpeed.Value;
         attackRange = attributes.attackRange.Value;
-        
         // set tower sprite
         // spriteRenderer = GetComponent<SpriteRenderer>();
         // if (spriteRenderer == null)
@@ -46,7 +52,7 @@ public class Tower : MonoBehaviour
         // if (rangeCollider == null)
         //     rangeCollider = gameObject.AddComponent<CircleCollider2D>();
         // rangeCollider.isTrigger = true;
-        rangeCollider.radius = attackRange;
+        sight1.GetComponent<CircleCollider2D>().radius = attackRange;
         towerID = towerIDCounter++;
         
         gameObject.SetActive(true);
@@ -77,12 +83,13 @@ public class Tower : MonoBehaviour
 
     public void DestroyTower()
     {
+        sight1.Clear();
         gameObject.SetActive(false); // 将塔移回对象池
     }
 
     public void Attack()
     {
-        if (attackTimer >= attackCooldown && enemiesInRange.Count > 0)
+        if (enemiesInRange.Count > 0 && attackTimer >= attackCooldown)
         {
             // 攻击最近的敌人
             Enemy target = FindClosestEnemy();
@@ -100,13 +107,14 @@ public class Tower : MonoBehaviour
 
     public void OnHit(int damage)
     {
-        if(health - damage <= 0)
-            DestroyTower();
         health -= damage;
+        if (health <= 0)DestroyTower();
     }
     
     private Enemy FindClosestEnemy()
     {
+        sight1.Refresh();
+
         Enemy closestEnemy = null;
         float closestDistance = Mathf.Infinity;
 
@@ -123,35 +131,35 @@ public class Tower : MonoBehaviour
         return closestEnemy;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision == null)
-        {
-            Debug.LogError("Collision is null in OnTriggerEnter2D.");
-            return;
-        }
-        if (collision.TryGetComponent<Enemy>(out Enemy enemy))
-        {
-            enemiesInRange.Add(enemy); // 添加进入范围的敌人
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision == null)
+    //    {
+    //        Debug.LogError("Collision is null in OnTriggerEnter2D.");
+    //        return;
+    //    }
+    //    if (collision.TryGetComponent<Enemy>(out Enemy enemy))
+    //    {
+    //        enemiesInRange.Add(enemy); // 添加进入范围的敌人 
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision == null)
-        {
-            Debug.LogError("Collision is null in OnTriggerExit2D.");
-            return;
-        }
-        if (collision.TryGetComponent<Enemy>(out Enemy enemy))
-        {
-            //enemiesInRange.Remove(enemy); // 移除离开范围的敌人
-            if (enemy != null && !enemy.Equals(null)) // 确保 enemy 没有被销毁
-            {
-                enemiesInRange.Remove(enemy);
-                Debug.Log($"Enemy {enemy.name} removed from range.");
-            }
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision == null)
+    //    {
+    //        Debug.LogError("Collision is null in OnTriggerExit2D.");
+    //        return;
+    //    }
+    //    if (collision.TryGetComponent<Enemy>(out Enemy enemy))
+    //    {
+    //        //enemiesInRange.Remove(enemy); // 移除离开范围的敌人
+    //        if (enemy != null && !enemy.Equals(null)) // 确保 enemy 没有被销毁
+    //        {
+    //            enemiesInRange.Remove(enemy);
+    //            Debug.Log($"Enemy {enemy.name} removed from range.");
+    //        }
+    //    }
+    //}
     
 }

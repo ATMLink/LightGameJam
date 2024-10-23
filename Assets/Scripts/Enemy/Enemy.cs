@@ -17,7 +17,7 @@ public class Enemy : EnemyBase
 
     #region generate
     private bool init = false;
-    private Vector2 offset = Vector2.zero;
+    protected Vector2 offset = Vector2.zero;
     [SerializeField]
     private float maxGenerateOffset = 100f;
     //值固定在0-100内，分布策略为二次反比。
@@ -42,7 +42,7 @@ public class Enemy : EnemyBase
     protected EnemyState enemyState;
 
     protected RoadPoint targetPoint;
-    private float minMoveOffset = 0.2f;
+    protected float minMoveOffset = 0.2f;
     //只需到达目标点附近就可以向新目标移动了
     private float stunCD = 0;
 
@@ -96,11 +96,14 @@ public class Enemy : EnemyBase
             }
         }
 
+        sight1.Clear();
         enemyState = EnemyState.move;
         // 旋转效果
         float randomRotation = Random.Range(0f, 360f);
         transform.rotation = Quaternion.Euler(0, 0, randomRotation);
         currentRotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
+        //环境影响
+        environmentSpeed = 1;
 
         CopyData();
         ExtraEnableSet();
@@ -214,15 +217,31 @@ public class Enemy : EnemyBase
         else
         {
             Tower temp = GetTowerInSight();
-            if (temp == null) enemyState = EnemyState.move;
+            if (temp == null)
+            {
+                enemyState = EnemyState.move;
+                return;
+            }
+            else
+            {
+                Debug.Log(currentAttackDamage);
+                Attack(temp);
 
-            Attack(temp);
-            CaculateAttackCD();
+                temp = GetTowerInSight();
+                if (temp == null)
+                {
+                    enemyState = EnemyState.move;
+                    return;
+                }//攻击消灭视野内所有塔则前进
+
+                CaculateAttackCD();
+            }
         }
     }
 
     protected virtual Tower GetTowerInSight()
     {
+        sight1.Refresh();
         Tower temp = null;
         foreach(var tower in sight1.towerInSight)
         {
@@ -254,7 +273,7 @@ public class Enemy : EnemyBase
 
     protected virtual void Attack(Tower tower)
     {
-        //这个函数调用被攻击的塔的受伤函数
+        tower.OnHit((int)currentAttackDamage);
     }
 
     protected void CaculateAttackCD()
@@ -303,7 +322,7 @@ public class Enemy : EnemyBase
         SetMainVelocity(0);
     }
 
-    private void RefreshOffsetToCenter()
+    protected void RefreshOffsetToCenter()
     {
         float offsetAngle = Random.Range(0, 360f);
         float radians = Mathf.Deg2Rad * offsetAngle;

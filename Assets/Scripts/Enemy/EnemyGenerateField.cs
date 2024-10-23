@@ -66,7 +66,7 @@ public class EnemyGenerateField : MonoBehaviour
             //感觉可以优化，但脑子有点转不动了
             for (int i = 2; i < levelTable[realTurn - 1].Length; i++){
                 string[] sp = levelTable[realTurn - 1][i].Split('*');
-                Debug.Log(sp[0] + "  " + sp[1]);
+                //Debug.Log(sp[0] + "  " + sp[1]);
                 enemyName.Add(sp[0]);
                 maxEnemyGenerateCD.Add(TurnCD / (float.Parse(sp[1]) * level));//随着难度改变会增加每波的怪物总量
                 //立刻出怪

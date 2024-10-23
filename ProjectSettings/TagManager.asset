@@ -7,6 +7,7 @@ TagManager:
   - Tower
   - Tile
   - Tilemap
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - TileMap
   - tile
   - Tower
-  - 
-  - 
-  - 
+  - Enemy
+  - EnemySight
+  - TowerSight
   - 
   - 
   - 

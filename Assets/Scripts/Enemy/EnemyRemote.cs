@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class EnemyRemote : Enemy
 {
 
     protected float maxAttackCost = 0;//攻击时的停顿
     protected float attackCost = 0;
+    [SerializeField]
     protected List<Tower> towerInBlock = new List<Tower>();
 
     private bool onBlock = false;
@@ -31,27 +33,52 @@ public class EnemyRemote : Enemy
     #region update
     protected override void AttackPlan()
     {
-        if (attackCD >= 0)
+        if (targetPoint != null)
         {
-            attackCD -= Time.deltaTime;
+            if (Vector2.Distance(gameObject.transform.position, targetPoint.GetPos() + offset) < minMoveOffset)
+            {
+                targetPoint = targetPoint.getNextPoint();
+                if (targetPoint != null)
+                {
+                    if (!targetPoint.IsEndOfTheRoad()) RefreshOffsetToCenter();
+                    else offset = Vector2.zero;//向终点移动时取消偏移
+                }
+            }
         }
         else
         {
-            Tower temp = GetTowerInSight();
-            if (temp == null) enemyState = EnemyState.move;
-
-            Attack(temp);
-            attackCost = maxAttackCost;
-            CaculateAttackCD();
+            enemyState = EnemyState.idle;
         }
+
 
         if (attackCost > 0)
         {
             attackCost -= Time.deltaTime;
         }
+        else
+        {
+            if (attackCD >= 0)
+            {
+                attackCD -= Time.deltaTime;
+            }
+            else
+            {
+                Tower temp = GetTowerInSight();
+                if (temp == null)
+                {
+                    enemyState = EnemyState.move;
+                    return;
+                }
+
+                Attack(temp);
+                attackCost = maxAttackCost;
+                CaculateAttackCD();
+            }
+        }
 
         if (towerInBlock.Count > 0)
         {
+            Debug.Log("onblock");
             onBlock = true;
         }
         else
@@ -68,7 +95,7 @@ public class EnemyRemote : Enemy
     {
         if (onBlock == true)
         {
-            SetMainVelocity(1);
+            SetMainVelocity(0);
         }
         else
         {
@@ -90,13 +117,16 @@ public class EnemyRemote : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision != null)
+        if (collision.transform == transform)
         {
-            if (collision.TryGetComponent<Tower>(out Tower tower))
+            if (collision != null)
             {
-                if (!towerInBlock.Contains(tower))
+                if (collision.TryGetComponent<Tower>(out Tower tower))
                 {
-                    towerInBlock.Add(tower);
+                    if (!towerInBlock.Contains(tower))
+                    {
+                        towerInBlock.Add(tower);
+                    }
                 }
             }
         }
@@ -104,13 +134,16 @@ public class EnemyRemote : Enemy
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision != null)
+        if (collision.transform == transform)
         {
-            if (collision.TryGetComponent<Tower>(out Tower tower))
+            if (collision != null)
             {
-                if (!towerInBlock.Contains(tower))
+                if (collision.TryGetComponent<Tower>(out Tower tower))
                 {
-                    towerInBlock.Remove(tower);
+                    if (!towerInBlock.Contains(tower))
+                    {
+                        towerInBlock.Remove(tower);
+                    }
                 }
             }
         }
