@@ -14,6 +14,8 @@ public class TowerAttributes : ScriptableObject
     public FloatVariable attackRange;
     public Sprite towerSprite;
 
+    public bool withLaser = false;
+
     public GameObject Prefab;
     
     public string towerName;
