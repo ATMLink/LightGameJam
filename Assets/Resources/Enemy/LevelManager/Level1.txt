@@ -1,4 +1,9 @@
 1;10;enemy_Small*10
-2;12;enemy_Small*20;enemy_Medium*4
-3;30;enemy_Small*50;enemy_Medium*16
-4;30;enemy_Small*120;enemy_Medium*50
+2;12;enemy_Medium*20;enemy_Skeleton*4
+3;10;enemy_Huge*20;enemy_Creation*4
+4;10;enemy_Creeper*20
+5;10;enemy_Creation*60
+6;10;enemy_Witch*20
+7;10;enemy_Guard*20
+8;10;enemy_Skeleton*20
+9;10;enemy_Shell*20

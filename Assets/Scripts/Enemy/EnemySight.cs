@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemySight : MonoBehaviour
 {
-    //后续改为Tower
-    public List<GameObject> towerInSight;
+    public List<Tower> towerInSight;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -13,7 +12,7 @@ public class EnemySight : MonoBehaviour
         {
             if(collision.transform.tag == "Tower")
             {
-                towerInSight.Add(collision.gameObject);
+                towerInSight.Add(collision.gameObject.GetComponent<Tower>());
             }
         }
     }
@@ -24,7 +23,7 @@ public class EnemySight : MonoBehaviour
         {
             if (collision.transform.tag == "Tower")
             {
-                towerInSight.Remove(collision.gameObject);
+                towerInSight.Remove(collision.gameObject.GetComponent<Tower>());
             }
         }
     }

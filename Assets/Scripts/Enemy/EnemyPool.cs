@@ -22,7 +22,14 @@ public class EnemyPool : MonoBehaviour
     private Dictionary<string, Queue<Enemy>> enemyPoolDic = new Dictionary<string, Queue<Enemy>>()
     {
             {EnemyData.enemyName[0],new Queue<Enemy>()},
-            {EnemyData.enemyName[1],new Queue<Enemy>()}
+            {EnemyData.enemyName[1],new Queue<Enemy>()},
+            {EnemyData.enemyName[2],new Queue<Enemy>()},
+            {EnemyData.enemyName[3],new Queue<Enemy>()},
+            {EnemyData.enemyName[4],new Queue<Enemy>()},
+            {EnemyData.enemyName[5],new Queue<Enemy>()},
+            {EnemyData.enemyName[6],new Queue<Enemy>()},
+            {EnemyData.enemyName[7],new Queue<Enemy>()},
+            {EnemyData.enemyName[8],new Queue<Enemy>()},
     };
 
     private void Start()
