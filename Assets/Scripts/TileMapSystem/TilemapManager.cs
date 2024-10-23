@@ -89,16 +89,32 @@ public class TilemapManager : MonoBehaviour
                         tile = ScriptableObject.CreateInstance<Tile>();
                         tile.sprite = tiles[(int)c - 48].sprites[0];
                         tileMap.SetTile(new Vector3Int(x - midx, y - midy, 0), tile);
-                        TilemapFeature temp = Instantiate(prefabs[(int)c - 48], new Vector3(x - midx + 0.5f, y - midy + 0.5f, 0), Quaternion.identity, dad.transform).GetComponent<TilemapFeature>();
-                        temp.sprites = tiles[(int)c - 48].sprites;
-                        temp.tileName = tiles[(int)c - 48].tileName;
-                        temp.gameObject.name = tiles[(int)c - 48].tileName;
-                        temp.canConstruct = tiles[(int)c - 48].canConstruct;
-                        temp.canLightThrough = tiles[(int)c - 48].canLightThrough;
-                        temp.canSlowEnemy = tiles[(int)c - 48].canSlowEnemy;
-                        temp.canEnemyThrough = tiles[(int)c - 48].canEnemyThrough;
-                        temp.canAttackTowerConstruct = tiles[(int)c - 48].canAttackTowerConstruct;
-                        temp.canMinerConstruct = tiles[(int)c - 48].canMinerConstruct;
+                        if ((int)c - 48 != 4)
+                        {
+                            TilemapFeature temp = Instantiate(prefabs[(int)c - 48], new Vector3(x - midx + 0.5f, y - midy + 0.5f, 0), Quaternion.identity, dad.transform).GetComponent<TilemapFeature>();
+                            temp.sprites = tiles[(int)c - 48].sprites;
+                            temp.tileName = tiles[(int)c - 48].tileName;
+                            temp.gameObject.name = tiles[(int)c - 48].tileName;
+                            temp.canConstruct = tiles[(int)c - 48].canConstruct;
+                            temp.canLightThrough = tiles[(int)c - 48].canLightThrough;
+                            temp.canSlowEnemy = tiles[(int)c - 48].canSlowEnemy;
+                            temp.canEnemyThrough = tiles[(int)c - 48].canEnemyThrough;
+                            temp.canAttackTowerConstruct = tiles[(int)c - 48].canAttackTowerConstruct;
+                            temp.canMinerConstruct = tiles[(int)c - 48].canMinerConstruct;
+                        }
+                        else
+                        {
+                            MarshFeature temp = Instantiate(prefabs[(int)c - 48], new Vector3(x - midx + 0.5f, y - midy + 0.5f, 0), Quaternion.identity, dad.transform).GetComponent<MarshFeature>();
+                            temp.sprites = tiles[(int)c - 48].sprites;
+                            temp.tileName = tiles[(int)c - 48].tileName;
+                            temp.gameObject.name = tiles[(int)c - 48].tileName;
+                            temp.canConstruct = tiles[(int)c - 48].canConstruct;
+                            temp.canLightThrough = tiles[(int)c - 48].canLightThrough;
+                            temp.canSlowEnemy = tiles[(int)c - 48].canSlowEnemy;
+                            temp.canEnemyThrough = tiles[(int)c - 48].canEnemyThrough;
+                            temp.canAttackTowerConstruct = tiles[(int)c - 48].canAttackTowerConstruct;
+                            temp.canMinerConstruct = tiles[(int)c - 48].canMinerConstruct;
+                        }
 
                     }
                 }

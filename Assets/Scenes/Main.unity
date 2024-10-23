@@ -2605,7 +2605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 4
+  m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2631,7 +2631,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 41.724434
+  m_PointLightOuterRadius: 6.3288603
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2650,7 +2650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619394800}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.45399392, w: 0.8910048}
+  m_LocalRotation: {x: 0, y: 0, z: -0.3997772, w: 0.9166124}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2770,7 +2770,8 @@ MonoBehaviour:
   fieldList:
   - {fileID: 1331573788}
   difficultLevel: 1
-  maxRestCD: 0.01
+  maxRestCD: 5
+  currentTurn: 0
 --- !u!114 &659915093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2786,6 +2787,13 @@ MonoBehaviour:
   enemyPrefabList:
   - {fileID: 2992511581504372685, guid: 0fee2a4ae5a05b3498f7aa3e66dfb100, type: 3}
   - {fileID: 2992511581504372685, guid: a494ce03da6304c4daa45fe741ca70e3, type: 3}
+  - {fileID: 2992511581504372685, guid: ec67cf560d495b242adc778affe378f8, type: 3}
+  - {fileID: 2992511581504372685, guid: 36691c27156238a4583580624cfdbe35, type: 3}
+  - {fileID: 2992511581504372685, guid: 287cd4a2d1e59524282559a34c0a9367, type: 3}
+  - {fileID: 2992511581504372685, guid: 616f6f114e388f34da4b55545fc8b108, type: 3}
+  - {fileID: 2992511581504372685, guid: 30136da475ba5bb42b3ae71c728e91a9, type: 3}
+  - {fileID: 2992511581504372685, guid: 94b87408d56f75b4c94dc022dcef8f47, type: 3}
+  - {fileID: 2992511581504372685, guid: 677556ba615490443b4acecb4f120abe, type: 3}
   originPoolSize: 5
 --- !u!1 &690544970
 GameObject:
@@ -4803,7 +4811,7 @@ MonoBehaviour:
   _tilemapManager: {fileID: 1424931871}
   _towerManager: {fileID: 945080038}
   _uiManager: {fileID: 180441133}
-  _enemyManager: {fileID: 659915092}
+  _enemyManager: {fileID: 0}
   _laserManager: {fileID: 415967692}
   isPaused: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
 --- !u!4 &1168804922
@@ -5756,7 +5764,7 @@ Transform:
   m_GameObject: {fileID: 1331573785}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5869,7 +5877,7 @@ MonoBehaviour:
   - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
   - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
   - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
-  - {fileID: 1386814747776378928, guid: 32ed40e9d6d82914b819302587c99bf7, type: 3}
+  - {fileID: 1386814747776378928, guid: 55c2fed364aeda64d974ff41c2713e7f, type: 3}
   dad: {fileID: 708461168}
 --- !u!4 &1424931873
 Transform:
@@ -7212,7 +7220,6 @@ GameObject:
   - component: {fileID: 1912484483}
   - component: {fileID: 1912484482}
   - component: {fileID: 1912484481}
-  - component: {fileID: 1912484486}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7357,18 +7364,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1912484486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912484480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f9835ed867c6274fb205de80b339d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1953277574
 GameObject:
   m_ObjectHideFlags: 0
@@ -7629,7 +7624,7 @@ Transform:
   m_GameObject: {fileID: 2025562785}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.14, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

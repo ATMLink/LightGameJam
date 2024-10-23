@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class TilemapFeature : MonoBehaviour
+public class MarshFeature : MonoBehaviour
 {
     public string tileName;
     public Vector3 tilePosition;
@@ -26,6 +26,29 @@ public class TilemapFeature : MonoBehaviour
         if (canLightThrough)shadowCaster.enabled = false;
     }
     public void ChangeSprite(int number) { 
-        sprite.sprite = sprites[number];  
+        sprite.sprite = sprites[number];
+    
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy" && canSlowEnemy)
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.SetSpeed(0.5f);
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy" && canSlowEnemy) {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.SetSpeed(1f);
+            }
+        }
+    }
+
 }
