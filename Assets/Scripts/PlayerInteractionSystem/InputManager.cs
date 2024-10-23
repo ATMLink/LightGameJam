@@ -122,7 +122,7 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // Debug.Log("Left mouse button clicked.");
+            Debug.Log("Left mouse button clicked.");
             
             if (EventSystem.current.IsPointerOverGameObject())
             {
@@ -139,19 +139,19 @@ public class InputManager : MonoBehaviour
                 Tower clickedTower = hit.collider.GetComponent<Tower>();
                 if (clickedTower != null)
                 {
-                    // Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
+                    Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
                     
                     uiManager.ShowTowerMenu(clickedTower);
                 }
-                // else
-                // {
-                    // Debug.Log("No tower found at clicked position.");
-                // }
+                else
+                {
+                    Debug.Log("No tower found at clicked position.");
+                }
             }
-            // else
-            // {
-            //     Debug.Log("No collider hit detected.");
-            // }
+            else
+            {
+                Debug.Log("No collider hit detected.");
+            }
         }
     }
 
@@ -171,15 +171,15 @@ public class InputManager : MonoBehaviour
                 // Debug.Log($"Mouse clicked on tile at cell position: {cellPosition}, cell center position: {cellCenterPos}");
                 return cellCenterPos;
             }
-            // else
-            // {
-            //     Debug.Log("Hit collider does not have a Tilemap component.");
-            // }
+            else
+            {
+                Debug.Log("Hit collider does not have a Tilemap component.");
+            }
         }
-        // else
-        // {
-        //     Debug.Log("No collider hit detected.");
-        // }
+        else
+        {
+            Debug.Log("No collider hit detected.");
+        }
 
         return null; // 点击的区域无效
     }
