@@ -78,10 +78,14 @@ public class InputManager : MonoBehaviour
 
                 if (Input.GetMouseButtonUp(0))
                 {
+                    if (EventSystem.current.IsPointerOverGameObject())
+                    {
+                        return;
+                    }
                     // Debug.Log("Left mouse button released, attempting to place tower...");
                     constructManager.SelectTower(selectedTowerAttributes);
 
-                        constructManager.PlaceTower(cellCenterPos);
+                    constructManager.PlaceTower(cellCenterPos);
                         // Debug.Log($"Tower placed at position: {cellCenterPos}");
 
                     CancelTowerDragging();
@@ -122,7 +126,6 @@ public class InputManager : MonoBehaviour
             
             if (EventSystem.current.IsPointerOverGameObject())
             {
-                // If clicking on UI, return early to avoid selecting towers
                 return;
             }
 

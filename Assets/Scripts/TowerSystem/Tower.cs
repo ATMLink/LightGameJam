@@ -15,6 +15,7 @@ public class Tower : MonoBehaviour
     private float damage;
     private float attackSpeed;
     private float attackRange;
+    private bool withLaser;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     private float attackCooldown;
@@ -29,6 +30,7 @@ public class Tower : MonoBehaviour
         damage = attributes.damage.Value;
         attackSpeed = attributes.attackSpeed.Value;
         attackRange = attributes.attackRange.Value;
+        withLaser = attributes.withLaser;
         
         // set tower sprite
         // spriteRenderer = GetComponent<SpriteRenderer>();

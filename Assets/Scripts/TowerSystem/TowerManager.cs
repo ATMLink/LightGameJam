@@ -34,6 +34,8 @@ public class TowerManager : MonoBehaviour
             newTower.attributes = towerAttributes;
             towers.Add(newTower);
             newTower.Initialize();
+            if (towerAttributes.withLaser)
+                laserManager.CreateLaser(newTower, position, new Vector3(0, -1, 0), 1);
         }
     }
 

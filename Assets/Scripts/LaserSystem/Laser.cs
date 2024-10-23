@@ -69,7 +69,7 @@ public class Laser : MonoBehaviour
     private Vector3 GetAdjustedLaserEndPoint(Vector3 intendedEndPoint)
     {
         RaycastHit hit;
-        // 检查激光是否击中敌人
+        // 检查激光是否击中不可穿透物体
         if (Physics.Raycast(transform.position, direction, out hit, maxDistance))
         {
             if (hit.collider.CompareTag("Enemy"))
@@ -92,6 +92,26 @@ public class Laser : MonoBehaviour
                 // 返回标准化方向计算的敌人前方位置
                 return hitPoint - laserDirection * offsetDistance;
             }
+
+            // 所有不可穿透的地形
+            if (hit.collider.gameObject.GetComponent<TilemapFeature>().canLightThrough)
+            {
+                Vector3 hitPoint = hit.point; // 激光击中的位置
+                Vector3 laserOrigin = transform.position; // 激光起始位置
+                Vector3 laserDirection = direction.normalized; // 激光方向
+                float distanceToEnemy = Vector3.Distance(laserOrigin, hitPoint);
+                float offsetDistance = 0.1f;
+
+                // 如果距离小于offsetDistance，返回起始点
+                if (distanceToEnemy <= offsetDistance)
+                {
+                    return laserOrigin; // 返回起始点，激光完全缩短
+                }
+                
+                return hitPoint - laserDirection * offsetDistance;
+            }
+                
+            
         }
 
         return intendedEndPoint; // 如果没有击中敌人，返回原定终点
