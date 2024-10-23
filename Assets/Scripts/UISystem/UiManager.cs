@@ -18,23 +18,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private InputManager _inputManager;
     [SerializeField] private TowerManager _towerManager;
     [SerializeField] private MainResourceManagement _resourceManager;
-
-    // Start is called before the first frame update
-    void Start()//测试用，后面删除
-    {
-        // UiInitialization();
-        // //ShowGameOverScreen();//测试用
-        // ShowIntroduction();
-        // //ShowConstructionMenu();
-        // ShowTowerMenu();
-
-    }
-
-    // Update is called once per frame
-    //public void UpdateState()//后面删除
-    //{
-    //    UpdateResources();
-    //}
+    
 
     public void Initialize()//UI初始化
     {
@@ -42,7 +26,7 @@ public class UiManager : MonoBehaviour
         gameover.SetActive(false);
         pauseGame.SetActive(false);
         showConstructionMenu.SetActive(false);
-        showTowerMenu.SetActive(false); 
+        showTowerMenu.gameObject.SetActive(false); 
         updateResources.SetActive(true);
         expandButton.gameObject.SetActive(false);
         pauseButton.onClick.AddListener(OnPauseButtonClicked);//暂停按钮
@@ -183,16 +167,6 @@ public class UiManager : MonoBehaviour
     void ShowConstructionMenu()
     {
         showConstructionMenu.SetActive(true);
-        // tower1.onClick.AddListener(OnTower1Clicked);
-        // tower2.onClick.AddListener(OnTower2Clicked);
-        // tower3.onClick.AddListener(OnTower3Clicked);
-        // tower4.onClick.AddListener(OnTower4Clicked);
-        // tower5.onClick.AddListener(OnTower5Clicked);
-        // tower6.onClick.AddListener(OnTower6Clicked);
-        // tower7.onClick.AddListener(OnTower7Clicked);
-        // tower8.onClick.AddListener(OnTower8Clicked);
-        // tower9.onClick.AddListener(OnTower9Clicked);
-        // tower10.onClick.AddListener(OnTower10Clicked);
         closeConstructionMenu.onClick.AddListener(OnCloseConstructionMenuClicked);
 
 
@@ -208,62 +182,19 @@ public class UiManager : MonoBehaviour
         showConstructionMenuButton.gameObject.SetActive(false);
         ShowConstructionMenu();
     }
-    //预留了10种塔的接口
-    // public void OnTower1Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }
-    // void OnTower2Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }
-    // void OnTower3Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }
-    // void OnTower4Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }
-    // void OnTower5Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }
-    // void OnTower6Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes); 
-    // }
-    // void OnTower7Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }
-    // void OnTower8Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }
-    // void OnTower9Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }
-    // void OnTower10Clicked()
-    // {
-    //     _inputManager.PrepareToDragTower(tower1Attributes);
-    // }  
 
 
     //**************************************************************
     //ShowTowerMenu相关属性
     [Header("ShowTowerMenu")]//塔更改菜单
-    [SerializeField] private GameObject showTowerMenu; //整体
-    [SerializeField] private RectTransform showTowerMenuPanel;//菜单面板
+    [SerializeField] private RectTransform showTowerMenu;
+    [SerializeField] private RectTransform canvasRectTransform;
     [SerializeField] private Button closeTowerMenu;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private Button clockwiseButton;
     [SerializeField] private Button anticlockwiseButton;
     [SerializeField] private Button deleteButton;
-    [SerializeField] private Camera mainCamera;
-
-    Vector2 localPoint;
+    
 
     private Tower selectedTower;
 
@@ -277,22 +208,14 @@ public class UiManager : MonoBehaviour
             Vector3 worldPosition = selectedTower.transform.position;
 
             // 将世界坐标转换为屏幕坐标  
-            Vector3 screenPosition = mainCamera.WorldToScreenPoint(worldPosition);
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
 
+            Vector2 localPoint;
+            
             // 计算本地坐标
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(showTowerMenuPanel, screenPosition, mainCamera, out localPoint);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, screenPosition, null, out localPoint);
 
-            // 使用计算得出的本地点来设置菜单的位置
-            showTowerMenuPanel.anchoredPosition = localPoint;
-
-            // Debugging
-            Debug.Log($"World Position: {worldPosition}");
-            Debug.Log($"Screen Position: {screenPosition}");
-            Debug.Log($"Local Point: {localPoint}");
-        }
-        else
-        {
-            Debug.LogWarning("Target object or main camera is missing.");
+            showTowerMenu.localPosition = localPoint;
         }
         
         // 在添加之前移除现有监听器
@@ -308,11 +231,11 @@ public class UiManager : MonoBehaviour
         clockwiseButton.onClick.AddListener(OnClockwiseButtonClicked);
         anticlockwiseButton.onClick.AddListener(OnAnticlockwiseButtonClicked);
         deleteButton.onClick.AddListener(OnDeleteButtonClicked);
-        showTowerMenu.SetActive(true);
+        showTowerMenu.gameObject.SetActive(true);
     }
     void OnCloseTowerMenuClicked()
     {
-        showTowerMenu.SetActive(false);//关闭面板
+        showTowerMenu.gameObject.SetActive(false);//关闭面板
         selectedTower = null;
     }
     void OnUpgradeButtonClicked()
@@ -320,7 +243,7 @@ public class UiManager : MonoBehaviour
         if (selectedTower != null)
         {
             _towerManager.UpgradeTower(selectedTower);
-            showTowerMenu.SetActive(false);
+            showTowerMenu.gameObject.SetActive(false);
             selectedTower = null;
         }
     }
@@ -328,21 +251,27 @@ public class UiManager : MonoBehaviour
     {
         //顺时针旋转
         if (selectedTower != null)
+        {
             _towerManager.RotateTower(selectedTower, false);
+        }
+            
             
     }
     void OnAnticlockwiseButtonClicked() 
     {
         //逆时针旋转的接口
         if (selectedTower != null)
+        {
             _towerManager.RotateTower(selectedTower, true);
+        }
+            
     }
     void OnDeleteButtonClicked()
     {
         if (selectedTower != null)
         {
             _towerManager.RemoveTower(selectedTower);
-            showTowerMenu.SetActive(false);
+            showTowerMenu.gameObject.SetActive(false);
             selectedTower = null;
         }
             
@@ -384,39 +313,3 @@ public class UiManager : MonoBehaviour
     }
     
 }
-// void ShowTowerMenu(Tower tower, Vector3 position)
-// {
-//     selectedTower = tower;
-//     // if (testobject != null && Camera.main != null)
-//     // {
-//     //     // 获取游戏对象的世界坐标  
-//     //     Vector3 worldPosition = testobject.position;//testobject将替换为点击时选中的物体
-//     //
-//     //     // 将世界坐标转换为屏幕坐标  
-//     //     Vector3 screenPosition = mainCamera.WorldToScreenPoint(worldPosition);
-//     //
-//     //     // 由于UI元素通常只关心x和y坐标，我们可以创建一个Vector2  
-//     //     Vector2 screenPosition2D = new Vector2(screenPosition.x, screenPosition.y);
-//     //     RectTransformUtility.ScreenPointToLocalPointInRectangle(showTowerMenuPanel, screenPosition, mainCamera, out localPoint);
-//     //         
-//     //
-//     //        
-//     //     showTowerMenuPanel.anchoredPosition=screenPosition2D;
-//     //
-//     //     
-//     // }
-//     // else
-//     // {
-//     //     Debug.LogWarning("Target object or main camera is missing.");
-//     // }
-//         
-//
-//
-//
-//     showTowerMenu.SetActive(true);
-//     closeTowerMenu.onClick.AddListener(OnCloseTowerMenuClicked);
-//     upgradeButton.onClick.AddListener(OnUpgradeButtonClicked);
-//     clockwiseButton.onClick.AddListener(OnClockwiseButtonClicked);
-//     anticlockwiseButton.onClick.AddListener(OnAnticlockwiseButtonClicked);
-//     deleteButton.onClick.AddListener(OnDeleteButtonClicked);
-// }

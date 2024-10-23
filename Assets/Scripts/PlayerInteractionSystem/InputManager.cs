@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
@@ -118,6 +119,12 @@ public class InputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Left mouse button clicked.");
+            
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                // If clicking on UI, return early to avoid selecting towers
+                return;
+            }
 
             // 射线检测以确定点击的对象
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -129,7 +136,7 @@ public class InputManager : MonoBehaviour
                 Tower clickedTower = hit.collider.GetComponent<Tower>();
                 if (clickedTower != null)
                 {
-                    Debug.Log($"Tower clicked at position: {hit.point}. Showing tower menu.");
+                    Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
                     
                     uiManager.ShowTowerMenu(clickedTower);
                 }

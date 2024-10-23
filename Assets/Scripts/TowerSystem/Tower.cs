@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     
     public TowerAttributes attributes;
 
-    private int towerID;
+    public int towerID;
     private static int towerIDCounter = 0;
     private float health;
     private float damage;
