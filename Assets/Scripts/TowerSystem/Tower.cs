@@ -117,7 +117,7 @@ public class Tower : MonoBehaviour
     }
     
     
-    public void OnHit(int damage)
+    public virtual void OnHit(int damage)
     {
         health -= damage;
         if (health <= 0)DestroyTower();

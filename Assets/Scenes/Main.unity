@@ -1009,7 +1009,7 @@ MonoBehaviour:
   leftPage: {fileID: 1187203607}
   rightPage: {fileID: 107415200}
   closeIntroduction: {fileID: 283721794}
-  openIntroductionButton: {fileID: 1679361115}
+  openIntroductionButton: {fileID: 0}
   pauseGame: {fileID: 1471685663}
   continueButton: {fileID: 1777615533}
   titleButton2: {fileID: 441936466}
@@ -1047,8 +1047,8 @@ MonoBehaviour:
   - {fileID: 1854198408}
   retractButton: {fileID: 539828891}
   expandButton: {fileID: 1887000973}
-  waves: {fileID: 96902154}
-  enemyManager: {fileID: 659915092}
+  waves: {fileID: 0}
+  enemyManager: {fileID: 0}
 --- !u!114 &180441134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,7 +3166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0ccc8503fb3314bb9dd58210454153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 5102841807158000920, guid: e6c0bdcf0f559aa4f97dae01c1b93d45, type: 3}
+  laserPrefab: {fileID: 801038782662623395, guid: 93c40ec57bb17354db658361dd4b9717, type: 3}
   initialPoolSize: 8
 --- !u!1 &708461168
 GameObject:
@@ -4072,7 +4072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2070ae943bf454086a709de5657882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerAttributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
+  towerAttributes: {fileID: 11400000, guid: 4c428a937ad201c43aeffb07595ff507, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 1214024201}
 --- !u!114 &783167585
@@ -4088,7 +4088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSprite: {fileID: 1214024203}
-  inputManager: {fileID: 1967238063}
+  inputManager: {fileID: 0}
 --- !u!1 &802670698
 GameObject:
   m_ObjectHideFlags: 0
@@ -4169,7 +4169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefabs:
   - {fileID: 1287831529039793251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
-  - {fileID: 4103204399544144501, guid: 1270cc8af7cd6a94d8e401db87c20a6e, type: 3}
+  - {fileID: 7800116646058778857, guid: 1270cc8af7cd6a94d8e401db87c20a6e, type: 3}
 --- !u!1 &913605972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4938,6 +4938,7 @@ GameObject:
   - component: {fileID: 1165520999}
   - component: {fileID: 1165520998}
   - component: {fileID: 1165521001}
+  - component: {fileID: 1165521002}
   m_Layer: 5
   m_Name: Tower (2)
   m_TagString: Untagged
@@ -5061,6 +5062,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverSprite: {fileID: 38772589}
   inputManager: {fileID: 1967238063}
+--- !u!114 &1165521002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165520995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2070ae943bf454086a709de5657882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerAttributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
+  inputManager: {fileID: 1967238063}
+  informationImage: {fileID: 38772587}
 --- !u!1 &1168804920
 GameObject:
   m_ObjectHideFlags: 0
@@ -7587,7 +7603,7 @@ MonoBehaviour:
   minBounds: {fileID: 11400000, guid: 01edf8910f9d34f4196c91f3cb6c8357, type: 2}
   maxBounds: {fileID: 11400000, guid: 72846aaef60511f46a3744d5eb96a6da, type: 2}
   tilemapManager: {fileID: 1424931871}
-  FunctionMenu: {fileID: 44910126}
+  FunctionMenu: {fileID: 0}
   isMoving: 0
 --- !u!114 &1912484482
 MonoBehaviour:

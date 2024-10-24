@@ -17,8 +17,6 @@ public class SplitterTower : Tower
     {
         base.Initialize();
         laserManager = FindObjectOfType<LaserManager>();
-        laserManager.CreateLaser(this, transform.position,
-            Vector3.down, 1);
     }
 
     public override void UpdateState()
