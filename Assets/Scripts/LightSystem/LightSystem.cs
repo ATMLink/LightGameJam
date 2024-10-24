@@ -7,6 +7,7 @@ public class LightSystem : MonoBehaviour
 {   
     private static LightSystem instance;
     private List<Light2D> lightList;
+    public List<Light2D> selectedLightList;
     void Awake(){
         if(instance == null){
             instance = new LightSystem();
@@ -26,9 +27,6 @@ public class LightSystem : MonoBehaviour
     void Update()
     {
         
-    }
-    public void debug() {
-        Debug.Log("ssss");
     }
     public void AddLight(Light2D light) {
             lightList.Add(light);
