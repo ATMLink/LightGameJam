@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Vector2Variable minBounds;
     [SerializeField] private Vector2Variable maxBounds;
     [SerializeField] private TilemapManager tilemapManager;
-    private Camera camera;
+    private Camera camera;  
     private Vector3 initialPosition;
     private Vector3 lastMouseWorldPosition;
 

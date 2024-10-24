@@ -44,6 +44,12 @@ public class Enemy_Witch : EnemyRemote
 
     }
 
+
+    protected override void AttackPlan()
+    {
+        base.AttackPlan();
+    }
+
     protected override void SkillPlan()
     {
         if (currentCreationCount > creationCount)
@@ -75,6 +81,11 @@ public class Enemy_Witch : EnemyRemote
         currentEnemyDurCD = maxEnemyDurCD;
     }
 
+
+    protected override void FixAttack()
+    {
+        base.FixAttack();
+    }
 
 
     private void GenerateEnemy(string name)

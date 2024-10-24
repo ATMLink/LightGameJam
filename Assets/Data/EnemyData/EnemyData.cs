@@ -105,7 +105,7 @@ public static class EnemyData
 
     //enemy_Creeper
     static List<float> sp4 = new List<float>() { 25f, 2, 0.5f };//爆炸伤害,爆炸范围,爆炸前摇
-    static EnemyInfo enemy_4 = new EnemyInfo(2, 30, 0.7f, 0, 2, sp4);
+    static EnemyInfo enemy_4 = new EnemyInfo(2, 1, 0.7f, 0, 2, sp4);
 
     //enemy_Skeleton
     //理论上攻击时应该会停下来,但是目前没有攻击间隔和攻击花费时间的区别,因此随便定一个攻击花费时间

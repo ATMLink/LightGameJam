@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class EnemyRemote : Enemy
 {
@@ -11,7 +12,11 @@ public class EnemyRemote : Enemy
     [SerializeField]
     protected List<Tower> towerInBlock = new List<Tower>();
 
-    private bool onBlock = false;
+    protected bool onBlock = false;
+
+
+    private EnemySight sight2;
+
 
 
     //
@@ -22,12 +27,37 @@ public class EnemyRemote : Enemy
 
     //
 
+    protected override void Start()
+    {
+        //视野触发器2,用于获取自身阻挡的敌人
+        sight2 = gameObject.transform.GetChild(1).GetComponent<EnemySight>();
+
+        //需要写在Start前
+        base.Start();
+    }
+
 
     protected override void CopyData()
     {
         base.CopyData();
         maxAttackCost = saving.specialAbility[0];
     }
+
+    protected override void ExtraEnableSet()
+    {
+        towerInBlock.Clear();
+        base.ExtraEnableSet();
+    }
+
+    protected override void GlobleSkill()
+    {
+        base.GlobleSkill();
+
+    }
+
+
+
+
 
 
     #region update
@@ -76,9 +106,8 @@ public class EnemyRemote : Enemy
             }
         }
 
-        if (towerInBlock.Count > 0)
+        if (sight2.towerInSight.Count > 0)
         {
-            Debug.Log("onblock");
             onBlock = true;
         }
         else
@@ -113,40 +142,5 @@ public class EnemyRemote : Enemy
 
     #endregion
 
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform == transform)
-        {
-            if (collision != null)
-            {
-                if (collision.TryGetComponent<Tower>(out Tower tower))
-                {
-                    if (!towerInBlock.Contains(tower))
-                    {
-                        towerInBlock.Add(tower);
-                    }
-                }
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.transform == transform)
-        {
-            if (collision != null)
-            {
-                if (collision.TryGetComponent<Tower>(out Tower tower))
-                {
-                    if (!towerInBlock.Contains(tower))
-                    {
-                        towerInBlock.Remove(tower);
-                    }
-                }
-            }
-        }
-    }
 
 }

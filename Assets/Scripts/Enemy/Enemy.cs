@@ -224,7 +224,6 @@ public class Enemy : EnemyBase
             }
             else
             {
-                Debug.Log(currentAttackDamage);
                 Attack(temp);
 
                 temp = GetTowerInSight();

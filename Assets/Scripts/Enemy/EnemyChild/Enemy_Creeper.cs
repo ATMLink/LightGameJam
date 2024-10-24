@@ -11,6 +11,7 @@ public class Enemy_Creeper : Enemy
     private EnemySight2 sight2;
 
 
+
     protected override void Start()
     {
         //视野触发器2,用于获取范围内的我方单位
@@ -22,13 +23,15 @@ public class Enemy_Creeper : Enemy
 
     protected override void ExtraEnableSet()
     {
-        sight2.enabled = false;
+        base.ExtraEnableSet();
+        sight2.gameObject.SetActive(false);
+        sight2.towerInSight.Clear();
+        sight2.enemyInSight.Clear();
     }
 
     protected override void ExtraDisableSet()
     {
         base.ExtraDisableSet();
-        sight1 = null;
     }
 
 
@@ -68,7 +71,7 @@ public class Enemy_Creeper : Enemy
 
     protected override void Destroy()
     {
-        sight2.enabled = true;
+        sight2.gameObject.SetActive(true);
         enemyState = EnemyState.skill;
     }
 }

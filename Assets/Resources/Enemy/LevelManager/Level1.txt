@@ -1,4 +1,4 @@
-1;2;enemy_Small*3
+1;2;enemy_Small*20
 2;2;enemy_Medium*3
 3;2;enemy_Huge*3
 4;2;enemy_Creeper*3
