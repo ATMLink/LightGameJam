@@ -4072,7 +4072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2070ae943bf454086a709de5657882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerAttributes: {fileID: 11400000, guid: 4c428a937ad201c43aeffb07595ff507, type: 2}
+  towerAttributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 1214024201}
 --- !u!114 &783167585
@@ -4167,7 +4167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40d0c42e5d2d4d409d625bfd30b1b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 1287831529039793251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+  towerPrefabs:
+  - {fileID: 1287831529039793251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+  - {fileID: 4103204399544144501, guid: 1270cc8af7cd6a94d8e401db87c20a6e, type: 3}
 --- !u!1 &913605972
 GameObject:
   m_ObjectHideFlags: 0

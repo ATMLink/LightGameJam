@@ -1,40 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TowerPool : MonoBehaviour
 {
-    public Tower towerPrefab;
-    private List<Tower> pool = new List<Tower>();
+    // 用于存储不同类型塔的Prefab
+    [SerializeField] private List<Tower> towerPrefabs;  // 将不同的塔预设存储在列表中
+    private Dictionary<Tower, List<Tower>> poolDictionary = new Dictionary<Tower, List<Tower>>();
+
     private int initialCapacity = 10; // 初始容量
-    private int maxCapacity = 50;     // 最大容量
 
     public void Initialize()
     {
-        // 初始化对象池
-        for (int i = 0; i < initialCapacity; i++)
+        // 为每种塔类型初始化对象池
+        foreach (Tower towerPrefab in towerPrefabs)
         {
-            CreateNewTower();
+            poolDictionary[towerPrefab] = new List<Tower>();
+
+            for (int i = 0; i < initialCapacity; i++)
+            {
+                CreateNewTower(towerPrefab);
+            }
         }
     }
 
-    private Tower CreateNewTower()
+    private Tower CreateNewTower(Tower towerPrefab)
     {
-        if (pool.Count >= maxCapacity)
-        {
-            Debug.LogWarning("TowerPool has reached its maximum capacity.");
-            return null;
-        }
 
         Tower newTower = Instantiate(towerPrefab);
         newTower.gameObject.SetActive(false);
-        pool.Add(newTower);
+        poolDictionary[towerPrefab].Add(newTower);
         return newTower;
     }
 
-    public Tower GetTower()
+    // 获取特定类型的塔
+    public Tower GetTower(Tower towerPrefab)
     {
-        foreach (Tower tower in pool)
+        if (!poolDictionary.ContainsKey(towerPrefab))
+        {
+            Debug.LogWarning($"No pool exists for {towerPrefab.name}. Creating a new pool.");
+            poolDictionary[towerPrefab] = new List<Tower>();
+        }
+
+        foreach (Tower tower in poolDictionary[towerPrefab])
         {
             if (!tower.gameObject.activeInHierarchy)
             {
@@ -42,7 +51,8 @@ public class TowerPool : MonoBehaviour
                 return tower;
             }
         }
-        return CreateNewTower(); // 如果池中没有可用对象，则扩容
+
+        return CreateNewTower(towerPrefab); // 如果池中没有可用对象，则扩容
     }
 
     public void ReturnTower(Tower tower)
