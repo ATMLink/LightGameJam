@@ -1009,7 +1009,7 @@ MonoBehaviour:
   leftPage: {fileID: 1187203607}
   rightPage: {fileID: 107415200}
   closeIntroduction: {fileID: 283721794}
-  openIntroductionButton: {fileID: 0}
+  openIntroductionButton: {fileID: 1679361115}
   pauseGame: {fileID: 1471685663}
   continueButton: {fileID: 1777615533}
   titleButton2: {fileID: 441936466}

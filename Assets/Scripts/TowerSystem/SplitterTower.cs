@@ -103,4 +103,30 @@ public class SplitterTower : Tower
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 检查碰撞的对象是否是 Laser，并且是否带有 "Laser" 标签
+        if (collision.CompareTag("Laser"))
+        {
+            Laser laser = collision.GetComponent<Laser>();
+            if (laser != null)
+            {
+                // 调用塔的 OnLaserHit 方法处理激光击中
+                OnLaserHit(laser);
+            }
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Laser"))
+        {
+            Laser laser = collision.GetComponent<Laser>();
+            if (laser != null)
+            {
+                // 调用塔的 OnLaserHit 方法处理激光击中
+                OnLaserOut(laser);
+            }
+        }
+    }
 }
