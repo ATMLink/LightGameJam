@@ -23,21 +23,20 @@ public class TowerManager : MonoBehaviour
         foreach (Tower tower in towers)
         {
             // 执行塔的攻击逻辑或其他需要定期更新的操作
-            tower.Attack();
+            tower.UpdateState();
         }
     }
 
     public void AddTower(Vector3 position, TowerAttributes towerAttributes)
     {
-        Tower newTower = towerPool.GetTower();
+        Tower newTower = towerPool.GetTower(towerAttributes.Prefab.GetComponent<Tower>());
         if (newTower != null) // 确保池子未满
         {
             newTower.transform.position = position;
             newTower.attributes = towerAttributes;
             towers.Add(newTower);
             newTower.Initialize();
-            // if (towerAttributes.withLaser)
-            //     laserManager.CreateLaser(newTower, position, Vector, 1);
+            // create lasers
         }
     }
 

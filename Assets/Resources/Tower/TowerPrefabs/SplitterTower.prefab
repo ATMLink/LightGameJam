@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       propertyPath: m_Name
-      value: Tower
+      value: SplitterTower
       objectReference: {fileID: 0}
     - target: {fileID: 205747301775463251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,8 +52,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1287831529039793251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+      propertyPath: attributes
+      value: 
+      objectReference: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
+    m_RemovedComponents:
+    - {fileID: 1287831529039793251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7800116646058778857}
   m_SourcePrefab: {fileID: 100100000, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+--- !u!1 &3523363381708340611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+  m_PrefabInstance: {fileID: 3567406333848435590}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7800116646058778857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3523363381708340611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913b443849a708b43b5b38e5fdc9dca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
+  towerID: 0
+  spriteRenderer: {fileID: 6379383655884286785}
+  sight1: {fileID: 4185680295617339669}
+  numberOfLasers: 2
+--- !u!114 &4185680295617339669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 835276055896660627, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+  m_PrefabInstance: {fileID: 3567406333848435590}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5387691268969804780415f9fbc18a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &6379383655884286785 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7568834130568925383, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+  m_PrefabInstance: {fileID: 3567406333848435590}
+  m_PrefabAsset: {fileID: 0}

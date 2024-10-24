@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    private Laser attachedLaser;
+    protected Laser attachedLaser;
     
     public TowerAttributes attributes;
 
     public int towerID;
-    private static int towerIDCounter = 0;
-    private float health;
-    private float damage;
-    private float attackSpeed;
-    private float attackRange;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-
-    private float attackCooldown;
-    private float attackTimer;
+    protected static int towerIDCounter = 0;
     
+    protected float health;
+    protected float damage;
+    protected float attackSpeed;
+    protected float attackRange;
+    protected float attackCooldown;
+    protected float attackTimer;
+    
+    protected List<Laser> receivedLasers;
     private List<Enemy> enemiesInRange;
-
+    
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private TowerSight sight1;
 
 
@@ -35,39 +36,37 @@ public class Tower : MonoBehaviour
         damage = attributes.damage.Value;
         attackSpeed = attributes.attackSpeed.Value;
         attackRange = attributes.attackRange.Value;
-        // set tower sprite
-        // spriteRenderer = GetComponent<SpriteRenderer>();
-        // if (spriteRenderer == null)
-        //     spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = attributes.towerSprite;
 
         enemiesInRange = new List<Enemy>();
+        receivedLasers = new List<Laser>();
 
         attackCooldown = 1f / attackSpeed;
         attackTimer = 0f;
 
         transform.rotation = Quaternion.Euler(Vector3.down);
-
-        // set tower circle collider
-        // rangeCollider = GetComponent<CircleCollider2D>();
-        // if (rangeCollider == null)
-        //     rangeCollider = gameObject.AddComponent<CircleCollider2D>();
-        // rangeCollider.isTrigger = true;
-       sight1.GetComponent<CircleCollider2D>().radius = attackRange;
         
-       towerID = towerIDCounter++;
+        sight1.GetComponent<CircleCollider2D>().radius = attackRange;
+        
+        towerID = towerIDCounter++;
         
         gameObject.SetActive(true);
     }
     
+    public virtual void UpdateState()
+    {
+        // Attack();
+    }
+    
     // 重置塔的属性，方便对象池回收
-    public void ResetAttributes()
+    public virtual void ResetAttributes()
     {
         health = 0;
         damage = 0;
         attackSpeed = 0;
         attackRange = 0;
         enemiesInRange.Clear();
+        receivedLasers.Clear();
     }
 
     public void Upgrade()
@@ -89,6 +88,8 @@ public class Tower : MonoBehaviour
         gameObject.SetActive(false); // 将塔移回对象池
     }
 
+    
+    
     public virtual void Attack()
     {
         if (enemiesInRange.Count > 0 && attackTimer >= attackCooldown)
@@ -107,15 +108,25 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public virtual bool OnLaserHit(Laser laser)
+    public virtual List<Laser> OnLaserHit(Laser laser)
     {
-        return false;
+        Debug.Log($"{gameObject.name} 被激光击中了");
+        // receivedLasers.Add(laser);
+        // return receivedLasers;
+        return receivedLasers;
     }
+    
     
     public void OnHit(int damage)
     {
         health -= damage;
         if (health <= 0)DestroyTower();
+    }
+
+    public virtual List<Laser> OnLaserOut(Laser laser)
+    {
+        Debug.Log($"{gameObject.name} 离开了");
+        return null;
     }
     
     private Enemy FindClosestEnemy()
@@ -138,35 +149,31 @@ public class Tower : MonoBehaviour
         return closestEnemy;
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision == null)
-    //    {
-    //        Debug.LogError("Collision is null in OnTriggerEnter2D.");
-    //        return;
-    //    }
-    //    if (collision.TryGetComponent<Enemy>(out Enemy enemy))
-    //    {
-    //        enemiesInRange.Add(enemy); // 添加进入范围的敌人 
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (collision == null)
-    //    {
-    //        Debug.LogError("Collision is null in OnTriggerExit2D.");
-    //        return;
-    //    }
-    //    if (collision.TryGetComponent<Enemy>(out Enemy enemy))
-    //    {
-    //        //enemiesInRange.Remove(enemy); // 移除离开范围的敌人
-    //        if (enemy != null && !enemy.Equals(null)) // 确保 enemy 没有被销毁
-    //        {
-    //            enemiesInRange.Remove(enemy);
-    //            Debug.Log($"Enemy {enemy.name} removed from range.");
-    //        }
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 检查碰撞的对象是否是 Laser，并且是否带有 "Laser" 标签
+        if (collision.CompareTag("Laser"))
+        {
+            Laser laser = collision.GetComponent<Laser>();
+            if (laser != null)
+            {
+                // 调用塔的 OnLaserHit 方法处理激光击中
+                OnLaserHit(laser);
+            }
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Laser"))
+        {
+            Laser laser = collision.GetComponent<Laser>();
+            if (laser != null)
+            {
+                // 调用塔的 OnLaserHit 方法处理激光击中
+                OnLaserOut(laser);
+            }
+        }
+    }
     
 }
