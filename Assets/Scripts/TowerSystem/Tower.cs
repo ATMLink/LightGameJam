@@ -29,7 +29,7 @@ public class Tower : MonoBehaviour
     //     sight1 = transform.GetChild(0).GetComponent<TowerSight>();
     // }
 
-    public void Initialize()
+    public virtual void Initialize()
     {
         health = attributes.health.Value;
         damage = attributes.damage.Value;
@@ -89,7 +89,7 @@ public class Tower : MonoBehaviour
         gameObject.SetActive(false); // 将塔移回对象池
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
         if (enemiesInRange.Count > 0 && attackTimer >= attackCooldown)
         {
@@ -107,6 +107,11 @@ public class Tower : MonoBehaviour
         }
     }
 
+    public virtual bool OnLaserHit(Laser laser)
+    {
+        return false;
+    }
+    
     public void OnHit(int damage)
     {
         health -= damage;
