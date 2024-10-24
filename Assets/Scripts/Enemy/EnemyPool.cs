@@ -30,6 +30,7 @@ public class EnemyPool : MonoBehaviour
             {EnemyData.enemyName[6],new Queue<Enemy>()},
             {EnemyData.enemyName[7],new Queue<Enemy>()},
             {EnemyData.enemyName[8],new Queue<Enemy>()},
+            {EnemyData.enemyName[9],new Queue<Enemy>()},
     };
 
     private void Start()

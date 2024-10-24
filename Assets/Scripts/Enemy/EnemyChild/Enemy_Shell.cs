@@ -7,6 +7,9 @@ public class Enemy_Shell : Enemy
 
     private float creationHealth = 0;
 
+    [SerializeField]
+    private string creationName;
+
     protected override void Start()
     {
         base.Start();
@@ -24,9 +27,18 @@ public class Enemy_Shell : Enemy
     protected override void SkillPlan()
     {
         //这里调用一下创造中立障碍物的函数
+        GenerateEnemy(creationName);
+
         ReturnToPool();
     }
 
+    private void GenerateEnemy(string name)
+    {
+        GameObject enemy = EnemyPool.instance.GetEnemyFromPool(name);
+        enemy.gameObject.transform.position = transform.position;
+        enemy.GetComponent<Enemy>().SetMap(targetPoint);
+        EnemyEventSystem.instance.EnemyGenerate(enemy.GetComponent<Enemy>());
+    }
 
     protected override void Destroy()
     {

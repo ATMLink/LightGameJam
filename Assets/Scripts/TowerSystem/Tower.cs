@@ -18,16 +18,17 @@ public class Tower : MonoBehaviour
 
     private float attackCooldown;
     private float attackTimer;
-    
-    private List<Enemy> enemiesInRange;
+
+    private List<Enemy> enemiesInRange = new List<Enemy>();
 
     [SerializeField] private TowerSight sight1;
 
 
-    // private void Start()
-    // {
-    //     sight1 = transform.GetChild(0).GetComponent<TowerSight>();
-    // }
+    //private void Start()
+    //{
+    //    //需要删除
+    //    health = 2000;
+    //}
 
     public void Initialize()
     {
@@ -107,7 +108,7 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public void OnHit(int damage)
+    public virtual void OnHit(int damage)
     {
         health -= damage;
         if (health <= 0)DestroyTower();
@@ -131,6 +132,40 @@ public class Tower : MonoBehaviour
         }
 
         return closestEnemy;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision != null)
+        {
+            if (collision.transform.tag == "Enemy")
+            {
+                if (collision.TryGetComponent<Enemy>(out Enemy enemy))
+                {
+                    enemiesInRange.Add(enemy); // 添加进入范围的敌人     
+                }
+            }
+        }
+    }
+
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision != null)
+        {
+            if (collision.transform.tag == "Enemy")
+            {
+                if (collision.TryGetComponent<Enemy>(out Enemy enemy))
+                {
+                    if (enemiesInRange.Contains(enemy))
+                    {
+                        enemiesInRange.Remove(enemy);
+                    }
+                }
+            }
+        }
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)
@@ -163,5 +198,5 @@ public class Tower : MonoBehaviour
     //        }
     //    }
     //}
-    
+
 }

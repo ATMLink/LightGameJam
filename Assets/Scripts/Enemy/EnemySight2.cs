@@ -13,9 +13,12 @@ public class EnemySight2 : MonoBehaviour
         {
             if (collision.transform.tag == "Tower")
             {
-                if (!towerInSight.Contains(collision.gameObject.GetComponent<Tower>()))
+                if (collision.gameObject.GetComponent<Tower>() != null)
                 {
-                    towerInSight.Add(collision.gameObject.GetComponent<Tower>());
+                    if (!towerInSight.Contains(collision.gameObject.GetComponent<Tower>()))
+                    {
+                        towerInSight.Add(collision.gameObject.GetComponent<Tower>());
+                    }
                 }
             }
             if (collision.transform.tag == "Enemy")
@@ -32,11 +35,14 @@ public class EnemySight2 : MonoBehaviour
     {
         if (collision != null)
         {
-            if (collision.transform.tag == "Tower")
+            if (collision.gameObject.GetComponent<Tower>() != null)
             {
-                if (!towerInSight.Contains(collision.gameObject.GetComponent<Tower>()))
+                if (collision.transform.tag == "Tower")
                 {
-                    towerInSight.Add(collision.gameObject.GetComponent<Tower>());
+                    if (!towerInSight.Contains(collision.gameObject.GetComponent<Tower>()))
+                    {
+                        towerInSight.Add(collision.gameObject.GetComponent<Tower>());
+                    }
                 }
             }
             if (collision.transform.tag == "Enemy")

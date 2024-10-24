@@ -43,6 +43,9 @@ public class EnemyManager : MonoBehaviour
     private void Awake()
     {
         SetLevelTable(1, "Level1");
+        SetLevelTable(2, "Level1");
+        SetLevelTable(3, "Level1");
+        SetLevelTable(4, "Level1");
     }
 
     private void Start()
@@ -64,6 +67,7 @@ public class EnemyManager : MonoBehaviour
             case GameState.inTurn:
                 if (trigger == true)
                 {
+                    //获取所有场地难度最高的作为刷新间隔时间
                     SetDifficultLevel();
                     currentTurn += 1;
                     Debug.Log($"进入轮次{currentTurn}");
@@ -80,7 +84,7 @@ public class EnemyManager : MonoBehaviour
                     //开始所有已绑定的刷怪点的刷怪行为
                     foreach (var field in fieldList)
                     {
-                        field.StartTurn(currentTurn, difficultLevel);
+                        field.StartTurn(currentTurn);
                     }
                     trigger = false;
                 }
@@ -137,11 +141,17 @@ public class EnemyManager : MonoBehaviour
         return restCD / difficultLevel;
     }
 
+    public int etCurrentTurn()
+    {
+        return currentTurn;
+    }
+
+
+
 
     private void SetDifficultLevel()
     {
-        //未启用
-        //difficultLevel = EnemyData.InfinityStrategy(currentTurn - maxTurnNum);
+        difficultLevel = EnemyData.InfinityStrategy(currentTurn - maxTurnNum);
     }
 
     private void GameStart()

@@ -60,6 +60,9 @@ public static class EnemyData
         can,
         cant,
     }
+
+    public static float maxDarkSpeedUp = 8;
+
     //路径属性
     //与路径的最大偏移量
     public static float globleGenerateOffset = 2f;
@@ -86,6 +89,7 @@ public static class EnemyData
         "enemy_Creation",
         "enemy_Guard",
         "enemy_Shell",
+        "enemy_Box"
     };
 
     //以下为各个怪物的具体数值
@@ -93,24 +97,24 @@ public static class EnemyData
 
     //enemy_Small
     //static List<float> sp1 = new List<float>(){1f};（例：回血速度，对于任何拥有特殊能力的怪都会将对应属性写在其基础属性上）
-    static EnemyInfo enemy_1 = new EnemyInfo(1, 10, 1.5f, 0, 1/*,sp1*/);
+    static EnemyInfo enemy_1 = new EnemyInfo(1, 10, 1.5f, 0, 4/*,sp1*/);
 
     //以上是一个完整的怪物信息
 
     //enemy_Middle
-    static EnemyInfo enemy_2 = new EnemyInfo(2, 20, 1f, 0, 1);
+    static EnemyInfo enemy_2 = new EnemyInfo(2, 20, 1f, 0, 2);
 
     //enemy_Huge
     static EnemyInfo enemy_3 = new EnemyInfo(8, 64,0.8f, 0, 1);
 
     //enemy_Creeper
     static List<float> sp4 = new List<float>() { 25f, 2, 0.5f };//爆炸伤害,爆炸范围,爆炸前摇
-    static EnemyInfo enemy_4 = new EnemyInfo(2, 1, 0.7f, 0, 2, sp4);
+    static EnemyInfo enemy_4 = new EnemyInfo(2, 30, 0.7f, 0, 2, sp4);
 
     //enemy_Skeleton
     //理论上攻击时应该会停下来,但是目前没有攻击间隔和攻击花费时间的区别,因此随便定一个攻击花费时间
     static List<float> sp5 = new List<float>() { 0.2f };//攻击花费时间
-    static EnemyInfo enemy_5 = new EnemyInfo(3, 15, 1f, 4, 0.2f, sp5);
+    static EnemyInfo enemy_5 = new EnemyInfo(3, 15, 1f, 4, 2, sp5);
 
     //enemy_Witch
     static List<float> sp6 = new List<float>() { 0.2f, 10, 0.2f, 10f };//攻击花费时间,召唤衍生物数量,召唤多个衍生物间隔,与下一次召唤衍生物间隔
@@ -118,14 +122,17 @@ public static class EnemyData
 
     //enemy_Creation
     //Witch衍生物
-    static EnemyInfo enemy_7 = new EnemyInfo(1, 5, 1.5f, 0, 1);
+    static EnemyInfo enemy_7 = new EnemyInfo(1, 5, 1.5f, 0, 5);
 
     //enemy_Guard
-    static EnemyInfo enemy_8 = new EnemyInfo(2, 128, 0.7f, 0, 2, 105);
+    static EnemyInfo enemy_8 = new EnemyInfo(2, 128, 0.7f, 0, 1, 105);
 
     //enemy_Shell
-    static List<float> sp9 = new List<float>() { 150f};//召唤障碍物血量
-    static EnemyInfo enemy_9 = new EnemyInfo(2, 20, 1f, 0, 1, sp9);
+    static List<float> sp9 = new List<float>() {150f};//召唤障碍物血量
+    static EnemyInfo enemy_9 = new EnemyInfo(2, 20, 1f, 0, 2, sp9);
+
+    //enemy_Box
+    static EnemyInfo enemy_10 = new EnemyInfo(0, 150, 1f, 0, 0);
 
     static EnemyData()
     {
@@ -140,6 +147,7 @@ public static class EnemyData
             {enemyName[6],enemy_7},
             {enemyName[7],enemy_8},
             {enemyName[8],enemy_9},
+            {enemyName[9],enemy_10},
         };
     }
 
@@ -161,9 +169,15 @@ public static class EnemyData
         return y;
     }
 
-    public static float InfinityStrategy(float level)
+    public static float InfinityStrategy(int extraTurn)
     {
-        //后续修改为无尽模式的难度曲线
+        //无尽模式的难度曲线
+
+        if (extraTurn <= 0) return 1;
+        int count = (extraTurn - 1) % 5 + 1;
+
+        float level = 1 + 0.3f * count;
+
         return level;
     }
 

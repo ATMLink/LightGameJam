@@ -6,4 +6,5 @@
 6;2;enemy_Witch*3
 7;2;enemy_Creation*3
 8;2;enemy_Guard*3
-9;2;enemy_Shell*3
+9;2;enemy_Creeper*3
+10;2;enemy_Shell*3

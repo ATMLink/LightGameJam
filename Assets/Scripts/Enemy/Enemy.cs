@@ -6,9 +6,9 @@ using UnityEngine.Rendering;
 public class Enemy : EnemyBase
 {
 
-    private bool firstInit = true;
+    protected bool firstInit = true;
 
-    private Material material;
+    protected Material material;
     private float flashDuration = 0.1f;
 
     protected Rigidbody2D rigid;
@@ -57,6 +57,14 @@ public class Enemy : EnemyBase
 
     private float environmentSpeed = 1f;
 
+    private float maxDarkSpeedUp = 8;
+    private float DarkSpeedUp = 8;
+
+
+    //和推进器对接
+    private float landmarkSpeed = 1;
+
+
 
     protected virtual void Start()
     {
@@ -96,17 +104,8 @@ public class Enemy : EnemyBase
             }
         }
 
-        sight1.Clear();
-        enemyState = EnemyState.move;
-        // 旋转效果
-        float randomRotation = Random.Range(0f, 360f);
-        transform.rotation = Quaternion.Euler(0, 0, randomRotation);
-        currentRotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
-        //环境影响
-        environmentSpeed = 1;
-
-        CopyData();
         ExtraEnableSet();
+        CopyData();
         RefreshOffsetToCenter();
     }
 
@@ -122,7 +121,16 @@ public class Enemy : EnemyBase
 
     protected virtual void ExtraEnableSet()
     {
-
+        sight1.Clear();
+        enemyState = EnemyState.move;
+        // 旋转效果
+        float randomRotation = Random.Range(0f, 360f);
+        transform.rotation = Quaternion.Euler(0, 0, randomRotation);
+        currentRotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
+        //环境影响
+        environmentSpeed = 1;
+        maxDarkSpeedUp = EnemyData.maxDarkSpeedUp;
+        DarkSpeedUp = maxDarkSpeedUp;
     }
 
     private void OnDisable()
@@ -142,12 +150,24 @@ public class Enemy : EnemyBase
         {
             OnHit(1);
         }
+        DarkTest();
         EnemyAction();
     }
 
+    protected void DarkTest()
+    {
+        if(DarkSpeedUp == maxDarkSpeedUp)
+        {
+            if (LightSystem.Instance.IsIrradiated(transform.position))
+            {
+                DarkSpeedUp = 0;
+            }
+        }
+    }
+
+
     private void FixedUpdate()
     {
-        rigid.angularVelocity = currentRotationSpeed;
         MoveController();
     }
 
@@ -285,6 +305,9 @@ public class Enemy : EnemyBase
     {
         //主要控制移动，防止卡顿
 
+
+        rigid.angularVelocity = currentRotationSpeed;
+
         switch (enemyState)
         {
             case EnemyState.idle:
@@ -339,7 +362,21 @@ public class Enemy : EnemyBase
     protected virtual void SetMainVelocity(float v)
     {
         if (v == 0) rigid.velocity = Vector3.zero;
-        else rigid.velocity = v * environmentSpeed * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized * currentMoveSpeed;
+        else
+        {
+            if (DarkSpeedUp == 0)
+            {
+                rigid.velocity = v * currentMoveSpeed
+                    * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized
+                    * environmentSpeed * landmarkSpeed;
+            }
+            else
+            {
+                rigid.velocity = DarkSpeedUp
+                    * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized
+                    * environmentSpeed * landmarkSpeed;
+            }
+        }
     }
 
     #endregion
