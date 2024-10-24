@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour
     //难度管理
     [SerializeField]
     private float difficultLevel = 1.0f;
-    //所有出怪点开始无尽的回合数
+    //出怪点开始无尽的回合数
     private int maxTurnNum = 0;
 
     //游戏时间进程管理
@@ -141,9 +141,14 @@ public class EnemyManager : MonoBehaviour
         return restCD / difficultLevel;
     }
 
-    public int etCurrentTurn()
+    public int GetCurrentTurn()
     {
         return currentTurn;
+    }
+
+    public int GetMaxTurn()
+    {
+        return maxTurnNum;
     }
 
 
