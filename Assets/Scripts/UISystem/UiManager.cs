@@ -33,6 +33,10 @@ public class UiManager : MonoBehaviour
         retractButton.onClick.AddListener(OnRetractButtonClicked);//收起资源面板按钮
         expandButton.onClick.AddListener(OnExpandButtonClicked);//展开资源面板按钮
         showConstructionMenuButton.onClick.AddListener(OnShowConstructionMenuButtonClicked);//建筑菜单按钮
+        openIntroductionButton.onClick.AddListener(OnOpenIntroductionButtonClicked);
+        leftPage.onClick.AddListener(OnLeftButtonClicked);
+        rightPage.onClick.AddListener(OnRightButtonClicked);
+        closeIntroduction.onClick.AddListener(OnCloseIntroduction);
         UpdateResources();
 
     }
@@ -71,15 +75,19 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button rightPage;// 右翻按钮
     [SerializeField] private Button closeIntroduction;//关闭按钮
     private int currentIndex = 0;
+    [SerializeField] private Button openIntroductionButton;
 
     //introduction相关方法
     void ShowIntroduction()//需要出现新手教程时候调用该方法
     {
         introduction.SetActive(true);
-        leftPage.onClick.AddListener(OnLeftButtonClicked);
-        rightPage.onClick.AddListener(OnRightButtonClicked);
-        closeIntroduction.onClick.AddListener(OnCloseIntroduction);
         UpdateImage();
+    }
+
+    void OnOpenIntroductionButtonClicked()
+    {
+        currentIndex = 0;
+        ShowIntroduction();
     }
     void OnLeftButtonClicked()
     {
@@ -287,6 +295,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] resources;
     [SerializeField] private Button retractButton;//收起、
     [SerializeField] private Button expandButton;//展开
+    [SerializeField] private TextMeshProUGUI waves;
+    [SerializeField] private EnemyManager enemyManager;
     void OnRetractButtonClicked()//收起
     {
         updateResources.SetActive(false);
@@ -309,6 +319,12 @@ public class UiManager : MonoBehaviour
         resources[5].text = "Cs" + " " + _resourceManager.GetResourceNumber(element.cs);
 
         //以上在实际应用中传递数值
+
+        //波次显示
+        //有点问题，暂时不做
+
+        //waves.text = +"" +;
+        
 
     }
     
