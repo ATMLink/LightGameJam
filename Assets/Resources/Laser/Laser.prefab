@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6278942135053503511}
   - component: {fileID: 3901999576327902468}
   - component: {fileID: 2343219634303855292}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 8421180548493301259}
   - component: {fileID: 1339121900705569760}
   - component: {fileID: 1585948854131986385}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5000,7 +5000,7 @@ GameObject:
   - component: {fileID: 3015217154784043499}
   - component: {fileID: 6898057267525962736}
   - component: {fileID: 7439847729465875810}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: beam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9830,7 +9830,7 @@ GameObject:
   - component: {fileID: 7348669220023079601}
   - component: {fileID: 9196000629656467970}
   - component: {fileID: 2057897998081577321}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14660,7 +14660,7 @@ GameObject:
   - component: {fileID: 3974349775643741444}
   - component: {fileID: 8269348522432679811}
   - component: {fileID: 1836765894531719391}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
