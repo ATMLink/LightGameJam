@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6aaa40c8c3afbd44896ffe0be7f46222, type: 3}
-  m_Name: CameraMoveSpeed
+  m_Name: TowerHP
   m_EditorClassIdentifier: 
-  Value: 0.2
-  valueChangedEvent: {fileID: 11400000, guid: 834f627317ba1bf4f8ca0279b4dcc61d, type: 2}
+  Value: 200
+  valueChangedEvent: {fileID: 11400000, guid: b6ea7223ce0e14e40a0c7c1f36c3743d, type: 2}

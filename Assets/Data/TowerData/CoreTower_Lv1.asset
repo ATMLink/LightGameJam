@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0529adfce856be4fa346244339e3e14, type: 3}
-  m_Name: BasicLevelTwo
+  m_Name: CoreTower_Lv1
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: 07df5cfa1d34d53498f9cef17ffd9adc, type: 2}
   damage: {fileID: 11400000, guid: 050a24ee3d4268c448efe7ba91267162, type: 2}
-  attackSpeed: {fileID: 11400000, guid: 99cd01bdd27caf5408a686597846dd0e, type: 2}
-  attackRange: {fileID: 11400000, guid: 61f8e112413fecb4b8516364da7f8dd5, type: 2}
-  towerSprite: {fileID: 21300000, guid: 22e174aa332c6a94a8730639d0d5bc61, type: 3}
+  attackSpeed: {fileID: 11400000, guid: 07df5cfa1d34d53498f9cef17ffd9adc, type: 2}
+  attackRange: {fileID: 11400000, guid: 007103087382dcd4ab8fd9844a492884, type: 2}
+  towerSprite: {fileID: 21300000, guid: 2183c9e1a6ce72846816b13ad2ca179e, type: 3}
   withLaser: 0
-  Prefab: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
-  towerName: BasicLevel2
+  Prefab: {fileID: 6468066811811687904, guid: b7843fb5ac8db114bb27d6f1b5e28194, type: 3}
+  towerName: CoreTower_Lv1
   nextLevelAttributes: {fileID: 0}
