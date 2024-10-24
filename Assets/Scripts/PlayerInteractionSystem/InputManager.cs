@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
 
     public LayerMask tilemapLayerMask;
     
-    private bool isDraggingTower = false;
+    public bool isDraggingTower = false;
     private TowerAttributes selectedTowerAttributes;
     private GameObject towerPreview;
 

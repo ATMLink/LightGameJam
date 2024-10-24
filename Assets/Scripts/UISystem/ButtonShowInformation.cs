@@ -10,7 +10,8 @@ public class ButtonShowInformation : MonoBehaviour, IPointerEnterHandler, IPoint
 
 
     public Image hoverSprite; // 悬停时显示的图片
-
+    [SerializeField] private InputManager inputManager;
+ 
     void Start()
     {
         hoverSprite.gameObject.SetActive(false);
@@ -18,13 +19,13 @@ public class ButtonShowInformation : MonoBehaviour, IPointerEnterHandler, IPoint
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+      
+        hoverSprite.gameObject.SetActive(!inputManager.isDraggingTower);
         
-        hoverSprite.gameObject.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // 鼠标离开时恢复原始图片
         hoverSprite.gameObject.SetActive(false);
     }
 }
