@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 using Vector3 = UnityEngine.Vector3;
 
 public class TowerManager : MonoBehaviour
@@ -37,6 +39,11 @@ public class TowerManager : MonoBehaviour
             towers.Add(newTower);
             newTower.Initialize();
             // create lasers
+            if(towerAttributes.towerName == "CoreTower_Lv1")
+            {
+                laserManager.CreateLaser(newTower, position, new Vector3(0, -1, 0), 400);
+                Debug.Log("调用成功");
+            }
         }
     }
 
