@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    [SerializeField] private LaserManager laserManager;
     private Laser attachedLaser;
     
     public TowerAttributes attributes;
@@ -22,13 +21,13 @@ public class Tower : MonoBehaviour
     
     private List<Enemy> enemiesInRange;
 
-    private TowerSight sight1;
+    [SerializeField] private TowerSight sight1;
 
 
-    private void Start()
-    {
-        sight1 = transform.GetChild(0).GetComponent<TowerSight>();
-    }
+    // private void Start()
+    // {
+    //     sight1 = transform.GetChild(0).GetComponent<TowerSight>();
+    // }
 
     public void Initialize()
     {
@@ -47,13 +46,16 @@ public class Tower : MonoBehaviour
         attackCooldown = 1f / attackSpeed;
         attackTimer = 0f;
 
+        transform.rotation = Quaternion.Euler(Vector3.down);
+
         // set tower circle collider
         // rangeCollider = GetComponent<CircleCollider2D>();
         // if (rangeCollider == null)
         //     rangeCollider = gameObject.AddComponent<CircleCollider2D>();
         // rangeCollider.isTrigger = true;
-        sight1.GetComponent<CircleCollider2D>().radius = attackRange;
-        towerID = towerIDCounter++;
+       sight1.GetComponent<CircleCollider2D>().radius = attackRange;
+        
+       towerID = towerIDCounter++;
         
         gameObject.SetActive(true);
     }

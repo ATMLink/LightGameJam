@@ -4778,7 +4778,7 @@ MonoBehaviour:
   _tilemapManager: {fileID: 1424931871}
   _towerManager: {fileID: 945080038}
   _uiManager: {fileID: 180441133}
-  _enemyManager: {fileID: 0}
+  _enemyManager: {fileID: 659915092}
   _laserManager: {fileID: 415967692}
   isPaused: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
 --- !u!4 &1168804922

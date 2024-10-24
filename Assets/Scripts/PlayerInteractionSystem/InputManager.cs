@@ -86,7 +86,7 @@ public class InputManager : MonoBehaviour
                     constructManager.SelectTower(selectedTowerAttributes);
 
                     constructManager.PlaceTower(cellCenterPos);
-                        // Debug.Log($"Tower placed at position: {cellCenterPos}");
+                    Debug.Log($"Tower placed at position: {cellCenterPos}");
 
                     CancelTowerDragging();
                 }
@@ -129,18 +129,20 @@ public class InputManager : MonoBehaviour
                 return;
             }
 
-            // 射线检测以确定点击的对象
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+            // 获取点击的世界坐标位置
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if (hit.collider != null)
+            // 使用 OverlapPoint 检测点击点是否有塔
+            LayerMask towerLayerMask = LayerMask.GetMask("Tower");
+            Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition, towerLayerMask);
+
+            // 检查点击到的是否为塔
+            if (hitCollider != null)
             {
-                // 检查点击到的物体是否是塔
-                Tower clickedTower = hit.collider.GetComponent<Tower>();
+                Tower clickedTower = hitCollider.GetComponent<Tower>();
                 if (clickedTower != null)
                 {
-                    Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
-                    
+                    Debug.Log($"Tower clicked at position: {mousePosition}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
                     uiManager.ShowTowerMenu(clickedTower);
                 }
                 else
@@ -152,6 +154,29 @@ public class InputManager : MonoBehaviour
             {
                 Debug.Log("No collider hit detected.");
             }
+            // 射线检测以确定点击的对象
+            // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            // RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+            //
+            // if (hit.collider != null)
+            // {
+            //     // 检查点击到的物体是否是塔
+            //     Tower clickedTower = hit.collider.GetComponent<Tower>();
+            //     if (clickedTower != null)
+            //     {
+            //         Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
+            //         
+            //         uiManager.ShowTowerMenu(clickedTower);
+            //     }
+            //     else
+            //     {
+            //         Debug.Log("No tower found at clicked position.");
+            //     }
+            // }
+            // else
+            // {
+            //     Debug.Log("No collider hit detected.");
+            // }
         }
     }
 
