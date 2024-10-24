@@ -12,12 +12,15 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Vector2Variable minBounds;
     [SerializeField] private Vector2Variable maxBounds;
     [SerializeField] private TilemapManager tilemapManager;
+    [SerializeField] private GameObject FunctionMenu;
+    public bool isMoving;
     private Camera camera;  
     private Vector3 initialPosition;
     private Vector3 lastMouseWorldPosition;
 
     public void Initialize()
     {
+        isMoving = false;
         // Initialize the camera component if it's not already assigned
         camera = Camera.main; // or GetComponent<Camera>() if the camera is attached to this gameObject
         if (camera == null)
@@ -48,6 +51,7 @@ public class CameraController : MonoBehaviour
         HandleCameraZoom();
         ResetCameraPosition();
         ChangeBounds();
+        HideMenu();
     }
 
     public void HandleCameraMovement()// speed should not be absoluted
@@ -55,10 +59,12 @@ public class CameraController : MonoBehaviour
         // Logic for dragging the camera with the right mouse button
         if (Input.GetMouseButton(1))
         {
+            isMoving = true;
             Vector3 delta = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
             camera.transform.Translate(-delta * moveSpeed.Value, Space.World);
             ClampCameraPosition();
         }
+        else isMoving = false;
     }
 
     public void HandleCameraZoom()
@@ -96,5 +102,10 @@ public class CameraController : MonoBehaviour
         minBounds.SetValue(new Vector2(-(tilemapManager.width / 2 - BorderX), -(tilemapManager.height / 2 - BorderY)));
         maxBounds.SetValue(new Vector2((tilemapManager.width / 2 - BorderX), tilemapManager.height / 2 - BorderY));
         ClampCameraPosition();
+    }
+    public void HideMenu() { 
+        if (isMoving)FunctionMenu.gameObject.SetActive(false);
+    
+    
     }
 }

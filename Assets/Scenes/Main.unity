@@ -5794,6 +5794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8048084f9017f2449af777e0e3dfb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedLightList: []
 --- !u!4 &1285599220
 Transform:
   m_ObjectHideFlags: 0
@@ -6025,6 +6026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 2025562786}
+  turnDelay: 0
 --- !u!1 &1424931870
 GameObject:
   m_ObjectHideFlags: 0
@@ -7327,6 +7329,8 @@ MonoBehaviour:
   minBounds: {fileID: 11400000, guid: 01edf8910f9d34f4196c91f3cb6c8357, type: 2}
   maxBounds: {fileID: 11400000, guid: 72846aaef60511f46a3744d5eb96a6da, type: 2}
   tilemapManager: {fileID: 1424931871}
+  FunctionMenu: {fileID: 44910126}
+  isMoving: 0
 --- !u!114 &1912484482
 MonoBehaviour:
   m_ObjectHideFlags: 0
