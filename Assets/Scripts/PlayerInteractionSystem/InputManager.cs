@@ -139,7 +139,7 @@ public class InputManager : MonoBehaviour
                 Tower clickedTower = hit.collider.GetComponent<Tower>();
                 if (clickedTower != null)
                 {
-                    Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
+                    //Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
                     
                     uiManager.ShowTowerMenu(clickedTower);
                 }

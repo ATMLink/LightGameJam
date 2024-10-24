@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     
     public TowerAttributes attributes;
 
-    private int towerID;
+    public int towerID;
     private static int towerIDCounter = 0;
     private float health;
     private float damage;
@@ -22,13 +22,14 @@ public class Tower : MonoBehaviour
     
     private List<Enemy> enemiesInRange;
 
+    [SerializeField]
     private TowerSight sight1;
 
 
-    private void Start()
-    {
-        sight1 = transform.GetChild(0).GetComponent<TowerSight>();
-    }
+    //private void Start()
+    //{
+    //    health = 10000;
+    //}
 
     public void Initialize()
     {
