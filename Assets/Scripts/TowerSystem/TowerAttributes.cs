@@ -21,4 +21,6 @@ public class TowerAttributes : ScriptableObject
     public string towerName;
 
     public TowerAttributes nextLevelAttributes;
+    public List<element> elements;
+    public List<float> elementSpendNumber;
 }

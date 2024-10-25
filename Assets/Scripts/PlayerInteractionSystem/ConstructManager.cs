@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class ConstructManager : MonoBehaviour
 {
+    [SerializeField] private MainResourceManagement resourceManagement;
     public Light2D _light;
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private TowerPool towerPool;
@@ -15,6 +16,7 @@ public class ConstructManager : MonoBehaviour
     private void Start()
     {
         LightSystem.Instance.AddLight(_light);
+        resourceManagement = GameObject.Find("ResourceManager").GetComponent<MainResourceManagement>();
     }
     // 设置当前选择的塔
     public void SelectTower(TowerAttributes towerAttributes)
@@ -24,11 +26,11 @@ public class ConstructManager : MonoBehaviour
 
     public void PlaceTower(Vector3 position)
     {
-        Debug.Log($"Placing tower at position: {position}");
         if (selectedTowerAttributes != null)
         {
             if (CanPlaceTower(selectedTowerAttributes,position)) // 检查是否可以放置塔
             {
+                Debug.Log($"Placing tower at position: {position}");
                 towerManager.AddTower(position, selectedTowerAttributes);
                 // Tower newTower = towerPool.GetTower();
                 // if (newTower != null) // 确保池子未满
@@ -49,7 +51,18 @@ public class ConstructManager : MonoBehaviour
     // 检查指定位置是否允许放置塔
     private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)
     {
-        if(!LightSystem.Instance.IsIrradiated(new Vector2(position.x, position.y)))return false;
+        //Debug.LogWarning(towerAttributes.spendElement_1);
+        //Debug.LogWarning(towerAttributes.elementNumber_1);
+        //Debug.LogWarning(towerAttributes.spendElement_2);
+        //Debug.LogWarning(towerAttributes.elementNumber_2);
+        //Debug.LogWarning(resourceManagement.JudgeAfford(towerAttributes.spendElement_1, towerAttributes.elementNumber_1));
+        //Debug.LogWarning(resourceManagement.JudgeAfford(towerAttributes.spendElement_2, towerAttributes.elementNumber_2));
+
+        for (int i = 0; i < towerAttributes.elements.Count; i++) {
+            if (!resourceManagement.JudgeAfford(towerAttributes.elements[i], towerAttributes.elementSpendNumber[i]))return false;
+        }
+        Debug.LogWarning("resource2");
+        if (!LightSystem.Instance.IsIrradiated(new Vector2(position.x, position.y)))return false;
         //bool canConstruct = false;
         int count = 0;
         float radius = 0f;
@@ -80,7 +93,7 @@ public class ConstructManager : MonoBehaviour
                         {
                             count++;
                         }
-                        if (count == 1) { Debug.LogWarning(2); return false; }
+                        if (count == 1) {  return false; }
                     }
                 }
             }

@@ -20,7 +20,8 @@ public class Tower : MonoBehaviour
     
     protected List<Laser> receivedLasers;
     private List<Enemy> enemiesInRange;
-    
+
+    [SerializeField] private MainResourceManagement resourceManagement;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private TowerSight sight1;
 
@@ -47,7 +48,13 @@ public class Tower : MonoBehaviour
         transform.rotation = Quaternion.Euler(Vector3.down);
         
         sight1.GetComponent<CircleCollider2D>().radius = attackRange;
-        
+
+        resourceManagement = GameObject.Find("ResourceManager").GetComponent<MainResourceManagement>();
+        for (int i = 0; i < attributes.elements.Count; i++)
+        {
+            resourceManagement.SpendResoure(attributes.elements[i], attributes.elementSpendNumber[i]);
+        }
+
         towerID = towerIDCounter++;
         
         gameObject.SetActive(true);

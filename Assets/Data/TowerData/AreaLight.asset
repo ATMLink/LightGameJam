@@ -17,7 +17,9 @@ MonoBehaviour:
   attackSpeed: {fileID: 11400000, guid: 60e3a04e833b6294eb8100ae9755f67e, type: 2}
   attackRange: {fileID: 11400000, guid: 60e3a04e833b6294eb8100ae9755f67e, type: 2}
   towerSprite: {fileID: 21300000, guid: 68753d450b0a61143be6c6861e6a5af1, type: 3}
-  withLaser: 0
+  withLight: 0
   Prefab: {fileID: 3989233581575745183, guid: 3e34f24c11308294991d526bee15e32c, type: 3}
   towerName: AreaLight
   nextLevelAttributes: {fileID: 0}
+  elements: 
+  elementSpendNumber: []

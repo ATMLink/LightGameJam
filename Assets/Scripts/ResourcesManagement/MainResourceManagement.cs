@@ -55,7 +55,7 @@ public class MainResourceManagement : MonoBehaviour
             case element.li:elementNumber = liNumber.Value; break;
             case element.cs:elementNumber = csNumber.Value; break;
         }
-        bool isAfford = ( elementNumber > number )?  true : false;
+        bool isAfford = ( elementNumber >= number )?  true : false;
         return isAfford;
     }
     /// <summary>

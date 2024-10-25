@@ -21,3 +21,6 @@ MonoBehaviour:
   Prefab: {fileID: 3523363381708340611, guid: 1270cc8af7cd6a94d8e401db87c20a6e, type: 3}
   towerName: SplitterTower
   nextLevelAttributes: {fileID: 0}
+  elements: 01000000
+  elementSpendNumber:
+  - 50
