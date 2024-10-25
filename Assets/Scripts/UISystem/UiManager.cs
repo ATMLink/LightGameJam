@@ -335,9 +335,8 @@ public class UiManager : MonoBehaviour
         //以上在实际应用中传递数值
 
         //波次显示
-        //有点问题，暂时不做
 
-        //waves.text = +"" +;
+        waves.text =" "+enemyManager.GetCurrentTurn();
         
     }
     public void SiNumberChangeShow() {
