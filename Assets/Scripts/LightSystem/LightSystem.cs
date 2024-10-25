@@ -10,7 +10,7 @@ public class LightSystem : MonoBehaviour
     public List<Light2D> selectedLightList;
     void Awake(){
         if(instance == null){
-            instance = new LightSystem();
+            instance = new LightSystem();   
             instance.lightList = new List<Light2D>();
         }
         else{

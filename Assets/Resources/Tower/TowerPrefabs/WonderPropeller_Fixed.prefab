@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 205747301775463251}
-  - component: {fileID: 1287831529039793251}
+  - component: {fileID: 5568792086731059891}
   - component: {fileID: 7867459719826588639}
   - component: {fileID: 7568834130568925383}
   - component: {fileID: 8277901072605045474}
   m_Layer: 8
-  m_Name: Tower
+  m_Name: WonderPropeller_Fixed
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,9 +34,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3366522488626588461}
+  - {fileID: 3322368851393153604}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1287831529039793251
+--- !u!114 &5568792086731059891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,14 +46,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100338661431412229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca28202a5e7e0549b8da2df45ddc13e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e68267ce2f72ba4a81d325192de0f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes: {fileID: 11400000, guid: 4c428a937ad201c43aeffb07595ff507, type: 2}
+  attributes: {fileID: 11400000, guid: dba6be536777467499bcbca8f7ab6b29, type: 2}
   towerID: 0
   resourceManagement: {fileID: 0}
-  spriteRenderer: {fileID: 7568834130568925383}
+  spriteRenderer: {fileID: 0}
   sight1: {fileID: 835276055896660627}
+  colider: {fileID: 4594287746945456720}
 --- !u!50 &7867459719826588639
 Rigidbody2D:
   serializedVersion: 4
@@ -248,3 +250,83 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyInSight: []
+--- !u!1 &7637779399320526184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3322368851393153604}
+  - component: {fileID: 4594287746945456720}
+  - component: {fileID: 3825230646047867213}
+  m_Layer: 8
+  m_Name: force
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3322368851393153604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637779399320526184}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 205747301775463251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4594287746945456720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637779399320526184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0068bc85aa0f60419232fd0b3520a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &3825230646047867213
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637779399320526184}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

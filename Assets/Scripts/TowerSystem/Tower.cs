@@ -19,17 +19,23 @@ public class Tower : MonoBehaviour
     protected float attackTimer;
     
     protected List<Laser> receivedLasers;
-    private List<Enemy> enemiesInRange;
 
     [SerializeField] private MainResourceManagement resourceManagement;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private TowerSight sight1;
 
 
-    // private void Start()
-    // {
-    //     sight1 = transform.GetChild(0).GetComponent<TowerSight>();
-    // }
+    ////测试用
+    //private void Start()
+    //{
+    //    health = 2000;
+    //    damage = 10f;
+    //    attackCooldown = 2f;
+    //}
+    //private void Update()
+    //{
+    //    Attack();
+    //}
 
     public virtual void Initialize()
     {
@@ -39,7 +45,6 @@ public class Tower : MonoBehaviour
         attackRange = attributes.attackRange.Value;
         spriteRenderer.sprite = attributes.towerSprite;
 
-        enemiesInRange = new List<Enemy>();
         receivedLasers = new List<Laser>();
 
         attackCooldown = 1f / attackSpeed;
@@ -62,9 +67,11 @@ public class Tower : MonoBehaviour
     
     public virtual void UpdateState()
     {
-        // Attack();
+        Attack();
     }
-    
+
+
+
     // 重置塔的属性，方便对象池回收
     public virtual void ResetAttributes()
     {
@@ -72,7 +79,7 @@ public class Tower : MonoBehaviour
         damage = 0;
         attackSpeed = 0;
         attackRange = 0;
-        enemiesInRange.Clear();
+        sight1.EnemyInSight.Clear();
         receivedLasers.Clear();
     }
 
@@ -99,12 +106,13 @@ public class Tower : MonoBehaviour
     
     public virtual void Attack()
     {
-        if (enemiesInRange.Count > 0 && attackTimer >= attackCooldown)
+        if (sight1.EnemyInSight.Count > 0 && attackTimer >= attackCooldown)
         {
             // 攻击最近的敌人
             Enemy target = FindClosestEnemy();
             if (target != null)
             {
+                Debug.Log("attack");
                 target.OnHit(damage); // 对敌人造成伤害
                 attackTimer = 0f; // 重置攻击计时器
             }
@@ -143,7 +151,7 @@ public class Tower : MonoBehaviour
         Enemy closestEnemy = null;
         float closestDistance = Mathf.Infinity;
 
-        foreach (Enemy enemy in enemiesInRange)
+        foreach (Enemy enemy in sight1.EnemyInSight)
         {
             float distance = Vector3.Distance(transform.position, enemy.transform.position);
             if (distance < closestDistance)

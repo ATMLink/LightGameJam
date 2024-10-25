@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 205747301775463251}
-  - component: {fileID: 1287831529039793251}
+  - component: {fileID: 3573694046526634010}
   - component: {fileID: 7867459719826588639}
   - component: {fileID: 7568834130568925383}
   - component: {fileID: 8277901072605045474}
   m_Layer: 8
-  m_Name: Tower
+  m_Name: WonderPropeller
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 3366522488626588461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1287831529039793251
+--- !u!114 &3573694046526634010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca28202a5e7e0549b8da2df45ddc13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes: {fileID: 11400000, guid: 4c428a937ad201c43aeffb07595ff507, type: 2}
+  attributes: {fileID: 11400000, guid: 22573743c340e1e48a48ecf251808311, type: 2}
   towerID: 0
   resourceManagement: {fileID: 0}
-  spriteRenderer: {fileID: 7568834130568925383}
+  spriteRenderer: {fileID: 0}
   sight1: {fileID: 835276055896660627}
 --- !u!50 &7867459719826588639
 Rigidbody2D:

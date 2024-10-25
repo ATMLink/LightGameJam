@@ -158,6 +158,8 @@ public class Enemy : EnemyBase
     {
         if(DarkSpeedUp == maxDarkSpeedUp)
         {
+            //‘› ±∆¡±Œπ‚’’¬ﬂº≠
+            DarkSpeedUp = 0;
             if (LightSystem.Instance.IsIrradiated(transform.position))
             {
                 DarkSpeedUp = 0;
