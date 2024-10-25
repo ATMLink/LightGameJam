@@ -26,6 +26,9 @@ public class Tower : MonoBehaviour
     [SerializeField] private TowerSight sight1;
 
 
+    private bool beenDestoryed = false;
+
+
     //测试用
     private void Start()
     {
@@ -133,7 +136,11 @@ public class Tower : MonoBehaviour
     public virtual void OnHit(int damage)
     {
         health -= damage;
-        if (health <= 0)DestroyTower();
+        if (health <= 0 && !beenDestoryed)
+        {
+            beenDestoryed = true;
+            DestroyTower();
+        }
     }
 
     public virtual void OnLaserOut(Laser laser)

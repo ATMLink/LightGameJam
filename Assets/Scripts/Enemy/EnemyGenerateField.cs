@@ -86,6 +86,12 @@ public class EnemyGenerateField : MonoBehaviour
         }
     }
 
+    public void StopTurn()
+    {
+        TurnCD = 0;
+    }
+
+
     public void GetLevelTable(string name)
     {
         levelTable = LevelParser.ParsePSV(name);
@@ -139,6 +145,7 @@ public class EnemyGenerateField : MonoBehaviour
             }
         }
     }
+
 
     private Vector3 GetRandomPointInPolygonCollider()
     {

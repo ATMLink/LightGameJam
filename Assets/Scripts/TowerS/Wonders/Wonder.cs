@@ -9,6 +9,7 @@ public class Wonder : Tower
     private TowerAttributes destoryAttributes;
 
 
+
     protected virtual void Update()
     {
         //≤‚ ‘”√
