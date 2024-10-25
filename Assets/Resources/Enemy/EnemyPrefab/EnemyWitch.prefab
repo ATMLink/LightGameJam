@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: enemy_Witch
   enemyType: 1
-  maxGenerateOffset: 100
+  maxGenerateOffset: 50
   DarkSpeedUp: 8
   towerInBlock: []
   projectileName: EnemyProjectile

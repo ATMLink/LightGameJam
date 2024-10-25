@@ -8,7 +8,7 @@ public class Enemy_Witch : EnemyRemote
     private string creationName;
 
     Vector3 generateOffset = Vector3.zero;
-    private float maxOffsetForGeneration = 0.1f;
+    private float maxOffsetForGeneration = 80f;
 
     private float creationCount = 0;
     private float maxEnemyCreateCD = 0;
@@ -107,7 +107,8 @@ public class Enemy_Witch : EnemyRemote
 
         generateOffset = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
-        float offsetToCenter = EnemyData.GenerateStrategy(Random.Range(0, maxOffsetForGeneration));
+        //ºìÎÂÁË¸ÄµÄ
+        float offsetToCenter = Random.Range(0, 1f);
 
         generateOffset *= offsetToCenter;
     }
