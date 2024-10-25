@@ -1728,6 +1728,7 @@ GameObject:
   - component: {fileID: 236914440}
   - component: {fileID: 236914439}
   - component: {fileID: 236914442}
+  - component: {fileID: 236914443}
   m_Layer: 5
   m_Name: Tower (8)
   m_TagString: Untagged
@@ -1819,7 +1820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 120376416607844448a8cedd6a3ec736, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a11adf31d2b09e6499db3332709f7105, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1849,8 +1850,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2513471c8d2684abc29307d0bdb460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 0}
-  inputManager: {fileID: 0}
+  hoverSprite: {fileID: 1247196990}
+  inputManager: {fileID: 1967238063}
+--- !u!114 &236914443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236914437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2070ae943bf454086a709de5657882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerAttributes: {fileID: 11400000, guid: 04307fb9f07a87d4c9fa498c5e0fcdcb, type: 2}
+  inputManager: {fileID: 1967238063}
+  informationImage: {fileID: 1247196988}
+  musicManager: {fileID: 0}
 --- !u!1 &283721792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,8 +2736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2513471c8d2684abc29307d0bdb460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 0}
-  inputManager: {fileID: 0}
+  hoverSprite: {fileID: 78326678}
+  inputManager: {fileID: 1967238063}
 --- !u!114 &347644103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2733,9 +2750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2070ae943bf454086a709de5657882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerAttributes: {fileID: 0}
-  inputManager: {fileID: 0}
-  informationImage: {fileID: 0}
+  towerAttributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
+  inputManager: {fileID: 1967238063}
+  informationImage: {fileID: 78326676}
   musicManager: {fileID: 0}
 --- !u!1 &369856518
 GameObject:
@@ -4794,6 +4811,7 @@ GameObject:
   - component: {fileID: 765879697}
   - component: {fileID: 765879696}
   - component: {fileID: 765879699}
+  - component: {fileID: 765879700}
   m_Layer: 5
   m_Name: Tower (7)
   m_TagString: Untagged
@@ -4885,7 +4903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 120376416607844448a8cedd6a3ec736, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1c814816e2c7d74f8c5d2f05ffcc666, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4915,8 +4933,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2513471c8d2684abc29307d0bdb460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 0}
-  inputManager: {fileID: 0}
+  hoverSprite: {fileID: 1500753152}
+  inputManager: {fileID: 1967238063}
+--- !u!114 &765879700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765879694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2070ae943bf454086a709de5657882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerAttributes: {fileID: 11400000, guid: a39ac6033fd8c1d449298c91cf77c3d0, type: 2}
+  inputManager: {fileID: 1967238063}
+  informationImage: {fileID: 1500753150}
+  musicManager: {fileID: 0}
 --- !u!1 &769245940
 GameObject:
   m_ObjectHideFlags: 0
