@@ -26,31 +26,31 @@ public class Tower : MonoBehaviour
     [SerializeField] protected TowerSight sight1;
 
 
-    //测试用
-    private void Start()
-    {
-        health = 2000;
-        damage = attributes.damage.Value;
-        attackSpeed = attributes.attackSpeed.Value;
-        attackRange = attributes.attackRange.Value;
-        spriteRenderer.sprite = attributes.towerSprite;
+    ////测试用
+    //private void Start()
+    //{
+    //    health = 2000;
+    //    damage = attributes.damage.Value;
+    //    attackSpeed = attributes.attackSpeed.Value;
+    //    attackRange = attributes.attackRange.Value;
+    //    spriteRenderer.sprite = attributes.towerSprite;
 
-        receivedLasers = new List<Laser>();
+    //    receivedLasers = new List<Laser>();
 
-        attackCooldown = 1f / attackSpeed;
-        attackTimer = 0f;
+    //    attackCooldown = 1f / attackSpeed;
+    //    attackTimer = 0f;
 
-        transform.rotation = Quaternion.Euler(Vector3.down);
+    //    transform.rotation = Quaternion.Euler(Vector3.down);
 
-        sight1.GetComponent<CircleCollider2D>().radius = attackRange;
-        towerID = towerIDCounter++;
+    //    sight1.GetComponent<CircleCollider2D>().radius = attackRange;
+    //    towerID = towerIDCounter++;
 
-        gameObject.SetActive(true);
-    }
-    private void Update()
-    {
-        Attack();
-    }
+    //    gameObject.SetActive(true);
+    //}
+    //private void Update()
+    //{
+    //    Attack();
+    //}
 
     public virtual void Initialize()
     {
