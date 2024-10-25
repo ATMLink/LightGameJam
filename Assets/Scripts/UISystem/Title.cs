@@ -29,15 +29,12 @@ public class Title : MonoBehaviour
 
     void OnEnterButtonClick()
     {
-
+        //进入游戏
     }
     void OnExitButtonClick()
     {
-
+        //退出
+        Application.Quit();
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

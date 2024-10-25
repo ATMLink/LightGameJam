@@ -253,10 +253,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 67818498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df2513471c8d2684abc29307d0bdb460, type: 3}
+  m_Script: {fileID: 11500000, guid: a1ddb53b5c06e544d9af8a21a3decf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 242652100}
+  displayImage: {fileID: 242652100}
+  hoverSprite: {fileID: 21300000, guid: c9c0e78931d5faa4993f41f1917d5cd0, type: 3}
 --- !u!1 &242652098
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c9c0e78931d5faa4993f41f1917d5cd0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 515bf22a5da4f264aaac6839584261ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -819,10 +820,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1218494814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df2513471c8d2684abc29307d0bdb460, type: 3}
+  m_Script: {fileID: 11500000, guid: a1ddb53b5c06e544d9af8a21a3decf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 1638452275}
+  displayImage: {fileID: 1638452275}
+  hoverSprite: {fileID: 21300000, guid: b28274852a64aee42b664f655b5d2c6e, type: 3}
 --- !u!1 &1344695644
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b28274852a64aee42b664f655b5d2c6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 515bf22a5da4f264aaac6839584261ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

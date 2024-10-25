@@ -8,6 +8,7 @@ TagManager:
   - Tile
   - Tilemap
   - Enemy
+  - Laser
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Enemy
   - EnemySight
   - TowerSight
-  - 
+  - Laser
   - 
   - 
   - 

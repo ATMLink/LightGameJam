@@ -53,7 +53,7 @@ public class InputManager : MonoBehaviour
         SpriteRenderer spriteRenderer = towerPreview.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = towerAttributes.towerSprite;
         
-        spriteRenderer.sortingOrder = 8;  // Ensure the preview appears above other objects if needed.
+        spriteRenderer.sortingOrder = 10;  
 
         towerPreview.SetActive(true); // Make sure it's visible
 

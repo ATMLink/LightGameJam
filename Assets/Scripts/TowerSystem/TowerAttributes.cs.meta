@@ -3,7 +3,14 @@ guid: b0529adfce856be4fa346244339e3e14
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - health: {instanceID: 0}
+  - damage: {instanceID: 0}
+  - attackSpeed: {instanceID: 0}
+  - attackRange: {instanceID: 0}
+  - towerSprite: {instanceID: 0}
+  - Prefab: {instanceID: 0}
+  - nextLevelAttributes: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
