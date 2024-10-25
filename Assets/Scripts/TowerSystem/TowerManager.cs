@@ -89,6 +89,7 @@ public class TowerManager : MonoBehaviour
     public void RemoveTower(Tower tower)
     {
         Debug.Log($"Removing tower: {tower.name}, at position: {tower.transform.position}");
+        musicManager.PlaySound("DestructTower");
         laserManager.RemoveLaser(tower);
         towerPool.ReturnTower(tower);
         towers.Remove(tower);
@@ -110,7 +111,7 @@ public class TowerManager : MonoBehaviour
     private void StartRotate(Tower tower)
     {
         laserManager.SetLaserActiveForTower(tower, false);
-        musicManager.PlaySound("");
+        musicManager.PlaySound("TowerRotate");
     }
 
     private void EndRotate(Tower tower, bool antiClockwise)

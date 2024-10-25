@@ -10,6 +10,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]
     private List<EnemyGenerateField> fieldList = new List<EnemyGenerateField>();
 
+    [SerializeField] private MusicManager musicManager;
+
     //存储所有在场的enemy,暂时没用，可能用于动态调控难度
     private List<Enemy> enemyList = new List<Enemy>();
 
@@ -108,8 +110,7 @@ public class EnemyManager : MonoBehaviour
                 else
                 {
                     //进入下一波
-                    state = GameState.inTurn;
-                    trigger = true;
+                    NextTurn();
                 }
 
                 break;
@@ -163,6 +164,7 @@ public class EnemyManager : MonoBehaviour
     {
         trigger = true;
         maxTurnNum = 0;
+        musicManager.PlaySound("EnemyWaveBegin");
         foreach (var field in fieldList)
         {
             if(maxTurnNum < field.GetTurnCount())
@@ -180,6 +182,7 @@ public class EnemyManager : MonoBehaviour
     {
         trigger = true;
         state = GameState.inTurn;
+        musicManager.PlaySound("EnemyWaveBegin");
     }
 
     private void EnemyGenerate(Enemy enemy)
