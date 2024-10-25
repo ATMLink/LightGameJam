@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemySight2 : MonoBehaviour
 {
-    public List<Tower> towerInSight;
-    public List<Enemy> enemyInSight;
+    public List<Tower> towerInSight = new List<Tower>();
+    public List<Enemy> enemyInSight = new List<Enemy>();
 
     private void OnTriggerStay2D(Collider2D collision)
     {

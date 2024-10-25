@@ -58,12 +58,16 @@ public class Enemy : EnemyBase
     private float environmentSpeed = 1f;
 
     private float maxDarkSpeedUp = 8;
+    [SerializeField]
     private float DarkSpeedUp = 8;
 
 
     //和推进器对接
     private float landmarkSpeed = 1;
-
+    private float wonderEffectCD = 8;
+    private float maxLandmarkSpeed = 1f;
+    private float minLandmarkSpeed = 0.2f;
+    private Coroutine currentWonderCoroutine;
 
 
     protected virtual void Start()
@@ -159,7 +163,7 @@ public class Enemy : EnemyBase
         if(DarkSpeedUp == maxDarkSpeedUp)
         {
             //暂时屏蔽光照逻辑
-            DarkSpeedUp = 0;
+            //DarkSpeedUp = 0;
             if (LightSystem.Instance.IsIrradiated(transform.position))
             {
                 DarkSpeedUp = 0;
@@ -376,7 +380,7 @@ public class Enemy : EnemyBase
             {
                 rigid.velocity = DarkSpeedUp
                     * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized
-                    * environmentSpeed * landmarkSpeed;
+                    * environmentSpeed * landmarkSpeed * 1 / 4;
             }
         }
     }
@@ -423,6 +427,18 @@ public class Enemy : EnemyBase
         if (currentHealth > saving.health) currentHealth = saving.health;
     }
 
+    public virtual void WonderPropellerForce()
+    {
+        landmarkSpeed = minLandmarkSpeed;
+        if (currentWonderCoroutine != null)
+        {
+            StopCoroutine(currentWonderCoroutine);
+        }
+        currentWonderCoroutine = StartCoroutine(WonderEffect());
+    }
+
+
+
     protected virtual IEnumerator OnHitShow()
     {
         float elapsed = 0f;
@@ -438,6 +454,21 @@ public class Enemy : EnemyBase
         {
             Destroy();
         }
+    }
+
+
+    protected virtual IEnumerator WonderEffect()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < wonderEffectCD)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / wonderEffectCD);
+            landmarkSpeed = Mathf.Lerp(minLandmarkSpeed, maxLandmarkSpeed, t);
+            yield return null;
+        }
+        landmarkSpeed = maxLandmarkSpeed;
+
     }
 
 
