@@ -2650,7 +2650,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2758,8 +2758,8 @@ MonoBehaviour:
   finishWonderBuild: {fileID: 8300000, guid: 47f798bfbafaf8741a4c0c2199a7ca83, type: 3}
   towerDestroyed: {fileID: 8300000, guid: 123e4adcabae1c44ba82cd5d0a13b673, type: 3}
   destructTower: {fileID: 8300000, guid: 4cc21d27aa8f2e048a6c4f4ab8336d27, type: 3}
-  towerRotate: {fileID: 8300000, guid: 860a0565252b0a949a960f0b74846b69, type: 3}
-  enemyWaveBegin: {fileID: 8300000, guid: bbdbe0a88e355c14985d085993d91842, type: 3}
+  towerRotate: {fileID: 0}
+  enemyWaveBegin: {fileID: 0}
 --- !u!1 &575471094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,7 +4452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &802670699
 Transform:
   m_ObjectHideFlags: 0
@@ -5472,6 +5472,7 @@ MonoBehaviour:
   _enemyManager: {fileID: 659915092}
   _laserManager: {fileID: 415967692}
   _musicManager: {fileID: 555020838}
+  resourceManagement: {fileID: 1202425554}
   isPaused: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
 --- !u!4 &1168804922
 Transform:
