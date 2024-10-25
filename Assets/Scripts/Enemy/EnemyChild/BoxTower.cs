@@ -8,4 +8,9 @@ public class BoxTower : Tower
     {
         gameObject.transform.parent.GetComponent<Enemy>().OnHit(damage);
     }
+
+    public override void Attack()
+    {
+
+    }
 }

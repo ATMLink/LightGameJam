@@ -11,6 +11,8 @@ public class TowerManager : MonoBehaviour
 {
     public TowerPool towerPool;
     [SerializeField] private LaserManager laserManager;
+    //为了测试公开的
+    [SerializeField]
     private List<Tower> towers = new List<Tower>();
     private bool isRotating = false;
 
