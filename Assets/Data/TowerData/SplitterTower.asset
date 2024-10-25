@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: 9eb8153ac7c9f2248baaf118ce2d63f3, type: 2}
   attackSpeed: {fileID: 11400000, guid: 35ee6a7b13f70ce4aaec0e0dee7686f3, type: 2}
   attackRange: {fileID: 11400000, guid: affbeff40a9133e4f88f87d711756a0f, type: 2}
-  towerSprite: {fileID: 21300000, guid: 9e92615bf53eef644a05004c1dc36430, type: 3}
+  towerSprite: {fileID: 21300000, guid: b1f132ac85c0d404cae7610e1def266d, type: 3}
   withLight: 0
   Prefab: {fileID: 3523363381708340611, guid: 1270cc8af7cd6a94d8e401db87c20a6e, type: 3}
   towerName: SplitterTower
