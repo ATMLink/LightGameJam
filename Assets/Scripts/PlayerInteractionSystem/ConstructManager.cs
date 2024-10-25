@@ -11,6 +11,8 @@ public class ConstructManager : MonoBehaviour
     public Light2D _light;
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private TowerPool towerPool;
+
+    [SerializeField] private MusicManager musicManager;
     //[SerializeField] private LightSystem lightSystem;
     private TowerAttributes selectedTowerAttributes;
     private void Start()
@@ -30,16 +32,9 @@ public class ConstructManager : MonoBehaviour
         {
             if (CanPlaceTower(selectedTowerAttributes,position)) // 检查是否可以放置塔
             {
-                Debug.Log($"Placing tower at position: {position}");
+                musicManager.PlaySound("BeginBuildTower");
                 towerManager.AddTower(position, selectedTowerAttributes);
-                // Tower newTower = towerPool.GetTower();
-                // if (newTower != null) // 确保池子未满
-                // {
-                //     // newTower.transform.position = position;
-                //     // newTower.attributes = selectedTowerAttributes;
-                //     // newTower.Initialize();
-                //     towerManager.AddTower(position, selectedTowerAttributes);
-                // }
+                musicManager.PlaySound("FinishBuildTower");
             }
             else
             {
@@ -101,39 +96,6 @@ public class ConstructManager : MonoBehaviour
         if (tilecount == 0 && towerAttributes.name == "Miner")return false;
         return true; // 可以放置
     }
-    // private bool CanPlaceTower(TowerAttributes towerAttributes,Vector3 position)
-    // {
-    //     int count = 0;
-    //     float radius = 0.25f;
-    //     TilemapFeature temp;
-    //     Collider2D[] collider = Physics2D.OverlapCircleAll(position, radius);
-    //     Debug.LogWarning(collider);
-    //     if (collider.Length == 1) return true;
-    //     else foreach (Collider2D col in collider)
-    //         {
-    //
-    //             GameObject foundObject = col.gameObject;
-    //             if (foundObject.tag == "Tilemap") continue;
-    //             else if (foundObject.tag == "Tile")
-    //             {
-    //                 temp = foundObject.GetComponent<TilemapFeature>();
-    //                 if (!temp.canConstruct)
-    //                 {
-    //                     Debug.Log(towerAttributes.name);
-    //                     if (towerAttributes.name == "Basic" && temp.canMinerConstruct) return true;
-    //                     return false;
-    //                 }
-    //             }
-    //             else if (foundObject.tag == "Tower")
-    //             {
-    //                 count++;
-    //                 if (count == 2) return false;
-    //             }
-    //
-    //         }
-    //     return true; // 可以放置
-    // }
-        
     
     
 }

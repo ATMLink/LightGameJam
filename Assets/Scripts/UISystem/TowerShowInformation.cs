@@ -8,6 +8,7 @@ public class TowerShowInformation : MonoBehaviour, IPointerEnterHandler, IPointe
 {
 
 
+    [SerializeField] private MusicManager musicManager;
     public Image displayImage; // 用于显示的Image对象
     public Sprite hoverSprite; // 悬停时显示的图片
     private Sprite originalSprite; // 原始图片
@@ -21,6 +22,7 @@ public class TowerShowInformation : MonoBehaviour, IPointerEnterHandler, IPointe
     public void OnPointerEnter(PointerEventData eventData)
     {
         // 鼠标悬停时更改图片
+        musicManager.PlaySound("ButtonPass");
         displayImage.sprite = hoverSprite;
     }
 

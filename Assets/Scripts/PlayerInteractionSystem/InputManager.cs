@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private ConstructManager constructManager;
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private UiManager uiManager;
+    [SerializeField] private MusicManager musicManager;
 
     public LayerMask tilemapLayerMask;
     
@@ -84,7 +85,7 @@ public class InputManager : MonoBehaviour
                     }
                     // Debug.Log("Left mouse button released, attempting to place tower...");
                     constructManager.SelectTower(selectedTowerAttributes);
-
+                    
                     constructManager.PlaceTower(cellCenterPos);
                     Debug.Log($"Tower placed at position: {cellCenterPos}");
 
@@ -143,6 +144,7 @@ public class InputManager : MonoBehaviour
                 if (clickedTower != null)
                 {
                     Debug.Log($"Tower clicked at position: {mousePosition}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
+                    musicManager.PlaySound("TowerClick");
                     uiManager.ShowTowerMenu(clickedTower);
                 }
                 else

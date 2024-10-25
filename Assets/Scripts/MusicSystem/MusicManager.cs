@@ -21,6 +21,8 @@ public class MusicManager : MonoBehaviour
     public AudioClip finishWonderBuild;
     public AudioClip towerDestroyed;
     public AudioClip destructTower;
+    public AudioClip towerRotate;
+    public AudioClip enemyWaveBegin;
 
     public void Initialize()
     {
@@ -32,7 +34,17 @@ public class MusicManager : MonoBehaviour
             { "TowerClick", towerClickSound },
             { "WinBGM", winBGM },
             { "BattleBGM", battleBGM },
-            {"ButtonPass", buttonPassSound}
+            {"ButtonPass", buttonPassSound},
+            {"TowerAttackBeam", towerAttackBeam},
+            {"TowerAttackShells", towerAttackShells},
+            {"BeginBuildTower", beginBuildTower},
+            {"FinishBuildTower", finishBuildTower},
+            {"FinishWonderBuild", finishBuildTower},
+            {"FinishWonderBuild", finishWonderBuild},
+            {"TowerDestroyed", towerDestroyed},
+            {"DestructTower", destructTower},
+            {"TowerRotate", towerRotate},
+            {"EnemyWaveBegin", enemyWaveBegin}
         };
     }
 

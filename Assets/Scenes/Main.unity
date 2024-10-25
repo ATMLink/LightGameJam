@@ -2756,6 +2756,7 @@ MonoBehaviour:
   finishWonderBuild: {fileID: 8300000, guid: 47f798bfbafaf8741a4c0c2199a7ca83, type: 3}
   towerDestroyed: {fileID: 8300000, guid: 123e4adcabae1c44ba82cd5d0a13b673, type: 3}
   destructTower: {fileID: 8300000, guid: 4cc21d27aa8f2e048a6c4f4ab8336d27, type: 3}
+  towerRotate: {fileID: 8300000, guid: 860a0565252b0a949a960f0b74846b69, type: 3}
 --- !u!1 &575471094
 GameObject:
   m_ObjectHideFlags: 0
