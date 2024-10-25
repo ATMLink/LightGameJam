@@ -197,4 +197,10 @@ private Vector3 AdjustEndPoint(RaycastHit2D hit, Vector2 laserDirection)
         lineRenderer.enabled = active; // 根据激光状态来显示或隐藏激光
         Debug.Log($"Laser {gameObject.name} active: {active}"); // 输出激光的激活状态
         }
-    }
+
+
+}
+
+
+
+

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0529adfce856be4fa346244339e3e14, type: 3}
-  m_Name: BasicLevelTwo
+  m_Name: SiTower
   m_EditorClassIdentifier: 
-  health: {fileID: 11400000, guid: 07df5cfa1d34d53498f9cef17ffd9adc, type: 2}
-  damage: {fileID: 11400000, guid: 050a24ee3d4268c448efe7ba91267162, type: 2}
-  attackSpeed: {fileID: 11400000, guid: 99cd01bdd27caf5408a686597846dd0e, type: 2}
-  attackRange: {fileID: 11400000, guid: 61f8e112413fecb4b8516364da7f8dd5, type: 2}
+  health: {fileID: 11400000, guid: 4775076691b014949ad850ba6fa38f61, type: 2}
+  damage: {fileID: 11400000, guid: 68b7dc8dae25dd240a058cc050734952, type: 2}
+  attackSpeed: {fileID: 11400000, guid: 02aee5d2fefc20c44b30ea385f2757c7, type: 2}
+  attackRange: {fileID: 11400000, guid: d128f2cd448e8814e97762457e19c93f, type: 2}
   towerSprite: {fileID: 21300000, guid: 2c753a0059c13a846b48f62feae1a963, type: 3}
   withLight: 0
-  Prefab: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
-  towerName: BasicLevel2
+  Prefab: {fileID: 8629526528625447749, guid: 7849f2bde8cb68b4caede8a64876d68d, type: 3}
+  towerName: SiTower
   nextLevelAttributes: {fileID: 0}
   elements: 
   elementSpendNumber: []

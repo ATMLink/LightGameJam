@@ -1,15 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;  
 
-public class TowerProjectile : Tower
+public class SiTower : TowerProjectile
 {
-    [SerializeField]
-    protected string projectileName;
 
-    protected bool canAttack = false;
-
+    private float power = 0;
 
     public override void Attack()
     {
@@ -23,7 +19,7 @@ public class TowerProjectile : Tower
                 // 对敌人造成伤害
                 Projectile pro = ProjectilePool.instance.GetObjFromPool(projectileName);
                 pro.transform.position = transform.position;
-                pro.Launch(target.transform, damage);
+                pro.Launch(target.transform, damage + power * 5);
                 attackTimer = 0f; // 重置攻击计时器
             }
         }
@@ -32,8 +28,7 @@ public class TowerProjectile : Tower
             attackTimer += Time.deltaTime; // 增加计时器
         }
     }
-
-    protected virtual void DamageTest()
+    protected override void DamageTest()
     {
         if (!canAttack) return;
     }
@@ -52,43 +47,17 @@ public class TowerProjectile : Tower
             {
                 inten += lasr.intensity;
             }
-            if (inten > 20f) canAttack = true;
-        }
-    }
-
-    public override void OnLaserOut(Laser laser)
-    {
-        if (receivedLasers.Contains(laser))
-        {
-            laser.UpdateState();
-            receivedLasers.Remove(laser);
-        }
-    }
-
-
-
-    protected void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
-        {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
+            if (inten >= 20f)
             {
-                OnLaserHit(laser);
+                canAttack = true;
+                power = inten / 20;
+                if (power > 3) power = 3;
+            }
+            else
+            {
+                canAttack = false;
+                power = 0;
             }
         }
     }
-
-    protected void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
-        {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
-            {
-                OnLaserOut(laser);
-            }
-        }
-    }
-
 }

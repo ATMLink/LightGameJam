@@ -142,12 +142,7 @@ public override void OnLaserHit(Laser laser)
         Debug.Log("激光来自本塔，不执行OnLaserHit处理。");
         return;
     }
-
-    if (receivedLasers != null)
-    {
-        receivedLasers.Add(laser);
-        Debug.Log($"接收到激光，方向: {laser.direction}, 强度: {laser.intensity}, 激光数量: {receivedLasers.Count}");
-    }
+    
 
     if (receivedLasers.Count == 1||(laserManager.GetLaserForTower(this) == null && receivedLasers.Count == 2)) // 只在接收到一条激光时生成分光
     {

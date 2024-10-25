@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: 5b969070be443ef4087ec3882ed3b7e8, type: 2}
   attackSpeed: {fileID: 11400000, guid: 8025e3f2635243e4d953d174597ef1b4, type: 2}
   attackRange: {fileID: 11400000, guid: 007103087382dcd4ab8fd9844a492884, type: 2}
-  towerSprite: {fileID: 21300000, guid: 3ceb6811dd80e944d960cba0277515d2, type: 3}
+  towerSprite: {fileID: 21300000, guid: 2c753a0059c13a846b48f62feae1a963, type: 3}
   withLight: 0
   Prefab: {fileID: 6468066811811687904, guid: b7843fb5ac8db114bb27d6f1b5e28194, type: 3}
   towerName: Basic
