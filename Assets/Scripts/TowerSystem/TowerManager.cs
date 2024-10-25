@@ -17,10 +17,10 @@ public class TowerManager : MonoBehaviour
     private List<Tower> towers = new List<Tower>();
     private bool isRotating = false;
 
-    private void Start()
-    {
-        laserManager.CreateLaser(testTower, testTower.transform.position, Vector3.down, 400);
-    }
+    // private void Start()
+    // {
+    //     laserManager.CreateLaser(testTower, testTower.transform.position, Vector3.down, 400);
+    // }
 
     public void Initialize()
     {

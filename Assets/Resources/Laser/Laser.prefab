@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c64ce9389ed6244acc6752af2f02a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 0
+  intensity: 1
   direction: {x: 0, y: 0, z: 0}
   damage: 0
   maxDistance: 20
