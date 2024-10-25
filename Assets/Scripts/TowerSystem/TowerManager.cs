@@ -9,10 +9,16 @@ using Vector3 = UnityEngine.Vector3;
 
 public class TowerManager : MonoBehaviour
 {
+    [SerializeField] private Tower testTower;
     public TowerPool towerPool;
     [SerializeField] private LaserManager laserManager;
     private List<Tower> towers = new List<Tower>();
     private bool isRotating = false;
+
+    private void Start()
+    {
+        laserManager.CreateLaser(testTower, testTower.transform.position, Vector3.down, 400);
+    }
 
     public void Initialize()
     {
