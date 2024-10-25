@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &143356658041778700
+--- !u!1001 &1744947775289353073
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       propertyPath: m_Name
-      value: CombineTower
+      value: ReflectTower
       objectReference: {fileID: 0}
     - target: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       propertyPath: m_Layer
@@ -63,35 +63,12 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 771785676557318831}
+      addedObject: {fileID: 4679494107956932193}
   m_SourcePrefab: {fileID: 100100000, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
---- !u!1 &43126582279140361 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
-  m_PrefabInstance: {fileID: 143356658041778700}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &771785676557318831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43126582279140361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187804f1133c3b44dbaf61a649ca58bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attributes: {fileID: 11400000, guid: a39ac6033fd8c1d449298c91cf77c3d0, type: 2}
-  towerID: 0
-  resourceManagement: {fileID: 0}
-  spriteRenderer: {fileID: 7562855030599819979}
-  sight1: {fileID: 750466418723023007}
-  maxLasers: 7
---- !u!114 &750466418723023007 stripped
+--- !u!114 &1414187337619274210 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 835276055896660627, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
-  m_PrefabInstance: {fileID: 143356658041778700}
+  m_PrefabInstance: {fileID: 1744947775289353073}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -99,8 +76,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5387691268969804780415f9fbc18a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &7562855030599819979 stripped
+--- !u!1 &1824861350055208308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+  m_PrefabInstance: {fileID: 1744947775289353073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4679494107956932193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824861350055208308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187804f1133c3b44dbaf61a649ca58bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes: {fileID: 11400000, guid: 04307fb9f07a87d4c9fa498c5e0fcdcb, type: 2}
+  towerID: 0
+  resourceManagement: {fileID: 0}
+  spriteRenderer: {fileID: 8160146818199663542}
+  sight1: {fileID: 1414187337619274210}
+  maxLasers: 1
+--- !u!212 &8160146818199663542 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7568834130568925383, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
-  m_PrefabInstance: {fileID: 143356658041778700}
+  m_PrefabInstance: {fileID: 1744947775289353073}
   m_PrefabAsset: {fileID: 0}
