@@ -49,9 +49,9 @@ public class LightSystem : MonoBehaviour
             //Debug.Log(position.x);
             float dotValue = Vector2.Dot(light2Position.normalized,lightAngleZ2Vector.normalized);
             float angle = 1.0f/ 8.0f * light.pointLightInnerAngle + 3.0f / 8.0f * light.pointLightOuterAngle;
-            Debug.Log(dotValue);
-            Debug.Log(angle);
-            Debug.Log(Mathf.Cos(angle * Mathf.Deg2Rad));
+            //Debug.Log(dotValue);
+           // Debug.Log(angle);
+           // Debug.Log(Mathf.Cos(angle * Mathf.Deg2Rad));
             //&&dotValue > Mathf.Cos(angle)
             if (light2Position.magnitude < radius && dotValue > Mathf.Cos(angle * Mathf.Deg2Rad)) {
                 isIrradiated = true;

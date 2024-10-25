@@ -61,7 +61,6 @@ public class ConstructManager : MonoBehaviour
         for (int i = 0; i < towerAttributes.elements.Count; i++) {
             if (!resourceManagement.JudgeAfford(towerAttributes.elements[i], towerAttributes.elementSpendNumber[i]))return false;
         }
-        Debug.LogWarning("resource2");
         if (!LightSystem.Instance.IsIrradiated(new Vector2(position.x, position.y)))return false;
         //bool canConstruct = false;
         int count = 0;

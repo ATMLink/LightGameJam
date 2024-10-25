@@ -325,7 +325,9 @@ public class UiManager : MonoBehaviour
 
         //waves.text = +"" +;
         
-
     }
+    //public void ChangeTextColor(TextMeshProUGUI text) {
+    //    text.color = Color.green;    
+    //}
     
 }
