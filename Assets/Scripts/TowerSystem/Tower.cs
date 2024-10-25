@@ -21,7 +21,7 @@ public class Tower : MonoBehaviour
     
     protected List<Laser> receivedLasers;
 
-    [SerializeField] private MainResourceManagement resourceManagement;
+    public MainResourceManagement resourceManagement;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private TowerSight sight1;
 
