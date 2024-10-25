@@ -164,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attributes: {fileID: 11400000, guid: 8f8a519aa44d8554ea12fae8737a4ae1, type: 2}
   towerID: 0
+  resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 3140906336850519198}
   sight1: {fileID: 1129364053786602895}
 --- !u!1 &7381842620935901242

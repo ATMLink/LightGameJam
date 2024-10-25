@@ -102,135 +102,142 @@ public class SplitterTower : Tower
     //     }
     // }
     public int numberOfLasers = 2;
-    // public float decay = 0.5f;
-    private float totalIntensity = 0;
-    private float maxTotalIntensity = 100f;
-    private float updateInterval = 0.1f; // 每隔0.1秒更新一次激光强度
-    private float lastUpdateTime = 0f;
+// public float decay = 0.5f;
+private float totalIntensity = 0;
+private float maxTotalIntensity = 100f;
+private float updateInterval = 0.1f; // 每隔0.1秒更新一次激光强度
+private float lastUpdateTime = 0f;
 
-    private LaserManager laserManager;
+private LaserManager laserManager;
 
-    public override void Initialize()
+public override void Initialize()
+{
+    base.Initialize();
+    laserManager = FindObjectOfType<LaserManager>();
+    Debug.Log("SplitterTower initialized.");
+}
+
+public override void UpdateState()
+{
+    // 计算并更新强度
+    if (Time.time - lastUpdateTime >= updateInterval)
     {
-        base.Initialize();
-        laserManager = FindObjectOfType<LaserManager>();
+        UpdateLaserIntensity();
+        lastUpdateTime = Time.time; // 记录上一次更新的时间
+    }
+}
+
+public override void ResetAttributes()
+{
+    base.ResetAttributes();
+    totalIntensity = 0;
+    lastUpdateTime = 0f;
+    Debug.Log("SplitterTower attributes reset.");
+}
+
+public override void OnLaserHit(Laser laser)
+{
+    if (laser.sourceTower == this)
+    {
+        Debug.Log("激光来自本塔，不执行OnLaserHit处理。");
+        return;
     }
 
-    public override void UpdateState()
+    if (receivedLasers != null)
     {
-        // 计算并更新强度
-        if (Time.time - lastUpdateTime >= updateInterval)
-        {
-            UpdateLaserIntensity();
-            lastUpdateTime = Time.time; // 记录上一次更新的时间
-        }
+        receivedLasers.Add(laser);
+        Debug.Log($"接收到激光，方向: {laser.direction}, 强度: {laser.intensity}, 激光数量: {receivedLasers.Count}");
     }
 
-    public override void ResetAttributes()
+    if (receivedLasers.Count == 1)
     {
-        base.ResetAttributes();
-        totalIntensity = 0;
-        lastUpdateTime = 0f;
+        Vector3 originalDirection = laser.direction;
+        Vector3 referenceVector = Vector3.up;
+
+        Vector3 outLaserDirection1 = Vector3.Cross(originalDirection, referenceVector).normalized;
+        Vector3 outLaserDirection2 = Vector3.Cross(originalDirection, outLaserDirection1).normalized;
+
+        Debug.Log($"分光器发射两束激光，方向1: {outLaserDirection1}, 方向2: {outLaserDirection2}");
+
+        laserManager.CreateLaser(this, transform.position, outLaserDirection1, laser.intensity / 2);
+        laserManager.CreateLaser(this, transform.position, outLaserDirection2, laser.intensity / 2);
+    }
+}
+
+public override void OnLaserOut(Laser laser)
+{
+    if (receivedLasers.Contains(laser))
+    {
+        receivedLasers.Remove(laser);
+        Debug.Log("激光离开分光器，剩余接收激光数量: " + receivedLasers.Count);
+    }
+}
+
+public void UpdateLaserIntensity()
+{
+    totalIntensity = 0;
+
+    foreach (var receivedLaser in receivedLasers)
+    {
+        totalIntensity += receivedLaser.intensity;
     }
 
-    // 重写 OnLaserHit 方法
-    public override void OnLaserHit(Laser laser)
+    if (totalIntensity > maxTotalIntensity)
     {
-        if (laser.sourceTower == this)
-        {
-            Debug.Log("激光来自本塔，不执行OnLaserHit处理。");
-            return;
-        }
-
-        // 检查是否已接收到激光
-        if (receivedLasers!=null)
-        {
-            receivedLasers.Add(laser);
-            Debug.Log($"接收到激光，方向: {laser.direction}, 强度: {laser.intensity}");
-        }
-        
-        if (receivedLasers.Count == 1)
-        {
-            Vector3 originalDirection = laser.direction;
-            Vector3 referenceVector = Vector3.up;
-
-            // 与原始激光垂直的两个方向
-            Vector3 outLaserDirection1 = Vector3.Cross(originalDirection, referenceVector).normalized;
-            Vector3 outLaserDirection2 = Vector3.Cross(originalDirection, outLaserDirection1).normalized;
-
-            Debug.Log($"分光器发射两束激光，方向1: {outLaserDirection1}, 方向2: {outLaserDirection2}");
-
-            // 创建分光器发射的激光
-            laserManager.CreateLaser(this, transform.position, outLaserDirection1, laser.intensity / 2);
-            laserManager.CreateLaser(this, transform.position, outLaserDirection2, laser.intensity / 2);
-        }
+        totalIntensity = maxTotalIntensity;
     }
 
-    public override void OnLaserOut(Laser laser)
+    Debug.Log($"分光器总接收强度: {totalIntensity}");
+
+    float emittedIntensity = totalIntensity / numberOfLasers;
+    Debug.Log($"分光器发出的激光强度: {emittedIntensity}");
+
+    List<Laser> emittedLasers = laserManager.GetLaserForTower(this);
+    if (emittedLasers != null)
     {
-        if (receivedLasers.Contains(laser))
+        foreach (var laser in emittedLasers)
         {
-            receivedLasers.Remove(laser);
-            Debug.Log("激光离开分光器。");
+            laser.SetLaserProperties(emittedIntensity, laser.direction);
+            Debug.Log($"更新发射激光的强度: {emittedIntensity}, 方向: {laser.direction}");
         }
     }
-    
+}
 
-    public void UpdateLaserIntensity()
+protected void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("Laser"))
     {
-        
-        foreach (var receivedLaser in receivedLasers)
+        Laser laser = collision.GetComponent<Laser>();
+        if (laser != null)
         {
-            totalIntensity += receivedLaser.intensity;
+            Debug.Log($"检测到碰撞对象为激光，方向: {laser.direction}, 强度: {laser.intensity}");
+            OnLaserHit(laser);
         }
-
-        // 限制总强度不能超过最大值
-        if (totalIntensity > maxTotalIntensity)
+        else
         {
-            totalIntensity = maxTotalIntensity;
-        }
-
-        Debug.Log($"分光器总接收强度: {totalIntensity}");
-
-        // 计算分光器发出的激光强度，并更新激光属性
-        float emittedIntensity = totalIntensity / numberOfLasers;
-        Debug.Log($"分光器发出的激光强度: {emittedIntensity}");
-
-        // 获取与该塔关联的激光并更新其强度
-        List<Laser> emittedLasers = laserManager.GetLaserForTower(this);
-        if (emittedLasers != null)
-        {
-            foreach (var laser in emittedLasers)
-            {
-                laser.SetLaserProperties(emittedIntensity, laser.direction);
-                Debug.Log($"更新发射激光的强度: {emittedIntensity}, 方向: {laser.direction}");
-            }
+            Debug.Log("碰撞对象无激光组件。");
         }
     }
-    protected void OnTriggerEnter2D(Collider2D collision)
+    else
     {
-        // 检查碰撞的对象是否是 Laser，并且是否带有 "Laser" 标签
-        if (collision.CompareTag("Laser"))
+        Debug.Log("碰撞对象非激光。");
+    }
+}
+
+protected void OnTriggerExit2D(Collider2D collision)
+{
+    if (collision.CompareTag("Laser"))
+    {
+        Laser laser = collision.GetComponent<Laser>();
+        if (laser != null)
         {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
-            {
-                // 调用塔的 OnLaserHit 方法处理激光击中
-                OnLaserHit(laser);
-            }
+            Debug.Log($"激光离开，方向: {laser.direction}, 强度: {laser.intensity}");
+            OnLaserOut(laser);
+        }
+        else
+        {
+            Debug.Log("离开碰撞区域的对象无激光组件。");
         }
     }
-    
-    protected void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
-        {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
-            {
-                // 调用塔的 OnLaserHit 方法处理激光击中
-                OnLaserOut(laser);
-            }
-        }
-    }
+}
 }
