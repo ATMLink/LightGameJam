@@ -44,6 +44,10 @@ public class Enemy_Witch : EnemyRemote
 
     }
 
+    protected override void MovePlan()
+    {
+        base.MovePlan();
+    }
 
     protected override void AttackPlan()
     {

@@ -3,16 +3,60 @@
   "WorkspaceRootPath": "D:\\Project\\GameJam\\LightGameJam\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towers\\wonders\\wonder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towers\\wonders\\wonder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towersystem\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\enemy\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\projectilesystem\\projectilechild\\protower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\projectilesystem\\projectilechild\\protower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemyremote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemyremote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towers\\towerprojectile\\towerprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towers\\towerprojectile\\towerprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\projectilesystem\\projectilepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\projectilesystem\\projectilepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\data\\enemydata\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\data\\enemydata\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\enemy\\enemychild\\enemy_witch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemychild\\enemy_witch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\projectilesystem\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\projectilesystem\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\projectilesystem\\projectilechild\\proenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\projectilesystem\\projectilechild\\proenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\enemy\\enemypool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemypool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\lasersystem\\laserpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lasersystem\\laserpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towers\\wonders\\wonder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towers\\wonders\\wonder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemysight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemysight2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemysight2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemygeneratefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,18 +115,6 @@
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towers\\wonders\\wonderlaser_fixed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemypool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemypool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemyremote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemyremote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\data\\enemydata\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\data\\enemydata\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towersystem\\towermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\towermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -125,10 +153,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\uisystem\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uisystem\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\lasersystem\\laserpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lasersystem\\laserpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\resourcesmanagement\\mainresourcemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -252,7 +276,85 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
+              "Title": "Enemy_Witch.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyChild\\Enemy_Witch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyChild\\Enemy_Witch.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyChild\\Enemy_Witch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyChild\\Enemy_Witch.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAwCoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T17:15:19.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProEnemy.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\ProEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\ProEnemy.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\ProEnemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\ProEnemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T16:37:28.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProTower.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\ProTower.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\ProTower.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\ProTower.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\ProTower.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T16:14:51.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Projectile.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\Projectile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ProjectileSystem\\Projectile.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\Projectile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ProjectileSystem\\Projectile.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvyEAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T16:06:56.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectilePool.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\ProjectilePool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ProjectileSystem\\ProjectilePool.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\ProjectilePool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ProjectileSystem\\ProjectilePool.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAApwF4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T16:07:19.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TowerProjectile.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\TowerProjectile\\TowerProjectile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TowerS\\TowerProjectile\\TowerProjectile.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\TowerProjectile\\TowerProjectile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TowerS\\TowerProjectile\\TowerProjectile.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T15:33:52.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "MusicManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\MusicSystem\\MusicManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MusicSystem\\MusicManager.cs",
@@ -264,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "PropellerForceCollider.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\Wonders\\PropellerForceCollider.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerS\\Wonders\\PropellerForceCollider.cs",
@@ -276,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
               "Title": "Wonder.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\Wonders\\Wonder.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerS\\Wonders\\Wonder.cs",
@@ -284,12 +386,11 @@
               "RelativeToolTip": "Assets\\Scripts\\TowerS\\Wonders\\Wonder.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAAwCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T10:59:17.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T10:59:17.589Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "EnemyTest.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyChild\\EnemyTest.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyChild\\EnemyTest.cs",
@@ -301,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "LaserAt.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\Wonders\\LaserAt.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerS\\Wonders\\LaserAt.cs",
@@ -313,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "Enemy_Creeper.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyChild\\Enemy_Creeper.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyChild\\Enemy_Creeper.cs",
@@ -325,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "TowerSight.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\TowerSight.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\TowerSight.cs",
@@ -337,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "GameDriver.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\GameDriver\\GameDriver.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameDriver\\GameDriver.cs",
@@ -349,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "MainResourceManagement.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
@@ -361,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "SplitterTower.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\SplitterTower.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\SplitterTower.cs",
@@ -373,19 +474,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 12,
               "Title": "LaserPool.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\LaserSystem\\LaserPool.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LaserSystem\\LaserPool.cs",
               "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\LaserSystem\\LaserPool.cs",
               "RelativeToolTip": "Assets\\Scripts\\LaserSystem\\LaserPool.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAYAAAArAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAIwAYAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T08:00:11.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "ButtonShowInformation.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\UISystem\\ButtonShowInformation.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UISystem\\ButtonShowInformation.cs",
@@ -397,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "TowerPool.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\TowerPool.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\TowerPool.cs",
@@ -409,19 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EnemyPool.cs",
-              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyPool.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyPool.cs",
-              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyPool.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyPool.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:00:11.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "EnemyGenerateField.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyGenerateField.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyGenerateField.cs",
@@ -429,12 +518,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyGenerateField.cs",
               "ViewState": "AQIAAEEAAAAAAAAAAAAswFgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:00:11.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T08:00:11.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 41,
               "Title": "LaserManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\LaserSystem\\LaserManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LaserSystem\\LaserManager.cs",
@@ -446,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 40,
               "Title": "cameratest.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\CameraSystem\\cameratest.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraSystem\\cameratest.cs",
@@ -458,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "Light.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\LightSystem\\Light.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LightSystem\\Light.cs",
@@ -470,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 39,
               "Title": "TilemapFeature.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapFeature.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TilemapFeature.cs",
@@ -482,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "InputManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\PlayerInteractionSystem\\InputManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteractionSystem\\InputManager.cs",
@@ -494,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "ConstructManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
@@ -506,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 50,
               "Title": "tilemaptxt.txt",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Data\\Tile\\TileTxt\\tilemaptxt.txt",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Data\\Tile\\TileTxt\\tilemaptxt.txt",
@@ -515,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 67,
               "Title": "TilemapWithEnemy.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapWithEnemy.cs",
@@ -525,20 +613,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "EnemyManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyManager.cs",
               "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyManager.cs",
-              "ViewState": "AQIAAKoAAAAAAAAAAADwv64AAAAxAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAuwKEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T08:00:11.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 44,
               "Title": "Test.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\LightSystem\\Test.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\LightSystem\\Test.cs",
@@ -548,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 51,
               "Title": "EnemyBase.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyBase.cs",
@@ -560,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "TowerManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\TowerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\TowerManager.cs",
@@ -572,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 43,
               "Title": "tilemaptxt.txt",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Resources\\tilemaptxt.txt",
               "RelativeDocumentMoniker": "Assets\\Resources\\tilemaptxt.txt",
@@ -584,7 +672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 42,
               "Title": "TilemapManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TilemapManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TilemapManager.cs",
@@ -596,7 +684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 45,
               "Title": "test.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\test.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\test.cs",
@@ -608,7 +696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 48,
               "Title": "TileType.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileType.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\TileType.cs",
@@ -620,7 +708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 47,
               "Title": "WaterTileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\WaterTileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\WaterTileType.cs",
@@ -630,7 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 52,
               "Title": "collider test.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\collider test.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileMapSystem\\collider test.cs",
@@ -642,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "UniversalRenderPipeline.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\Runtime\\UniversalRenderPipeline.cs",
@@ -654,7 +742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "TowerShowInformation.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\UISystem\\TowerShowInformation.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UISystem\\TowerShowInformation.cs",
@@ -666,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 46,
               "Title": "UiManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\UISystem\\UiManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UISystem\\UiManager.cs",
@@ -678,7 +766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 53,
               "Title": "UiManager.cs",
               "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\UiManager.cs",
               "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Ui\\UiScripts\\UiManager.cs",
@@ -687,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 49,
               "Title": "EnemyEventSystem.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyEventSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyEventSystem.cs",
@@ -699,7 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 54,
               "Title": "GameEventVector2Listener.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2Listener.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\GameEventVector2Listener.cs",
@@ -711,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 66,
               "Title": "TileTypeFill.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileTypeFill.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\TileTypeFill.cs",
@@ -721,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 56,
               "Title": "FloatVariable.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Variables\\FloatVariable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\FloatVariable.cs",
@@ -733,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "CameraController.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\CameraSystem\\CameraController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraSystem\\CameraController.cs",
@@ -745,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 57,
               "Title": "Vector2Variable.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Variables\\Vector2Variable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\Vector2Variable.cs",
@@ -757,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 55,
               "Title": "test.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\test.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\test.cs",
@@ -766,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 58,
               "Title": "GameEventVector2.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventVector2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\GameEventVector2.cs",
@@ -778,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 59,
               "Title": "GameEventFloat.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Variables\\GameEventFloat.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Variables\\GameEventFloat.cs",
@@ -790,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 68,
               "Title": "MiningTileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\MiningTileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TileMapSystem\\MiningTileType.cs",
@@ -800,7 +888,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 60,
               "Title": "TilemapManager.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TilemapManager.cs",
@@ -809,7 +897,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 62,
               "Title": "WaterTileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\WaterTileType.cs",
@@ -819,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 61,
               "Title": "MiningTileType1.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType1.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType1.cs",
@@ -829,7 +917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 63,
               "Title": "MiningTileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\MiningTileType.cs",
@@ -839,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 64,
               "Title": "TileType.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Tile\\TileType.cs",
@@ -849,7 +937,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 65,
               "Title": "MainResourceManagement.cs",
               "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs",
               "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\ResourceManagement\\MainResourceManagement.cs",
@@ -865,19 +953,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 2,
               "Title": "EnemyRemote.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyRemote.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyRemote.cs",
               "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyRemote.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyRemote.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAADwv4gAAAAjAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAYwH4AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:48:55.383Z"
+              "WhenOpened": "2024-10-25T13:48:55.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "LaserForceCollider.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\Wonders\\LaserForceCollider.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerS\\Wonders\\LaserForceCollider.cs",
@@ -889,32 +978,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 6,
               "Title": "EnemyData.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Data\\EnemyData\\EnemyData.cs",
               "RelativeDocumentMoniker": "Assets\\Data\\EnemyData\\EnemyData.cs",
               "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Data\\EnemyData\\EnemyData.cs",
               "RelativeToolTip": "Assets\\Data\\EnemyData\\EnemyData.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAAwEoAAAAoAAAA",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAUwHgAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:58:38.578Z"
+              "WhenOpened": "2024-10-25T08:58:38.578Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Tower.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\Tower.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\Tower.cs",
               "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\Tower.cs",
               "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\Tower.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAQwIwAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T08:00:11.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "LightSystem.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\LightSystem\\LightSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LightSystem\\LightSystem.cs",
@@ -926,20 +1016,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy.cs",
               "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\Enemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\Enemy.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAgwJMAAAAAAAAA",
+              "ViewState": "AQIAABEBAAAAAAAAAAAlwCoBAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T08:00:11.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "EnemySight2.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemySight2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemySight2.cs",
@@ -947,12 +1037,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemySight2.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T09:40:39.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T09:40:39.874Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "EnemySight.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemySight.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemySight.cs",
@@ -960,12 +1049,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemySight.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T09:40:07.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T09:40:07.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 27,
               "Title": "WonderLaser_Fixed.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\Wonders\\WonderLaser_Fixed.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerS\\Wonders\\WonderLaser_Fixed.cs",
@@ -977,7 +1065,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "WonderPropeller_Fixed.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\Wonders\\WonderPropeller_Fixed.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerS\\Wonders\\WonderPropeller_Fixed.cs",
@@ -986,6 +1074,19 @@
               "ViewState": "AQIAAAsAAAAAAAAAAADwvwgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T08:21:12.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnemyPool.cs",
+              "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyPool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyPool.cs",
+              "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyPool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyPool.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T08:00:11.935Z",
+              "EditorCaption": ""
             }
           ]
         }
