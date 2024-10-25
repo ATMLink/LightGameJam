@@ -17,8 +17,9 @@ public class LaserPool : MonoBehaviour
             GameObject laserObject = Instantiate(laserPrefab);
             Laser laser = laserObject.GetComponent<Laser>();
             laser.SetLaserActive(false); // 初始化时隐藏激光
-            laserPool.Add(laser);
             laser.gameObject.SetActive(false);
+            laserPool.Add(laser);
+            
         }
     }
 
@@ -31,6 +32,7 @@ public class LaserPool : MonoBehaviour
                 laser.transform.position = position;
                 laser.SetLaserProperties(intensity, direction);
                 laser.SetLaserActive(true); // 激活激光
+                laser.gameObject.SetActive(true);
                 return laser;
             }
         }
