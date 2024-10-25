@@ -219,7 +219,6 @@ public class UiManager : MonoBehaviour
         {
             // 获取游戏对象的世界坐标  
             Vector3 worldPosition = selectedTower.transform.position;
-
             // 将世界坐标转换为屏幕坐标  
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
 
@@ -245,6 +244,8 @@ public class UiManager : MonoBehaviour
         anticlockwiseButton.onClick.AddListener(OnAnticlockwiseButtonClicked);
         deleteButton.onClick.AddListener(OnDeleteButtonClicked);
         showTowerMenu.gameObject.SetActive(true);
+        TextMeshProUGUI HPtext = showTowerMenu.gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        HPtext.text = "HP:" + tower.attributes.health.Value;
     }
     void OnCloseTowerMenuClicked()
     {
