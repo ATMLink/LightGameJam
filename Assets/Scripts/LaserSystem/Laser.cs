@@ -131,7 +131,7 @@ public class Laser : MonoBehaviour
                     return hit.point; // 不可穿透塔，结束激光
                 }
             }
-            else if (hit.collider.GetComponent<TilemapFeature>()?.canLightThrough == true)
+            else if (hit.collider.GetComponent<TilemapFeature>()?.canLightThrough == false)
             {
                 return AdjustEndPoint(hit, laserDirection);
             }

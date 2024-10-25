@@ -28,7 +28,7 @@ public class MainResourceManagement : MonoBehaviour
     public void UpdateState()
     {
         time += Time.deltaTime;
-        if (time >= 1) { CollectResource(element.si, 30); time = 0; }
+        if (time >= 10) { CollectResource(element.si, 30); time = 0; }
     }
     /// <summary>
     /// 将某一元素数量重新设为0
