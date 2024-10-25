@@ -22,7 +22,8 @@ public class TowerShowInformation : MonoBehaviour, IPointerEnterHandler, IPointe
     public void OnPointerEnter(PointerEventData eventData)
     {
         // 鼠标悬停时更改图片
-        musicManager.PlaySound("ButtonPass");
+        if(musicManager != null)
+            musicManager.PlaySound("ButtonPass");
         displayImage.sprite = hoverSprite;
     }
 

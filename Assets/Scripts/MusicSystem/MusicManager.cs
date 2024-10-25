@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    // public static MusicManager Instance; // 单例模式
-
     private Dictionary<string, AudioClip> soundClips;
-    public AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
 
-    // 在 Inspector 中设置各个音效
     public AudioClip towerClickSound;
     public AudioClip battleBGM;
     public AudioClip winBGM;
@@ -24,9 +21,19 @@ public class MusicManager : MonoBehaviour
     public AudioClip towerRotate;
     public AudioClip enemyWaveBegin;
 
+    void Start()
+    {
+        Initialize();
+    }
+
     public void Initialize()
     {
-        
+        // 检查 audioSource 是否已分配
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource is not assigned.");
+            return;
+        }
 
         // 初始化音效字典
         soundClips = new Dictionary<string, AudioClip>
@@ -34,27 +41,54 @@ public class MusicManager : MonoBehaviour
             { "TowerClick", towerClickSound },
             { "WinBGM", winBGM },
             { "BattleBGM", battleBGM },
-            {"ButtonPass", buttonPassSound},
-            {"TowerAttackBeam", towerAttackBeam},
-            {"TowerAttackShells", towerAttackShells},
-            {"BeginBuildTower", beginBuildTower},
-            {"FinishBuildTower", finishBuildTower},
-            {"FinishWonderBuild", finishBuildTower},
-            {"FinishWonderBuild", finishWonderBuild},
-            {"TowerDestroyed", towerDestroyed},
-            {"DestructTower", destructTower},
-            {"TowerRotate", towerRotate},
-            {"EnemyWaveBegin", enemyWaveBegin}
+            { "ButtonPass", buttonPassSound },
+            { "TowerAttackBeam", towerAttackBeam },
+            { "TowerAttackShells", towerAttackShells },
+            { "BeginBuildTower", beginBuildTower },
+            { "FinishBuildTower", finishBuildTower },
+            { "FinishWonderBuild", finishWonderBuild },
+            { "TowerDestroyed", towerDestroyed },
+            { "DestructTower", destructTower },
+            { "TowerRotate", towerRotate },
+            { "EnemyWaveBegin", enemyWaveBegin }
         };
     }
 
-    // 播放音效
     public void PlaySound(string soundName)
     {
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource is not assigned.");
+            return;
+        }
+
         if (soundClips.ContainsKey(soundName))
         {
             audioSource.PlayOneShot(soundClips[soundName]);
         }
+        else
+        {
+            Debug.LogError($"Sound '{soundName}' not found in soundClips dictionary.");
+        }
     }
 
+    public void PlayBGM(string bgmName)
+    {
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource is not assigned.");
+            return;
+        }
+
+        if (soundClips.ContainsKey(bgmName))
+        {
+            audioSource.clip = soundClips[bgmName];
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogError($"BGM '{bgmName}' not found in soundClips dictionary.");
+        }
+    }
 }

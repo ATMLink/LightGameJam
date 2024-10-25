@@ -172,7 +172,8 @@ public class EnemyManager : MonoBehaviour
     {
         trigger = true;
         maxTurnNum = 0;
-        musicManager.PlaySound("EnemyWaveBegin");
+        if(musicManager != null)
+            musicManager.PlaySound("EnemyWaveBegin");
         foreach (var field in fieldList)
         {
             if(maxTurnNum < field.GetTurnCount())
@@ -190,7 +191,8 @@ public class EnemyManager : MonoBehaviour
     {
         trigger = true;
         state = GameState.inTurn;
-        musicManager.PlaySound("EnemyWaveBegin");
+        if(musicManager != null)
+            musicManager.PlaySound("EnemyWaveBegin");
     }
 
     private void EnemyGenerate(Enemy enemy)

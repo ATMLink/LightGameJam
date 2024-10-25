@@ -19,7 +19,7 @@ public class ButtonShowInformation : MonoBehaviour, IPointerEnterHandler, IPoint
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-      
+        
         hoverSprite.gameObject.SetActive(!inputManager.isDraggingTower);
         
     }

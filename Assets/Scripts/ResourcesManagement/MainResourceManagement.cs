@@ -24,6 +24,12 @@ public class MainResourceManagement : MonoBehaviour
         liNumber.SetValue(0);
         csNumber.SetValue(0);
     }
+    public void UpdateState()
+    {
+        float time = 0;
+        time += Time.deltaTime;
+        if (time >= 1) { CollectResource(element.si, 30); time = 0; }
+    }
     /// <summary>
     /// 将某一元素数量重新设为0
     /// </summary>

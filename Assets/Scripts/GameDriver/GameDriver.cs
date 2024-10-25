@@ -15,6 +15,7 @@ public class GameDriver : MonoBehaviour
     [SerializeField] private EnemyManager _enemyManager;
     [SerializeField] private LaserManager _laserManager;
     [SerializeField] private MusicManager _musicManager;
+    [SerializeField] private MainResourceManagement resourceManagement;
     
     // 游戏状态变量
     [Header("Variables")]
@@ -39,6 +40,8 @@ public class GameDriver : MonoBehaviour
             _cameraController.UpdateState();
             _laserManager.UpdateState();
             _uiManager.UpdateState();
+            resourceManagement.UpdateState();
+            
         }
     }
 
@@ -61,8 +64,6 @@ public class GameDriver : MonoBehaviour
         _towerManager.Initialize();
         _uiManager.Initialize();
         _laserManager.Initialize();
-        _musicManager.Initialize();
-        _musicManager.PlaySound("BattleBGM");
     }
 
     private void UpdateGameTime()

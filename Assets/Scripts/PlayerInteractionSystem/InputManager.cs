@@ -144,7 +144,8 @@ public class InputManager : MonoBehaviour
                 if (clickedTower != null)
                 {
                     Debug.Log($"Tower clicked at position: {mousePosition}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
-                    musicManager.PlaySound("TowerClick");
+                    if(musicManager != null)
+                        musicManager.PlaySound("TowerClick");
                     uiManager.ShowTowerMenu(clickedTower);
                 }
                 else

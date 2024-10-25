@@ -10,6 +10,7 @@ public class Laser : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer; // 用于可视化激光
     [SerializeField] private ParticleSystem hitEffect; // 激光击中效果的粒子系统
 
+    private BoxCollider2D boxCollider2D;
     private bool isActive = true; // 激光是否有效
 
 
@@ -19,6 +20,7 @@ public class Laser : MonoBehaviour
             transform.position = position;
             this.direction = direction;
             this.intensity = intensity;
+            boxCollider2D = GetComponent<BoxCollider2D>();
         }
     /*
     public void Initialize()
@@ -63,12 +65,17 @@ public class Laser : MonoBehaviour
         endPoint = GetAdjustedLaserEndPoint(endPoint);
         lineRenderer.SetPosition(1, endPoint);
         Vector3 relativePosition = endPoint - transform.position;
+        float lineLength = relativePosition.magnitude;
         Transform endBeam = transform.GetChild(1);
         Transform endParticle = hitEffect.transform;
-        endBeam.localPosition = relativePosition;
-        endParticle.localPosition = relativePosition;
+        endBeam.localPosition = new Vector3(lineLength,0,0);
+        endParticle.localPosition = new Vector3(lineLength, 0, 0);
         float angle = (relativePosition.y > 0 ? 1 : -1)* Vector3.Angle(relativePosition.normalized,new Vector3(1,0,0));
-        endParticle.localRotation = Quaternion.Euler(angle, -90, 0);
+        transform.localRotation = Quaternion.Euler(0, 0, angle);
+        //collider
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D.offset = new Vector2(lineLength/2,0);
+        boxCollider2D.size = new Vector2(lineLength,boxCollider2D.size.y);
         Attack();
         }
 
