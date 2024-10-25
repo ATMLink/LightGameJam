@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: 72486f974b9486744af924223c42e7e7, type: 2}
   attackSpeed: {fileID: 11400000, guid: 9934416bb27d41d4aa0ca2499f90fe76, type: 2}
   attackRange: {fileID: 11400000, guid: 76b64cc2ae638204497632a438dc05e8, type: 2}
-  towerSprite: {fileID: 0}
+  towerSprite: {fileID: 21300000, guid: a11adf31d2b09e6499db3332709f7105, type: 3}
   withLight: 0
   Prefab: {fileID: 1824861350055208308, guid: 5befa83210b1d6b4eb0f4c70c3285edc, type: 3}
   towerName: ReflectTower

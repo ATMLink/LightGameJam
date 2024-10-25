@@ -21,5 +21,6 @@ MonoBehaviour:
   Prefab: {fileID: 3989233581575745183, guid: 3e34f24c11308294991d526bee15e32c, type: 3}
   towerName: AreaLight
   nextLevelAttributes: {fileID: 0}
-  elements: 
-  elementSpendNumber: []
+  elements: 01000000
+  elementSpendNumber:
+  - 50
