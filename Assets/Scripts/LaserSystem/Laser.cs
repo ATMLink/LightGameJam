@@ -97,7 +97,7 @@ public class Laser : MonoBehaviour
     Vector2 laserDirection = direction.normalized;
     float laserDistance = maxDistance;
 
-    Debug.Log($"Adjusted Laser Origin: {laserOrigin}, Direction: {laserDirection}, Distance: {laserDistance}");
+    // Debug.Log($"Adjusted Laser Origin: {laserOrigin}, Direction: {laserDirection}, Distance: {laserDistance}");
 
     // 忽略 Laser, TileMap 和 Tower 层的 layerMask
     int layerMask = ~(
@@ -142,7 +142,7 @@ public class Laser : MonoBehaviour
         }
     }
 
-    Debug.Log("No hit detected, laser reached intended endpoint.");
+    // Debug.Log("No hit detected, laser reached intended endpoint.");
     return intendedEndPoint;
 }
 
@@ -151,7 +151,7 @@ private Vector3 AdjustEndPoint(RaycastHit2D hit, Vector2 laserDirection)
     Vector3 hitPoint = hit.point;
     float offsetDistance = 0.1f;
 
-    Debug.Log($"Adjusting endpoint from {hitPoint} with offset {offsetDistance} in direction {laserDirection}");
+    // Debug.Log($"Adjusting endpoint from {hitPoint} with offset {offsetDistance} in direction {laserDirection}");
 
     return hitPoint - (Vector3)laserDirection * offsetDistance;
 }
