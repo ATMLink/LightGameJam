@@ -108,9 +108,32 @@ public class Laser : MonoBehaviour
                 // 返回标准化方向计算的敌人前方位置
                 return hitPoint - laserDirection * offsetDistance;
                 }
+            if (hit.collider.CompareTag("Tower"))
+            {
+                if (hit.collider.GetComponent<Wall>() != null && hit.collider.gameObject.GetComponent<Wall>().canLightThrough)
+                {
+                    // 计算敌人前面的位置
+                    Vector3 hitPoint = hit.point; // 激光击中的位置
+                    Vector3 laserOrigin = transform.position; // 激光起始位置
+                    Vector3 laserDirection = direction.normalized; // 激光方向
+
+                    // 计算敌人前方的点（按标准化方向缩短激光长度）
+                    float distanceToEnemy = Vector3.Distance(laserOrigin, hitPoint);
+                    float offsetDistance = 0.1f; // 确保激光不与敌人重叠
+
+                    // 如果距离小于offsetDistance，返回起始点
+                    if (distanceToEnemy <= offsetDistance)
+                    {
+                        return laserOrigin; // 返回起始点，激光完全缩短
+                    }
+
+                    // 返回标准化方向计算的敌人前方位置
+                    return hitPoint - laserDirection * offsetDistance;
+                }
+            }
 
             // 所有不可穿透的地形
-            if (hit.collider.gameObject.GetComponent<TilemapFeature>().canLightThrough)
+            if (hit.collider.GetComponent<TilemapFeature>() != null && hit.collider.gameObject.GetComponent<TilemapFeature>().canLightThrough)
                 {
                 Vector3 hitPoint = hit.point; // 激光击中的位置
                 Vector3 laserOrigin = transform.position; // 激光起始位置

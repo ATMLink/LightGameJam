@@ -944,7 +944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerAttributes: {fileID: 11400000, guid: a85485ef577454a459f827f24c209920, type: 2}
   inputManager: {fileID: 1967238063}
-  informationImage: {fileID: 176421443}
+  informationImage: {fileID: 1692473481}
 --- !u!1 &180441130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,7 +2890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 3
+  m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3079,6 +3079,7 @@ MonoBehaviour:
   - {fileID: 2992511581504372685, guid: 30136da475ba5bb42b3ae71c728e91a9, type: 3}
   - {fileID: 2992511581504372685, guid: 94b87408d56f75b4c94dc022dcef8f47, type: 3}
   - {fileID: 2992511581504372685, guid: 677556ba615490443b4acecb4f120abe, type: 3}
+  - {fileID: 1724688622223484815, guid: 1b39817916a2b0c4cae14c0aa4bd38ca, type: 3}
   originPoolSize: 5
 --- !u!1 &690544970
 GameObject:
@@ -4213,7 +4214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &802670699
 Transform:
   m_ObjectHideFlags: 0
@@ -4280,8 +4281,8 @@ MonoBehaviour:
   - {fileID: 130950550348363044, guid: b7843fb5ac8db114bb27d6f1b5e28194, type: 3}
   - {fileID: 7800116646058778857, guid: 1270cc8af7cd6a94d8e401db87c20a6e, type: 3}
   - {fileID: 1640247796025206812, guid: 4cfa1357a930b734d98f48bbdb8a9af8, type: 3}
-  - {fileID: 0}
-  - {fileID: 1640247796025206812, guid: 4cfa1357a930b734d98f48bbdb8a9af8, type: 3}
+  - {fileID: -5465623397160251218, guid: d2b48f59399a8fc4bac6ed11a3b5a516, type: 3}
+  - {fileID: -4986640299030141421, guid: 456c57ac4ae4e6549b034b791e992dca, type: 3}
 --- !u!1 &913605972
 GameObject:
   m_ObjectHideFlags: 0
