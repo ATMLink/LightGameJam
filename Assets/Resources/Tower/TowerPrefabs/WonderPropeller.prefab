@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7867459719826588639}
   - component: {fileID: 7568834130568925383}
   - component: {fileID: 8277901072605045474}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: WonderPropeller
   m_TagString: Tower
   m_Icon: {fileID: 0}

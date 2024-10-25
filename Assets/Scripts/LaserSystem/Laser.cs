@@ -88,80 +88,73 @@ public class Laser : MonoBehaviour
         direction = newDirection;
         UpdateLaser();
         }
-
+    
     private Vector3 GetAdjustedLaserEndPoint(Vector3 intendedEndPoint)
+    {
+        // 激光的发射方向和长度
+        Vector3 adjustedOrigin = transform.position + (Vector3)(direction.normalized * 0.1f); // 稍微偏移射线的起点
+        Vector2 laserOrigin = new Vector2(adjustedOrigin.x, adjustedOrigin.y); // 转换为 Vector2 用于射线
+        Vector2 laserDirection = direction.normalized;
+        float laserDistance = maxDistance;
+
+        Debug.Log($"Adjusted Laser Origin: {laserOrigin}, Direction: {laserDirection}, Distance: {laserDistance}");
+
+        // 忽略 Laser, TileMap 和 Tower 层的 layerMask
+        int layerMask = ~(
+            LayerMask.GetMask("Laser") | 
+            LayerMask.GetMask("TileMap") | 
+            LayerMask.GetMask("Tower")|
+            LayerMask.GetMask("TowerSight")|
+            LayerMask.GetMask("EnemySight")
+        );
+
+        RaycastHit2D hit = Physics2D.Raycast(laserOrigin, laserDirection, laserDistance, layerMask);
+
+        if (hit.collider != null)
         {
-        RaycastHit hit;
-        // 检查激光是否击中不可穿透物体
-        if (Physics.Raycast(transform.position, direction, out hit, maxDistance))
-            {
+            Debug.Log($"Hit detected at: {hit.point} with collider: {hit.collider.name}");
+
+            // 根据碰撞对象的标签进行检查
             if (hit.collider.CompareTag("Enemy"))
-                {
-                // 计算敌人前面的位置
-                Vector3 hitPoint = hit.point; // 激光击中的位置
-                Vector3 laserOrigin = transform.position; // 激光起始位置
-                Vector3 laserDirection = direction.normalized; // 激光方向
-
-                // 计算敌人前方的点（按标准化方向缩短激光长度）
-                float distanceToEnemy = Vector3.Distance(laserOrigin, hitPoint);
-                float offsetDistance = 0.1f; // 确保激光不与敌人重叠
-
-                // 如果距离小于offsetDistance，返回起始点
-                if (distanceToEnemy <= offsetDistance)
-                    {
-                    return laserOrigin; // 返回起始点，激光完全缩短
-                    }
-
-                // 返回标准化方向计算的敌人前方位置
-                return hitPoint - laserDirection * offsetDistance;
-                }
-            if (hit.collider.CompareTag("Tower"))
             {
-                if (hit.collider.GetComponent<Wall>() != null && hit.collider.gameObject.GetComponent<Wall>().canLightThrough)
+                return AdjustEndPoint(hit, laserDirection);
+            }
+            else if (hit.collider.CompareTag("TowerWall"))
+            {
+                var wallComponent = hit.collider.GetComponent<Wall>();
+                if (wallComponent != null && wallComponent.canLightThrough)
                 {
-                    // 计算敌人前面的位置
-                    Vector3 hitPoint = hit.point; // 激光击中的位置
-                    Vector3 laserOrigin = transform.position; // 激光起始位置
-                    Vector3 laserDirection = direction.normalized; // 激光方向
-
-                    // 计算敌人前方的点（按标准化方向缩短激光长度）
-                    float distanceToEnemy = Vector3.Distance(laserOrigin, hitPoint);
-                    float offsetDistance = 0.1f; // 确保激光不与敌人重叠
-
-                    // 如果距离小于offsetDistance，返回起始点
-                    if (distanceToEnemy <= offsetDistance)
-                    {
-                        return laserOrigin; // 返回起始点，激光完全缩短
-                    }
-
-                    // 返回标准化方向计算的敌人前方位置
-                    return hitPoint - laserDirection * offsetDistance;
+                    return AdjustEndPoint(hit, laserDirection); // 可穿透塔，继续激光
+                }
+                else
+                {
+                    return hit.point; // 不可穿透塔，结束激光
                 }
             }
-
-            // 所有不可穿透的地形
-            if (hit.collider.GetComponent<TilemapFeature>() != null && hit.collider.gameObject.GetComponent<TilemapFeature>().canLightThrough)
-                {
-                Vector3 hitPoint = hit.point; // 激光击中的位置
-                Vector3 laserOrigin = transform.position; // 激光起始位置
-                Vector3 laserDirection = direction.normalized; // 激光方向
-                float distanceToEnemy = Vector3.Distance(laserOrigin, hitPoint);
-                float offsetDistance = 0.1f;
-
-                // 如果距离小于offsetDistance，返回起始点
-                if (distanceToEnemy <= offsetDistance)
-                    {
-                    return laserOrigin; // 返回起始点，激光完全缩短
-                    }
-
-                return hitPoint - laserDirection * offsetDistance;
-                }
-
-
+            else if (hit.collider.GetComponent<TilemapFeature>()?.canLightThrough == true)
+            {
+                return AdjustEndPoint(hit, laserDirection);
             }
-
-        return intendedEndPoint; // 如果没有击中敌人，返回原定终点
+            else
+            {
+                return hit.point; // 返回碰撞点作为激光的终点
+            }
         }
+
+        Debug.Log("No hit detected, laser reached intended endpoint.");
+        return intendedEndPoint;
+    }
+
+    private Vector3 AdjustEndPoint(RaycastHit2D hit, Vector2 laserDirection)
+    {
+        Vector3 hitPoint = hit.point;
+        float offsetDistance = 0.1f;
+
+        Debug.Log($"Adjusting endpoint from {hitPoint} with offset {offsetDistance} in direction {laserDirection}");
+    
+        return hitPoint - (Vector3)laserDirection * offsetDistance;
+    }
+    
     private void Attack()
         {
         RaycastHit hit;

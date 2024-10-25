@@ -12,6 +12,7 @@ public class MainResourceManagement : MonoBehaviour
     [SerializeField] private FloatVariable cuNumber;
     [SerializeField] private FloatVariable csNumber;
     [SerializeField] private FloatVariable liNumber;
+    float time = 0;
     /// <summary>
     /// 将所有元素数量重新设为0
     /// </summary>
@@ -26,7 +27,6 @@ public class MainResourceManagement : MonoBehaviour
     }
     public void UpdateState()
     {
-        float time = 0;
         time += Time.deltaTime;
         if (time >= 1) { CollectResource(element.si, 30); time = 0; }
     }

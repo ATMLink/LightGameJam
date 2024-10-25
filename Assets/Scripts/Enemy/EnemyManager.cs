@@ -31,7 +31,7 @@ public class EnemyManager : MonoBehaviour
         pause,//暂时不写，用于游戏暂停
         end//结束
     }
-    GameState state = GameState.None;
+    GameState state = GameState.inTurn;
 
     [SerializeField]
     private float maxRestCD = 30;//最大波次间隔时间
@@ -120,15 +120,7 @@ public class EnemyManager : MonoBehaviour
 
                 break;
             case GameState.end:
-
                 //停止所有刷怪行为
-
-                foreach (var field in fieldList)
-                {
-                    field.StopTurn();
-                }
-
-
                 break;
         }
     }

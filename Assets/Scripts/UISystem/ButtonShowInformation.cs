@@ -14,18 +14,20 @@ public class ButtonShowInformation : MonoBehaviour, IPointerEnterHandler, IPoint
  
     void Start()
     {
+        if (hoverSprite != null)
         hoverSprite.gameObject.SetActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
-        hoverSprite.gameObject.SetActive(!inputManager.isDraggingTower);
+        if (hoverSprite != null)
+            hoverSprite.gameObject.SetActive(!inputManager.isDraggingTower);
         
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        hoverSprite.gameObject.SetActive(false);
+        if (hoverSprite != null)
+            hoverSprite.gameObject.SetActive(false);
     }
 }

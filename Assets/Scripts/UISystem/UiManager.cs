@@ -43,6 +43,7 @@ public class UiManager : MonoBehaviour
     }
     public void UpdateState()
     {
+        UpdateHP();
         waves.text = " " + enemyManager.GetCurrentTurn();
     }
     //****************************************************************
@@ -207,7 +208,9 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button clockwiseButton;
     [SerializeField] private Button anticlockwiseButton;
     [SerializeField] private Button deleteButton;
-    
+    TextMeshProUGUI HPtext;
+
+
 
     private Tower selectedTower;
 
@@ -219,7 +222,6 @@ public class UiManager : MonoBehaviour
         {
             // 获取游戏对象的世界坐标  
             Vector3 worldPosition = selectedTower.transform.position;
-
             // 将世界坐标转换为屏幕坐标  
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
 
@@ -245,6 +247,7 @@ public class UiManager : MonoBehaviour
         anticlockwiseButton.onClick.AddListener(OnAnticlockwiseButtonClicked);
         deleteButton.onClick.AddListener(OnDeleteButtonClicked);
         showTowerMenu.gameObject.SetActive(true);
+        HPtext = showTowerMenu.gameObject.GetComponentInChildren<TextMeshProUGUI>();
     }
     void OnCloseTowerMenuClicked()
     {
@@ -288,6 +291,14 @@ public class UiManager : MonoBehaviour
             selectedTower = null;
         }
             
+    }
+    private void UpdateHP()
+    {
+        if (showTowerMenu.gameObject.activeInHierarchy)
+        {
+            
+        
+        HPtext.text = "HP:" + selectedTower.gameObject.GetComponent<Tower>().GetHealth();}
     }
 
 
