@@ -38,7 +38,7 @@ public class GameDriver : MonoBehaviour
         {
             _inputManager.UpdateState();
             _cameraController.UpdateState();
-            _laserManager.UpdateState();
+            //_laserManager.UpdateState();
             _uiManager.UpdateState();
             resourceManagement.UpdateState();
             
@@ -51,7 +51,7 @@ public class GameDriver : MonoBehaviour
         {
             UpdateGameTime();
             _towerManager.UpdateState();
-            _laserManager.UpdateState();
+            //_laserManager.UpdateState();
         }
     }
 

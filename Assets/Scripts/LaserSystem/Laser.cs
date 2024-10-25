@@ -109,32 +109,37 @@ public class Laser : MonoBehaviour
         LayerMask.GetMask("tile")|
         LayerMask.GetMask("Default")
     );
-
+    hitEffect.gameObject.SetActive(false);
+        Debug.Log("!!!");
     RaycastHit2D hit = Physics2D.Raycast(laserOrigin, laserDirection, laserDistance, layerMask);
-
+    
     if (hit.collider != null)
     {
         Debug.Log($"Hit detected at: {hit.point} with collider: {hit.collider.name}");
 
         // 根据碰撞对象的 Layer 进行检查
         int enemyLayer = LayerMask.NameToLayer("Enemy");
-        int towerLayer = LayerMask.NameToLayer("Tower");
+        int towerLayer = LayerMask.NameToLayer("TowerWall");
 
         if (hit.collider.gameObject.layer == enemyLayer)
         {
-            return AdjustEndPoint(hit, laserDirection);
+                return AdjustEndPoint(hit, laserDirection);
         }
         else if (hit.collider.gameObject.layer == towerLayer)
         {
             var wallComponent = hit.collider.GetComponent<Wall>();
             if (wallComponent == null || !wallComponent.canLightThrough)
-            {
+            {   
+                hitEffect.gameObject.SetActive(true);
+                
                 return hit.point;
             }
         }
         else if (hit.collider.GetComponent<TilemapFeature>()?.canLightThrough == true)
         {
-            return AdjustEndPoint(hit, laserDirection);
+                hitEffect.gameObject.SetActive(true);
+              
+                return AdjustEndPoint(hit, laserDirection);
         }
         else
         {
@@ -166,7 +171,7 @@ private Vector3 AdjustEndPoint(RaycastHit2D hit, Vector2 laserDirection)
                 {
                 // 造成伤害
                 hit.collider.GetComponent<Enemy>().OnHit(damage);
-                TriggerHitEffect(hit.point); // 触发击中效果
+               // TriggerHitEffect(hit.point); // 触发击中效果
                 }
             }
         }
@@ -195,6 +200,8 @@ private Vector3 AdjustEndPoint(RaycastHit2D hit, Vector2 laserDirection)
         {
         isActive = active;
         lineRenderer.enabled = active; // 根据激光状态来显示或隐藏激光
+        hitEffect.gameObject.SetActive(active);
+        transform.GetChild(1).gameObject.SetActive(active);
         Debug.Log($"Laser {gameObject.name} active: {active}"); // 输出激光的激活状态
         }
 
