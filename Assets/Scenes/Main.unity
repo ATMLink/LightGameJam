@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0ccc8503fb3314bb9dd58210454153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 801038782662623395, guid: 93c40ec57bb17354db658361dd4b9717, type: 3}
+  laserPrefab: {fileID: 801038782662623395, guid: cbac24c17c32f2b42b48869736d9843d, type: 3}
   initialPoolSize: 8
 --- !u!1 &708461168
 GameObject:

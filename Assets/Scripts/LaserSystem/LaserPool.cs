@@ -37,9 +37,12 @@ public class LaserPool : MonoBehaviour
             }
         }
 
-        // 如果没有可用的激光，扩容池
+        // 保护措施，避免无限递归
+        int originalSize = laserPool.Count;
         ExpandPool(1);
-        return GetLaser(position, direction, intensity); // 递归调用以获取新的激光
+        if (laserPool.Count > originalSize)
+            return GetLaser(position, direction, intensity); // 递归调用以获取新的激光   
+        return null;
     }
 
     private void ExpandPool(int amount)
@@ -49,6 +52,7 @@ public class LaserPool : MonoBehaviour
             GameObject laserObject = Instantiate(laserPrefab);
             Laser laser = laserObject.GetComponent<Laser>();
             laser.SetLaserActive(false); // 初始化时隐藏激光
+            laser.gameObject.SetActive(false);
             laserPool.Add(laser);
         }
 
