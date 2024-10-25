@@ -10,7 +10,6 @@ using UnityEngine.UIElements;
 
 public class TowerManager : MonoBehaviour
 {
-    [SerializeField] private Tower testTower;
     public TowerPool towerPool;
     [SerializeField] private LaserManager laserManager;
     [SerializeField] private MusicManager musicManager;
@@ -89,7 +88,8 @@ public class TowerManager : MonoBehaviour
     public void RemoveTower(Tower tower)
     {
         Debug.Log($"Removing tower: {tower.name}, at position: {tower.transform.position}");
-        musicManager.PlaySound("DestructTower");
+        if(musicManager != null)
+            musicManager.PlaySound("DestructTower");
         laserManager.RemoveLaser(tower);
         towerPool.ReturnTower(tower);
         towers.Remove(tower);
@@ -111,7 +111,8 @@ public class TowerManager : MonoBehaviour
     private void StartRotate(Tower tower)
     {
         laserManager.SetLaserActiveForTower(tower, false);
-        musicManager.PlaySound("TowerRotate");
+        if(musicManager != null)
+            musicManager.PlaySound("TowerRotate");
     }
 
     private void EndRotate(Tower tower, bool antiClockwise)

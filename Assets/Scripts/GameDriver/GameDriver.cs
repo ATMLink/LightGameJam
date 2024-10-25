@@ -61,8 +61,6 @@ public class GameDriver : MonoBehaviour
         _towerManager.Initialize();
         _uiManager.Initialize();
         _laserManager.Initialize();
-        _musicManager.Initialize();
-        _musicManager.PlaySound("BattleBGM");
     }
 
     private void UpdateGameTime()

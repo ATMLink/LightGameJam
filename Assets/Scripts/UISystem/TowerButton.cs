@@ -11,7 +11,8 @@ public class TowerButton : MonoBehaviour, IPointerDownHandler
     // 当鼠标按下时调用
     public void OnPointerDown(PointerEventData eventData)
     {
-        musicManager.PlaySound("TowerClick");
+        if (musicManager != null)
+            musicManager.PlaySound("TowerClick");
         informationImage.SetActive(false);
         inputManager.PrepareToDragTower(towerAttributes); // 立即开始拖拽
 

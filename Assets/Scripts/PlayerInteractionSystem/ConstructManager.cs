@@ -32,9 +32,11 @@ public class ConstructManager : MonoBehaviour
         {
             if (CanPlaceTower(selectedTowerAttributes,position)) // 检查是否可以放置塔
             {
-                musicManager.PlaySound("BeginBuildTower");
+                if(musicManager != null)
+                    musicManager.PlaySound("BeginBuildTower");
                 towerManager.AddTower(position, selectedTowerAttributes);
-                musicManager.PlaySound("FinishBuildTower");
+                if(musicManager != null)
+                    musicManager.PlaySound("FinishBuildTower");
             }
             else
             {
