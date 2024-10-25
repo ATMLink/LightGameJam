@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0529adfce856be4fa346244339e3e14, type: 3}
+  m_Name: TransparentWall
+  m_EditorClassIdentifier: 
+  health: {fileID: 11400000, guid: 219d60fd86f5bce41869b2caccf58e11, type: 2}
+  damage: {fileID: 11400000, guid: 5c6b1127100a3d446913a9af6d38eff6, type: 2}
+  attackSpeed: {fileID: 11400000, guid: 5c6b1127100a3d446913a9af6d38eff6, type: 2}
+  attackRange: {fileID: 11400000, guid: 5c6b1127100a3d446913a9af6d38eff6, type: 2}
+  towerSprite: {fileID: 21300000, guid: 98d5be6e5084a2747ac0c3203ebee905, type: 3}
+  withLight: 0
+  Prefab: {fileID: 986361475676171302, guid: 456c57ac4ae4e6549b034b791e992dca, type: 3}
+  towerName: TransparentWall
+  nextLevelAttributes: {fileID: 0}
+  elements: 01000000
+  elementSpendNumber:
+  - 50
