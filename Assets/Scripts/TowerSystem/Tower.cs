@@ -27,16 +27,30 @@ public class Tower : MonoBehaviour
 
 
     //测试用
-    //private void Start()
-    //{
-    //    health = 2000;
-    //    damage = 10f;
-    //    attackCooldown = 2f;
-    //}
-    //private void Update()
-    //{
-    //    Attack();
-    //}
+    private void Start()
+    {
+        health = 2000;
+        damage = attributes.damage.Value;
+        attackSpeed = attributes.attackSpeed.Value;
+        attackRange = attributes.attackRange.Value;
+        spriteRenderer.sprite = attributes.towerSprite;
+
+        receivedLasers = new List<Laser>();
+
+        attackCooldown = 1f / attackSpeed;
+        attackTimer = 0f;
+
+        transform.rotation = Quaternion.Euler(Vector3.down);
+
+        sight1.GetComponent<CircleCollider2D>().radius = attackRange;
+        towerID = towerIDCounter++;
+
+        gameObject.SetActive(true);
+    }
+    private void Update()
+    {
+        Attack();
+    }
 
     public virtual void Initialize()
     {
@@ -152,6 +166,7 @@ public class Tower : MonoBehaviour
 
         foreach (Enemy enemy in sight1.EnemyInSight)
         {
+            if (!enemy.gameObject.activeInHierarchy) continue;
             float distance = Vector3.Distance(transform.position, enemy.transform.position);
             if (distance < closestDistance)
             {

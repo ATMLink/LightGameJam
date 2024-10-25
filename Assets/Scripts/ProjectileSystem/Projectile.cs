@@ -7,13 +7,15 @@ public class Projectile : MonoBehaviour
 {
 
     public string projectileName;
-    private float speed = 10f;
+    [SerializeField]
+    protected float speed = 10f;
 
     protected Transform target;
-    private Vector3 targetpos;
-    private Vector3 direction;
+    protected Vector3 targetpos;
+    protected Vector3 direction;
 
-    private float destoryDistance = 0.2f;
+    [SerializeField]
+    protected float destoryDistance = 0.2f;
 
     public void Launch(Transform targetTransform, float damage)
     {
@@ -21,7 +23,7 @@ public class Projectile : MonoBehaviour
         StartCoroutine(MoveToTarget(damage));
     }
 
-    private IEnumerator MoveToTarget(float damage)
+    protected virtual IEnumerator MoveToTarget(float damage)
     {
         while (true)
         {
@@ -57,7 +59,7 @@ public class Projectile : MonoBehaviour
         
     }
 
-    protected void ReturnToPool()
+    protected virtual void ReturnToPool()
     {
         ProjectilePool.instance.ReturnObjToPool(this, projectileName);
     }

@@ -14,7 +14,7 @@ public class TowerProjectile : Tower
         {
             // 攻击最近的敌人
             Enemy target = FindClosestEnemy();
-            if (target != null)
+            if (target.gameObject.activeInHierarchy)
             {
                 // 对敌人造成伤害
                 Projectile pro = ProjectilePool.instance.GetObjFromPool(projectileName);

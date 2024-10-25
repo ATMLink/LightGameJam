@@ -13,7 +13,8 @@ public class ProjectilePool : MonoBehaviour
     private List<string> ProjectileName = new List<string>()
     {
         "TowerProjectile",
-        "EnemyProjectile"
+        "EnemyProjectile",
+        "KProjectile"
     };
 
     public int originPoolSize = 5;
@@ -28,6 +29,7 @@ public class ProjectilePool : MonoBehaviour
     {
             {"TowerProjectile",new Queue<Projectile>()},
             {"EnemyProjectile",new Queue<Projectile>()},
+            {"KProjectile",new Queue<Projectile>()},
     };
 
     private void Start()

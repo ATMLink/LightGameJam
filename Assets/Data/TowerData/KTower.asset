@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0529adfce856be4fa346244339e3e14, type: 3}
+  m_Name: KTower
+  m_EditorClassIdentifier: 
+  health: {fileID: 11400000, guid: 445a4dc9b3ca47f48be236eb9ad79f2c, type: 2}
+  damage: {fileID: 11400000, guid: f0b7caae9cb21234da41be536a818692, type: 2}
+  attackSpeed: {fileID: 11400000, guid: 8efe5f1eb1f810a4faf62a6639fc767d, type: 2}
+  attackRange: {fileID: 11400000, guid: 279a9a31b1ec5a0458123563d4411a12, type: 2}
+  towerSprite: {fileID: 21300000, guid: a11adf31d2b09e6499db3332709f7105, type: 3}
+  withLight: 0
+  Prefab: {fileID: 3082863862407716987, guid: 5d0b865eaa9561d48898d2efa7290edd, type: 3}
+  towerName: KTower
+  nextLevelAttributes: {fileID: 0}
+  elements: 
+  elementSpendNumber: []
