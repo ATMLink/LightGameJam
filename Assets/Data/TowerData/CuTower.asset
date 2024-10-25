@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: 3b2b99d3fe887d143860ee5ed28fb5ef, type: 2}
   attackSpeed: {fileID: 11400000, guid: 90c7bce696419444cb56a95a85b0d493, type: 2}
   attackRange: {fileID: 11400000, guid: 045fcada326867d408b0bf24846cfb60, type: 2}
-  towerSprite: {fileID: 21300000, guid: 30911ad39f862274c9e234212882fa7f, type: 3}
+  towerSprite: {fileID: 21300000, guid: 0b542169c55a94949b8b4eb2c7ae4f85, type: 3}
   withLight: 0
   Prefab: {fileID: 8578151285703894285, guid: 33f43972541eab74a80f986a3c28e3a2, type: 3}
   towerName: CuTower

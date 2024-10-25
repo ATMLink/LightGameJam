@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: f0b7caae9cb21234da41be536a818692, type: 2}
   attackSpeed: {fileID: 11400000, guid: 8efe5f1eb1f810a4faf62a6639fc767d, type: 2}
   attackRange: {fileID: 11400000, guid: 279a9a31b1ec5a0458123563d4411a12, type: 2}
-  towerSprite: {fileID: 21300000, guid: a11adf31d2b09e6499db3332709f7105, type: 3}
+  towerSprite: {fileID: 21300000, guid: 2bb291a7da0ec8d42a28e2884aea556d, type: 3}
   withLight: 0
   Prefab: {fileID: 3082863862407716987, guid: 5d0b865eaa9561d48898d2efa7290edd, type: 3}
   towerName: KTower
