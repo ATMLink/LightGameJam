@@ -14,6 +14,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] private TilemapManager tilemapManager;
     [SerializeField] private GameObject FunctionMenu;
     public bool isMoving;
+    public bool isRolling;
+
     private Camera camera;  
     private Vector3 initialPosition;
     private Vector3 lastMouseWorldPosition;
@@ -71,6 +73,8 @@ public class CameraController : MonoBehaviour
     {
         // Logic for zooming in and out with the mouse scroll wheel
         float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if (scroll !=0)isRolling = true;
+        else isRolling = false;
         float newZoom = Mathf.Clamp(camera.orthographicSize - scroll * zoomSpeed.Value, minZoom.Value, maxZoom.Value);
         camera.orthographicSize = newZoom;
     }
@@ -104,7 +108,7 @@ public class CameraController : MonoBehaviour
         ClampCameraPosition();
     }
     public void HideMenu() { 
-        if (isMoving)FunctionMenu.gameObject.SetActive(false);
+        if (isMoving || isRolling)FunctionMenu.gameObject.SetActive(false);
     
     
     }

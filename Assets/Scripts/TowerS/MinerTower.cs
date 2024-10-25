@@ -3,10 +3,12 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class MinerTower : Tower
 {
     //private MainResourceManagement resourceManagement;
+    float minIntensity;
     float medaltime = 0;
     float sitime = 0;
     private float totalIntensity = 0;
@@ -22,6 +24,8 @@ public class MinerTower : Tower
         base.UpdateState();
         UpdateLaserIntensity();
         Generate();
+        if (attributes.name == "Miner") minIntensity = 50;
+        else if (attributes.name == "LaserTower")minIntensity = 0;
     }
     public override void OnLaserHit(Laser laser)
     {
@@ -42,9 +46,9 @@ public class MinerTower : Tower
     public void Generate()
     {
         
-        if (totalIntensity >= 0)
+        if (totalIntensity >= minIntensity)
         {
-            Debug.LogWarning("work");
+            //Debug.LogWarning("work");
             sitime += Time.deltaTime;
             medaltime += Time.deltaTime;
             if (sitime >= 5)

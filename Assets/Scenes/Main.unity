@@ -3204,7 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0ccc8503fb3314bb9dd58210454153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 801038782662623395, guid: b2bd0b32d8a9cef4590bd3888c9a0240, type: 3}
+  laserPrefab: {fileID: 801038782662623395, guid: 93c40ec57bb17354db658361dd4b9717, type: 3}
   initialPoolSize: 8
 --- !u!1 &708461168
 GameObject:
@@ -4217,7 +4217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &802670699
 Transform:
   m_ObjectHideFlags: 0
@@ -7799,6 +7799,7 @@ MonoBehaviour:
   tilemapManager: {fileID: 1424931871}
   FunctionMenu: {fileID: 44910126}
   isMoving: 0
+  isRolling: 0
 --- !u!114 &1912484482
 MonoBehaviour:
   m_ObjectHideFlags: 0
