@@ -62,7 +62,13 @@ public class Laser : MonoBehaviour
         // 更新激光终点，处理敌人遮挡情况
         endPoint = GetAdjustedLaserEndPoint(endPoint);
         lineRenderer.SetPosition(1, endPoint);
-
+        Vector3 relativePosition = endPoint - transform.position;
+        Transform endBeam = transform.GetChild(1);
+        Transform endParticle = hitEffect.transform;
+        endBeam.localPosition = relativePosition;
+        endParticle.localPosition = relativePosition;
+        float angle = (relativePosition.y > 0 ? 1 : -1)* Vector3.Angle(relativePosition.normalized,new Vector3(1,0,0));
+        endParticle.localRotation = Quaternion.Euler(angle, -90, 0);
         Attack();
         }
 
@@ -169,9 +175,10 @@ public class Laser : MonoBehaviour
         // 在激光击中位置播放粒子效果
         if (hitEffect != null)
             {
-            ParticleSystem effect = Instantiate(hitEffect, position, Quaternion.identity);
-            effect.Play();
-            Destroy(effect.gameObject, effect.main.duration); // 播放完成后销毁粒子效果
+                hitEffect.gameObject.SetActive(true);
+            //ParticleSystem effect = Instantiate(hitEffect, position, Quaternion.identity);
+            hitEffect.Play();
+           //Destroy(effect.gameObject, effect.main.duration); // 播放完成后销毁粒子效果
             }
         }
 

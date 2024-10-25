@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class MinerTower : Tower
 {
-    private MainResourceManagement resourceManagement;
+    //private MainResourceManagement resourceManagement;
     float medaltime = 0;
     float sitime = 0;
     private float totalIntensity = 0;
