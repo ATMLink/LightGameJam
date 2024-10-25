@@ -124,7 +124,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Left mouse button clicked.");
-            
+        
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 return;
@@ -133,53 +133,66 @@ public class InputManager : MonoBehaviour
             // 获取点击的世界坐标位置
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            // 使用 OverlapPoint 检测点击点是否有塔
-            LayerMask towerLayerMask = LayerMask.GetMask("Tower");
-            Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition, towerLayerMask);
+            // 使用 OverlapPointAll 来查找所有与该点重叠的碰撞体
+            Collider2D[] hitColliders = Physics2D.OverlapPointAll(mousePosition);
 
-            // 检查点击到的是否为塔
-            if (hitCollider != null)
+            foreach (Collider2D hitCollider in hitColliders)
             {
-                Tower clickedTower = hitCollider.GetComponent<Tower>();
-                if (clickedTower != null)
+                // 检查是否点击到标签为 "Tower" 的对象
+                if (hitCollider.CompareTag("Tower"))
                 {
-                    Debug.Log($"Tower clicked at position: {mousePosition}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
-                    if(musicManager != null)
-                        musicManager.PlaySound("TowerClick");
-                    uiManager.ShowTowerMenu(clickedTower);
-                }
-                else
-                {
-                    Debug.Log("No tower found at clicked position.");
+                    Tower clickedTower = hitCollider.GetComponent<Tower>();
+                    if (clickedTower != null)
+                    {
+                        Debug.Log($"Tower clicked at position: {mousePosition}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
+                    
+                        if (musicManager != null)
+                            musicManager.PlaySound("TowerClick");
+
+                        uiManager.ShowTowerMenu(clickedTower);
+                        return; // 找到塔后结束循环
+                    }
                 }
             }
-            else
-            {
-                Debug.Log("No collider hit detected.");
-            }
-            // 射线检测以确定点击的对象
-            // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            // RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-            //
-            // if (hit.collider != null)
-            // {
-            //     // 检查点击到的物体是否是塔
-            //     Tower clickedTower = hit.collider.GetComponent<Tower>();
-            //     if (clickedTower != null)
-            //     {
-            //         Debug.Log($"Tower clicked at position: {hit.point}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
-            //         
-            //         uiManager.ShowTowerMenu(clickedTower);
-            //     }
-            //     else
-            //     {
-            //         Debug.Log("No tower found at clicked position.");
-            //     }
-            // }
-            // else
-            // {
-            //     Debug.Log("No collider hit detected.");
-            // }
+
+            Debug.Log("No tower found at clicked position.");
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     Debug.Log("Left mouse button clicked.");
+        //     
+        //     if (EventSystem.current.IsPointerOverGameObject())
+        //     {
+        //         return;
+        //     }
+        //
+        //     // 获取点击的世界坐标位置
+        //     Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //
+        //     // 使用 OverlapPoint 检测点击点是否有塔
+        //     LayerMask towerLayerMask = LayerMask.GetMask("Tower");
+        //     Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition, towerLayerMask);
+        //
+        //     // 检查点击到的是否为塔
+        //     if (hitCollider != null)
+        //     {
+        //         Tower clickedTower = hitCollider.GetComponent<Tower>();
+        //         if (clickedTower != null)
+        //         {
+        //             Debug.Log($"Tower clicked at position: {mousePosition}, Tower ID: {clickedTower.towerID}. Showing tower menu.");
+        //             if(musicManager != null)
+        //                 musicManager.PlaySound("TowerClick");
+        //             uiManager.ShowTowerMenu(clickedTower);
+        //         }
+        //         else
+        //         {
+        //             Debug.Log("No tower found at clicked position.");
+        //         }
+        //     }
+        //     else
+        //     {
+        //         Debug.Log("No collider hit detected.");
+        //     }
+        //     
         }
     }
 

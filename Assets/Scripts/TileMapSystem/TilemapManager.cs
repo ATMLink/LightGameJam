@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
@@ -101,6 +102,7 @@ public class TilemapManager : MonoBehaviour
                             temp.canEnemyThrough = tiles[(int)c - 48].canEnemyThrough;
                             temp.canAttackTowerConstruct = tiles[(int)c - 48].canAttackTowerConstruct;
                             temp.canMinerConstruct = tiles[(int)c - 48].canMinerConstruct;
+                            if ((int)c-48 == 2)temp.gameObject.layer = 13;
                         }
                         else
                         {

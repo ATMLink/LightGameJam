@@ -5027,6 +5027,7 @@ MonoBehaviour:
   laserManager: {fileID: 415967692}
   musicManager: {fileID: 0}
   towers: []
+  coreTower: {fileID: 0}
 --- !u!1 &1005225518
 GameObject:
   m_ObjectHideFlags: 0

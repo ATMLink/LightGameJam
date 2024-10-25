@@ -149,18 +149,21 @@ public override void OnLaserHit(Laser laser)
         Debug.Log($"接收到激光，方向: {laser.direction}, 强度: {laser.intensity}, 激光数量: {receivedLasers.Count}");
     }
 
-    if (receivedLasers.Count == 1)
+    if (receivedLasers.Count == 1||(laserManager.GetLaserForTower(this) == null && receivedLasers.Count == 2)) // 只在接收到一条激光时生成分光
     {
-        Vector3 originalDirection = laser.direction;
-        Vector3 referenceVector = Vector3.up;
+        Vector3 originalDirection = laser.direction.normalized;
 
-        Vector3 outLaserDirection1 = Vector3.Cross(originalDirection, referenceVector).normalized;
-        Vector3 outLaserDirection2 = Vector3.Cross(originalDirection, outLaserDirection1).normalized;
+        // 计算与入射光线垂直的两个方向，方向相反
+        Vector3 outLaserDirection1 = Vector3.Cross(originalDirection, Vector3.forward).normalized;
+        Vector3 outLaserDirection2 = -outLaserDirection1;
 
+        Vector3 laserOriginOffset = outLaserDirection1.normalized * 0.51f;
         Debug.Log($"分光器发射两束激光，方向1: {outLaserDirection1}, 方向2: {outLaserDirection2}");
 
-        laserManager.CreateLaser(this, transform.position, outLaserDirection1, laser.intensity / 2);
-        laserManager.CreateLaser(this, transform.position, outLaserDirection2, laser.intensity / 2);
+        // 使用半强度创建两条新激光
+        laserManager.CreateLaser(this, transform.position + laserOriginOffset, outLaserDirection1, laser.intensity / 2);
+        laserOriginOffset = outLaserDirection2 * 0.51f;
+        laserManager.CreateLaser(this, transform.position + laserOriginOffset, outLaserDirection2, laser.intensity / 2);
     }
 }
 
@@ -168,8 +171,14 @@ public override void OnLaserOut(Laser laser)
 {
     if (receivedLasers.Contains(laser))
     {
+        laser.UpdateState();
         receivedLasers.Remove(laser);
         Debug.Log("激光离开分光器，剩余接收激光数量: " + receivedLasers.Count);
+    }
+
+    if (receivedLasers.Count == 0)
+    {
+        laserManager.RemoveLaser(this);
     }
 }
 
