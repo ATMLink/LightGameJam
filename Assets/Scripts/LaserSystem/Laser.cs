@@ -106,7 +106,8 @@ public class Laser : MonoBehaviour
         LayerMask.GetMask("Tower")|
         LayerMask.GetMask("TowerSight")|
         LayerMask.GetMask("EnemySight")|
-        LayerMask.GetMask("tile")
+        LayerMask.GetMask("tile")|
+        LayerMask.GetMask("Default")
     );
 
     RaycastHit2D hit = Physics2D.Raycast(laserOrigin, laserDirection, laserDistance, layerMask);
