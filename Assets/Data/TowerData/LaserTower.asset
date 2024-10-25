@@ -18,7 +18,7 @@ MonoBehaviour:
   attackRange: {fileID: 11400000, guid: e7e304375bfcd95469f04f852e67e698, type: 2}
   towerSprite: {fileID: 21300000, guid: 3ceb6811dd80e944d960cba0277515d2, type: 3}
   withLight: 0
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 842001516123018691, guid: 31fa7a421df0eac45b4f7c79c0b6bdfb, type: 3}
   towerName: LaserTower
   nextLevelAttributes: {fileID: 0}
   elements: 01000000

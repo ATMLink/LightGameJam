@@ -42,7 +42,7 @@ public class MinerTower : Tower
     public void Generate()
     {
         
-        if (totalIntensity >= 50)
+        if (totalIntensity >= 0)
         {
             Debug.LogWarning("work");
             sitime += Time.deltaTime;

@@ -2890,7 +2890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 4
+  m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2916,7 +2916,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 6.3288603
+  m_PointLightOuterRadius: 16.058138
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2935,7 +2935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619394800}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.3997772, w: 0.9166124}
+  m_LocalRotation: {x: 0, y: 0, z: -0.44463986, w: 0.89570946}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5534,7 +5534,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 180441133}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: UpdateResources
+        m_MethodName: LiNumberChangeShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5562,7 +5562,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 180441133}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: UpdateResources
+        m_MethodName: CsNumberChangeShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5590,7 +5590,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 180441133}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: UpdateResources
+        m_MethodName: CuNumberChangeShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5618,7 +5618,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 180441133}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: UpdateResources
+        m_MethodName: NaNumberChangeShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5646,7 +5646,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 180441133}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: UpdateResources
+        m_MethodName: KNumberChangeShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5674,7 +5674,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 180441133}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: UpdateResources
+        m_MethodName: SiNumberChangeShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

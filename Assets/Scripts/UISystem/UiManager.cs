@@ -38,6 +38,7 @@ public class UiManager : MonoBehaviour
         rightPage.onClick.AddListener(OnRightButtonClicked);
         closeIntroduction.onClick.AddListener(OnCloseIntroduction);
         UpdateResources();
+        TempInitialise();
 
     }
     //****************************************************************
@@ -308,7 +309,20 @@ public class UiManager : MonoBehaviour
         expandButton.gameObject.SetActive(false);
     }
 
-
+    float tempsi;
+    float tempna;
+    float tempk;
+    float tempcs;
+    float tempcu;
+    float templi;
+    public void TempInitialise() {
+        tempcs = _resourceManager.GetResourceNumber(element.cs);
+        tempcu = _resourceManager.GetResourceNumber(element.cu);
+        tempsi = _resourceManager.GetResourceNumber(element.si);
+        tempk = _resourceManager.GetResourceNumber(element.k);
+        templi = _resourceManager.GetResourceNumber(element.li);
+        tempna = _resourceManager.GetResourceNumber(element.na);
+    }
     public void UpdateResources()//每帧更新
     {
         resources[0].text = "Si" + " " + _resourceManager.GetResourceNumber(element.si);
@@ -326,8 +340,110 @@ public class UiManager : MonoBehaviour
         //waves.text = +"" +;
         
     }
-    //public void ChangeTextColor(TextMeshProUGUI text) {
-    //    text.color = Color.green;    
-    //}
+    public void SiNumberChangeShow() {
+        if (tempsi < _resourceManager.GetResourceNumber(element.si))
+        {
+            resources[0].color = Color.green;
+            resources[0].text = "Si" + " " + _resourceManager.GetResourceNumber(element.si) + " ↑";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        else {
+            resources[0].color = Color.red;
+            resources[0].text = "Si" + " " + _resourceManager.GetResourceNumber(element.si) + " ↓";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        tempsi = _resourceManager.GetResourceNumber(element.si);
+    
+    }
+    public void NaNumberChangeShow() {
+        if (tempna < _resourceManager.GetResourceNumber(element.na))
+        {
+            resources[2].color = Color.green;
+            resources[2].text = "Na" + " " + _resourceManager.GetResourceNumber(element.na) + " ↑";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        else {
+            resources[2].color = Color.red;
+            resources[2].text = "Na" + " " + _resourceManager.GetResourceNumber(element.na) + " ↓";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        tempna = _resourceManager.GetResourceNumber(element.na);
+    
+    }
+    public void CuNumberChangeShow()
+    {
+        if (tempcu < _resourceManager.GetResourceNumber(element.cu))
+        {
+            resources[3].color = Color.green;
+            resources[3].text = "Cu" + " " + _resourceManager.GetResourceNumber(element.cu) + " ↑";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        else
+        {
+            resources[3].color = Color.red;
+            resources[3].text = "Cu" + " " + _resourceManager.GetResourceNumber(element.cu) + " ↓";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        tempcu = _resourceManager.GetResourceNumber(element.cu);
+
+    }
+    public void LiNumberChangeShow()
+    {
+        if (templi < _resourceManager.GetResourceNumber(element.li))
+        {
+            resources[4].color = Color.green;
+            resources[4].text = "Li" + " " + _resourceManager.GetResourceNumber(element.li) + " ↑";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        else
+        {
+            resources[4].color = Color.red;
+            resources[4].text = "Li" + " " + _resourceManager.GetResourceNumber(element.li) + " ↓";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        templi = _resourceManager.GetResourceNumber(element.li);
+
+    }
+    public void CsNumberChangeShow()
+    {
+        if (tempcs < _resourceManager.GetResourceNumber(element.cs))
+        {
+            resources[5].color = Color.green;
+            resources[5].text = "Cs" + " " + _resourceManager.GetResourceNumber(element.cs) + " ↑";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        else
+        {
+            resources[5].color = Color.red;
+            resources[5].text = "Cs" + " " + _resourceManager.GetResourceNumber(element.cs) + " ↓";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        tempcs = _resourceManager.GetResourceNumber(element.cs);
+
+    }
+    public void KNumberChangeShow()
+    {
+        if (tempk < _resourceManager.GetResourceNumber(element.k))
+        {
+            resources[1].color = Color.green;
+            resources[1].text = "K" + " " + _resourceManager.GetResourceNumber(element.k) + " ↑";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        else
+        {
+            resources[1].color = Color.red;
+            resources[1].text = "K" + " " + _resourceManager.GetResourceNumber(element.k) + " ↓";
+            Invoke("ChangeTextColor", 0.5f);
+        }
+        tempk = _resourceManager.GetResourceNumber(element.k);
+
+    }
+    public void ChangeTextColor() {
+        for (int i = 0; i < resources.Length; i++)
+        {
+            resources[i].color = Color.white;
+        }
+        UpdateResources();
+    }
     
 }
