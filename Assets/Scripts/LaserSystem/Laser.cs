@@ -1,7 +1,8 @@
 using UnityEngine;
 
 public class Laser : MonoBehaviour
-    {
+{
+    public Tower sourceTower;
     public float intensity; // 激光强度
     public Vector3 direction; // 激光发射方向
     public float damage; // 激光对敌人造成的伤害
@@ -12,19 +13,12 @@ public class Laser : MonoBehaviour
     private bool isActive = true; // 激光是否有效
 
 
-    public void Initialize()
+    public void Initialize(Tower source, Vector3 position, Vector3 direction, float intensity)
         {
-        // 先检查是否已经有 LineRenderer 组件，如果没有则添加
-        if (!lineRenderer)
-            {
-            lineRenderer = gameObject.AddComponent<LineRenderer>();
-            }
-        lineRenderer.startWidth = 0.1f;
-        lineRenderer.endWidth = 0.1f;
-        lineRenderer.material = new Material(Shader.Find("Unlit/Color"));
-        lineRenderer.startColor = Color.red; // 根据强度设置颜色
-        lineRenderer.endColor = Color.red;
-        lineRenderer.positionCount = 2;
+            sourceTower = source; // 设置激光来源
+            transform.position = position;
+            this.direction = direction;
+            this.intensity = intensity;
         }
     /*
     public void Initialize()

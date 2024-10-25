@@ -41,7 +41,7 @@ public class LaserManager : MonoBehaviour
                 towerLaserMap[tower] = new List<Laser>();
             
             towerLaserMap[tower].Add(laser); // 绑定塔和激光
-            laser.Initialize();
+            laser.Initialize(tower, position, direction, intensity);
             laser.SetLaserActive(true);
         }
         return laser;
