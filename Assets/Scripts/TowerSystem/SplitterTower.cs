@@ -43,7 +43,7 @@ public class SplitterTower : Tower
         {
             receivedLasers.Add(laser);
         }
-
+        
         if (receivedLasers.Count == 1)
         {
             Vector3 originalDirection = laser.direction;

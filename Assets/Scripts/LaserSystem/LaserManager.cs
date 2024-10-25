@@ -5,7 +5,7 @@ using UnityEngine;
 public class LaserManager : MonoBehaviour
 {
     public LaserPool laserPool; // 激光池引用
-    private Dictionary<Tower, List<Laser>> towerLaserMap = new Dictionary<Tower, List<Laser>>(); // 存储塔与激光的映射关系
+    public Dictionary<Tower, List<Laser>> towerLaserMap = new Dictionary<Tower, List<Laser>>(); // 存储塔与激光的映射关系
 
     public void Initialize()
     {
