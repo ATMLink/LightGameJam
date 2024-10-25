@@ -18,6 +18,7 @@ public class Tower : MonoBehaviour
     protected float attackCooldown;
     protected float attackTimer;
     
+    
     protected List<Laser> receivedLasers;
 
     [SerializeField] private MainResourceManagement resourceManagement;
