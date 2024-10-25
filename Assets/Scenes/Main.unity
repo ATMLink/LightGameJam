@@ -945,6 +945,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: a85485ef577454a459f827f24c209920, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 1692473481}
+  musicManager: {fileID: 0}
 --- !u!1 &180441130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,6 +1785,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: bd246b8ccb3f79947a990ffd90e259e4, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 798115729}
+  musicManager: {fileID: 0}
 --- !u!1 &343316223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,7 +2650,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2757,6 +2759,7 @@ MonoBehaviour:
   towerDestroyed: {fileID: 8300000, guid: 123e4adcabae1c44ba82cd5d0a13b673, type: 3}
   destructTower: {fileID: 8300000, guid: 4cc21d27aa8f2e048a6c4f4ab8336d27, type: 3}
   towerRotate: {fileID: 8300000, guid: 860a0565252b0a949a960f0b74846b69, type: 3}
+  enemyWaveBegin: {fileID: 8300000, guid: bbdbe0a88e355c14985d085993d91842, type: 3}
 --- !u!1 &575471094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,6 +2931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ddb53b5c06e544d9af8a21a3decf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicManager: {fileID: 0}
   displayImage: {fileID: 0}
   hoverSprite: {fileID: 21300000, guid: 6f71906dc824103468b2a42aaef9a3c8, type: 3}
 --- !u!114 &605824373
@@ -3286,6 +3290,7 @@ MonoBehaviour:
   - {fileID: 1331573788}
   - {fileID: 1331573788}
   - {fileID: 1331573788}
+  musicManager: {fileID: 0}
   difficultLevel: 1
   maxRestCD: 5
   currentTurn: 0
@@ -4342,6 +4347,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 8f8a519aa44d8554ea12fae8737a4ae1, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 1214024201}
+  musicManager: {fileID: 0}
 --- !u!114 &783167585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4563,6 +4569,7 @@ MonoBehaviour:
   _light: {fileID: 619394801}
   towerManager: {fileID: 945080038}
   towerPool: {fileID: 864061134}
+  musicManager: {fileID: 0}
 --- !u!1 &940748517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,6 +5433,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 38772587}
+  musicManager: {fileID: 0}
 --- !u!1 &1168804920
 GameObject:
   m_ObjectHideFlags: 0
@@ -8333,6 +8341,7 @@ MonoBehaviour:
   constructManager: {fileID: 913605974}
   towerManager: {fileID: 945080038}
   uiManager: {fileID: 180441133}
+  musicManager: {fileID: 0}
   tilemapLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -8746,6 +8755,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 896ca7c9f85093f478d73dedac3be922, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 2068672434}
+  musicManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
