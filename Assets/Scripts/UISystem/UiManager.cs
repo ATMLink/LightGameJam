@@ -41,6 +41,10 @@ public class UiManager : MonoBehaviour
         TempInitialise();
 
     }
+    public void UpdateState()
+    {
+        waves.text = " " + enemyManager.GetCurrentTurn();
+    }
     //****************************************************************
     //gameover相关属性
     [Header("gameover")]//游戏结束
@@ -331,14 +335,14 @@ public class UiManager : MonoBehaviour
         resources[3].text = "Cu" + " " + _resourceManager.GetResourceNumber(element.cu);
         resources[4].text = "Li" + " " + _resourceManager.GetResourceNumber(element.li);
         resources[5].text = "Cs" + " " + _resourceManager.GetResourceNumber(element.cs);
-
+    }
         //以上在实际应用中传递数值
 
         //波次显示
 
-        waves.text =" "+enemyManager.GetCurrentTurn();
+       
         
-    }
+    
     public void SiNumberChangeShow() {
         if (tempsi < _resourceManager.GetResourceNumber(element.si))
         {

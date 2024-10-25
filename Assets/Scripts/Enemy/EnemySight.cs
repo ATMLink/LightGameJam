@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySight : MonoBehaviour
 {
-    public List<Tower> towerInSight;
+    public List<Tower> towerInSight = new List<Tower>();
 
 
     public void Refresh()

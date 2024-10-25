@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSprite: {fileID: 0}
-  inputManager: {fileID: 1967238063}
+  inputManager: {fileID: 0}
 --- !u!1 &96902152
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +945,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: a85485ef577454a459f827f24c209920, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 1692473481}
-  musicManager: {fileID: 555020838}
+  musicManager: {fileID: 0}
 --- !u!1 &180441130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,8 +1065,8 @@ MonoBehaviour:
   - {fileID: 1854198408}
   retractButton: {fileID: 539828891}
   expandButton: {fileID: 1887000973}
-  waves: {fileID: 0}
-  enemyManager: {fileID: 0}
+  waves: {fileID: 96902154}
+  enemyManager: {fileID: 659915092}
 --- !u!114 &180441134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSprite: {fileID: 0}
-  inputManager: {fileID: 1967238063}
+  inputManager: {fileID: 0}
 --- !u!1 &283721792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: bd246b8ccb3f79947a990ffd90e259e4, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 798115729}
-  musicManager: {fileID: 555020838}
+  musicManager: {fileID: 0}
 --- !u!1 &343316223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,7 +2040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSprite: {fileID: 0}
-  inputManager: {fileID: 1967238063}
+  inputManager: {fileID: 0}
 --- !u!1 &369856518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,8 +2649,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2758,8 +2758,8 @@ MonoBehaviour:
   finishWonderBuild: {fileID: 8300000, guid: 47f798bfbafaf8741a4c0c2199a7ca83, type: 3}
   towerDestroyed: {fileID: 8300000, guid: 123e4adcabae1c44ba82cd5d0a13b673, type: 3}
   destructTower: {fileID: 8300000, guid: 4cc21d27aa8f2e048a6c4f4ab8336d27, type: 3}
-  towerRotate: {fileID: 8300000, guid: 860a0565252b0a949a960f0b74846b69, type: 3}
-  enemyWaveBegin: {fileID: 8300000, guid: bbdbe0a88e355c14985d085993d91842, type: 3}
+  towerRotate: {fileID: 0}
+  enemyWaveBegin: {fileID: 0}
 --- !u!1 &575471094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4123,7 +4123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSprite: {fileID: 0}
-  inputManager: {fileID: 1967238063}
+  inputManager: {fileID: 0}
 --- !u!1 &769547754
 GameObject:
   m_ObjectHideFlags: 0
@@ -4347,7 +4347,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 8f8a519aa44d8554ea12fae8737a4ae1, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 1214024201}
-  musicManager: {fileID: 555020838}
+  musicManager: {fileID: 0}
 --- !u!114 &783167585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4565,11 +4565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474e201309e1afb478253de8235c6be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceManagement: {fileID: 1202425554}
+  resourceManagement: {fileID: 0}
   _light: {fileID: 619394801}
   towerManager: {fileID: 945080038}
   towerPool: {fileID: 864061134}
-  musicManager: {fileID: 555020838}
+  musicManager: {fileID: 0}
 --- !u!1 &940748517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4887,9 +4887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f689b5ea292e67648938362b12a63f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testTower: {fileID: 0}
   towerPool: {fileID: 864061134}
   laserManager: {fileID: 415967692}
-  musicManager: {fileID: 555020838}
+  musicManager: {fileID: 0}
   towers: []
 --- !u!1 &1005225518
 GameObject:
@@ -5111,7 +5112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSprite: {fileID: 0}
-  inputManager: {fileID: 1967238063}
+  inputManager: {fileID: 0}
 --- !u!1 &1096998157
 GameObject:
   m_ObjectHideFlags: 0
@@ -5432,7 +5433,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 38772587}
-  musicManager: {fileID: 555020838}
+  musicManager: {fileID: 0}
 --- !u!1 &1168804920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,6 +5472,7 @@ MonoBehaviour:
   _enemyManager: {fileID: 659915092}
   _laserManager: {fileID: 415967692}
   _musicManager: {fileID: 555020838}
+  resourceManagement: {fileID: 1202425554}
   isPaused: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
 --- !u!4 &1168804922
 Transform:
@@ -8340,7 +8342,7 @@ MonoBehaviour:
   constructManager: {fileID: 913605974}
   towerManager: {fileID: 945080038}
   uiManager: {fileID: 180441133}
-  musicManager: {fileID: 555020838}
+  musicManager: {fileID: 0}
   tilemapLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -8754,7 +8756,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 896ca7c9f85093f478d73dedac3be922, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 2068672434}
-  musicManager: {fileID: 555020838}
+  musicManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

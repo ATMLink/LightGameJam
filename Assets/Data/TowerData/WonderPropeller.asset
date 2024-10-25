@@ -16,9 +16,9 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
   attackSpeed: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
   attackRange: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
-  towerSprite: {fileID: 0}
+  towerSprite: {fileID: 21300000, guid: 6d1c951ab919b0c4cbefbe7588d655ac, type: 3}
   withLight: 0
-  Prefab: {fileID: 6597019955516988515, guid: ffc13e066a21eb647b4513834621a976, type: 3}
+  Prefab: {fileID: 100338661431412229, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
   towerName: WonderPropeller
   nextLevelAttributes: {fileID: 11400000, guid: dba6be536777467499bcbca8f7ab6b29, type: 2}
   elements: 
