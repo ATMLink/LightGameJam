@@ -13,8 +13,12 @@ PrefabInstance:
       value: NormalWall
       objectReference: {fileID: 0}
     - target: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       propertyPath: m_TagString
-      value: TowerWall
+      value: Tower
       objectReference: {fileID: 0}
     - target: {fileID: 205747301775463251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       propertyPath: m_LocalPosition.x
