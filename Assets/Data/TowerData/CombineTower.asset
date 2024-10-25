@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0529adfce856be4fa346244339e3e14, type: 3}
+  m_Name: CombineTower
+  m_EditorClassIdentifier: 
+  health: {fileID: 11400000, guid: 2a0b0c35b5aa2604e91153f88497c5fe, type: 2}
+  damage: {fileID: 11400000, guid: 458db8f50140e4345b6752e8eb4a8123, type: 2}
+  attackSpeed: {fileID: 11400000, guid: 61d3273da4d82bd499d67d89a9ef2ade, type: 2}
+  attackRange: {fileID: 11400000, guid: f69990dfbb9dfb942995e3243fc157e8, type: 2}
+  towerSprite: {fileID: 0}
+  withLight: 0
+  Prefab: {fileID: 43126582279140361, guid: f995dd132783f9a4ca398ce047be2b2a, type: 3}
+  towerName: CombineTower
+  nextLevelAttributes: {fileID: 0}
+  elements: 01000000
+  elementSpendNumber:
+  - 50
