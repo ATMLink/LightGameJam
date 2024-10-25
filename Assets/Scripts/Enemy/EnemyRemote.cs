@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyRemote : Enemy
 {
@@ -17,6 +18,8 @@ public class EnemyRemote : Enemy
 
     private EnemySight sight2;
 
+    [SerializeField]
+    protected string projectileName;
 
 
     //
@@ -99,7 +102,7 @@ public class EnemyRemote : Enemy
                     enemyState = EnemyState.move;
                     return;
                 }
-
+                Debug.Log("attack");
                 Attack(temp);
                 attackCost = maxAttackCost;
                 CaculateAttackCD();
@@ -115,6 +118,15 @@ public class EnemyRemote : Enemy
             onBlock = false;
         }
     }
+
+    protected override void Attack(Tower tower)
+    {
+        // 对敌人造成伤害
+        Projectile pro = ProjectilePool.instance.GetObjFromPool(projectileName);
+        pro.transform.position = transform.position;
+        pro.Launch(tower.transform, currentAttackDamage);
+    }
+
 
     #endregion
 

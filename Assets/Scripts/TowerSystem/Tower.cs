@@ -23,7 +23,7 @@ public class Tower : MonoBehaviour
 
     public MainResourceManagement resourceManagement;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private TowerSight sight1;
+    [SerializeField] protected TowerSight sight1;
 
 
     //测试用
@@ -113,7 +113,6 @@ public class Tower : MonoBehaviour
             Enemy target = FindClosestEnemy();
             if (target != null)
             {
-                Debug.Log("attack");
                 target.OnHit(damage); // 对敌人造成伤害
                 attackTimer = 0f; // 重置攻击计时器
             }
@@ -144,7 +143,7 @@ public class Tower : MonoBehaviour
         Debug.Log($"{gameObject.name} 离开了");
     }
     
-    private Enemy FindClosestEnemy()
+    protected Enemy FindClosestEnemy()
     {
         sight1.Refresh();
 

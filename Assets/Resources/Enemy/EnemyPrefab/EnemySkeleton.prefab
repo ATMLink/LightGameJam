@@ -187,6 +187,7 @@ MonoBehaviour:
   maxGenerateOffset: 100
   DarkSpeedUp: 8
   towerInBlock: []
+  projectileName: EnemyProjectile
 --- !u!50 &2650699530531593539
 Rigidbody2D:
   serializedVersion: 4
