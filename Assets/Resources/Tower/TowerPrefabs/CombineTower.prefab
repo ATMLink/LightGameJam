@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CombineTower
       objectReference: {fileID: 0}
+    - target: {fileID: 100338661431412229, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 205747301775463251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -81,7 +85,7 @@ MonoBehaviour:
   attributes: {fileID: 11400000, guid: a39ac6033fd8c1d449298c91cf77c3d0, type: 2}
   towerID: 0
   resourceManagement: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 7562855030599819979}
   sight1: {fileID: 750466418723023007}
   maxLasers: 7
 --- !u!114 &750466418723023007 stripped
@@ -95,3 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5387691268969804780415f9fbc18a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &7562855030599819979 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7568834130568925383, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+  m_PrefabInstance: {fileID: 143356658041778700}
+  m_PrefabAsset: {fileID: 0}
