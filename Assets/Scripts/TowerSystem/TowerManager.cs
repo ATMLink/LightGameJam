@@ -13,6 +13,8 @@ public class TowerManager : MonoBehaviour
     [SerializeField] private Tower testTower;
     public TowerPool towerPool;
     [SerializeField] private LaserManager laserManager;
+    [SerializeField] private MusicManager musicManager;
+     
     //为了测试公开的
     [SerializeField]
     private List<Tower> towers = new List<Tower>();
@@ -107,6 +109,7 @@ public class TowerManager : MonoBehaviour
     private void StartRotate(Tower tower)
     {
         laserManager.SetLaserActiveForTower(tower, false);
+        musicManager.PlaySound("");
     }
 
     private void EndRotate(Tower tower, bool antiClockwise)

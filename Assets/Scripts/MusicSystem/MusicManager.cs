@@ -10,30 +10,29 @@ public class MusicManager : MonoBehaviour
     public AudioSource audioSource;
 
     // 在 Inspector 中设置各个音效
-    public AudioClip buttonClickSound;
-    public AudioClip explosionSound;
-    public AudioClip backgroundMusic;
+    public AudioClip towerClickSound;
+    public AudioClip battleBGM;
+    public AudioClip winBGM;
+    public AudioClip buttonPassSound;
+    public AudioClip towerAttackBeam;
+    public AudioClip towerAttackShells;
+    public AudioClip beginBuildTower;
+    public AudioClip finishBuildTower;
+    public AudioClip finishWonderBuild;
+    public AudioClip towerDestroyed;
+    public AudioClip destructTower;
 
     public void Initialize()
     {
-        // // 单例模式确保只有一个 MusicManager 实例
-        // if (Instance == null)
-        // {
-        //     Instance = this;
-        //     DontDestroyOnLoad(gameObject);
-        // }
-        // else
-        // {
-        //     Destroy(gameObject);
-        //     return;
-        // }
+        
 
         // 初始化音效字典
         soundClips = new Dictionary<string, AudioClip>
         {
-            { "ButtonClick", buttonClickSound },
-            { "Explosion", explosionSound },
-            { "BackgroundMusic", backgroundMusic }
+            { "TowerClick", towerClickSound },
+            { "WinBGM", winBGM },
+            { "BattleBGM", battleBGM },
+            {"ButtonPass", buttonPassSound}
         };
     }
 
@@ -43,10 +42,6 @@ public class MusicManager : MonoBehaviour
         if (soundClips.ContainsKey(soundName))
         {
             audioSource.PlayOneShot(soundClips[soundName]);
-        }
-        else
-        {
-            Debug.LogWarning($"音效 {soundName} 不存在！");
         }
     }
 
