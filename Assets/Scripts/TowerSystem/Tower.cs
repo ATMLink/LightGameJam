@@ -27,12 +27,12 @@ public class Tower : MonoBehaviour
 
 
     //测试用
-    private void Start()
-    {
-        health = 2000;
-        damage = 10f;
-        attackCooldown = 2f;
-    }
+    //private void Start()
+    //{
+    //    health = 2000;
+    //    damage = 10f;
+    //    attackCooldown = 2f;
+    //}
     //private void Update()
     //{
     //    Attack();
@@ -134,6 +134,9 @@ public class Tower : MonoBehaviour
     {
         health -= damage;
         if (health <= 0)DestroyTower();
+    }
+    public float GetHealth() { 
+        return health; 
     }
 
     public virtual void OnLaserOut(Laser laser)

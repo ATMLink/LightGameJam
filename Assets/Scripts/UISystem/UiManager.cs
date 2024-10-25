@@ -43,6 +43,7 @@ public class UiManager : MonoBehaviour
     }
     public void UpdateState()
     {
+        UpdateHP();
         waves.text = " " + enemyManager.GetCurrentTurn();
     }
     //****************************************************************
@@ -207,7 +208,9 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button clockwiseButton;
     [SerializeField] private Button anticlockwiseButton;
     [SerializeField] private Button deleteButton;
-    
+    TextMeshProUGUI HPtext;
+
+
 
     private Tower selectedTower;
 
@@ -244,8 +247,7 @@ public class UiManager : MonoBehaviour
         anticlockwiseButton.onClick.AddListener(OnAnticlockwiseButtonClicked);
         deleteButton.onClick.AddListener(OnDeleteButtonClicked);
         showTowerMenu.gameObject.SetActive(true);
-        TextMeshProUGUI HPtext = showTowerMenu.gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        HPtext.text = "HP:" + tower.attributes.health.Value;
+        HPtext = showTowerMenu.gameObject.GetComponentInChildren<TextMeshProUGUI>();
     }
     void OnCloseTowerMenuClicked()
     {
@@ -289,6 +291,14 @@ public class UiManager : MonoBehaviour
             selectedTower = null;
         }
             
+    }
+    private void UpdateHP()
+    {
+        if (showTowerMenu.gameObject.activeInHierarchy)
+        {
+            
+        
+        HPtext.text = "HP:" + selectedTower.gameObject.GetComponent<Tower>().GetHealth();}
     }
 
 
