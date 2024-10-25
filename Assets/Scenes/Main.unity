@@ -3054,6 +3054,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fieldList:
   - {fileID: 1331573788}
+  - {fileID: 1331573788}
+  - {fileID: 1331573788}
+  - {fileID: 1331573788}
   difficultLevel: 1
   maxRestCD: 5
   currentTurn: 0

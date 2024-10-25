@@ -20,7 +20,7 @@ MonoBehaviour:
   withLight: 1
   Prefab: {fileID: 3770614878429186850, guid: 4cfa1357a930b734d98f48bbdb8a9af8, type: 3}
   towerName: MIner
-  nextLevelAttributes: {fileID: 0}
+  nextLevelAttributes: {fileID: 11400000, guid: fa629e0409419e740b4aa428eb3cb37e, type: 2}
   elements: 01000000
   elementSpendNumber:
   - 200
