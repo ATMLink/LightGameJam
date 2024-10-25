@@ -123,12 +123,9 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public virtual List<Laser> OnLaserHit(Laser laser)
+    public virtual void OnLaserHit(Laser laser)
     {
         Debug.Log($"{gameObject.name} 被激光击中了");
-        // receivedLasers.Add(laser);
-        // return receivedLasers;
-        return receivedLasers;
     }
     
     
@@ -138,10 +135,9 @@ public class Tower : MonoBehaviour
         if (health <= 0)DestroyTower();
     }
 
-    public virtual List<Laser> OnLaserOut(Laser laser)
+    public virtual void OnLaserOut(Laser laser)
     {
         Debug.Log($"{gameObject.name} 离开了");
-        return null;
     }
     
     private Enemy FindClosestEnemy()
@@ -164,6 +160,31 @@ public class Tower : MonoBehaviour
         return closestEnemy;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 检查碰撞的对象是否是 Laser，并且是否带有 "Laser" 标签
+        if (collision.CompareTag("Laser"))
+        {
+            Laser laser = collision.GetComponent<Laser>();
+            if (laser != null)
+            {
+                // 调用塔的 OnLaserHit 方法处理激光击中
+                OnLaserHit(laser);
+            }
+        }
+    }
     
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Laser"))
+        {
+            Laser laser = collision.GetComponent<Laser>();
+            if (laser != null)
+            {
+                // 调用塔的 OnLaserHit 方法处理激光击中
+                OnLaserOut(laser);
+            }
+        }
+    }
     
 }

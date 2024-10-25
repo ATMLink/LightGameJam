@@ -3204,7 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0ccc8503fb3314bb9dd58210454153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 5102841807158000920, guid: e6c0bdcf0f559aa4f97dae01c1b93d45, type: 3}
+  laserPrefab: {fileID: 801038782662623395, guid: 93c40ec57bb17354db658361dd4b9717, type: 3}
   initialPoolSize: 8
 --- !u!1 &708461168
 GameObject:
@@ -4651,8 +4651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f689b5ea292e67648938362b12a63f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testTower: {fileID: 0}
   towerPool: {fileID: 864061134}
   laserManager: {fileID: 415967692}
+  towers: []
 --- !u!1 &1005225518
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,13 +23,11 @@ public class MinerTower : Tower
         UpdateLaserIntensity();
         Generate();
     }
-    public override List<Laser> OnLaserHit(Laser laser)
+    public override void OnLaserHit(Laser laser)
     {
-        if (receivedLasers.Count <= 0)
-        {
-            receivedLasers.Add(laser);
-        }
-        return receivedLasers;
+        if (laser.sourceTower == this)
+            return;
+        receivedLasers.Add(laser);
     }
     public void UpdateLaserIntensity()
     {
