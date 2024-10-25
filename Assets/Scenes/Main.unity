@@ -945,7 +945,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: a85485ef577454a459f827f24c209920, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 1692473481}
-  musicManager: {fileID: 0}
+  musicManager: {fileID: 555020838}
 --- !u!1 &180441130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: bd246b8ccb3f79947a990ffd90e259e4, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 798115729}
-  musicManager: {fileID: 0}
+  musicManager: {fileID: 555020838}
 --- !u!1 &343316223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4347,7 +4347,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 8f8a519aa44d8554ea12fae8737a4ae1, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 1214024201}
-  musicManager: {fileID: 0}
+  musicManager: {fileID: 555020838}
 --- !u!114 &783167585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4569,7 +4569,7 @@ MonoBehaviour:
   _light: {fileID: 619394801}
   towerManager: {fileID: 945080038}
   towerPool: {fileID: 864061134}
-  musicManager: {fileID: 0}
+  musicManager: {fileID: 555020838}
 --- !u!1 &940748517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4887,10 +4887,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f689b5ea292e67648938362b12a63f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testTower: {fileID: 0}
   towerPool: {fileID: 864061134}
   laserManager: {fileID: 415967692}
-  musicManager: {fileID: 0}
+  musicManager: {fileID: 555020838}
   towers: []
 --- !u!1 &1005225518
 GameObject:
@@ -5433,7 +5432,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 38772587}
-  musicManager: {fileID: 0}
+  musicManager: {fileID: 555020838}
 --- !u!1 &1168804920
 GameObject:
   m_ObjectHideFlags: 0
@@ -8342,7 +8341,7 @@ MonoBehaviour:
   constructManager: {fileID: 913605974}
   towerManager: {fileID: 945080038}
   uiManager: {fileID: 180441133}
-  musicManager: {fileID: 0}
+  musicManager: {fileID: 555020838}
   tilemapLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -8756,7 +8755,7 @@ MonoBehaviour:
   towerAttributes: {fileID: 11400000, guid: 896ca7c9f85093f478d73dedac3be922, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 2068672434}
-  musicManager: {fileID: 0}
+  musicManager: {fileID: 555020838}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
