@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 205747301775463251}
-  - component: {fileID: 8267522509092451530}
+  - component: {fileID: -4966153711465308936}
   - component: {fileID: 7867459719826588639}
   - component: {fileID: 7568834130568925383}
   - component: {fileID: 8277901072605045474}
   m_Layer: 8
-  m_Name: WonderPropeller
+  m_Name: WonderLaser
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 3366522488626588461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8267522509092451530
+--- !u!114 &-4966153711465308936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bcea1aa8d5dcc4f98992d58e859702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes: {fileID: 11400000, guid: 22573743c340e1e48a48ecf251808311, type: 2}
+  attributes: {fileID: 11400000, guid: 66a662b893f1db64582b3bbf9d35d928, type: 2}
   towerID: 0
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 0}
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 6d1c951ab919b0c4cbefbe7588d655ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30911ad39f862274c9e234212882fa7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
