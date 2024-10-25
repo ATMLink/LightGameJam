@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0529adfce856be4fa346244339e3e14, type: 3}
-  m_Name: WonderPropeller
+  m_Name: WonderSun_Fixed
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
   damage: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
   attackSpeed: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
   attackRange: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
-  towerSprite: {fileID: 21300000, guid: 6d1c951ab919b0c4cbefbe7588d655ac, type: 3}
-  withLight: 0
-  Prefab: {fileID: 100338661431412229, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
-  towerName: WonderPropeller
-  nextLevelAttributes: {fileID: 11400000, guid: dba6be536777467499bcbca8f7ab6b29, type: 2}
+  towerSprite: {fileID: 0}
+  withLight: 1
+  Prefab: {fileID: 100338661431412229, guid: 2831106a4f5a05a4d83277228224b1e2, type: 3}
+  towerName: WonderSun_Fixed
+  nextLevelAttributes: {fileID: 0}
   elements: 
   elementSpendNumber: []

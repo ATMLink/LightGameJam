@@ -54,7 +54,10 @@ public class Enemy_Creeper : Enemy
         {
             foreach (var tower in sight2.towerInSight)
             {
-                tower.OnHit((int)boomDamage);
+                if (tower.gameObject.activeInHierarchy == true)
+                {
+                    tower.OnHit((int)boomDamage);
+                }
             }
 
             foreach (var enemy in sight2.enemyInSight)

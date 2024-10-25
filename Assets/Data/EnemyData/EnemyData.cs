@@ -72,7 +72,7 @@ public static class EnemyData
     public static float globleHealthValue = 1f;
     public static float globleAttackSpeedValue = 1f;
     public static float globleAttackRangeValue = 1f;
-    public static float globleMoveSpeedValue = 0.1f;
+    public static float globleMoveSpeedValue = 1f;
 
 
 

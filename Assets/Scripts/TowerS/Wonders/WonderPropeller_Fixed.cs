@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.WSA;
 
-public class WonderPropeller_Fixed : Tower
+public class WonderPropeller_Fixed : Wonder
 {
 
-    [SerializeField] private PropellerForceColider force;
+    [SerializeField] private PropellerForceCollider force;
 
 
-    private float maxAdvanceCD = 15;
-    private float advanceCD = 15;
+    private float maxAdvanceCD = 12;
+    private float advanceCD = 12;
 
+
+    protected override void Update()
+    {
+        base.Update();
+        UpdateState();
+    }
 
 
     public override void UpdateState()
@@ -21,6 +28,8 @@ public class WonderPropeller_Fixed : Tower
         }
         else
         {
+            Launch();
+            Debug.Log("Launch!");
             advanceCD = maxAdvanceCD;
         }
     }
@@ -28,7 +37,7 @@ public class WonderPropeller_Fixed : Tower
 
     private void Launch()
     {
-        force.Launch();
+        force.gameObject.SetActive(true);
     }
 
 

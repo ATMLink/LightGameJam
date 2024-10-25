@@ -25,13 +25,13 @@ public class Tower : MonoBehaviour
     [SerializeField] private TowerSight sight1;
 
 
-    ////测试用
-    //private void Start()
-    //{
-    //    health = 2000;
-    //    damage = 10f;
-    //    attackCooldown = 2f;
-    //}
+    //测试用
+    private void Start()
+    {
+        health = 2000;
+        damage = 10f;
+        attackCooldown = 2f;
+    }
     //private void Update()
     //{
     //    Attack();
@@ -83,7 +83,7 @@ public class Tower : MonoBehaviour
         receivedLasers.Clear();
     }
 
-    public void Upgrade()
+    public virtual void Upgrade()
     {
         if (attributes.nextLevelAttributes != null)
         {
@@ -96,9 +96,9 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public void DestroyTower()
+    public virtual void DestroyTower()
     {
-        sight1.Clear();
+        sight1.EnemyInSight.Clear();
         gameObject.SetActive(false); // 将塔移回对象池
     }
 
