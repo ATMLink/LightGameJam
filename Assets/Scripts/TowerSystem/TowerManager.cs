@@ -129,7 +129,7 @@ public class TowerManager : MonoBehaviour
 
     private void StartRotate(Tower tower)
     {
-        if (tower.name == "SplitterTower")
+        if (tower.attributes.towerName == "SplitterTower")
             return;
         laserManager.SetLaserActiveForTower(tower, false);
         if (musicManager != null)
@@ -138,7 +138,7 @@ public class TowerManager : MonoBehaviour
 
     private void EndRotate(Tower tower, bool antiClockwise)
     {
-        if (tower.name == "SplitterTower")
+        if (tower.attributes.towerName == "SplitterTower")
         {
             Debug.Log("splitter tower laser should not rotate");
             return;
