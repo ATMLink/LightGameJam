@@ -120,6 +120,7 @@ public class Laser : MonoBehaviour
         // 根据碰撞对象的 Layer 进行检查
         int enemyLayer = LayerMask.NameToLayer("Enemy");
         int towerLayer = LayerMask.NameToLayer("TowerWall");
+        int receiverLayer = LayerMask.NameToLayer("LaseerReceiver");
 
         if (hit.collider.gameObject.layer == enemyLayer)
         {
@@ -134,6 +135,11 @@ public class Laser : MonoBehaviour
                 
                 return hit.point;
             }
+        }
+        else if (hit.collider.gameObject.layer == receiverLayer)
+        {
+            hitEffect.gameObject.SetActive(false);
+            return AdjustEndPoint(hit, laserDirection);
         }
         else if (hit.collider.GetComponent<TilemapFeature>()?.canLightThrough == true)
         {
@@ -154,7 +160,7 @@ public class Laser : MonoBehaviour
 private Vector3 AdjustEndPoint(RaycastHit2D hit, Vector2 laserDirection)
 {
     Vector3 hitPoint = hit.point;
-    float offsetDistance = 0.1f;
+    float offsetDistance = -0.1f;
 
     // Debug.Log($"Adjusting endpoint from {hitPoint} with offset {offsetDistance} in direction {laserDirection}");
 

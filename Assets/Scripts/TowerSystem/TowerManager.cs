@@ -36,7 +36,7 @@ public class TowerManager : MonoBehaviour
         {
         yield return new WaitForSeconds(1);//等1秒
         Debug.Log("调用协程创建核心塔中");
-        this.AddTower(new Vector3(-1.5f, 1.5f, 0), coreTower);
+        AddTower(new Vector3(-1.5f, 1.5f, 0), coreTower);
 
         }
 
@@ -128,16 +128,24 @@ public class TowerManager : MonoBehaviour
         }
 
     private void StartRotate(Tower tower)
-        {
+    {
+        if (tower.attributes.towerName == "SplitterTower")
+            return;
         laserManager.SetLaserActiveForTower(tower, false);
         if (musicManager != null)
             musicManager.PlaySound("TowerRotate");
-        }
+    }
 
     private void EndRotate(Tower tower, bool antiClockwise)
+    {
+        if (tower.attributes.towerName == "SplitterTower")
         {
+            Debug.Log("splitter tower laser should not rotate");
+            return;
+        }
+            
         laserManager.SetLaserActiveForTower(tower, true);
         laserManager.RotateLaser(tower, antiClockwise);
-        }
+    }
 
     }

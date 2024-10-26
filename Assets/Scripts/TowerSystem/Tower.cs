@@ -22,6 +22,7 @@ public class Tower : MonoBehaviour
     protected List<Laser> receivedLasers;
 
     public MainResourceManagement resourceManagement;
+    protected LaserManager laserManager;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] protected TowerSight sight1;
 
@@ -76,6 +77,7 @@ public class Tower : MonoBehaviour
         }
 
         towerID = towerIDCounter++;
+        laserManager = FindObjectOfType<LaserManager>();
         
         gameObject.SetActive(true);
     }
@@ -113,7 +115,8 @@ public class Tower : MonoBehaviour
 
     public virtual void DestroyTower()
     {
-        sight1.EnemyInSight.Clear();
+        ResetAttributes();
+        laserManager.RemoveLaser(this);
         gameObject.SetActive(false); // 将塔移回对象池
     }
 
