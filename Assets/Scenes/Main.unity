@@ -5327,7 +5327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &802670699
 Transform:
   m_ObjectHideFlags: 0
@@ -5451,6 +5451,7 @@ MonoBehaviour:
   _light: {fileID: 619394801}
   towerManager: {fileID: 945080038}
   towerPool: {fileID: 864061134}
+  _laserManager: {fileID: 415967692}
   musicManager: {fileID: 0}
 --- !u!1 &940748517
 GameObject:

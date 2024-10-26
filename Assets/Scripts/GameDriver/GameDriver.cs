@@ -16,6 +16,7 @@ public class GameDriver : MonoBehaviour
     [SerializeField] private LaserManager _laserManager;
     [SerializeField] private MusicManager _musicManager;
     [SerializeField] private MainResourceManagement resourceManagement;
+
     
     // 游戏状态变量
     [Header("Variables")]

@@ -11,6 +11,7 @@ public class ConstructManager : MonoBehaviour
     public Light2D _light;
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private TowerPool towerPool;
+    [SerializeField] private LaserManager _laserManager;
 
     [SerializeField] private MusicManager musicManager;
     //[SerializeField] private LightSystem lightSystem;
@@ -37,6 +38,7 @@ public class ConstructManager : MonoBehaviour
                 towerManager.AddTower(position, selectedTowerAttributes);
                 if(musicManager != null)
                     musicManager.PlaySound("FinishBuildTower");
+                //_laserManager.UpdateState();
             }
             else
             {
