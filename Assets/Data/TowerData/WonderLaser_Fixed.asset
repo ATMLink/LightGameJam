@@ -21,5 +21,6 @@ MonoBehaviour:
   Prefab: {fileID: 100338661431412229, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
   towerName: WonderLaser_Fixed
   nextLevelAttributes: {fileID: 0}
-  elements: 
-  elementSpendNumber: []
+  elements: 01000000
+  elementSpendNumber:
+  - 2000

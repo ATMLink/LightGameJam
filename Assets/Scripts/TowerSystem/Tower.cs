@@ -144,6 +144,7 @@ public class Tower : MonoBehaviour
 
     public virtual void OnLaserHit(Laser laser)
     {
+        Invoke("Check", 0.1f);
         Debug.Log($"{gameObject.name} 被激光击中了");
     }
     
@@ -159,6 +160,7 @@ public class Tower : MonoBehaviour
 
     public virtual void OnLaserOut(Laser laser)
     {
+        Invoke("Check", 0.1f);
         Debug.Log($"{gameObject.name} 离开了");
     }
     
