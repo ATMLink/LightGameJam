@@ -102,7 +102,7 @@ public class EnemyRemote : Enemy
                     enemyState = EnemyState.move;
                     return;
                 }
-                Debug.Log("attack");
+                //Debug.Log("attack");
                 Attack(temp);
                 attackCost = maxAttackCost;
                 CaculateAttackCD();
