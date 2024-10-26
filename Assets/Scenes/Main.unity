@@ -6552,7 +6552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2070ae943bf454086a709de5657882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerAttributes: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
+  towerAttributes: {fileID: 11400000, guid: e8b3409280e26e74b80f8833c056e9b5, type: 2}
   inputManager: {fileID: 1967238063}
   informationImage: {fileID: 38772587}
   musicManager: {fileID: 0}

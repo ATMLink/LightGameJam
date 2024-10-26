@@ -12,7 +12,7 @@ private float maxTotalIntensity = 100f;
 private float updateInterval = 0.1f; // 每隔0.1秒更新一次激光强度
 private float lastUpdateTime = 0f;
 
-private LaserManager laserManager;
+// private LaserManager laserManager;
 
 public override void Initialize()
 {
@@ -41,12 +41,15 @@ public override void ResetAttributes()
 
 public override void OnLaserHit(Laser laser)
 {
-    if (laser.sourceTower == this)
+    // if (laser.sourceTower == this)
+    // {
+    //     Debug.Log("激光来自本塔，不执行OnLaserHit处理。");
+    //     return;
+    // }
+    if (!receivedLasers.Contains(laser))
     {
-        Debug.Log("激光来自本塔，不执行OnLaserHit处理。");
-        return;
+        receivedLasers.Add(laser);
     }
-    
 
     if (receivedLasers.Count == 1||(laserManager.GetLaserForTower(this) == null && receivedLasers.Count == 2)) // 只在接收到一条激光时生成分光
     {
@@ -84,7 +87,6 @@ public override void OnLaserOut(Laser laser)
 public void UpdateLaserIntensity()
 {
     totalIntensity = 0;
-
     foreach (var receivedLaser in receivedLasers)
     {
         totalIntensity += receivedLaser.intensity;
@@ -95,7 +97,7 @@ public void UpdateLaserIntensity()
         totalIntensity = maxTotalIntensity;
     }
 
-    Debug.Log($"分光器总接收强度: {totalIntensity}");
+    Debug.Log($"分光器总接收强度: {totalIntensity} (接收的激光数量: {receivedLasers.Count})");
 
     float emittedIntensity = totalIntensity / numberOfLasers;
     Debug.Log($"分光器发出的激光强度: {emittedIntensity}");

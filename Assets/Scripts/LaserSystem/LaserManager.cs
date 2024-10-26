@@ -103,19 +103,27 @@ public class LaserManager : MonoBehaviour
             // 旋转角度，逆时针为正，顺时针为负
             float angle = antiClockwise ? 45f : -45f;
 
-            // 遍历所有激光，更新每个激光的方向
+            // 遍历所有激光，更新每个激光的方向和起点
             foreach (Laser laser in lasers)
             {
                 if (laser != null)
                 {
-                    // 获取激光当前的方向
+                    // 获取激光当前的方向和起点
                     Vector3 currentDirection = laser.direction;
+                    Vector3 laserPosition = laser.transform.position;
+                
+                    // 获取塔的中心位置
+                    Vector3 towerCenter = tower.transform.position;
 
-                    // 计算新的旋转角度（绕Z轴旋转2D平面中的方向）
+                    // 计算激光起点相对于塔中心的偏移
+                    Vector3 offset = laserPosition - towerCenter;
+
+                    // 计算新的偏移方向和新的激光方向
+                    Vector3 newOffset = Quaternion.Euler(0, 0, angle) * offset;
                     Vector3 newDirection = Quaternion.Euler(0, 0, angle) * currentDirection;
 
-                    // 更新激光的方向
-                    laser.UpdateLaserPositionAndDirection(laser.transform.position, newDirection);
+                    // 更新激光的起点位置和方向
+                    laser.UpdateLaserPositionAndDirection(towerCenter + newOffset, newDirection);
                 }
             }
         }

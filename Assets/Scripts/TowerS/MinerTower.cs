@@ -12,7 +12,7 @@ public class MinerTower : Tower
     float medaltime = 0;
     float sitime = 0;
     private float totalIntensity = 0;
-    private LaserManager laserManager;
+    // private LaserManager laserManager;
     public override void Initialize()
     {
         base.Initialize();
