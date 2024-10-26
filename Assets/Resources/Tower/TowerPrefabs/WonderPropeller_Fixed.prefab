@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 287998320572791214}
   m_Layer: 11
   m_Name: force
-  m_TagString: Tower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
