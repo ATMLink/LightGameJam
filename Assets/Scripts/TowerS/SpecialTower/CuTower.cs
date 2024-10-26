@@ -14,6 +14,7 @@ public class CuTower : Tower
     public override void Attack()
     {
         DamageTest();
+        if (!canAttack) return;
         if (attackTimer < attackCooldown)attackTimer += Time.deltaTime; // 增加计时器
         if (sight1.EnemyInSight.Count > 0)
         {
@@ -39,7 +40,6 @@ public class CuTower : Tower
 
     protected virtual void DamageTest()
     {
-        if (!canAttack) return;
     }
 
     public override void OnLaserHit(Laser laser)
@@ -50,7 +50,7 @@ public class CuTower : Tower
         }
         if (!canAttack)
         {
-            float inten = 0;
+            float inten = -400;
             foreach (var lasr in receivedLasers)
             {
                 inten += lasr.intensity;
