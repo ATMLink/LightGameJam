@@ -102,7 +102,7 @@ public class EnemyRemote : Enemy
                     enemyState = EnemyState.move;
                     return;
                 }
-                Debug.Log("attack");
+                //Debug.Log("attack");
                 Attack(temp);
                 attackCost = maxAttackCost;
                 CaculateAttackCD();
@@ -134,7 +134,7 @@ public class EnemyRemote : Enemy
 
     protected override void FixAttack()
     {
-        if (onBlock == true)
+        if (onBlock == true || targetPoint == null)
         {
             SetMainVelocity(0);
         }

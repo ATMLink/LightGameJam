@@ -86,12 +86,6 @@ public class Enemy_Witch : EnemyRemote
     }
 
 
-    protected override void FixAttack()
-    {
-        base.FixAttack();
-    }
-
-
     private void GenerateEnemy(string name)
     {
         GameObject enemy = EnemyPool.instance.GetEnemyFromPool(name);

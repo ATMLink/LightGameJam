@@ -10,7 +10,7 @@ public class Enemy : EnemyBase
 
     protected Material material;
     private float flashDuration = 0.1f;
-
+    [SerializeField]
     protected Rigidbody2D rigid;
     protected new PolygonCollider2D collider;
     protected EnemySight sight1;    
@@ -372,13 +372,15 @@ public class Enemy : EnemyBase
         {
             if (DarkSpeedUp == 0)
             {
-                rigid.velocity = v * currentMoveSpeed
+                rigid.velocity = 
+                    v * currentMoveSpeed
                     * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized
                     * environmentSpeed * landmarkSpeed;
             }
             else
             {
-                rigid.velocity = DarkSpeedUp
+                rigid.velocity = 
+                    DarkSpeedUp
                     * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized
                     * environmentSpeed * landmarkSpeed * 1 / 4;
             }

@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: enemy_Witch
   enemyType: 1
+  rigid: {fileID: 2650699530531593539}
   maxGenerateOffset: 50
   DarkSpeedUp: 8
   towerInBlock: []

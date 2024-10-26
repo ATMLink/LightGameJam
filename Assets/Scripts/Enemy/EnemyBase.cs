@@ -19,7 +19,7 @@ public class EnemyBase : MonoBehaviour
     protected float currentAttackDamage;
     protected float currentAttackSpeed;
     protected float currentAttackRange;
-    protected float currentMoveSpeed;
+    protected float currentMoveSpeed = 0;
     protected int currentPriority;
 
 }

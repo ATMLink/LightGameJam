@@ -184,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: enemy_Skeleton
   enemyType: 1
+  rigid: {fileID: 2650699530531593539}
   maxGenerateOffset: 100
   DarkSpeedUp: 8
   towerInBlock: []

@@ -26,7 +26,7 @@ public class TowerPool : MonoBehaviour
     }
 
     private Tower CreateNewTower(Tower towerPrefab)
-    {
+    {   
 
         Tower newTower = Instantiate(towerPrefab);
         newTower.gameObject.SetActive(false);

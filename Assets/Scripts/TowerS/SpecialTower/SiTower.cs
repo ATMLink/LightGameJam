@@ -30,6 +30,12 @@ public class SiTower : TowerProjectile
     }
     protected override void DamageTest()
     {
+        float inten = 0;
+        foreach (var lasr in receivedLasers)
+        {
+            inten += lasr.intensity;
+        }
+        Debug.Log(inten);
         if (!canAttack) return;
     }
 
