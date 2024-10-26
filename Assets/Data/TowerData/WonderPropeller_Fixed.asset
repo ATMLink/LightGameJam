@@ -21,5 +21,6 @@ MonoBehaviour:
   Prefab: {fileID: 100338661431412229, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
   towerName: WonderPropeller_Fixed
   nextLevelAttributes: {fileID: 0}
-  elements: 
-  elementSpendNumber: []
+  elements: 01000000
+  elementSpendNumber:
+  - 1000

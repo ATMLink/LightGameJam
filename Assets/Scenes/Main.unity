@@ -643,6 +643,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7568834130568925383, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -858,8 +862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2513471c8d2684abc29307d0bdb460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 0}
-  inputManager: {fileID: 0}
+  hoverSprite: {fileID: 1501751081}
+  inputManager: {fileID: 1967238063}
 --- !u!114 &82681342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2292,8 +2296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 226.49417, y: 304.46765}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 226.76971, y: 305.8456}
+  m_SizeDelta: {x: 350.7888, y: 212.9927}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &324808561
 MonoBehaviour:
@@ -4060,7 +4064,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 16.058138
+  m_PointLightOuterRadius: 7.1440125
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -4079,7 +4083,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619394800}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.44463986, w: 0.89570946}
+  m_LocalRotation: {x: 0, y: 0, z: -0.4686928, w: 0.8833613}
   m_LocalPosition: {x: -1.33, y: 1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6293,8 +6297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2513471c8d2684abc29307d0bdb460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 0}
-  inputManager: {fileID: 0}
+  hoverSprite: {fileID: 324808561}
+  inputManager: {fileID: 1967238063}
 --- !u!114 &1092552482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8448,8 +8452,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 305.92084, y: 304.46765}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 305.6453, y: 306.39682}
+  m_SizeDelta: {x: 350.7889, y: 209.6857}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1501751081
 MonoBehaviour:
@@ -10363,6 +10367,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
+      propertyPath: resourceManagement
+      value: 
+      objectReference: {fileID: 1202425554}
     - target: {fileID: 100338661431412229, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
       propertyPath: m_Name
       value: WonderLaser
@@ -11290,6 +11298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
+      propertyPath: resourceManagement
+      value: 
+      objectReference: {fileID: 1202425554}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -30,9 +30,14 @@ public class Wonder : Tower
 
     public override void Upgrade()
     {
-        GameObject t2 = Instantiate(attributes.nextLevelAttributes.Prefab, transform.position, Quaternion.identity);
-        t2.GetComponent<Wonder>().Initialize();
-        Destroy(gameObject);
+        
+        if (resourceManagement.JudgeAfford(element.si, 1000))
+        {
+            resourceManagement.SpendResoure(element.si, 1000);
+            GameObject t2 = Instantiate(attributes.nextLevelAttributes.Prefab, transform.position, Quaternion.identity);
+            t2.GetComponent<Wonder>().Initialize();
+            Destroy(gameObject);
+        }
     }
 
 
