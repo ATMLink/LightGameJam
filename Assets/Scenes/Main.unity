@@ -4146,7 +4146,7 @@ MonoBehaviour:
   - {fileID: 1331573788}
   musicManager: {fileID: 0}
   difficultLevel: 1
-  maxRestCD: 5
+  maxRestCD: 60
   currentTurn: 0
 --- !u!114 &659915093
 MonoBehaviour:

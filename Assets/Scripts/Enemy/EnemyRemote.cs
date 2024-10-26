@@ -134,7 +134,7 @@ public class EnemyRemote : Enemy
 
     protected override void FixAttack()
     {
-        if (onBlock == true)
+        if (onBlock == true || targetPoint == null)
         {
             SetMainVelocity(0);
         }
