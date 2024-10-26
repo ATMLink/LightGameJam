@@ -10,6 +10,10 @@ public class SiTower : TowerProjectile
     public override void Attack()
     {
         DamageTest();
+        if (!canAttack)
+        {
+            return;
+        }
         if (sight1.EnemyInSight.Count > 0 && attackTimer >= attackCooldown)
         {
             // 攻击最近的敌人
@@ -30,13 +34,7 @@ public class SiTower : TowerProjectile
     }
     protected override void DamageTest()
     {
-        float inten = 0;
-        foreach (var lasr in receivedLasers)
-        {
-            inten += lasr.intensity;
-        }
-        Debug.Log(inten);
-        if (!canAttack) return;
+        
     }
 
 
@@ -48,11 +46,13 @@ public class SiTower : TowerProjectile
         }
         if (!canAttack)
         {
-            float inten = 0;
+            float inten = -400;
             foreach (var lasr in receivedLasers)
             {
                 inten += lasr.intensity;
             }
+
+            Debug.Log(inten);
             if (inten >= 20f)
             {
                 canAttack = true;
