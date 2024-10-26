@@ -14,6 +14,7 @@ public class TowerProjectile : Tower
     public override void Attack()
     {
         DamageTest();
+        if (!canAttack) return;
         if (sight1.EnemyInSight.Count > 0 && attackTimer >= attackCooldown)
         {
             // 攻击最近的敌人
@@ -35,7 +36,7 @@ public class TowerProjectile : Tower
 
     protected virtual void DamageTest()
     {
-        if (!canAttack) return;
+        //弃用
     }
 
 
@@ -47,7 +48,7 @@ public class TowerProjectile : Tower
         }
         if (!canAttack)
         {
-            float inten = 0;
+            float inten = -400;
             foreach (var lasr in receivedLasers)
             {
                 inten += lasr.intensity;

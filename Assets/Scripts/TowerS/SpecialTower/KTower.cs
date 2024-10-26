@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KTower : TowerProjectile
 {
+
     public override void OnLaserHit(Laser laser)
     {
         if (receivedLasers != null)
@@ -12,12 +13,13 @@ public class KTower : TowerProjectile
         }
         if (!canAttack)
         {
-            float inten = 0;
+            float inten = -400;
             foreach (var lasr in receivedLasers)
             {
                 inten += lasr.intensity;
             }
-            if (inten > 20f) canAttack = true;
+            if (inten > 30f) canAttack = true;
         }
     }
+
 }

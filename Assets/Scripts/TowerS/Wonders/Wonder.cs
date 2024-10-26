@@ -32,7 +32,6 @@ public class Wonder : Tower
     {
         GameObject t2 = Instantiate(attributes.nextLevelAttributes.Prefab, transform.position, Quaternion.identity);
         t2.GetComponent<Wonder>().Initialize();
-
         Destroy(gameObject);
     }
 
