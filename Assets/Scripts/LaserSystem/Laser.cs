@@ -236,7 +236,6 @@ public class Laser : MonoBehaviour
     private BoxCollider2D boxCollider2D;
     private bool isActive = true; // 激光是否有效
 
-    [SerializeField]
     private List<GameObject> hitObj = new List<GameObject>();
     [SerializeField]
     private TextMeshProUGUI textMeshProUGUI;
@@ -434,6 +433,12 @@ public class Laser : MonoBehaviour
     {
         intensity = newIntensity;
         direction = newDirection;
+        UpdateLaser();
+    }
+
+    public void SetLaserIntensity(float newIntensity)
+    {
+        intensity = newIntensity;
         UpdateLaser();
     }
 
