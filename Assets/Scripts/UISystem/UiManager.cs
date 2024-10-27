@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 using UnityEngine.EventSystems;
 using TMPro;
+using System.Threading;
 
 
 public class UiManager : MonoBehaviour
@@ -39,6 +40,7 @@ public class UiManager : MonoBehaviour
         closeIntroduction.onClick.AddListener(OnCloseIntroduction);
         UpdateResources();
         TempInitialise();
+        StartCountdown();
 
     }
     public void UpdateState()
@@ -459,5 +461,53 @@ public class UiManager : MonoBehaviour
         }
         UpdateResources();
     }
-    
+
+
+
+
+    [Header("Countdown")] 
+    [SerializeField] private float countdownTime = 120.0f; // 设置倒计时时间  
+    [SerializeField] private TextMeshProUGUI countdownText; // 引用用于显示倒计时的UI Text元素  
+
+    private bool isCountingDown = false;
+
+    // 开始倒计时  
+    public void StartCountdown()
+    {
+        if (!isCountingDown)
+        {
+            isCountingDown = true;
+            StartCoroutine(Countdown());
+        }
+    }
+
+    // 停止倒计时  
+    public void StopCountdown()
+    {
+        StopAllCoroutines();
+        isCountingDown = false;
+    }
+
+    // 协程实现倒计时  
+    private IEnumerator Countdown()
+    {
+        while (countdownTime > 0)
+        {
+            if (countdownText != null)
+            {
+                countdownText.text = countdownTime.ToString("F0"); // 显示倒计时时间，保留整数部分  
+            }
+            yield return new WaitForSeconds(1.0f); // 等待1秒  
+            countdownTime -= 1.0f;
+        }
+
+        if (countdownText != null)
+        {
+            countdownText.text = "Enemy is coming!!";// 倒计时结束
+            yield return new WaitForSeconds(3.0f);
+            countdownText.gameObject.SetActive(false);
+        }
+
+        isCountingDown = false; // 重置状态  
+    }
 }
