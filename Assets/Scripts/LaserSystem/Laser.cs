@@ -346,12 +346,12 @@ public class Laser : MonoBehaviour
 
 
         hitEffect.gameObject.SetActive(false);
-        Debug.Log("!!!");
+        //Debug.Log("!!!");
         RaycastHit2D hit = Physics2D.Raycast(laserOrigin, laserDirection, laserDistance, layerMask);
 
         if (hit.collider != null)
         {
-            Debug.Log($"Hit detected at: {hit.point} with collider: {hit.collider.name}");
+            //Debug.Log($"Hit detected at: {hit.point} with collider: {hit.collider.name}");
 
             // 根据碰撞对象的 Layer 进行检查
             int enemyLayer = LayerMask.NameToLayer("Enemy");

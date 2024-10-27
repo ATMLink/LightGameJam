@@ -9,15 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8930318688051261028}
-  - component: {fileID: 4947724254664271184}
-  - component: {fileID: 6365452140072486238}
+  - component: {fileID: 2542697640511125778}
+  - component: {fileID: 585344555832725745}
   m_Layer: 11
   m_Name: sight1
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8930318688051261028
 Transform:
   m_ObjectHideFlags: 0
@@ -33,8 +33,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1656022142602936794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &4947724254664271184
-CircleCollider2D:
+--- !u!114 &2542697640511125778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287793861095091247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5387691268969804780415f9fbc18a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyInSight: []
+--- !u!61 &585344555832725745
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -66,21 +79,109 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 2
---- !u!114 &6365452140072486238
+  m_Size: {x: 2.95, y: 2.95}
+  m_EdgeRadius: 0
+--- !u!1 &3993816071618028494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5777281007874054439}
+  - component: {fileID: 4086652499885624939}
+  - component: {fileID: 1274616038849631032}
+  m_Layer: 10
+  m_Name: sight2
+  m_TagString: Tower
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5777281007874054439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993816071618028494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1656022142602936794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4086652499885624939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287793861095091247}
+  m_GameObject: {fileID: 3993816071618028494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5387691268969804780415f9fbc18a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 310950ffc7df588488c8eea10ecbbaa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyInSight: []
+  towerInSight: []
+--- !u!61 &1274616038849631032
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993816071618028494}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.95, y: 2.95}
+  m_EdgeRadius: 0
 --- !u!1 &7034938113320178737
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +372,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -819,7 +920,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 10
+    type: 16
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -827,7 +928,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 3, y: 3, z: 3}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1025,7 +1126,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 200
+      scalar: 50
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1463,9 +1564,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 1, b: 0.17089105, a: 0.5882353}
+        key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -1480,9 +1581,9 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 19661
-        atime2: 65535
-        atime3: 0
+        atime1: 13107
+        atime2: 39321
+        atime3: 65535
         atime4: 0
         atime5: 0
         atime6: 0
@@ -1490,7 +1591,7 @@ ParticleSystem:
         m_Mode: 0
         m_ColorSpace: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 3
+        m_NumAlphaKeys: 4
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4920,12 +5021,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1656022142602936794}
-  - component: {fileID: 8403619738671250611}
+  - component: {fileID: 6462340024064165400}
   - component: {fileID: 772458079774251867}
   - component: {fileID: 7059396015228550062}
   - component: {fileID: 4676210116089675479}
   m_Layer: 14
-  m_Name: CuTower
+  m_Name: Router
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4945,10 +5046,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8930318688051261028}
+  - {fileID: 5777281007874054439}
   - {fileID: 1221120048280376003}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8403619738671250611
+--- !u!114 &6462340024064165400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4957,15 +5059,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8578151285703894285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d914f8eed23e6941b8e7aae6aff263a, type: 3}
+  m_Script: {fileID: 11500000, guid: c0b503e1ffe1a0c42862809f09733a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes: {fileID: 11400000, guid: a2b1565453421b84bb06f6816afb92ca, type: 2}
+  attributes: {fileID: 11400000, guid: 11b8a9209ca1951449ea6fed21bf04ac, type: 2}
   towerID: 0
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 7059396015228550062}
-  sight1: {fileID: 6365452140072486238}
+  sight1: {fileID: 2542697640511125778}
   particle: {fileID: 3828828632807767350}
+  sight2: {fileID: 4086652499885624939}
 --- !u!50 &772458079774251867
 Rigidbody2D:
   serializedVersion: 4
@@ -5034,7 +5137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 0b542169c55a94949b8b4eb2c7ae4f85, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f9f3a0f8b64bfb4fadccbdb5a984689, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

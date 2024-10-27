@@ -24,6 +24,8 @@ public class Tower : MonoBehaviour
     protected LaserManager laserManager;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] protected TowerSight sight1;
+    
+    protected List<RouterTower> routerTowerList = new List<RouterTower>();
 
 
     ////测试用
@@ -61,6 +63,7 @@ public class Tower : MonoBehaviour
         spriteRenderer.sprite = attributes.towerSprite;
 
         receivedLasers = new List<Laser>();
+        routerTowerList.Clear();
 
         attackCooldown = 1f / attackSpeed;
         attackTimer = 0f;
@@ -84,6 +87,7 @@ public class Tower : MonoBehaviour
     
     public virtual void UpdateState()
     {
+        RouterSupply();
         Attack();
     }
     public void Check() { laserManager.UpdateState(); }
@@ -161,7 +165,27 @@ public class Tower : MonoBehaviour
         //Invoke("Check", 0.1f);
         Debug.Log($"{gameObject.name} 离开了");
     }
-    
+
+    public virtual void AddRouterToTower(RouterTower router)
+    {
+        if (!routerTowerList.Contains(router))
+        {
+            routerTowerList.Add(router);
+        }
+    }
+    public virtual void RemoveRouterToTower(RouterTower router)
+    {
+        if (routerTowerList.Contains(router))
+        {
+            routerTowerList.Remove(router);
+        }
+    }
+
+    protected virtual void RouterSupply()
+    {
+
+    }
+
     protected Enemy FindClosestEnemy()
     {
         sight1.Refresh();

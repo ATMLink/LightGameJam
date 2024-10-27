@@ -7,6 +7,8 @@ public class SiTower : TowerProjectile
 
     private float power = 0;
 
+    private float routerSupply = 0;
+
     public override void Attack()
     {
         DamageTest();
@@ -32,6 +34,21 @@ public class SiTower : TowerProjectile
             attackTimer += Time.deltaTime; // 增加计时器
         }
     }
+
+
+    protected override void RouterSupply()
+    {
+        if(routerTowerList.Count > 0)
+        {
+            routerSupply = 20;
+        }
+        else
+        {
+            routerSupply = 0;
+        }
+    }
+
+
     protected override void DamageTest()
     {
         
@@ -46,7 +63,7 @@ public class SiTower : TowerProjectile
         }
         if (!canAttack)
         {
-            float inten = 0;
+            float inten = routerSupply;
             foreach (var lasr in receivedLasers)
             {
                 inten += lasr.intensity;
@@ -75,7 +92,7 @@ public class SiTower : TowerProjectile
         }
         if (canAttack)
         {
-            float inten = 0;
+            float inten = routerSupply;
             foreach (var lasr in receivedLasers)
             {
                 inten += lasr.intensity;
