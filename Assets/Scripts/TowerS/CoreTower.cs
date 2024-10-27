@@ -13,7 +13,7 @@ public class CoreTower : Tower
 
     private void Start()//取得用来结束游戏的gamedirver
         {
-        GameObject temp = GameObject.Find("GameDirver");
+        GameObject temp = GameObject.Find("GameDriver");
         gameDriver = temp.GetComponent<GameDriver>();
         }
 
