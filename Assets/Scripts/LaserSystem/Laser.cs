@@ -460,6 +460,12 @@ public class Laser : MonoBehaviour
                     UpdateLaser();
                     hitObj.Add(collision.gameObject);
                 }
+                if (collision.CompareTag("Enemy"))
+                {
+                    Enemy enemy = collision.GetComponent<Enemy>();
+                    UpdateLaser();
+                    hitObj.Add(collision.gameObject);
+                }
             }
         }
     }
@@ -477,6 +483,10 @@ public class Laser : MonoBehaviour
                     {
                         tower.OnLaserOut(this);
                     }
+                }
+                if (collision.CompareTag("Enemy"))
+                {
+
                 }
                 UpdateLaser();
                 hitObj.Remove(collision.gameObject);
