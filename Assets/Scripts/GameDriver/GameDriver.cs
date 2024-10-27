@@ -104,6 +104,7 @@ public class GameDriver : MonoBehaviour
     public void EndGame()
     {
         gameIsRunning = false;
+        _musicManager.PlayBGM("WinBGM");
         _uiManager.ShowGameOverScreen();
         Debug.Log("game over");
     }
