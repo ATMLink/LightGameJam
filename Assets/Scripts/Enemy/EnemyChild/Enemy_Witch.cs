@@ -8,7 +8,7 @@ public class Enemy_Witch : EnemyRemote
     private string creationName;
 
     Vector3 generateOffset = Vector3.zero;
-    private float maxOffsetForGeneration = 80f;
+    //private float maxOffsetForGeneration = 80f;
 
     private float creationCount = 0;
     private float maxEnemyCreateCD = 0;

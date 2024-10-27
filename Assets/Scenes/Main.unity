@@ -6024,7 +6024,7 @@ MonoBehaviour:
   towerManager: {fileID: 945080038}
   towerPool: {fileID: 864061134}
   _laserManager: {fileID: 415967692}
-  reflectionManager: {fileID: 1479371187}
+  reflectionManager: {fileID: 0}
   musicManager: {fileID: 555020838}
   reflect: {fileID: 0}
   reflectText: {fileID: 0}

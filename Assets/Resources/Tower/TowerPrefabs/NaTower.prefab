@@ -164,7 +164,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fb1c3da92c3a2c54abc4e80d7b15c578, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,6 +249,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3932458159364070918}
   sight1: {fileID: 7974965998331771196}
   routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   projectileName: NaBomb
   bombPrefab: {fileID: 7737950740450778539, guid: 8736b0e87415bc84da94c92bc1e69088, type: 3}
   explosionEffect: {fileID: 0}
