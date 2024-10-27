@@ -21,5 +21,7 @@ MonoBehaviour:
   Prefab: {fileID: 8578151285703894285, guid: 33f43972541eab74a80f986a3c28e3a2, type: 3}
   towerName: CuTower
   nextLevelAttributes: {fileID: 0}
-  elements: 
-  elementSpendNumber: []
+  elements: 0100000002000000
+  elementSpendNumber:
+  - 500
+  - 3

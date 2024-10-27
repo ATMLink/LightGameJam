@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Laser : MonoBehaviour
@@ -9,19 +10,21 @@ public class Laser : MonoBehaviour
     public float maxDistance = 20f; // 激光最大距离
     [SerializeField] private LineRenderer lineRenderer; // 用于可视化激光
     [SerializeField] private ParticleSystem hitEffect; // 激光击中效果的粒子系统
+    [SerializeField] private TextMeshProUGUI intensityText;  
 
     private BoxCollider2D boxCollider2D;
     private bool isActive = true; // 激光是否有效
 
 
-    public void Initialize(Tower source, Vector3 position, Vector3 direction, float intensity)
-        {
-            sourceTower = source; // 设置激光来源
-            transform.position = position;
-            this.direction = direction;
-            this.intensity = intensity;
-            boxCollider2D = GetComponent<BoxCollider2D>();
-        }
+    public void Initialize(Tower source, Vector3 position, Vector3 direction, float intensity) {
+
+        sourceTower = source; // 设置激光来源
+        transform.position = position;
+        this.direction = direction;
+        this.intensity = intensity;
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        intensityText = GetComponentInChildren<TextMeshProUGUI>();
+     }
     /*
     public void Initialize()
         {
@@ -39,6 +42,7 @@ public class Laser : MonoBehaviour
         {
         if (isActive)
             {
+            intensityText.text =intensity.ToString();
             UpdateLaser();
             }
         else
