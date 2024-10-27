@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: attributes
       value: 
       objectReference: {fileID: 11400000, guid: 430f0345b5e1c39478b927c716921fcc, type: 2}
+    - target: {fileID: 7568834130568925383, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb1c3da92c3a2c54abc4e80d7b15c578, type: 2}
     - target: {fileID: 7867459719826588639, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
       propertyPath: m_BodyType
       value: 2
@@ -107,6 +111,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 6379383655884286785}
   sight1: {fileID: 4185680295617339669}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   numberOfLasers: 2
 --- !u!114 &4185680295617339669 stripped
 MonoBehaviour:

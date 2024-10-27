@@ -8,6 +8,10 @@ public class Tower : MonoBehaviour
     
     public TowerAttributes attributes;
 
+
+    protected Material material;
+    private float flashDuration = 0.1f;
+
     public int towerID;
     protected static int towerIDCounter = 0;
     
@@ -28,6 +32,9 @@ public class Tower : MonoBehaviour
     [SerializeField]
     protected List<RouterTower> routerTowerList = new List<RouterTower>();
 
+    [SerializeField] protected string placeEffectName = "TowerPlaceEffect";
+    [SerializeField] protected string deathEffectName = "TowerDeathEffect";
+    private Coroutine currentOnHitCoroutine;
 
     ////测试用
     //private void Start()
@@ -84,6 +91,10 @@ public class Tower : MonoBehaviour
         
         gameObject.SetActive(true);
         //Invoke("Check",0.1f);
+
+        material = GetComponent<Renderer>().material;
+        Effect effect = EffectPool.instance.GetObjFromPool(placeEffectName);
+        effect.gameObject.transform.position = transform.position;
     }
     
     public virtual void UpdateState()
@@ -155,10 +166,33 @@ public class Tower : MonoBehaviour
     public virtual void OnHit(int damage)
     {
         health -= damage;
-        if (health <= 0)DestroyTower();
+        if (currentOnHitCoroutine != null)
+        {
+            StopCoroutine(currentOnHitCoroutine);
+        }
+        currentOnHitCoroutine = StartCoroutine(OnHitShow());
     }
     public float GetHealth() { 
         return health; 
+    }
+
+    protected virtual IEnumerator OnHitShow()
+    {
+        float elapsed = 0f;
+        material.SetFloat("_FlashAmount", 1);
+        while (elapsed < flashDuration)
+        {
+            elapsed += Time.deltaTime;
+            material.SetFloat("_FlashAmount", Mathf.Lerp(1, 0, elapsed / flashDuration));
+            yield return null;
+        }
+        material.SetFloat("_FlashAmount", 0);
+        if (health <= 0)
+        {
+            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
+            effect.gameObject.transform.position = transform.position; 
+            DestroyTower();
+        }
     }
 
     public virtual void OnLaserOut(Laser laser)
@@ -207,6 +241,19 @@ public class Tower : MonoBehaviour
 
         return closestEnemy;
     }
+
+    public virtual void OnRotateEnd()
+    {
+
+    }
+
+    
+
+    public virtual void RemoveTower()
+    {
+
+    }
+
 
     //private void OnTriggerEnter2D(Collider2D collision)
     //{

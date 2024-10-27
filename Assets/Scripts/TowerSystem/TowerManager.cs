@@ -99,6 +99,7 @@ public class TowerManager : MonoBehaviour
                 .OnComplete(() =>
                 {
                     EndRotate(tower, antiClockwise);
+                    tower.OnRotateEnd();
                     isRotating = false;  // 旋转结束后，允许新的旋转
                 });
             }
@@ -111,6 +112,7 @@ public class TowerManager : MonoBehaviour
         if (musicManager != null)
             musicManager.PlaySound("DestructTower");
         laserManager.RemoveLaser(tower);
+        tower.RemoveTower();
         towerPool.ReturnTower(tower);
         towers.Remove(tower);
         }
