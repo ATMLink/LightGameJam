@@ -114,6 +114,12 @@ public class TowerManager : MonoBehaviour
         Debug.Log($"Removing tower: {tower.name}, at position: {tower.transform.position}");
         if (musicManager != null)
             musicManager.PlaySound("DestructTower");
+        
+        // ↓↓↓↓↓↓↓还要弹出一个“无法拆除核心塔”↓↓↓↓↓↓↓↓↓
+        if (tower.attributes.towerName == "CoreTower_Lv1" || tower.attributes.towerName == "CoreTower_Lv2")
+            return;
+        // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑还要弹出一个“无法拆除核心塔”↑↑↑↑↑↑↑↑↑↑↑↑
+        
         laserManager.RemoveLaser(tower);
         tower.RemoveTower();
         towerPool.ReturnTower(tower);
