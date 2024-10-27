@@ -170,7 +170,10 @@ public class CombineTower : Tower
             EmitLaser();
             ReceivedLaserIntensityIsZero();
             lastUpdateTime = Time.time;
+            
         }
+        Debug.Log(transform.rotation);
+        Debug.Log(Vector3.down);
     }
 
     public override void ResetAttributes()
