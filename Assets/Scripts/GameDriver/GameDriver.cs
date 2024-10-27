@@ -16,6 +16,7 @@ public class GameDriver : MonoBehaviour
     [SerializeField] private LaserManager _laserManager;
     [SerializeField] private MusicManager _musicManager;
     [SerializeField] private MainResourceManagement resourceManagement;
+    float time = 0;
 
     
     // 游戏状态变量
@@ -37,8 +38,10 @@ public class GameDriver : MonoBehaviour
     {
         if (gameIsRunning && !isPaused.Value)
         {
+            time += Time.deltaTime;   
             _inputManager.UpdateState();
             _cameraController.UpdateState();
+            if (time >= 0.1f) { _laserManager.UpdateState();time = 0; }
             //_laserManager.UpdateState();
             _uiManager.UpdateState();
             resourceManagement.UpdateState();
