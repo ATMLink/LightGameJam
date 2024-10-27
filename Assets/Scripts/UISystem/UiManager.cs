@@ -68,7 +68,7 @@ public class UiManager : MonoBehaviour
     }
     void OnTitleButtonClick()//返回标题键
     {
-        SceneManager.LoadScene(2);//根据实际修改：返回标题
+        SceneManager.LoadScene(0);//根据实际修改：返回标题
     }
 
 
