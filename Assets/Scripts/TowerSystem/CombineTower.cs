@@ -213,6 +213,7 @@ public class CombineTower : Tower
 
     public override void OnLaserOut(Laser laser)
     {
+        if (laser.sourceTower == this) return;
         if (receivedLasers.Contains(laser))
         {
             receivedLasers.Remove(laser);
