@@ -1,21 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Github lib\\LightGameJam\\",
+  "WorkspaceRootPath": "E:\\LightGameJam\\LightGameJam\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\uisystem\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\uisystem\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uisystem\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\github lib\\lightgamejam\\assets\\scripts\\playerinteractionsystem\\constructmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteractionsystem\\constructmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\scripts\\towersystem\\towermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\towermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\towersystem\\combinetower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\towersystem\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\scripts\\towers\\minertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towers\\minertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\scripts\\towersystem\\towerattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\towerattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\towersystem\\splittertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\splittertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\scripts\\uisystem\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uisystem\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\playerinteractionsystem\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteractionsystem\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|e:\\lightgamejam\\lightgamejam\\assets\\scripts\\reflect\\reflectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\reflect\\reflectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\towersystem\\combinetower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\combinetower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\Github lib\\LightGameJam\\assets\\scripts\\lasersystem\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\playerinteractionsystem\\constructmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteractionsystem\\constructmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\changesence\\changesence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\changesence\\changesence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\reflect\\reflection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\reflect\\reflection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|E:\\LightGameJam\\LightGameJam\\assets\\scripts\\lasersystem\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lasersystem\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,53 +66,184 @@
       "DocumentGroups": [
         {
           "DockedWidth": 224,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConstructManager.cs",
-              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
-              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAUwD4AAABUAAAA",
+              "Title": "TowerManager.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\TowerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\TowerManager.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\TowerManager.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\TowerManager.cs*",
+              "ViewState": "AQIAADkAAAAAAAAAAAAswFIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T11:26:55.237Z",
+              "WhenOpened": "2024-10-27T15:54:15.245Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TowerShowInformation.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\UISystem\\TowerShowInformation.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UISystem\\TowerShowInformation.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\UISystem\\TowerShowInformation.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UISystem\\TowerShowInformation.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCAAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T15:41:57.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MinerTower.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\MinerTower.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TowerS\\MinerTower.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerS\\MinerTower.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\TowerS\\MinerTower.cs*",
+              "ViewState": "AQIAABsAAAAAAAAAAAAIwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T15:37:00.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TowerAttributes.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\TowerAttributes.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\TowerAttributes.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\TowerAttributes.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\TowerAttributes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T15:35:57.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SplitterTower.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\SplitterTower.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\SplitterTower.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\SplitterTower.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\SplitterTower.cs",
+              "ViewState": "AQIAAM4AAAAAAAAAAAAQwOQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T14:10:01.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tower.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\Tower.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\Tower.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\Tower.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\Tower.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAAwHIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T14:07:40.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\PlayerInteractionSystem\\InputManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteractionSystem\\InputManager.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\PlayerInteractionSystem\\InputManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerInteractionSystem\\InputManager.cs",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAcwKYAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T13:21:47.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReflectionManager.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Reflect\\ReflectionManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Reflect\\ReflectionManager.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Reflect\\ReflectionManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Reflect\\ReflectionManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T13:04:29.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Reflection.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Reflect\\Reflection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Reflect\\Reflection.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\Reflect\\Reflection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Reflect\\Reflection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T12:52:43.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChangeSence.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ChangeSence\\ChangeSence.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ChangeSence\\ChangeSence.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\ChangeSence\\ChangeSence.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ChangeSence\\ChangeSence.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T11:37:39.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConstructManager.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerInteractionSystem\\ConstructManager.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAQwDYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T11:26:55.237Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UiManager.cs",
-              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\UISystem\\UiManager.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\UISystem\\UiManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UISystem\\UiManager.cs",
-              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\UISystem\\UiManager.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\UISystem\\UiManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\UISystem\\UiManager.cs",
-              "ViewState": "AQIAANYBAAAAAAAAAAAAANQBAAAzAAAA",
+              "ViewState": "AQIAAPMAAAAAAAAAAAAcwAYBAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T11:19:23.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "CombineTower.cs",
-              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TowerSystem\\CombineTower.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\CombineTower.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TowerSystem\\CombineTower.cs",
-              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\TowerSystem\\CombineTower.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\TowerSystem\\CombineTower.cs",
               "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\CombineTower.cs",
-              "ViewState": "AQIAAMgAAAAAAAAAAAAWwJsAAAAUAAAA",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAcwNAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T10:52:55.374Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Laser.cs",
-              "DocumentMoniker": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\LaserSystem\\Laser.cs",
+              "DocumentMoniker": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\LaserSystem\\Laser.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LaserSystem\\Laser.cs",
-              "ToolTip": "E:\\Github lib\\LightGameJam\\Assets\\Scripts\\LaserSystem\\Laser.cs",
+              "ToolTip": "E:\\LightGameJam\\LightGameJam\\Assets\\Scripts\\LaserSystem\\Laser.cs",
               "RelativeToolTip": "Assets\\Scripts\\LaserSystem\\Laser.cs",
               "ViewState": "AQIAAP0AAAAAAAAAAAAAwA4BAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

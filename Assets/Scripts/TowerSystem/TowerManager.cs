@@ -79,9 +79,8 @@ public class TowerManager : MonoBehaviour
     public void UpgradeTower(Tower tower)
         {
         tower.Upgrade();
-        Debug.LogWarning(tower.name);
-        if (tower.name == "Miner(Clone)")
-            laserManager.CreateLaser(tower, tower.transform.position, Vector3.down, 300);
+
+
         }
     public void RotateTower(Tower tower, bool antiClockwise = true)
         {
