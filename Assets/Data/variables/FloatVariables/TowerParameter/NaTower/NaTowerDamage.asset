@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6aaa40c8c3afbd44896ffe0be7f46222, type: 3}
-  m_Name: TowerHP
+  m_Name: NaTowerDamage
   m_EditorClassIdentifier: 
-  Value: 500
-  valueChangedEvent: {fileID: 11400000, guid: 7afa51f3e0711ef41ae5f3dbb5cb265d, type: 2}
+  Value: 11
+  valueChangedEvent: {fileID: 11400000, guid: ea54b8ff4cffd3c4bb414b3b8c2d2de3, type: 2}
