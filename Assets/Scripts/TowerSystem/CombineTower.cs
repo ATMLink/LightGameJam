@@ -108,37 +108,37 @@ public class CombineTower : Tower
         }
     }
 
-    protected void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
-        {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
-            {
-                Debug.Log($"激光进入 CombineTower 的触发器。方向：{laser.direction}，强度：{laser.intensity}");
-                OnLaserHit(laser);
-            }
-            else
-            {
-                Debug.LogWarning("标记为激光的碰撞对象没有激光组件。");
-            }
-        }
-    }
+    //protected void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Laser"))
+    //    {
+    //        Laser laser = collision.GetComponent<Laser>();
+    //        if (laser != null)
+    //        {
+    //            Debug.Log($"激光进入 CombineTower 的触发器。方向：{laser.direction}，强度：{laser.intensity}");
+    //            OnLaserHit(laser);
+    //        }
+    //        else
+    //        {
+    //            Debug.LogWarning("标记为激光的碰撞对象没有激光组件。");
+    //        }
+    //    }
+    //}
     
-    protected void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
-        {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
-            {
-                Debug.Log($"激光退出 CombineTower 的触发器。方向：{laser.direction}，强度：{laser.intensity}");
-                OnLaserOut(laser);
-            }
-            else
-            {
-                Debug.LogWarning("退出时标记为激光的碰撞对象没有激光组件。");
-            }
-        }
-    }
+    //protected void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Laser"))
+    //    {
+    //        Laser laser = collision.GetComponent<Laser>();
+    //        if (laser != null)
+    //        {
+    //            Debug.Log($"激光退出 CombineTower 的触发器。方向：{laser.direction}，强度：{laser.intensity}");
+    //            OnLaserOut(laser);
+    //        }
+    //        else
+    //        {
+    //            Debug.LogWarning("退出时标记为激光的碰撞对象没有激光组件。");
+    //        }
+    //    }
+    //}
 }

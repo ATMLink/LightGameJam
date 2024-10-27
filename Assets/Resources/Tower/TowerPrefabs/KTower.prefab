@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 9142407160745771378}
   - component: {fileID: 3932458159364070918}
   - component: {fileID: 2175737956074336833}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: KTower
   m_TagString: Tower
   m_Icon: {fileID: 0}

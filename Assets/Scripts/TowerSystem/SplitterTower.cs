@@ -113,41 +113,41 @@ public void UpdateLaserIntensity()
     }
 }
 
-protected void OnTriggerEnter2D(Collider2D collision)
-{
-    if (collision.CompareTag("Laser"))
-    {
-        Laser laser = collision.GetComponent<Laser>();
-        if (laser != null)
-        {
-            Debug.Log($"检测到碰撞对象为激光，方向: {laser.direction}, 强度: {laser.intensity}");
-            OnLaserHit(laser);
-        }
-        else
-        {
-            Debug.Log("碰撞对象无激光组件。");
-        }
-    }
-    else
-    {
-        Debug.Log("碰撞对象非激光。");
-    }
-}
+//protected void OnTriggerEnter2D(Collider2D collision)
+//{
+//    if (collision.CompareTag("Laser"))
+//    {
+//        Laser laser = collision.GetComponent<Laser>();
+//        if (laser != null)
+//        {
+//            Debug.Log($"检测到碰撞对象为激光，方向: {laser.direction}, 强度: {laser.intensity}");
+//            OnLaserHit(laser);
+//        }
+//        else
+//        {
+//            Debug.Log("碰撞对象无激光组件。");
+//        }
+//    }
+//    else
+//    {
+//        Debug.Log("碰撞对象非激光。");
+//    }
+//}
 
-protected void OnTriggerExit2D(Collider2D collision)
-{
-    if (collision.CompareTag("Laser"))
-    {
-        Laser laser = collision.GetComponent<Laser>();
-        if (laser != null)
-        {
-            Debug.Log($"激光离开，方向: {laser.direction}, 强度: {laser.intensity}");
-            OnLaserOut(laser);
-        }
-        else
-        {
-            Debug.Log("离开碰撞区域的对象无激光组件。");
-        }
-    }
-}
+//protected void OnTriggerExit2D(Collider2D collision)
+//{
+//    if (collision.CompareTag("Laser"))
+//    {
+//        Laser laser = collision.GetComponent<Laser>();
+//        if (laser != null)
+//        {
+//            Debug.Log($"激光离开，方向: {laser.direction}, 强度: {laser.intensity}");
+//            OnLaserOut(laser);
+//        }
+//        else
+//        {
+//            Debug.Log("离开碰撞区域的对象无激光组件。");
+//        }
+//    }
+//}
 }
