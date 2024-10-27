@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9085775006087365411}
   - component: {fileID: 4086408548941412184}
   - component: {fileID: 7625733548889351808}
+  - component: {fileID: 7195579131077710794}
   m_Layer: 8
   m_Name: SearchLight
   m_TagString: Tower
@@ -199,3 +200,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &7195579131077710794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3989233581575745183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca28202a5e7e0549b8da2df45ddc13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes: {fileID: 0}
+  towerID: 0
+  resourceManagement: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  sight1: {fileID: 0}
