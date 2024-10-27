@@ -252,7 +252,7 @@ public class Tower : MonoBehaviour
     public virtual void RemoveTower()
     {
         Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
-        effect.gameObject.transform.position = transform.position;
+        effect.gameObject.transform.position = transform.position;  
     }
 
 
