@@ -42,6 +42,15 @@ public class MinerTower : Tower
         }
         totalIntensity = temp;
     }
+    public override void Upgrade() { 
+        base.Upgrade();
+        Tower tower = GetComponent<Tower>();
+        if (attributes.name=="LaserTower")
+        {
+            laserManager.CreateLaser(tower, transform.position, Vector3.down, 300);
+        }
+        
+    }
     public void Generate()
     {
         

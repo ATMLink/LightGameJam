@@ -599,6 +599,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2680691337292502246, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
+      propertyPath: reflectionManager
+      value: 
+      objectReference: {fileID: 1479371187}
     - target: {fileID: 100338661431412229, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
       propertyPath: m_Name
       value: WonderSun
@@ -11101,6 +11105,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
+      propertyPath: reflectionManager
+      value: 
+      objectReference: {fileID: 1479371187}
+    - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
       propertyPath: resourceManagement
       value: 
       objectReference: {fileID: 1202425554}
@@ -12031,6 +12039,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
+      propertyPath: reflectionManager
+      value: 
+      objectReference: {fileID: 1479371187}
     - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
       propertyPath: resourceManagement
       value: 
