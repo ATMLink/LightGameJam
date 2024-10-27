@@ -264,7 +264,7 @@ public class SplitterTower : Tower
     }
     private void ReceivedLaserIntensityIsZero()
     {
-        if (totalIntensity > 0.1f)
+        if (totalIntensity > 5f)
             return;
         laserManager.RemoveLaser(this);
     }
