@@ -13,12 +13,13 @@ public class TowerProjectile : Tower
 
     public override void UpdateState()
     {
-        foreach(var laser in receivedLasers)
-        {
-            Debug.Log($"收到来自{laser.name}的强度{laser.intensity}");
-        }
+        //foreach(var laser in receivedLasers)
+        //{
+        //    Debug.Log($"收到来自{laser.name}的强度{laser.intensity}");
+        //}
 
         Attack();
+        RouterSupply();
     }
     public override void Attack()
     {

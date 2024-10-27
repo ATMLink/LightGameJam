@@ -8,23 +8,6 @@ public class RouterSight : MonoBehaviour
 
     public List<Tower> towerInSight = new List<Tower>();
 
-    public void Refresh()
-    {
-        List<Tower> list = new List<Tower>();
-        foreach (var tower in towerInSight)
-        {
-            if (!tower.gameObject.activeInHierarchy)
-            {
-                Debug.Log("ÒÆ³ý");
-                list.Add(tower);
-            }
-        }
-        foreach (var tower in list)
-        {
-            towerInSight.Remove(tower);
-        }
-    }
-
     public void Clear()
     {
         towerInSight.Clear();

@@ -9,6 +9,50 @@ public class SiTower : TowerProjectile
 
     private float routerSupply = 0;
 
+    private float routerCount = 0;
+    private float RouterCount
+    {
+        get {return routerCount;}
+        set
+        {
+            routerCount = value;
+            if (routerCount > 0)
+            {
+                canAttack = true;
+                routerSupply = 20;
+            }
+            else
+            {
+                routerSupply = 0;
+                if (!canAttack)
+                {
+                    float inten = routerSupply;
+                    foreach (var lasr in receivedLasers)
+                    {
+                        inten += lasr.intensity;
+                    }
+                    if (inten >= 20f)
+                    {
+                        canAttack = true;
+                        power = inten / 20;
+                        if (power > 3) power = 3;
+                    }
+                    else
+                    {
+                        canAttack = false;
+                        power = 0;
+                    }
+                }
+            }
+        }
+    }
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        RouterCount = 0;
+    }
+
     public override void Attack()
     {
         DamageTest();
@@ -38,13 +82,9 @@ public class SiTower : TowerProjectile
 
     protected override void RouterSupply()
     {
-        if(routerTowerList.Count > 0)
+        if (RouterCount != routerTowerList.Count)
         {
-            routerSupply = 20;
-        }
-        else
-        {
-            routerSupply = 0;
+            RouterCount = routerTowerList.Count;
         }
     }
 

@@ -24,7 +24,8 @@ public class Tower : MonoBehaviour
     protected LaserManager laserManager;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] protected TowerSight sight1;
-    
+
+    [SerializeField]
     protected List<RouterTower> routerTowerList = new List<RouterTower>();
 
 
