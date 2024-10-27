@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -12,8 +13,10 @@ public class ConstructManager : MonoBehaviour
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private TowerPool towerPool;
     [SerializeField] private LaserManager _laserManager;
-
+    [SerializeField] private ReflectionManager reflectionManager;
     [SerializeField] private MusicManager musicManager;
+    [SerializeField] private GameObject reflect;
+    [SerializeField] private Text reflectText;
     //[SerializeField] private LightSystem lightSystem;
     private TowerAttributes selectedTowerAttributes;
     private void Start()
@@ -42,6 +45,10 @@ public class ConstructManager : MonoBehaviour
             }
             else
             {
+                reflectionManager.Reflect("无法放置塔");
+                //reflectText.text = "无法放置塔";
+                //reflect.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);
+                //reflect.SetActive(true);
                 Debug.Log("无法在此位置放置塔。");
             }
         }
