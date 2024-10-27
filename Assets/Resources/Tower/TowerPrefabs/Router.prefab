@@ -5067,6 +5067,7 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 7059396015228550062}
   sight1: {fileID: 2542697640511125778}
+  routerTowerList: []
   particle: {fileID: 3828828632807767350}
   sight2: {fileID: 4086652499885624939}
 --- !u!50 &772458079774251867

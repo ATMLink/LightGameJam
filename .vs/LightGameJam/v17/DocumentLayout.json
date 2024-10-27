@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\Project\\GameJam\\LightGameJam\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towers\\specialtower\\sitower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\towers\\specialtower\\sitower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towers\\specialtower\\sitower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\towers\\specialtower\\routertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towers\\specialtower\\routertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towers\\specialtower\\routertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,11 +27,11 @@
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towersystem\\splittertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\uisystem\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\uisystem\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uisystem\\towershowinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\towers\\specialtower\\routersight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towers\\specialtower\\routersight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towers\\specialtower\\routersight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -292,8 +292,7 @@
               "RelativeToolTip": "Assets\\Scripts\\TowerS\\SpecialTower\\RouterTower.cs",
               "ViewState": "AQIAADAAAAAAAAAAAAAQwBIAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T08:46:07.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T08:46:07.731Z"
             },
             {
               "$type": "Document",
@@ -305,8 +304,7 @@
               "RelativeToolTip": "Assets\\Scripts\\TowerS\\SpecialTower\\RouterSight.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T08:41:04.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T08:41:04.348Z"
             },
             {
               "$type": "Document",
@@ -318,8 +316,7 @@
               "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\SplitterTower.cs",
               "ViewState": "AQIAAFQAAAAAAAAAAADwv14AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T05:19:48.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T05:19:48.565Z"
             },
             {
               "$type": "Document",
@@ -331,8 +328,7 @@
               "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\Tower.cs",
               "ViewState": "AQIAAFUAAAAAAAAAAAAAwFkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T05:21:08.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T05:21:08.137Z"
             },
             {
               "$type": "Document",
@@ -428,8 +424,7 @@
               "RelativeToolTip": "Assets\\Scripts\\UISystem\\TowerShowInformation.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAkwCAAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:00:11.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T08:00:11.946Z"
             },
             {
               "$type": "Document",
@@ -454,8 +449,7 @@
               "RelativeToolTip": "Assets\\Scripts\\TowerS\\TowerProjectile\\TowerProjectile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T15:33:52.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T15:33:52.496Z"
             },
             {
               "$type": "Document",
@@ -467,8 +461,7 @@
               "RelativeToolTip": "Assets\\Scripts\\LaserSystem\\Laser.cs",
               "ViewState": "AQIAAKMBAAAAAAAAAIA9wMABAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T20:09:02.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T20:09:02.145Z"
             },
             {
               "$type": "Document",
@@ -528,8 +521,7 @@
               "RelativeToolTip": "Assets\\Scripts\\TowerSystem\\TowerManager.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAADgvz4AAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:00:11.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T08:00:11.942Z"
             },
             {
               "$type": "Document",
