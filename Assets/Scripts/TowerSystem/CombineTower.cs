@@ -148,7 +148,7 @@ public class CombineTower : Tower
 {
     public int maxLasers = 7; // 最大接收激光数
     private float totalIntensity = 0f; // 合并激光强度
-    private float maxTotalIntensity = 200f; // 最大合并强度
+    private float maxTotalIntensity = 5000f; // 最大合并强度
     private float updateInterval = 0.1f; // 更新激光强度的间隔
     private float lastUpdateTime = 0f;
 

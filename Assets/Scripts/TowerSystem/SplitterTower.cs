@@ -155,7 +155,7 @@ public class SplitterTower : Tower
 {
     public int numberOfLasers = 2;
     private float totalIntensity = 0;
-    private float maxTotalIntensity = 100f;
+    private float maxTotalIntensity = 5000f;
     private float updateInterval = 0.1f;
     private float lastUpdateTime = 0f;
 
@@ -172,6 +172,7 @@ public class SplitterTower : Tower
         {
             Debug.Log($"received laser count {receivedLasers.Count}");
             UpdateLaserIntensity();
+            ReceivedLaserIntensityIsZero();
             lastUpdateTime = Time.time;
         }
     }
@@ -250,5 +251,11 @@ public class SplitterTower : Tower
         {
             Debug.Log("没有发射激光，无法更新强度。");
         }
+    }
+    private void ReceivedLaserIntensityIsZero()
+    {
+        if (totalIntensity > 0.1f)
+            return;
+        laserManager.RemoveLaser(this);
     }
 }
