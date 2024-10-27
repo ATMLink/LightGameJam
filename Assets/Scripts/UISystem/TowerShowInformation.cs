@@ -16,7 +16,6 @@ public class TowerShowInformation : MonoBehaviour, IPointerEnterHandler, IPointe
     void Start()
     {
         // 保存原始图片
-        if(originalSprite!=null)
         originalSprite = displayImage.sprite;
     }
 
@@ -25,14 +24,12 @@ public class TowerShowInformation : MonoBehaviour, IPointerEnterHandler, IPointe
         // 鼠标悬停时更改图片
         if(musicManager != null)
         musicManager.PlaySound("ButtonPass");
-        if (originalSprite != null)
             displayImage.sprite = hoverSprite;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         // 鼠标离开时恢复原始图片
-        if (originalSprite != null)
             displayImage.sprite = originalSprite;
     }
 }
