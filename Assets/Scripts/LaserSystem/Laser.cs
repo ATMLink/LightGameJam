@@ -219,6 +219,7 @@
 //}
 
 
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -233,6 +234,8 @@ public class Laser : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer; // 用于可视化激光
     [SerializeField] private ParticleSystem hitEffect; // 激光击中效果的粒子系统
 
+    public List<Enemy> enemies;
+    
     private BoxCollider2D boxCollider2D;
     private bool isActive = true; // 激光是否有效
 
@@ -247,6 +250,7 @@ public class Laser : MonoBehaviour
         transform.position = position;
         this.direction = direction;
         this.intensity = intensity;
+        lineRenderer.material.SetFloat("_Intensity", this.intensity);
         boxCollider2D = GetComponent<BoxCollider2D>();
         textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
         hitObj.Clear();
@@ -419,17 +423,16 @@ public class Laser : MonoBehaviour
 
     private void Attack()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, direction, out hit, maxDistance))
+        if (enemies != null)
         {
-            // 检查激光是否击中敌人
-            if (hit.collider.CompareTag("Enemy"))
+            foreach (var enemy in enemies)
             {
-                // 造成伤害
-                hit.collider.GetComponent<Enemy>().OnHit(damage);
-                // TriggerHitEffect(hit.point); // 触发击中效果
+                enemy.OnHit(0.00005f*intensity);
+                // enemy.OnHit(1000f);
             }
         }
+                // 造成伤害
+                // hit.collider.GetComponent<Enemy>().OnHit(damage);
     }
 
     private void TriggerHitEffect(Vector3 position)
@@ -446,7 +449,7 @@ public class Laser : MonoBehaviour
 
     public void SetLaserProperties(float newIntensity, Vector3 newDirection)
     {
-        intensity = newIntensity;
+        SetLaserIntensity(newIntensity);
         direction = newDirection;
         UpdateLaser();
     }
@@ -454,6 +457,7 @@ public class Laser : MonoBehaviour
     public void SetLaserIntensity(float newIntensity)
     {
         intensity = newIntensity;
+        lineRenderer.material.SetFloat("_Intensity", intensity);
         UpdateLaser();
     }
 
@@ -468,6 +472,16 @@ public class Laser : MonoBehaviour
     }
 
 
+    // protected void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     if (collision != null)
+    //     {
+    //         if (collision.CompareTag("Enemy"))
+    //         {
+    //             enemies.Add(collision.gameObject.GetComponent<Enemy>());
+    //         }
+    //     }
+    // }
 
     protected void OnTriggerStay2D(Collider2D collision)
     {
@@ -489,6 +503,7 @@ public class Laser : MonoBehaviour
                 if (collision.CompareTag("Enemy"))
                 {
                     Enemy enemy = collision.GetComponent<Enemy>();
+                    enemies.Add(enemy);
                     UpdateLaser();
                     hitObj.Add(collision.gameObject);
                 }
@@ -513,7 +528,7 @@ public class Laser : MonoBehaviour
                 }
                 if (collision.CompareTag("Enemy"))
                 {
-
+                    enemies.Remove(collision.gameObject.GetComponent<Enemy>());
                 }
                 UpdateLaser();
                 hitObj.Remove(collision.gameObject);

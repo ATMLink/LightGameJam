@@ -183,7 +183,9 @@ public class SplitterTower : Tower
         if (!receivedLasers.Contains(laser))
         {
             if (laser.sourceTower == this)
-                return;            
+                return;
+            if (receivedLasers.Count == 1)
+                return;
             receivedLasers.Add(laser);
             Debug.Log("激光接收: " + laser.gameObject.name);
         }
@@ -201,7 +203,7 @@ public class SplitterTower : Tower
         //Debug.Log("!!!!!!!!");
         if (laser.sourceTower == this)
         {
-            Debug.Log("忽略激光：自发。");
+            // Debug.Log("忽略激光：自发。");
             return;
         }
 
@@ -262,8 +264,9 @@ public class SplitterTower : Tower
     }
     private void ReceivedLaserIntensityIsZero()
     {
-        if (totalIntensity > 0.1f)
+        if (totalIntensity > 5f)
             return;
         laserManager.RemoveLaser(this);
     }
+
 }

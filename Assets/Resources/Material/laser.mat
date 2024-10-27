@@ -43,12 +43,17 @@ Material:
     m_Floats:
     - _ClmapMin: 0.073
     - _EnableExternalAlpha: 0
+    - _Intensity: 1000
     - _LaserSpeed: 2.54
     - _LaserWidth: 6.01
     - _NoiseScale: 3.56
     - _SmoothStepMax: 0.134
     m_Colors:
     - _Color: {r: 0.78679246, g: 0.98582786, b: 1, a: 1}
+    - _Color0: {r: 0.3735848, g: 0.3735848, b: 0.3735848, a: 1}
+    - _Color1: {r: 0.4529939, g: 0.47348207, b: 0.5622641, a: 1}
+    - _Color2: {r: 0.43153432, g: 0.532406, b: 0.85660374, a: 1}
+    - _Color3: {r: 0.3226415, g: 0.50500727, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

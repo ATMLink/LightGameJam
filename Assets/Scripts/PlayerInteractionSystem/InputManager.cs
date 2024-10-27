@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private UiManager uiManager;
     [SerializeField] private MusicManager musicManager;
+    [SerializeField] private BoolVariable isPaused;
 
     public LayerMask tilemapLayerMask;
     
@@ -24,6 +25,7 @@ public class InputManager : MonoBehaviour
         //Debug.Log("InputManager UpdateState called.");
         CaptureInput();
         HandleClickedTower();
+        // HandleSpacePauseGame();
         if(isDraggingTower)
         {
             //Debug.Log("Currently dragging a tower.");
@@ -79,10 +81,10 @@ public class InputManager : MonoBehaviour
 
                 if (Input.GetMouseButtonUp(0))
                 {
-                    if (EventSystem.current.IsPointerOverGameObject())
-                    {
-                        return;
-                    }
+                    // if (EventSystem.current.IsPointerOverGameObject())
+                    // {
+                    //     return;
+                    // }
                     // Debug.Log("Left mouse button released, attempting to place tower...");
                     constructManager.SelectTower(selectedTowerAttributes);
                     
@@ -196,6 +198,16 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    // public void HandleSpacePauseGame()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Space))
+    //     {
+    //         if(isPaused.Value)
+    //             isPaused.SetValue(false);
+    //         else
+    //             isPaused.SetValue(true);
+    //     }
+    // }
     public Vector3? GetPositionFromInput()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

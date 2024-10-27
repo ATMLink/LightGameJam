@@ -511,7 +511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -825, y: 76}
+  m_AnchoredPosition: {x: -760, y: -7}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44910128
@@ -1364,8 +1364,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1642,7 +1642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 88d4c70b4a804114bb22d9b69ecdf4a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34aad74db31037b4fa6687fd73994aeb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5876,6 +5876,7 @@ MonoBehaviour:
   - {fileID: 8403619738671250611, guid: 33f43972541eab74a80f986a3c28e3a2, type: 3}
   - {fileID: 6950114453182070920, guid: 5d0b865eaa9561d48898d2efa7290edd, type: 3}
   - {fileID: 6462340024064165400, guid: 860795ab29e0d9048bd0656c5e9ed4bf, type: 3}
+  - {fileID: -4781218507317445461, guid: 7aebaff1f355b5b4a9e3fc79c64c98a8, type: 3}
 --- !u!1 &913605972
 GameObject:
   m_ObjectHideFlags: 0
@@ -5925,7 +5926,10 @@ MonoBehaviour:
   towerManager: {fileID: 945080038}
   towerPool: {fileID: 864061134}
   _laserManager: {fileID: 415967692}
+  reflectionManager: {fileID: 1479371187}
   musicManager: {fileID: 0}
+  reflect: {fileID: 0}
+  reflectText: {fileID: 0}
 --- !u!1 &940748517
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,7 +6589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2bb291a7da0ec8d42a28e2884aea556d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9a11267c3a5841468869729b64ae6f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6629,9 +6633,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2070ae943bf454086a709de5657882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerAttributes: {fileID: 11400000, guid: b2e2749909ea32e43a9e61af21fc1235, type: 2}
+  towerAttributes: {fileID: 11400000, guid: 0217a0b8bcd264f4db854647e0ee333a, type: 2}
   inputManager: {fileID: 1967238063}
-  informationImage: {fileID: 3082863862407716987, guid: 5d0b865eaa9561d48898d2efa7290edd, type: 3}
+  informationImage: {fileID: 3082863862407716987, guid: 7aebaff1f355b5b4a9e3fc79c64c98a8, type: 3}
   musicManager: {fileID: 0}
 --- !u!1 &1096998157
 GameObject:
@@ -8968,6 +8972,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471685663}
   m_CullTransparentMesh: 1
+--- !u!1 &1479371185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1479371186}
+  - component: {fileID: 1479371187}
+  m_Layer: 0
+  m_Name: ReflectionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1479371186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479371185}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1510343054}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1479371187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479371185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddda51d5d1ccde043890d89e7a71312a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectTextPrefab: {fileID: 8372198620730512704, guid: ee597e73bff624b4e852790671a01b65, type: 3}
 --- !u!1 &1484039346
 GameObject:
   m_ObjectHideFlags: 0
@@ -9224,6 +9273,7 @@ Transform:
   m_Children:
   - {fileID: 1967238062}
   - {fileID: 913605973}
+  - {fileID: 1479371186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1529251772

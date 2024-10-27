@@ -33,7 +33,7 @@ public class Wonder : Tower
     {
         if (attributes.name == "WonderPropeller")
         {
-            if (resourceManagement.JudgeAfford(element.si, 1000)&& resourceManagement.JudgeAfford(element.li, 20))
+            if (resourceManagement.JudgeAfford(element.si, 1000) && resourceManagement.JudgeAfford(element.li, 20))
             {
                 resourceManagement.SpendResoure(element.si, 1000);
                 resourceManagement.SpendResoure(element.li, 20);
@@ -41,6 +41,7 @@ public class Wonder : Tower
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
             }
+            else reflectionManager.Reflect("资源不足");
         }
         else if (attributes.name == "WonderSun")
         {
@@ -53,7 +54,9 @@ public class Wonder : Tower
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
             }
-        }else if (attributes.name == "WonderLaser")
+            else reflectionManager.Reflect("资源不足");
+        }
+        else if (attributes.name == "WonderLaser")
         {
             if (resourceManagement.JudgeAfford(element.si, 3000) && resourceManagement.JudgeAfford(element.cs, 30))
             {
@@ -63,6 +66,7 @@ public class Wonder : Tower
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
             }
+            else reflectionManager.Reflect("资源不足");
         }
     }
 

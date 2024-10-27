@@ -79,9 +79,8 @@ public class TowerManager : MonoBehaviour
     public void UpgradeTower(Tower tower)
         {
         tower.Upgrade();
-        Debug.LogWarning(tower.name);
-        if (tower.name == "Miner(Clone)")
-            laserManager.CreateLaser(tower, tower.transform.position, Vector3.down, 300);
+
+
         }
     public void RotateTower(Tower tower, bool antiClockwise = true)
         {
@@ -98,6 +97,10 @@ public class TowerManager : MonoBehaviour
                 .SetEase(Ease.OutQuad)
                 .OnComplete(() =>
                 {
+                    // 更新塔的方向
+                    float radians = angle * Mathf.Deg2Rad; // 角度转弧度
+                    Vector3 newDirection = new Vector3(Mathf.Sin(radians), 0, Mathf.Cos(radians));
+                    tower.SetDirection(newDirection); // 设置新的方向
                     EndRotate(tower, antiClockwise);
                     tower.OnRotateEnd();
                     isRotating = false;  // 旋转结束后，允许新的旋转
@@ -146,7 +149,7 @@ public class TowerManager : MonoBehaviour
             Debug.Log("splitter tower laser should not rotate");
             return;
         }
-            
+        
         laserManager.SetLaserActiveForTower(tower, true);
         laserManager.RotateLaser(tower, antiClockwise);
     }
