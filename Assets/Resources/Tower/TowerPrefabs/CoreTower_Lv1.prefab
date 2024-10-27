@@ -167,6 +167,7 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 3140906336850519198}
   sight1: {fileID: 1129364053786602895}
+  gameDriver: {fileID: 0}
 --- !u!1 &7381842620935901242
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &344218276335264319
 Transform:
   m_ObjectHideFlags: 0

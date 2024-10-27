@@ -380,7 +380,7 @@ public class Enemy : EnemyBase
             else
             {
                 rigid.velocity = 
-                    DarkSpeedUp
+                    v * DarkSpeedUp
                     * (targetPoint.GetPos() + offset - new Vector2(transform.position.x, transform.position.y)).normalized
                     * environmentSpeed * landmarkSpeed * 1 / 4;
             }

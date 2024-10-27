@@ -11,6 +11,15 @@ public class TowerProjectile : Tower
     protected bool canAttack = false;
 
 
+    public override void UpdateState()
+    {
+        foreach(var laser in receivedLasers)
+        {
+            Debug.Log($"收到来自{laser.name}的强度{laser.intensity}");
+        }
+
+        Attack();
+    }
     public override void Attack()
     {
         DamageTest();
@@ -67,29 +76,52 @@ public class TowerProjectile : Tower
     }
 
 
+    //protected void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Laser"))
+    //    {
+    //        Laser laser = collision.gameObject.GetComponent<Laser>();
+    //        if (laser != null)
+    //        {
+    //            OnLaserHit(laser);
+    //        }
+    //    }
+    //}
 
-    protected void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
-        {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
-            {
-                OnLaserHit(laser);
-            }
-        }
-    }
+    //protected void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Laser"))
+    //    {
+    //        Laser laser = collision.gameObject.GetComponent<Laser>();
+    //        if (laser != null)
+    //        {
+    //            OnLaserOut(laser);
+    //        }
+    //    }
+    //}
 
-    protected void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
-        {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
-            {
-                OnLaserOut(laser);
-            }
-        }
-    }
+    //protected void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Laser"))
+    //    {
+    //        Laser laser = collision.GetComponent<Laser>();
+    //        if (laser != null)
+    //        {
+    //            OnLaserHit(laser);
+    //        }
+    //    }
+    //}
+
+    //protected void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Laser"))
+    //    {
+    //        Laser laser = collision.GetComponent<Laser>();
+    //        if (laser != null)
+    //        {
+    //            OnLaserOut(laser);
+    //        }
+    //    }
+    //}
 
 }

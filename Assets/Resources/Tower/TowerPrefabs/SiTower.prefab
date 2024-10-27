@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6924966726874034937}
   - component: {fileID: 929890256105646507}
   - component: {fileID: 7533185462159432081}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: SiTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
