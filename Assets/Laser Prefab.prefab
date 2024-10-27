@@ -161,7 +161,7 @@ MonoBehaviour:
   maxDistance: 20
   lineRenderer: {fileID: 2343219634303855292}
   hitEffect: {fileID: 8269348522432679811}
-  intensityText: {fileID: 0}
+  textMeshProUGUI: {fileID: 0}
 --- !u!61 &4331703481708549411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5138,8 +5138,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5156,13 +5156,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
