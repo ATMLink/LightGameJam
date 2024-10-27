@@ -69,7 +69,7 @@ public class MinerTower : Tower
 
                 for (int i = 0; i < 5; i++)
                     {
-                    int a = Random.Range(0, 5);
+                    int a = Random.Range(0, 1);//生成一个稀有资源
                     switch (a)
                         {
                         case 0: resourceManagement.CollectResource(element.na, 1); break;
