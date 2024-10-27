@@ -167,6 +167,7 @@ public class CombineTower : Tower
         if (Time.time - lastUpdateTime >= updateInterval && receivedLasers.Count > 0)
         {
             UpdateLaserIntensity();
+            ReceivedLaserIntensityIsZero();
             lastUpdateTime = Time.time;
         }
     }
@@ -240,12 +241,20 @@ public class CombineTower : Tower
 
         if (emittedLaser != null)
         {
-            emittedLaser.SetLaserProperties(totalIntensity, emittedDirection);
+            emittedLaser.SetLaserIntensity(totalIntensity);
             Debug.Log($"更新发射激光强度：{totalIntensity}，方向：{emittedDirection}");
         }
         else
         {
             Debug.LogWarning("未找到发射激光来更新强度。");
         }
+    }
+
+    private void ReceivedLaserIntensityIsZero()
+    {
+        if (totalIntensity > 0.1f)
+            return;
+        laserManager.RemoveLaser(this);
+        emittedLaser = null; // 确保移除发射激光
     }
 }
