@@ -11,6 +11,13 @@ public class CuTower : Tower
 
     protected bool canAttack = false;
 
+    public override void Initialize()
+    {
+        base.Initialize();
+        var emission = particle.emission;
+        emission.rateOverTime = 0;
+    }
+
     public override void Attack()
     {
         DamageTest();
@@ -40,6 +47,7 @@ public class CuTower : Tower
 
     protected virtual void DamageTest()
     {
+
     }
 
     public override void OnLaserHit(Laser laser)
@@ -50,12 +58,12 @@ public class CuTower : Tower
         }
         if (!canAttack)
         {
-            float inten = -400;
+            float inten = 0;
             foreach (var lasr in receivedLasers)
             {
                 inten += lasr.intensity;
             }
-            if (inten > 30f) canAttack = true;
+            if (inten >= 30f) canAttack = true;
         }
     }
 
@@ -63,34 +71,16 @@ public class CuTower : Tower
     {
         if (receivedLasers.Contains(laser))
         {
-            laser.UpdateState();
             receivedLasers.Remove(laser);
         }
-    }
-
-
-
-    protected void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
+        if (canAttack)
         {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
+            float inten = 0;
+            foreach (var lasr in receivedLasers)
             {
-                OnLaserHit(laser);
+                inten += lasr.intensity;
             }
-        }
-    }
-
-    protected void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Laser"))
-        {
-            Laser laser = collision.GetComponent<Laser>();
-            if (laser != null)
-            {
-                OnLaserOut(laser);
-            }
+            if (inten < 30f) canAttack = false;
         }
     }
 }

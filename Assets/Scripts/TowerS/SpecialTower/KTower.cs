@@ -13,12 +13,29 @@ public class KTower : TowerProjectile
         }
         if (!canAttack)
         {
-            float inten = -400;
+            float inten = 0;
             foreach (var lasr in receivedLasers)
             {
                 inten += lasr.intensity;
             }
-            if (inten > 30f) canAttack = true;
+            if (inten >= 30f) canAttack = true;
+        }
+    }
+
+    public override void OnLaserOut(Laser laser)
+    {
+        if (receivedLasers.Contains(laser))
+        {
+            receivedLasers.Remove(laser);
+        }
+        if (canAttack)
+        {
+            float inten = 0;
+            foreach (var lasr in receivedLasers)
+            {
+                inten += lasr.intensity;
+            }
+            if (inten < 30f) canAttack = false;
         }
     }
 

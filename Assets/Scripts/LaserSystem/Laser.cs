@@ -455,6 +455,7 @@ public class Laser : MonoBehaviour
                     Tower tower = collision.GetComponent<Tower>();
                     if (tower != null)
                     {
+                        Debug.Log("enter");
                         tower.OnLaserHit(this);
                     }
                     UpdateLaser();
@@ -478,6 +479,7 @@ public class Laser : MonoBehaviour
             {
                 if (collision.CompareTag("Tower"))
                 {
+                    Debug.Log("left");
                     Tower tower = collision.GetComponent<Tower>();
                     if (tower != null)
                     {

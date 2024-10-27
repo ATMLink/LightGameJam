@@ -45,11 +45,12 @@ public class ProK : Projectile
             if (collision.transform.tag == "Enemy" && !EnemyInSight.Contains(collision.gameObject.GetComponent<Enemy>()))
             {
                 Debug.Log(straightDamage);
-                HitTarget(straightDamage); // 击中目标
+                collision.GetComponent<Enemy>().OnHit(straightDamage); // 击中目标
                 EnemyInSight.Add(collision.gameObject.GetComponent<Enemy>());
             }
         }
     }
+
 
     protected override void ReturnToPool()
     {
