@@ -220,6 +220,7 @@
 
 
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Laser : MonoBehaviour
@@ -237,6 +238,8 @@ public class Laser : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> hitObj = new List<GameObject>();
+    [SerializeField]
+    private TextMeshProUGUI textMeshProUGUI;
 
 
     public void Initialize(Tower source, Vector3 position, Vector3 direction, float intensity)
@@ -246,6 +249,7 @@ public class Laser : MonoBehaviour
         this.direction = direction;
         this.intensity = intensity;
         boxCollider2D = GetComponent<BoxCollider2D>();
+        textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
         hitObj.Clear();
     }
     /*
@@ -265,6 +269,7 @@ public class Laser : MonoBehaviour
     {
         if (isActive)
         {
+            textMeshProUGUI.text =intensity.ToString();
             UpdateLaser();
         }
         else
