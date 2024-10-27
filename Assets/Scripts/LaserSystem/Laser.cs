@@ -268,7 +268,7 @@ public class Laser : MonoBehaviour
     {
         if (isActive)
         {
-            textMeshProUGUI.text =intensity.ToString();
+            textMeshProUGUI.text =(int)intensity + "";
             UpdateLaser();
         }
         else
