@@ -80,7 +80,7 @@ public class Tower : MonoBehaviour
         laserManager = FindObjectOfType<LaserManager>();
         
         gameObject.SetActive(true);
-        Invoke("Check",0.1f);
+        //Invoke("Check",0.1f);
     }
     
     public virtual void UpdateState()
