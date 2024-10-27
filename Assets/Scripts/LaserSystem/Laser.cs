@@ -280,11 +280,26 @@ public class Laser : MonoBehaviour
 
     public void ResetLaser()
     {
+
+        foreach (GameObject obj in hitObj)
+        {
+            Tower tower = obj.GetComponent<Tower>();
+            if (tower != null)
+            {
+                tower.OnLaserOut(this);
+            }
+            if (obj.CompareTag("Enemy"))
+            {
+                //
+            }
+        }
+        hitObj.Clear();
+
         intensity = 0;
         direction = Vector3.zero;
         damage = 0;
-        SetLaserActive(false); // 隐藏激光
-        hitObj.Clear();
+        //SetLaserActive(false); // 隐藏激光
+        
     }
 
     void UpdateLaser()

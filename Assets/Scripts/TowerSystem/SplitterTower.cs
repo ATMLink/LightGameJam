@@ -159,6 +159,8 @@ public class SplitterTower : Tower
     private float updateInterval = 0.1f;
     private float lastUpdateTime = 0f;
 
+    private bool onUse = false;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -195,9 +197,10 @@ public class SplitterTower : Tower
 
     public override void OnLaserOut(Laser laser)
     {
-        Debug.Log("!!!!!!");
-        Debug.Log("laser out");
-        Debug.Log("!!!!!!!!");
+        //Debug.Log("!!!!!!");
+        //Debug.Log("laser out");
+        //Debug.Log("!!!!!!!!");
+        if (onUse == false) return;
         if (receivedLasers.Contains(laser))
         {
             receivedLasers.Remove(laser);
@@ -206,6 +209,7 @@ public class SplitterTower : Tower
 
         if (receivedLasers.Count == 0)
         {
+            onUse = false;
             laserManager.RemoveLaser(this);
             Debug.Log("没有接收到激光，停止发射。");
         }
