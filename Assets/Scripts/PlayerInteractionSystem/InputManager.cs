@@ -12,7 +12,6 @@ public class InputManager : MonoBehaviour
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private UiManager uiManager;
     [SerializeField] private MusicManager musicManager;
-    [SerializeField] private BoolVariable isPaused;
 
     public LayerMask tilemapLayerMask;
     
