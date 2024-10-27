@@ -153,7 +153,7 @@ public class CombineTower : Tower
     private float lastUpdateTime = 0f;
 
     private Laser emittedLaser; // 由此塔发射的激光
-    private Vector3 emittedDirection = Vector3.down; // 固定向下的发射方向
+    private Vector3 emittedDirection = Vector3.down; // 默认向下发射
 
     public override void Initialize()
     {
@@ -167,6 +167,7 @@ public class CombineTower : Tower
         if (Time.time - lastUpdateTime >= updateInterval && receivedLasers.Count > 0)
         {
             UpdateLaserIntensity();
+            EmitLaser();
             ReceivedLaserIntensityIsZero();
             lastUpdateTime = Time.time;
         }
@@ -202,12 +203,12 @@ public class CombineTower : Tower
             Debug.Log($"激光添加至 CombineTower。当前总激光数：{receivedLasers.Count}");
 
             // 发射激光逻辑
-            if (receivedLasers.Count == 1 && emittedLaser == null)
-            {
-                Vector3 laserOriginOffset = emittedDirection.normalized * 0.51f;
-                emittedLaser = laserManager.CreateLaser(this, transform.position + laserOriginOffset, emittedDirection, laser.intensity);
-                Debug.Log("发射新的激光。");
-            }
+            // if (receivedLasers.Count == 1 && emittedLaser == null)
+            // {
+            //     Vector3 laserOriginOffset = emittedDirection.normalized * 0.51f;
+            //     emittedLaser = laserManager.CreateLaser(this, transform.position + laserOriginOffset, emittedDirection, laser.intensity);
+            //     Debug.Log("发射新的激光。");
+            // }
         }
     }
 
@@ -253,9 +254,19 @@ public class CombineTower : Tower
 
     private void ReceivedLaserIntensityIsZero()
     {
-        if (totalIntensity > 0.1f)
+        if (totalIntensity > 0.5f)
             return;
         laserManager.RemoveLaser(this);
         emittedLaser = null; // 确保移除发射激光
+    }
+
+    private void EmitLaser()
+    {
+        if (emittedLaser == null && totalIntensity >= 0.5)
+        {
+            emittedDirection = transform.rotation * Vector3.down;
+            Vector3 laserOriginOffset = emittedDirection.normalized * 0.51f;
+            emittedLaser = laserManager.CreateLaser(this, transform.position + laserOriginOffset,emittedDirection, totalIntensity);
+        }
     }
 }

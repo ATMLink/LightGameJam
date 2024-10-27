@@ -79,10 +79,10 @@ public class InputManager : MonoBehaviour
 
                 if (Input.GetMouseButtonUp(0))
                 {
-                    if (EventSystem.current.IsPointerOverGameObject())
-                    {
-                        return;
-                    }
+                    // if (EventSystem.current.IsPointerOverGameObject())
+                    // {
+                    //     return;
+                    // }
                     // Debug.Log("Left mouse button released, attempting to place tower...");
                     constructManager.SelectTower(selectedTowerAttributes);
                     

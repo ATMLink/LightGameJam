@@ -18,6 +18,8 @@ public class Tower : MonoBehaviour
     protected float attackCooldown;
     protected float attackTimer;
 
+    protected Vector3 towerDirection;
+    
     protected List<Laser> receivedLasers;
 
     public MainResourceManagement resourceManagement;
@@ -69,7 +71,7 @@ public class Tower : MonoBehaviour
         attackCooldown = 1f / attackSpeed;
         attackTimer = 0f;
 
-        transform.rotation = Quaternion.Euler(Vector3.down);
+        transform.rotation = Quaternion.Euler(Vector3.zero);
         
         sight1.GetComponent<CircleCollider2D>().radius = attackRange;
 
@@ -81,6 +83,8 @@ public class Tower : MonoBehaviour
 
         towerID = towerIDCounter++;
         laserManager = FindObjectOfType<LaserManager>();
+        
+        towerDirection = Vector3.down;
         
         gameObject.SetActive(true);
         //Invoke("Check",0.1f);
@@ -208,6 +212,15 @@ public class Tower : MonoBehaviour
         return closestEnemy;
     }
 
+    public void SetDirection(Vector3 newDirection)
+    {
+        towerDirection = newDirection;
+    }
+
+    public Vector3 GetDirection()
+    {
+        return towerDirection;
+    }
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
     //    // 检查碰撞的对象是否是 Laser，并且是否带有 "Laser" 标签

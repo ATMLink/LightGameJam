@@ -98,6 +98,10 @@ public class TowerManager : MonoBehaviour
                 .SetEase(Ease.OutQuad)
                 .OnComplete(() =>
                 {
+                    // 更新塔的方向
+                    float radians = angle * Mathf.Deg2Rad; // 角度转弧度
+                    Vector3 newDirection = new Vector3(Mathf.Sin(radians), 0, Mathf.Cos(radians));
+                    tower.SetDirection(newDirection); // 设置新的方向
                     EndRotate(tower, antiClockwise);
                     isRotating = false;  // 旋转结束后，允许新的旋转
                 });
@@ -144,7 +148,7 @@ public class TowerManager : MonoBehaviour
             Debug.Log("splitter tower laser should not rotate");
             return;
         }
-            
+        
         laserManager.SetLaserActiveForTower(tower, true);
         laserManager.RotateLaser(tower, antiClockwise);
     }
