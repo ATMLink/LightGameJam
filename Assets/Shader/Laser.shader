@@ -105,9 +105,9 @@ Shader "Unlit/Laser"
                 half range0 = smoothstep(0.0f, 333.3f, _Intensity);
                 half range1 = smoothstep(333.3f, 666.7f, _Intensity);
                 half range2 = smoothstep(666.7f, 1000.0f, _Intensity);
-                col.rgb = lerp(_Color0, _Color1, range0);
-                col.rgb = lerp(col.rgb, _Color2, range1);
-                col.rgb = lerp(col.rgb, _Color3, range2);
+                col.rgb = lerp(_Color0, _Color1.rgb, range0);
+                col.rgb = lerp(col.rgb, _Color2.rgb, range1);
+                col.rgb = lerp(col.rgb, _Color3.rgb, range2);
                 col.rgb = col.rgb * 1.25f;
                // col.rgb = noise;
                 return col;
