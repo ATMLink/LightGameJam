@@ -5,7 +5,8 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     private Dictionary<string, AudioClip> soundClips;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource bgmAudioSource;
+    [SerializeField] private AudioSource soundEffectAudioSource;
 
     public AudioClip towerClickSound;
     public AudioClip battleBGM;
@@ -29,7 +30,7 @@ public class MusicManager : MonoBehaviour
     public void Initialize()
     {
         // 检查 audioSource 是否已分配
-        if (audioSource == null)
+        if (bgmAudioSource == null)
         {
             Debug.LogError("AudioSource is not assigned.");
             return;
@@ -56,7 +57,7 @@ public class MusicManager : MonoBehaviour
 
     public void PlaySound(string soundName)
     {
-        if (audioSource == null)
+        if (soundEffectAudioSource == null)
         {
             Debug.LogError("AudioSource is not assigned.");
             return;
@@ -64,7 +65,7 @@ public class MusicManager : MonoBehaviour
 
         if (soundClips.ContainsKey(soundName))
         {
-            audioSource.PlayOneShot(soundClips[soundName]);
+            soundEffectAudioSource.PlayOneShot(soundClips[soundName]);
         }
         else
         {
@@ -74,7 +75,7 @@ public class MusicManager : MonoBehaviour
 
     public void PlayBGM(string bgmName)
     {
-        if (audioSource == null)
+        if (bgmAudioSource == null)
         {
             Debug.LogError("AudioSource is not assigned.");
             return;
@@ -82,9 +83,17 @@ public class MusicManager : MonoBehaviour
 
         if (soundClips.ContainsKey(bgmName))
         {
-            audioSource.clip = soundClips[bgmName];
-            audioSource.loop = true;
-            audioSource.Play();
+            // 停止当前BGM
+            bgmAudioSource.Stop();
+
+            // 更换BGM剪辑
+            bgmAudioSource.clip = soundClips[bgmName];
+        
+            // 设置为循环播放
+            bgmAudioSource.loop = true;
+
+            // 播放新的BGM
+            bgmAudioSource.Play();
         }
         else
         {
