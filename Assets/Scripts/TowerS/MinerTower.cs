@@ -48,7 +48,7 @@ public class MinerTower : Tower
         Tower tower = GetComponent<Tower>();
         if (attributes.name == "LaserTower")
             {
-            laserManager.CreateLaser(tower, transform.position, Vector3.down, 300);
+            laserManager.CreateLaser(tower, transform.position, Vector3.down, 100);
             }
 
         }

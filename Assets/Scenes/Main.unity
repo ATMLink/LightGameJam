@@ -645,6 +645,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 58078170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &252711560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1489384235686218316, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+  m_PrefabInstance: {fileID: 7710414804465380323}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &329141628
 GameObject:
   m_ObjectHideFlags: 0
@@ -4536,6 +4547,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1967238063}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: tower1
+      value: 
+      objectReference: {fileID: 252711560}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 659915092}
@@ -4547,6 +4562,10 @@ PrefabInstance:
       propertyPath: _towerManager
       value: 
       objectReference: {fileID: 945080038}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: countdownTime
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: _resourceManager
       value: 
