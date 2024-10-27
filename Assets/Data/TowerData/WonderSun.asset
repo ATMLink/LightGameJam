@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
   attackSpeed: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
   attackRange: {fileID: 11400000, guid: edc5e2f3292f3104f824e742b49dbeb4, type: 2}
-  towerSprite: {fileID: 0}
+  towerSprite: {fileID: 21300000, guid: 20bfcb65be3f74a4099939f0e0685353, type: 3}
   withLight: 1
   Prefab: {fileID: 100338661431412229, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
   towerName: WonderSun

@@ -8,6 +8,10 @@ public class Tower : MonoBehaviour
     
     public TowerAttributes attributes;
 
+
+    protected Material material;
+    private float flashDuration = 0.1f;
+
     public int towerID;
     protected static int towerIDCounter = 0;
     
@@ -18,19 +22,19 @@ public class Tower : MonoBehaviour
     protected float attackCooldown;
     protected float attackTimer;
 
-    protected Vector3 towerDirection;
-    
     protected List<Laser> receivedLasers;
 
     public MainResourceManagement resourceManagement;
     protected LaserManager laserManager;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] protected TowerSight sight1;
-    [SerializeField] protected ReflectionManager reflectionManager;
 
     [SerializeField]
     protected List<RouterTower> routerTowerList = new List<RouterTower>();
 
+    [SerializeField] protected string placeEffectName = "TowerPlaceEffect";
+    [SerializeField] protected string deathEffectName = "TowerDeathEffect";
+    private Coroutine currentOnHitCoroutine;
 
     ////测试用
     //private void Start()
@@ -72,12 +76,11 @@ public class Tower : MonoBehaviour
         attackCooldown = 1f / attackSpeed;
         attackTimer = 0f;
 
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.rotation = Quaternion.Euler(Vector3.down);
         
         sight1.GetComponent<CircleCollider2D>().radius = attackRange;
 
         resourceManagement = GameObject.Find("ResourceManager").GetComponent<MainResourceManagement>();
-        reflectionManager = GameObject.Find("ReflectionManager").GetComponent<ReflectionManager>();
         for (int i = 0; i < attributes.elements.Count; i++)
         {
             resourceManagement.SpendResoure(attributes.elements[i], attributes.elementSpendNumber[i]);
@@ -86,10 +89,12 @@ public class Tower : MonoBehaviour
         towerID = towerIDCounter++;
         laserManager = FindObjectOfType<LaserManager>();
         
-        towerDirection = Vector3.down;
-        
         gameObject.SetActive(true);
         //Invoke("Check",0.1f);
+
+        material = GetComponent<Renderer>().material;
+        Effect effect = EffectPool.instance.GetObjFromPool(placeEffectName);
+        effect.gameObject.transform.position = transform.position;
     }
     
     public virtual void UpdateState()
@@ -116,21 +121,11 @@ public class Tower : MonoBehaviour
     {
         if (attributes.nextLevelAttributes != null)
         {
-            bool a = true;
-            for (int i = 0; i < attributes.nextLevelAttributes.elements.Count; i++) if (!resourceManagement.JudgeAfford(attributes.nextLevelAttributes.elements[i], attributes.nextLevelAttributes.elementSpendNumber[i]))a = false;
-            if (a)
-            {
-                attributes = attributes.nextLevelAttributes;
-                Initialize();
-            }
-            else {
-
-                reflectionManager.Reflect("资源不足");
-            }
+            attributes = attributes.nextLevelAttributes;
+            Initialize();
         }
         else
         {
-            reflectionManager.Reflect("已经达到最高等级");
             Debug.Log("已经达到最高等级，无法继续升级。");
         }
     }
@@ -171,10 +166,33 @@ public class Tower : MonoBehaviour
     public virtual void OnHit(int damage)
     {
         health -= damage;
-        if (health <= 0)DestroyTower();
+        if (currentOnHitCoroutine != null)
+        {
+            StopCoroutine(currentOnHitCoroutine);
+        }
+        currentOnHitCoroutine = StartCoroutine(OnHitShow());
     }
     public float GetHealth() { 
         return health; 
+    }
+
+    protected virtual IEnumerator OnHitShow()
+    {
+        float elapsed = 0f;
+        material.SetFloat("_FlashAmount", 1);
+        while (elapsed < flashDuration)
+        {
+            elapsed += Time.deltaTime;
+            material.SetFloat("_FlashAmount", Mathf.Lerp(1, 0, elapsed / flashDuration));
+            yield return null;
+        }
+        material.SetFloat("_FlashAmount", 0);
+        if (health <= 0)
+        {
+            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
+            effect.gameObject.transform.position = transform.position; 
+            DestroyTower();
+        }
     }
 
     public virtual void OnLaserOut(Laser laser)
@@ -224,15 +242,19 @@ public class Tower : MonoBehaviour
         return closestEnemy;
     }
 
-    public void SetDirection(Vector3 newDirection)
+    public virtual void OnRotateEnd()
     {
-        towerDirection = newDirection;
+
     }
 
-    public Vector3 GetDirection()
+    
+
+    public virtual void RemoveTower()
     {
-        return towerDirection;
+
     }
+
+
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
     //    // 检查碰撞的对象是否是 Laser，并且是否带有 "Laser" 标签

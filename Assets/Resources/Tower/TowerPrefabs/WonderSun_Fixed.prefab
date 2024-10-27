@@ -54,6 +54,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 0}
   sight1: {fileID: 835276055896660627}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   destoryAttributes: {fileID: 11400000, guid: 18b3f9bba4d0e2c4a99bf34f0fb75a1f, type: 2}
 --- !u!50 &7867459719826588639
 Rigidbody2D:
@@ -102,7 +105,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fb1c3da92c3a2c54abc4e80d7b15c578, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

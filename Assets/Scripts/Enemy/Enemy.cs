@@ -69,6 +69,8 @@ public class Enemy : EnemyBase
     private float minLandmarkSpeed = 0.2f;
     private Coroutine currentWonderCoroutine;
 
+    [SerializeField] protected string deathEffectName = "EnemyDeathEffect";
+
 
     protected virtual void Start()
     {
@@ -454,6 +456,8 @@ public class Enemy : EnemyBase
         material.SetFloat("_FlashAmount", 0);
         if (currentHealth <= 0)
         {
+            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
+            effect.gameObject.transform.position = transform.position;
             Destroy();
         }
     }
@@ -470,7 +474,6 @@ public class Enemy : EnemyBase
             yield return null;
         }
         landmarkSpeed = maxLandmarkSpeed;
-
     }
 
 

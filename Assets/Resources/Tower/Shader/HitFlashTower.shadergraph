@@ -246,10 +246,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -380.00006103515627,
-            "y": -516.0000610351563,
-            "width": 208.00006103515626,
-            "height": 435.00006103515627
+            "x": -382.0,
+            "y": -591.0,
+            "width": 208.00001525878907,
+            "height": 435.0
         }
     },
     "m_Slots": [
@@ -361,7 +361,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Alpha",
     "m_StageCapability": 2,
-    "m_Value": 1.0,
+    "m_Value": 255.0,
     "m_DefaultValue": 1.0,
     "m_Labels": []
 }
@@ -1185,10 +1185,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -115.00005340576172,
-            "y": -86.99999237060547,
-            "width": 208.00003051757813,
-            "height": 325.9999694824219
+            "x": -133.99998474121095,
+            "y": -171.00001525878907,
+            "width": 208.00001525878907,
+            "height": 326.0
         }
     },
     "m_Slots": [

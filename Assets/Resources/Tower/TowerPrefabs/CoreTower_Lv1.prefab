@@ -83,7 +83,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fb1c3da92c3a2c54abc4e80d7b15c578, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,6 +167,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 3140906336850519198}
   sight1: {fileID: 1129364053786602895}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   gameDriver: {fileID: 0}
 --- !u!1 &7381842620935901242
 GameObject:

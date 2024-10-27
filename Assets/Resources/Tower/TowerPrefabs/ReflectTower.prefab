@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7568834130568925383, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb1c3da92c3a2c54abc4e80d7b15c578, type: 2}
     m_RemovedComponents:
     - {fileID: 1287831529039793251, guid: d7971c067d0602c4f92b926213ed5182, type: 3}
     m_RemovedGameObjects: []
@@ -98,6 +102,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 8160146818199663542}
   sight1: {fileID: 1414187337619274210}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   maxLasers: 1
 --- !u!212 &8160146818199663542 stripped
 SpriteRenderer:

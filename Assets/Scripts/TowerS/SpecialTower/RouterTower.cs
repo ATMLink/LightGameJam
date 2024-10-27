@@ -102,4 +102,28 @@ public class RouterTower : Tower
             }
         }
     }
+
+
+    public override void DestroyTower()
+    {
+        ResetAttributes();
+        laserManager.RemoveLaser(this);
+
+        Debug.Log("remove");
+        foreach (var tower in sight2.towerInSight)
+        {
+            tower.RemoveRouterToTower(this);
+        }
+
+        gameObject.SetActive(false); // 将塔移回对象池
+    }
+
+    public override void RemoveTower()
+    {
+        foreach (var tower in sight2.towerInSight)
+        {
+            tower.RemoveRouterToTower(this);
+        }
+    }
+
 }
