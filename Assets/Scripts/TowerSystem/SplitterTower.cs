@@ -242,7 +242,7 @@ public class SplitterTower : Tower
         {
             foreach (var laser in emittedLasers)
             {
-                laser.SetLaserProperties(emittedIntensity, laser.direction);
+                laser.SetLaserIntensity(emittedIntensity);
                 Debug.Log($"更新发射激光的强度: {emittedIntensity}, 方向: {laser.direction}");
             }
         }
