@@ -250,6 +250,7 @@ public class Laser : MonoBehaviour
         transform.position = position;
         this.direction = direction;
         this.intensity = intensity;
+        lineRenderer.material.SetFloat("_Intensity", this.intensity);
         boxCollider2D = GetComponent<BoxCollider2D>();
         textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
         hitObj.Clear();
@@ -456,6 +457,7 @@ public class Laser : MonoBehaviour
     public void SetLaserIntensity(float newIntensity)
     {
         intensity = newIntensity;
+        lineRenderer.material.SetFloat("_Intensity", intensity);
         UpdateLaser();
     }
 

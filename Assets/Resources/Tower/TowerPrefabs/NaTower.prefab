@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &296133822734868382
 Transform:
   m_ObjectHideFlags: 0
@@ -247,8 +247,8 @@ MonoBehaviour:
   towerID: 0
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 3932458159364070918}
-  sight1: {fileID: 0}
+  sight1: {fileID: 7974965998331771196}
   routerTowerList: []
-  projectileName: 
+  projectileName: NaBomb
   bombPrefab: {fileID: 7737950740450778539, guid: 8736b0e87415bc84da94c92bc1e69088, type: 3}
   explosionEffect: {fileID: 0}
