@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0529adfce856be4fa346244339e3e14, type: 3}
   m_Name: NaTower
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
-  damage: {fileID: 0}
-  attackSpeed: {fileID: 0}
-  attackRange: {fileID: 0}
+  health: {fileID: 11400000, guid: ec1fa9430dee82342a1939d77c2b97a5, type: 2}
+  damage: {fileID: 11400000, guid: 88390bef878a8b4428ce4894d777d382, type: 2}
+  attackSpeed: {fileID: 11400000, guid: 922f240003b339448bf287857d9b5274, type: 2}
+  attackRange: {fileID: 11400000, guid: 32acaec356280fb4897cf67b390c28f2, type: 2}
   towerSprite: {fileID: 21300000, guid: d9a11267c3a5841468869729b64ae6f9, type: 3}
   withLight: 0
-  Prefab: {fileID: 0}
-  towerName: 
+  Prefab: {fileID: 3082863862407716987, guid: 7aebaff1f355b5b4a9e3fc79c64c98a8, type: 3}
+  towerName: NaTower
   nextLevelAttributes: {fileID: 0}
-  elements: 
-  elementSpendNumber: []
+  elements: 0100000003000000
+  elementSpendNumber:
+  - 500
+  - 3
