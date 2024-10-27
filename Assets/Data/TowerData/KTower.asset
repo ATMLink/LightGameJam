@@ -21,5 +21,7 @@ MonoBehaviour:
   Prefab: {fileID: 3082863862407716987, guid: 5d0b865eaa9561d48898d2efa7290edd, type: 3}
   towerName: KTower
   nextLevelAttributes: {fileID: 0}
-  elements: 
-  elementSpendNumber: []
+  elements: 0000000001000000
+  elementSpendNumber:
+  - 3
+  - 500

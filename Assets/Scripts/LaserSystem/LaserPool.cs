@@ -63,5 +63,6 @@ public class LaserPool : MonoBehaviour
     {
         laser.ResetLaser();
         laser.SetLaserActive(false); // 隐藏激光
+        laser.gameObject.SetActive(false);
     }
 }

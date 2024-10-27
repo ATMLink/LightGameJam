@@ -103,9 +103,10 @@ public class TowerManager : MonoBehaviour
                 });
             }
         }
-
+    void Check() { laserManager.UpdateState(); }
     public void RemoveTower(Tower tower)
         {
+        Invoke("Check", 0.1f);
         Debug.Log($"Removing tower: {tower.name}, at position: {tower.transform.position}");
         if (musicManager != null)
             musicManager.PlaySound("DestructTower");
