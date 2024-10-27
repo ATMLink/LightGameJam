@@ -18,12 +18,12 @@ public class MainResourceManagement : MonoBehaviour
     /// </summary>
     public void Initialize() 
     {
-        siNumber.SetValue(0);
-        kNumber.SetValue(0);            
-        naNumber.SetValue(0);
-        cuNumber.SetValue(0);
-        liNumber.SetValue(0);
-        csNumber.SetValue(0);
+        siNumber.SetValue(20000);
+        kNumber.SetValue(20000);            
+        naNumber.SetValue(20000);
+        cuNumber.SetValue(20000);
+        liNumber.SetValue(20000);
+        csNumber.SetValue(20000);
     }
     public void UpdateState()
     {
