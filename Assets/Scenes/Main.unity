@@ -4570,10 +4570,6 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
-    - target: {fileID: 8027024273832180001, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8103020075571928829, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 

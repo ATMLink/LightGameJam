@@ -2742,6 +2742,7 @@ MonoBehaviour:
   _inputManager: {fileID: 0}
   _towerManager: {fileID: 0}
   _resourceManager: {fileID: 0}
+  WinPanel: {fileID: 664422959969314898}
   gameover: {fileID: 8027024273832180001}
   gameoverImg: {fileID: 5286125693705799080}
   exitButton: {fileID: 6268998011972386990}
@@ -8060,7 +8061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4341579035999476388
 RectTransform:
   m_ObjectHideFlags: 0
