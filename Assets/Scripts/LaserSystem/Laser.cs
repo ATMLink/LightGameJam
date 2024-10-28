@@ -427,7 +427,7 @@ public class Laser : MonoBehaviour
         {
             foreach (var enemy in enemies)
             {
-                enemy.OnHit(0.00005f*intensity);
+                enemy.OnHit(0.0001f*intensity);
                 // enemy.OnHit(1000f);
             }
         }
