@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3366522488626588461}
@@ -52,8 +52,9 @@ MonoBehaviour:
   attributes: {fileID: 11400000, guid: 88287af341f6a3f41801c86193b584e5, type: 2}
   towerID: 0
   resourceManagement: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 7568834130568925383}
   sight1: {fileID: 835276055896660627}
+  reflectionManager: {fileID: 0}
   routerTowerList: []
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect

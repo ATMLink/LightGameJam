@@ -172,8 +172,8 @@ public class CombineTower : Tower
             lastUpdateTime = Time.time;
             
         }
-        Debug.Log(transform.rotation);
-        Debug.Log(Vector3.down);
+        //Debug.Log(transform.rotation);
+        //Debug.Log(Vector3.down);
     }
 
     public override void ResetAttributes()

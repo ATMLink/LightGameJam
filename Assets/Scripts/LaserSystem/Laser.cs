@@ -246,8 +246,8 @@ public class Laser : MonoBehaviour
 
     public void Initialize(Tower source, Vector3 position, Vector3 direction, float intensity)
     {
-        sourceTower = source; // 设置激光来源
-        transform.position = position;
+        sourceTower = source; // 设置激光来源 
+        transform.position = new Vector3(position.x, position.y, 0);
         this.direction = direction;
         this.intensity = intensity;
         lineRenderer.material.SetFloat("_Intensity", this.intensity);

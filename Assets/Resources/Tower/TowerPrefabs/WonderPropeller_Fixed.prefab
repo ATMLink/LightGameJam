@@ -52,8 +52,9 @@ MonoBehaviour:
   attributes: {fileID: 11400000, guid: dba6be536777467499bcbca8f7ab6b29, type: 2}
   towerID: 0
   resourceManagement: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 7568834130568925383}
   sight1: {fileID: 835276055896660627}
+  reflectionManager: {fileID: 0}
   routerTowerList: []
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect

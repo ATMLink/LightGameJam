@@ -180,10 +180,10 @@ public class SplitterTower : Tower
 
     public override void OnLaserHit(Laser laser)
     {
+        if (laser.sourceTower == this)
+            return;
         if (!receivedLasers.Contains(laser))
         {
-            if (laser.sourceTower == this)
-                return;
             if (receivedLasers.Count == 1)
                 return;
             receivedLasers.Add(laser);
@@ -254,12 +254,12 @@ public class SplitterTower : Tower
             foreach (var laser in emittedLasers)
             {
                 laser.SetLaserIntensity(emittedIntensity);
-                Debug.Log($"更新发射激光的强度: {emittedIntensity}, 方向: {laser.direction}");
+                //Debug.Log($"更新发射激光的强度: {emittedIntensity}, 方向: {laser.direction}");
             }
         }
         else
         {
-            Debug.Log("没有发射激光，无法更新强度。");
+            //Debug.Log("没有发射激光，无法更新强度。");
         }
     }
     private void ReceivedLaserIntensityIsZero()
