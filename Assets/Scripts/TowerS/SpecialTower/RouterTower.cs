@@ -58,6 +58,10 @@ public class RouterTower : Tower
         gameObject.SetActive(true);
         var emission = particle.emission;
         emission.rateOverTime = 0;
+
+        material = GetComponent<Renderer>().material;
+        Effect effect = EffectPool.instance.GetObjFromPool(placeEffectName);
+        effect.gameObject.transform.position = transform.position;
     }
 
 
@@ -120,6 +124,7 @@ public class RouterTower : Tower
 
     public override void RemoveTower()
     {
+        base.RemoveTower();
         foreach (var tower in sight2.towerInSight)
         {
             tower.RemoveRouterToTower(this);
