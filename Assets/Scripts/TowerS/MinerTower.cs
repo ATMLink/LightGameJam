@@ -63,8 +63,8 @@ public class MinerTower : Tower
                 medaltime += Time.deltaTime;
                 if (sitime >= 5)
                     {
-                    resourceManagement.CollectResource(element.si, 20);
-                    reflectionManager.Reflect("+20 Si", transform.position, Color.green);
+                    resourceManagement.CollectResource(element.si, 5);
+                    reflectionManager.Reflect("+5 Si", transform.position, Color.green);
                     sitime = 0;
                     }
                 if (medaltime >= 31)
