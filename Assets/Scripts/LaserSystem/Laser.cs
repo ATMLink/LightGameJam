@@ -430,7 +430,7 @@ public class Laser : MonoBehaviour
             {
                 if (enemy.gameObject.activeInHierarchy)
                 {
-                    enemy.OnHit(0.0001f * intensity);
+                    enemy.OnHit(0.001f * intensity);
                 }
                 // enemy.OnHit(1000f);
             }

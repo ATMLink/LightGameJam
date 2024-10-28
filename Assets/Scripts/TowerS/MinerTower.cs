@@ -64,20 +64,21 @@ public class MinerTower : Tower
                 if (sitime >= 5)
                     {
                     resourceManagement.CollectResource(element.si, 20);
+                    reflectionManager.Reflect("+20 Si", transform.position, Color.green);
                     sitime = 0;
                     }
-                if (medaltime >= 30)
+                if (medaltime >= 31)
 
                     for (int i = 0; i < 1; i++)
                         {
                         int a = Random.Range(0, 5);//生成一个稀有资源
                         switch (a)
                             {
-                            case 0: resourceManagement.CollectResource(element.na, 1); break;
-                            case 1: resourceManagement.CollectResource(element.k, 1); break;
-                            case 2: resourceManagement.CollectResource(element.li, 1); break;
-                            case 3: resourceManagement.CollectResource(element.cu, 1); break;
-                            case 4: resourceManagement.CollectResource(element.cs, 1); break;
+                            case 0: resourceManagement.CollectResource(element.na, 1); reflectionManager.Reflect("+1 Na", transform.position, Color.green); break;
+                            case 1: resourceManagement.CollectResource(element.k, 1); reflectionManager.Reflect("+1 K", transform.position, Color.green); break;
+                            case 2: resourceManagement.CollectResource(element.li, 1); reflectionManager.Reflect("+1 Li", transform.position, Color.green); break;
+                            case 3: resourceManagement.CollectResource(element.cu, 1); reflectionManager.Reflect("+1 Cu", transform.position, Color.green); break;
+                            case 4: resourceManagement.CollectResource(element.cs, 1); reflectionManager.Reflect("+1 Cs", transform.position, Color.green); break;
                             }
                         medaltime = 0;
                         }
