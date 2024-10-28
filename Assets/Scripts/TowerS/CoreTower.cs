@@ -25,10 +25,13 @@ public class CoreTower : Tower
     public override void Upgrade()
         {
         base.Upgrade();
-        Tower tower = GetComponent<Tower>(); //获取tower脚本
-        laserManager.RemoveLaser(tower);//删除旧激光
-        laserManager.CreateLaser(tower, transform.position, Vector3.down, 1000);//创建新激光
+        if (attributes.name == "CoreTower_Lv2")
+        {
 
+            Tower tower = GetComponent<Tower>(); //获取tower脚本
+            laserManager.RemoveLaser(tower);//删除旧激光
+            laserManager.CreateLaser(tower, transform.position, Vector3.down, 1000);//创建新激光
+        }
         }
 
     }
