@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2105604472646138579
+--- !u!1 &4377431816720896136
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3862690589237154664}
-  - component: {fileID: 8770816482593411993}
-  - component: {fileID: 7974965998331771196}
+  - component: {fileID: 6015144246534677161}
+  - component: {fileID: 6127724347797321453}
+  - component: {fileID: 301713987534059267}
   m_Layer: 11
   m_Name: sight1
   m_TagString: Tower
@@ -18,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3862690589237154664
+--- !u!4 &6015144246534677161
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105604472646138579}
+  m_GameObject: {fileID: 4377431816720896136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 296133822734868382}
+  m_Father: {fileID: 1387315109506442525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &8770816482593411993
+--- !u!58 &6127724347797321453
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105604472646138579}
+  m_GameObject: {fileID: 4377431816720896136}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -68,20 +68,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
---- !u!114 &7974965998331771196
+--- !u!114 &301713987534059267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105604472646138579}
+  m_GameObject: {fileID: 4377431816720896136}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5387691268969804780415f9fbc18a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyInSight: []
---- !u!1 &3082863862407716987
+--- !u!1 &8525211062340059862
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,42 +89,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 296133822734868382}
-  - component: {fileID: 9142407160745771378}
-  - component: {fileID: 3932458159364070918}
-  - component: {fileID: 2175737956074336833}
-  - component: {fileID: -4781218507317445461}
+  - component: {fileID: 1387315109506442525}
+  - component: {fileID: 7998206090289442091}
+  - component: {fileID: 187639663634230532}
+  - component: {fileID: 4389498719319227223}
+  - component: {fileID: 8379781536554302568}
   m_Layer: 14
   m_Name: NaTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &296133822734868382
+  m_IsActive: 1
+--- !u!4 &1387315109506442525
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3082863862407716987}
+  m_GameObject: {fileID: 8525211062340059862}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3862690589237154664}
+  - {fileID: 6015144246534677161}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &9142407160745771378
+--- !u!50 &7998206090289442091
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3082863862407716987}
+  m_GameObject: {fileID: 8525211062340059862}
   m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -144,13 +144,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!212 &3932458159364070918
+--- !u!114 &187639663634230532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525211062340059862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e97d651c932e34ab990a76a4be9a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes: {fileID: 11400000, guid: 0217a0b8bcd264f4db854647e0ee333a, type: 2}
+  towerID: 0
+  resourceManagement: {fileID: 0}
+  spriteRenderer: {fileID: 4389498719319227223}
+  sight1: {fileID: 301713987534059267}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
+  projectileName: NaProjectile
+--- !u!212 &4389498719319227223
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3082863862407716987}
+  m_GameObject: {fileID: 8525211062340059862}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -196,13 +217,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2175737956074336833
+--- !u!58 &8379781536554302568
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3082863862407716987}
+  m_GameObject: {fileID: 8525211062340059862}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -231,26 +252,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-4781218507317445461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3082863862407716987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53e97d651c932e34ab990a76a4be9a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attributes: {fileID: 11400000, guid: 0217a0b8bcd264f4db854647e0ee333a, type: 2}
-  towerID: 0
-  resourceManagement: {fileID: 0}
-  spriteRenderer: {fileID: 3932458159364070918}
-  sight1: {fileID: 7974965998331771196}
-  routerTowerList: []
-  placeEffectName: TowerPlaceEffect
-  deathEffectName: TowerDeathEffect
-  projectileName: NaBomb
-  bombPrefab: {fileID: 7737950740450778539, guid: 8736b0e87415bc84da94c92bc1e69088, type: 3}
-  explosionEffect: {fileID: 0}

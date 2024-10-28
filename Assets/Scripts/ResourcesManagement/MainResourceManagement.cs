@@ -16,15 +16,24 @@ public class MainResourceManagement : MonoBehaviour
     /// <summary>
     /// 将所有元素数量重新设为0
     /// </summary>
+    //public void Initialize()
+    //    {
+    //    siNumber.SetValue(1000);
+    //    kNumber.SetValue(0);
+    //    naNumber.SetValue(0);
+    //    cuNumber.SetValue(0);
+    //    liNumber.SetValue(0);
+    //    csNumber.SetValue(0);
+    //}
     public void Initialize()
-        {
-        siNumber.SetValue(1000);
-        kNumber.SetValue(0);
-        naNumber.SetValue(0);
-        cuNumber.SetValue(0);
-        liNumber.SetValue(0);
-        csNumber.SetValue(0);
-        }
+    {
+        siNumber.SetValue(20000);
+        kNumber.SetValue(200000);
+        naNumber.SetValue(200000);
+        cuNumber.SetValue(200000);
+        liNumber.SetValue(200000);
+        csNumber.SetValue(200000);
+    }
     public void UpdateState()
         {
         time += Time.deltaTime;

@@ -2005,7 +2005,7 @@ MonoBehaviour:
   - {fileID: 8403619738671250611, guid: 33f43972541eab74a80f986a3c28e3a2, type: 3}
   - {fileID: 6950114453182070920, guid: 5d0b865eaa9561d48898d2efa7290edd, type: 3}
   - {fileID: 6462340024064165400, guid: 860795ab29e0d9048bd0656c5e9ed4bf, type: 3}
-  - {fileID: -4781218507317445461, guid: 7aebaff1f355b5b4a9e3fc79c64c98a8, type: 3}
+  - {fileID: 187639663634230532, guid: 24ea31ac6b590224f8a1f5c60f21cb00, type: 3}
 --- !u!1 &913605972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,6 +4458,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 3921531446775041163, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: informationImage
+      value: 
+      objectReference: {fileID: 8525211062340059862, guid: 24ea31ac6b590224f8a1f5c60f21cb00, type: 3}
     - target: {fileID: 4444585966705344470, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 

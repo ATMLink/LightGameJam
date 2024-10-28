@@ -14,7 +14,8 @@ public class ProjectilePool : MonoBehaviour
     {
         "TowerProjectile",
         "EnemyProjectile",
-        "KProjectile"
+        "KProjectile",
+        "NaProjectile",
     };
 
     public int originPoolSize = 5;
@@ -30,6 +31,7 @@ public class ProjectilePool : MonoBehaviour
             {"TowerProjectile",new Queue<Projectile>()},
             {"EnemyProjectile",new Queue<Projectile>()},
             {"KProjectile",new Queue<Projectile>()},
+            {"NaProjectile",new Queue<Projectile>()},
     };
 
     private void Start()

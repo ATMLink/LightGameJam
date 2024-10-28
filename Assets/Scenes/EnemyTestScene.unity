@@ -693,6 +693,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8ee2aeddd50ad4fab3a08cefbbe9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &854922195
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104708934424394610, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910184940526754696, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: m_Name
+      value: EffectSystem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
 --- !u!1 &913956189
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +846,120 @@ MonoBehaviour:
   roadInfos:
   - road: {fileID: 0}
     weight: 1
+--- !u!1001 &1009228605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100338661431412229, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_Name
+      value: WonderLaser_Fixed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.524025
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.7632337
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4ded2504549f5e47bf8657627d56a6a, type: 3}
+--- !u!1001 &1218069974
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100338661431412229, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_Name
+      value: WonderPropeller_Fixed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205747301775463251, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36132fda9a384ec4fa4e0966cba22182, type: 3}
 --- !u!1001 &1272188560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1195,6 +1366,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 1344516652}
   sight1: {fileID: 2103598531}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   projectileName: TowerProjectile
 --- !u!1 &1364102888
 GameObject:
@@ -1685,6 +1859,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 1473002540}
   sight1: {fileID: 1832836080}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   projectileName: TowerProjectile
 --- !u!1 &1499381089
 GameObject:
@@ -2082,6 +2259,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 1608400632}
   sight1: {fileID: 304182372}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   projectileName: TowerProjectile
 --- !u!1 &1662189194
 GameObject:
@@ -3077,6 +3257,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 2064305355}
   sight1: {fileID: 1920671744}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   projectileName: TowerProjectile
 --- !u!1 &2065293511
 GameObject:
@@ -3465,6 +3648,9 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 2109907537}
   sight1: {fileID: 1272574570}
+  routerTowerList: []
+  placeEffectName: TowerPlaceEffect
+  deathEffectName: TowerDeathEffect
   projectileName: TowerProjectile
 --- !u!1001 &2456971275609834019
 PrefabInstance:
@@ -3608,3 +3794,6 @@ SceneRoots:
   - {fileID: 1963318697}
   - {fileID: 1406480579}
   - {fileID: 1855760250}
+  - {fileID: 1009228605}
+  - {fileID: 1218069974}
+  - {fileID: 854922195}

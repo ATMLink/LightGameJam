@@ -445,6 +445,12 @@ public class Enemy : EnemyBase
 
     protected virtual IEnumerator OnHitShow()
     {
+        if (currentHealth <= 0)
+        {
+            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
+            effect.gameObject.transform.position = transform.position;
+            Destroy();
+        }
         float elapsed = 0f;
         material.SetFloat("_FlashAmount", 1);
         while (elapsed < flashDuration)
@@ -454,12 +460,6 @@ public class Enemy : EnemyBase
             yield return null;
         }
         material.SetFloat("_FlashAmount", 0);
-        if (currentHealth <= 0)
-        {
-            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
-            effect.gameObject.transform.position = transform.position;
-            Destroy();
-        }
     }
 
 
