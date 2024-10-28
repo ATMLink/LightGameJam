@@ -28,6 +28,7 @@ public class Tower : MonoBehaviour
     protected LaserManager laserManager;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] protected TowerSight sight1;
+    [SerializeField] protected ReflectionManager reflectionManager;
 
     [SerializeField]
     protected List<RouterTower> routerTowerList = new List<RouterTower>();
@@ -81,6 +82,7 @@ public class Tower : MonoBehaviour
         sight1.GetComponent<CircleCollider2D>().radius = attackRange;
 
         resourceManagement = GameObject.Find("ResourceManager").GetComponent<MainResourceManagement>();
+        reflectionManager = GameObject.Find("ReflectionManager").GetComponent<ReflectionManager>();
         for (int i = 0; i < attributes.elements.Count; i++)
             {
             resourceManagement.SpendResoure(attributes.elements[i], attributes.elementSpendNumber[i]);
@@ -118,19 +120,29 @@ public class Tower : MonoBehaviour
         }
 
     public virtual void Upgrade()
-        {
-        Debug.LogWarning("tower.Upgrade()执行成功");
+    {
         if (attributes.nextLevelAttributes != null)
+        {
+            bool a = true;
+            for (int i = 0; i < attributes.nextLevelAttributes.elements.Count; i++) if (!resourceManagement.JudgeAfford(attributes.nextLevelAttributes.elements[i], attributes.nextLevelAttributes.elementSpendNumber[i])) a = false;
+            if (a)
             {
-            attributes = attributes.nextLevelAttributes;
-            Initialize();
-            Debug.LogWarning("tower.Upgrade()升级最终成功");
+                attributes = attributes.nextLevelAttributes;
+                Initialize();
             }
-        else
+            else
             {
-            Debug.LogWarning("已经达到最高等级，无法继续升级。");
+
+                reflectionManager.Reflect("资源不足");
             }
         }
+        else
+        {
+            reflectionManager.Reflect("已经达到最高等级");
+            Debug.Log("已经达到最高等级，无法继续升级。");
+        }
+    }
+
 
     public virtual void DestroyTower()
         {

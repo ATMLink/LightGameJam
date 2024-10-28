@@ -41,7 +41,7 @@ public class Wonder : Tower
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
                 }
-            //else reflectionManager.Reflect("资源不足");
+            else reflectionManager.Reflect("资源不足");
             }
         else if (attributes.name == "WonderSun")
             {
@@ -54,7 +54,7 @@ public class Wonder : Tower
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
                 }
-            //else reflectionManager.Reflect("资源不足");
+            else reflectionManager.Reflect("资源不足");
             }
         else if (attributes.name == "WonderLaser")
             {
@@ -66,7 +66,7 @@ public class Wonder : Tower
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
                 }
-            //else reflectionManager.Reflect("资源不足");
+            else reflectionManager.Reflect("资源不足");
             }
         }
 
