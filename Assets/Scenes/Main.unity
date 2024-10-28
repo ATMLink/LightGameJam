@@ -322,6 +322,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2680691337292502246, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
+      propertyPath: wonderWinCount
+      value: 
+      objectReference: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
+    - target: {fileID: -2680691337292502246, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
       propertyPath: reflectionManager
       value: 
       objectReference: {fileID: 1479371187}
@@ -1166,7 +1170,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 7.1440125
+  m_PointLightOuterRadius: 12
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2138,6 +2142,7 @@ GameObject:
   - component: {fileID: 1168804922}
   - component: {fileID: 1168804921}
   - component: {fileID: 1168804923}
+  - component: {fileID: 1168804924}
   m_Layer: 0
   m_Name: GameDriver
   m_TagString: Untagged
@@ -2167,6 +2172,7 @@ MonoBehaviour:
   _musicManager: {fileID: 555020838}
   resourceManagement: {fileID: 1202425554}
   isPaused: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
+  wonderWinCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
 --- !u!4 &1168804922
 Transform:
   m_ObjectHideFlags: 0
@@ -2213,6 +2219,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1168804921}
         m_TargetAssemblyTypeName: GameDriver, Assembly-CSharp
         m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1168804924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168804920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1168804921}
+        m_TargetAssemblyTypeName: GameDriver, Assembly-CSharp
+        m_MethodName: WonderWin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3756,6 +3790,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
+      propertyPath: wonderWinCount
+      value: 
+      objectReference: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
+    - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
       propertyPath: reflectionManager
       value: 
       objectReference: {fileID: 1479371187}
@@ -4345,6 +4383,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
+      propertyPath: wonderWinCount
+      value: 
+      objectReference: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
+    - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
       propertyPath: reflectionManager
       value: 
       objectReference: {fileID: 1479371187}
@@ -4434,10 +4476,18 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 276774255130043180, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 634164826150630649, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 634164826150630649, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 952110372327224507, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4446,6 +4496,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 1788910681508514824, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 1860342428504519101, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4466,10 +4520,18 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 3175353361400266594, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 3468640748700881283, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 3468640748700881283, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 3663544463066784605, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: hoverSprite
       value: 
@@ -4486,6 +4548,10 @@ PrefabInstance:
       propertyPath: informationImage
       value: 
       objectReference: {fileID: 8525211062340059862, guid: 24ea31ac6b590224f8a1f5c60f21cb00, type: 3}
+    - target: {fileID: 3921531446775041163, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 4444585966705344470, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4550,10 +4616,18 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 6155914766974690511, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 6267752562968347558, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 6267752562968347558, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 6627998248715535599, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4574,6 +4648,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 7204571591845454747, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 7333699668179351073, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4582,6 +4660,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 7585410667364484438, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 7686852100895409724, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4654,6 +4736,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 8703890432703738710, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 8864620603388901470, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4666,6 +4752,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 9053688862040812064, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

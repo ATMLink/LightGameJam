@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: plain
   sprites:
-  - {fileID: 21300000, guid: edc8a9c1392588d4780e04bd52d56623, type: 3}
+  - {fileID: 21300000, guid: 5c1d3248d29959842b9e385477e73880, type: 3}
+  - {fileID: 21300000, guid: 69e7589342045bd40909408965080b51, type: 3}
+  - {fileID: 21300000, guid: 3237923b00446e44085edce7ebf62931, type: 3}
