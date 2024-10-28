@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 1118682005}
-  turnDelay: 8
+  turnDelay: 10
 --- !u!1 &43729373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,7 +2991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 2025562786}
-  turnDelay: 12
+  turnDelay: 15
 --- !u!1 &1339067320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,7 +3748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 119142080}
-  turnDelay: 4
+  turnDelay: 5
 --- !u!1 &1912484480
 GameObject:
   m_ObjectHideFlags: 0

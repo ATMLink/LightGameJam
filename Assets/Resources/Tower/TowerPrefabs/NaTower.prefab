@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1387315109506442525
 Transform:
   m_ObjectHideFlags: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 4389498719319227223}
   sight1: {fileID: 301713987534059267}
+  reflectionManager: {fileID: 0}
   routerTowerList: []
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect

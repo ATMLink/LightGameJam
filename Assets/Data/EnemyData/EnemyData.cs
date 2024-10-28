@@ -97,39 +97,39 @@ public static class EnemyData
 
     //enemy_Small
     //static List<float> sp1 = new List<float>(){1f};（例：回血速度，对于任何拥有特殊能力的怪都会将对应属性写在其基础属性上）
-    static EnemyInfo enemy_1 = new EnemyInfo(1, 10, 1.5f, 0, 4/*,sp1*/);
+    static EnemyInfo enemy_1 = new EnemyInfo(1, 15, 1.5f, 0, 3/*,sp1*/);
 
     //以上是一个完整的怪物信息
 
     //enemy_Middle
-    static EnemyInfo enemy_2 = new EnemyInfo(2, 20, 1f, 0, 2);
+    static EnemyInfo enemy_2 = new EnemyInfo(2, 30, 1f, 0, 1.5f);
 
     //enemy_Huge
-    static EnemyInfo enemy_3 = new EnemyInfo(8, 64,0.8f, 0, 1);
+    static EnemyInfo enemy_3 = new EnemyInfo(8, 64,0.8f, 0, 0.8f);
 
     //enemy_Creeper
     static List<float> sp4 = new List<float>() { 25f, 2, 0.5f };//爆炸伤害,爆炸范围,爆炸前摇
-    static EnemyInfo enemy_4 = new EnemyInfo(2, 30, 0.7f, 0, 2, sp4);
+    static EnemyInfo enemy_4 = new EnemyInfo(2, 30, 0.7f, 0, 1.5f, sp4);
 
     //enemy_Skeleton
     //理论上攻击时应该会停下来,但是目前没有攻击间隔和攻击花费时间的区别,因此随便定一个攻击花费时间
     static List<float> sp5 = new List<float>() { 0.2f };//攻击花费时间
-    static EnemyInfo enemy_5 = new EnemyInfo(3, 15, 1f, 4, 2, sp5);
+    static EnemyInfo enemy_5 = new EnemyInfo(2, 30, 1f, 4, 0.8f, sp5);
 
     //enemy_Witch
     static List<float> sp6 = new List<float>() { 0.2f, 10, 0.2f, 10f };//攻击花费时间,召唤衍生物数量,召唤多个衍生物间隔,与下一次召唤衍生物间隔
-    static EnemyInfo enemy_6 = new EnemyInfo(10, 200, 0.5f, 3.5f, 1, 110, sp6);
+    static EnemyInfo enemy_6 = new EnemyInfo(10, 250, 0.5f, 3.5f, 0.8f, 110, sp6);
 
     //enemy_Creation
     //Witch衍生物
-    static EnemyInfo enemy_7 = new EnemyInfo(1, 5, 1.5f, 0, 5);
+    static EnemyInfo enemy_7 = new EnemyInfo(1, 5, 1.5f, 0, 3);
 
     //enemy_Guard
-    static EnemyInfo enemy_8 = new EnemyInfo(2, 128, 0.7f, 0, 1, 105);
+    static EnemyInfo enemy_8 = new EnemyInfo(8, 96, 0.7f, 0, 0.8f, 105);
 
     //enemy_Shell
     static List<float> sp9 = new List<float>() {150f};//召唤障碍物血量
-    static EnemyInfo enemy_9 = new EnemyInfo(2, 20, 1f, 0, 2, sp9);
+    static EnemyInfo enemy_9 = new EnemyInfo(2, 20, 1f, 0, 1.5f, sp9);
 
     //enemy_Box
     static EnemyInfo enemy_10 = new EnemyInfo(0, 150, 1f, 0, 0);

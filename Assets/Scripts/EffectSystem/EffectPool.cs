@@ -9,7 +9,6 @@ public class EffectPool : MonoBehaviour
     [SerializeField]
     private List<GameObject> EffectPrefab = new List<GameObject>();
 
-    [SerializeField]
     private List<string> EffectName = new List<string>()
     {
         "EnemyDeathEffect",
