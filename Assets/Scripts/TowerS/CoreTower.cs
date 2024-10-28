@@ -22,6 +22,14 @@ public class CoreTower : Tower
         base.OnHit(damage);
         if (health <= 0) { gameDriver.EndGame(); }//血量为0结束游戏
         }
+    public override void Upgrade()
+        {
+        base.Upgrade();
+        Tower tower = GetComponent<Tower>(); //获取tower脚本
+        laserManager.RemoveLaser(tower);//删除旧激光
+        laserManager.CreateLaser(tower, transform.position, Vector3.down, 1000);//创建新激光
+
+        }
 
     }
 
