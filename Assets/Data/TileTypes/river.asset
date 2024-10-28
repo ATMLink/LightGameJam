@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: river
   sprites:
-  - {fileID: 21300000, guid: 7f1a467af7a52c9488ca95e0fed09c39, type: 3}
+  - {fileID: 21300000, guid: 78699bb04e8aef7499a09e042edb02e7, type: 3}
   canLightThrough: 1
   canEnemyThrough: 0
   canSlowEnemy: 0
