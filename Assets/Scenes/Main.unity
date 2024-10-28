@@ -4475,10 +4475,18 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 276774255130043180, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 634164826150630649, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 634164826150630649, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 952110372327224507, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4487,6 +4495,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 1788910681508514824, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 1860342428504519101, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4507,10 +4519,18 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 3175353361400266594, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 3468640748700881283, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 3468640748700881283, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 3663544463066784605, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: hoverSprite
       value: 
@@ -4527,6 +4547,10 @@ PrefabInstance:
       propertyPath: informationImage
       value: 
       objectReference: {fileID: 8525211062340059862, guid: 24ea31ac6b590224f8a1f5c60f21cb00, type: 3}
+    - target: {fileID: 3921531446775041163, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 4444585966705344470, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4591,10 +4615,18 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 6155914766974690511, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 6267752562968347558, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 6267752562968347558, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 6627998248715535599, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4615,6 +4647,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 7204571591845454747, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 7333699668179351073, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4623,6 +4659,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 7585410667364484438, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 7686852100895409724, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4695,6 +4735,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 8703890432703738710, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     - target: {fileID: 8864620603388901470, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4707,6 +4751,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 9053688862040812064, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: ShowTowerMenuPanel
+      value: 
+      objectReference: {fileID: 44910126}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
