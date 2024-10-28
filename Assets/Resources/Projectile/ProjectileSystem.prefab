@@ -48,8 +48,10 @@ MonoBehaviour:
   - {fileID: 7737950740450778539, guid: f404ef57e8f92734fb1ff84b78714643, type: 3}
   - {fileID: 642454311723958051, guid: d92fa9ed44958fc438a75d13e422e085, type: 3}
   - {fileID: 3942825929105803248, guid: 56a9a550cc9e18f489636ecb42a11001, type: 3}
+  - {fileID: 3942825929105803248, guid: f3005c51fddc04741a623510551f403e, type: 3}
   ProjectileName:
   - TowerProjectile
   - EnemyProjectile
   - KProjectile
+  - NaProjectile
   originPoolSize: 5

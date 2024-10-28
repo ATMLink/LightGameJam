@@ -18,7 +18,7 @@ MonoBehaviour:
   attackRange: {fileID: 11400000, guid: 32acaec356280fb4897cf67b390c28f2, type: 2}
   towerSprite: {fileID: 21300000, guid: d9a11267c3a5841468869729b64ae6f9, type: 3}
   withLight: 0
-  Prefab: {fileID: 3082863862407716987, guid: 7aebaff1f355b5b4a9e3fc79c64c98a8, type: 3}
+  Prefab: {fileID: 8525211062340059862, guid: 24ea31ac6b590224f8a1f5c60f21cb00, type: 3}
   towerName: NaTower
   nextLevelAttributes: {fileID: 0}
   elements: 0100000003000000

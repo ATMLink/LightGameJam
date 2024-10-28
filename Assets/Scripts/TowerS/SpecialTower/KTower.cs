@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class KTower : TowerProjectile
 {
-
-
-
     public override void Attack()
     {
         DamageTest();
@@ -81,7 +78,6 @@ public class KTower : TowerProjectile
                 }
                 break;
         }
-
     }
 
 
