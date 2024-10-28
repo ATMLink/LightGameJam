@@ -25,7 +25,8 @@ public class EnemyGenerateField : MonoBehaviour
     private int turnDelay = 0;
     private List<int> roundInfinity = new List<int>() { 5, 7, 8, 10, 11, 13, 15 };
 
-    private float wonderCountSaving = 1;
+    [SerializeField]
+    private float wonderCountSaving = 0;
     private float wonderLevel = 1.2f;
 
     void Start()
