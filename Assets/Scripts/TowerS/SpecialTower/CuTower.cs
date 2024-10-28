@@ -30,11 +30,13 @@ public class CuTower : Tower
             if (attackTimer >= attackCooldown)
             {
                 // 攻击所有敌人
-                foreach(var enemy in sight1.EnemyInSight)
-                if (enemy != null)
+                for(int i = 0; i < sight1.EnemyInSight.Count; i++)
                 {
-                    enemy.OnHit(damage); // 对敌人造成伤害
-                    attackTimer = 0f; // 重置攻击计时器
+                    if (sight1.EnemyInSight[i] != null)
+                    {
+                        sight1.EnemyInSight[i].OnHit(damage); // 对敌人造成伤害
+                        attackTimer = 0f; // 重置攻击计时器
+                    }
                 }
             }
         }

@@ -69,7 +69,8 @@ public class LaserAt : MonoBehaviour
             {
                 timer = 0;
                 if (hitCount > maxHitCount) break;
-                foreach (var en in EnemyInSight)
+                List<Enemy> enemySaving = new List<Enemy>(EnemyInSight);
+                foreach (var en in enemySaving)
                 {
                     if (en.gameObject.activeInHierarchy)
                     {

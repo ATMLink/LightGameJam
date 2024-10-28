@@ -300,11 +300,12 @@ public class UiManager : MonoBehaviour
     private void UpdateHP()
         {
         if (showTowerMenu.gameObject.activeInHierarchy)
+        {
+            if (selectedTower != null)
             {
-
-
-            HPtext.text = "HP:" + selectedTower.gameObject.GetComponent<Tower>().GetHealth();
+                HPtext.text = "HP:" + selectedTower.gameObject.GetComponent<Tower>().GetHealth();
             }
+        }
         }
 
 
