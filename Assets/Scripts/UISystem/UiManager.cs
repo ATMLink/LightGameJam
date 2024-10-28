@@ -10,7 +10,7 @@ using System.Threading;
 
 
 public class UiManager : MonoBehaviour
-{
+    {
 
 
     // 属性
@@ -19,15 +19,15 @@ public class UiManager : MonoBehaviour
     [SerializeField] private InputManager _inputManager;
     [SerializeField] private TowerManager _towerManager;
     [SerializeField] private MainResourceManagement _resourceManager;
-    
+
 
     public void Initialize()//UI初始化
-    {
+        {
         introduction.SetActive(false);
         gameover.SetActive(false);
         pauseGame.SetActive(false);
         showConstructionMenu.SetActive(false);
-        showTowerMenu.gameObject.SetActive(false); 
+        showTowerMenu.gameObject.SetActive(false);
         updateResources.SetActive(true);
         expandButton.gameObject.SetActive(false);
         pauseButton.onClick.AddListener(OnPauseButtonClicked);//暂停按钮
@@ -42,12 +42,12 @@ public class UiManager : MonoBehaviour
         TempInitialise();
         StartCountdown();
 
-    }
+        }
     public void UpdateState()
-    {
+        {
         UpdateHP();
         waves.text = " " + enemyManager.GetCurrentTurn();
-    }
+        }
     //****************************************************************
     //gameover相关属性
     [Header("gameover")]//游戏结束
@@ -57,19 +57,19 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button titleButton;//返回标题
     //gameover相关方法
     public void ShowGameOverScreen()//游戏结束时，调用该方法
-    {
+        {
         gameover.SetActive(true);
         titleButton.onClick.AddListener(OnTitleButtonClick);
         exitButton.onClick.AddListener(OnExitButtomClick);
-    }
+        }
     void OnExitButtomClick()//退出键
-    {
+        {
         Application.Quit();
-    }
+        }
     void OnTitleButtonClick()//返回标题键
-    {
-        SceneManager.LoadScene(2);//根据实际修改：返回标题
-    }
+        {
+        SceneManager.LoadScene(0);//根据实际修改：返回标题
+        }
 
 
 
@@ -87,44 +87,44 @@ public class UiManager : MonoBehaviour
 
     //introduction相关方法
     void ShowIntroduction()//需要出现新手教程时候调用该方法
-    {
+        {
         introduction.SetActive(true);
         UpdateImage();
-    }
+        }
 
     void OnOpenIntroductionButtonClicked()
-    {
+        {
         currentIndex = 0;
         ShowIntroduction();
-    }
+        }
     void OnLeftButtonClicked()
-    {
-        if (currentIndex > 0)
         {
+        if (currentIndex > 0)
+            {
             currentIndex--;
             UpdateImage();
+            }
         }
-    }
     void OnRightButtonClicked()
-    {
-        if (currentIndex < images.Length - 1)
         {
+        if (currentIndex < images.Length - 1)
+            {
             currentIndex++;
             UpdateImage();
+            }
         }
-    }
     void OnCloseIntroduction()
-    {
+        {
         introduction.SetActive(false);
-    }
+        }
     void UpdateImage()
-    {
+        {
         // 更新UI上的图片显示  
         if (currentImage != null && images.Length > 0)
-        {
+            {
             currentImage.sprite = images[currentIndex];
+            }
         }
-    }
 
 
     //***************************************************************
@@ -138,24 +138,24 @@ public class UiManager : MonoBehaviour
     [SerializeField] private BoolVariable isPaused;
     //pauseGame相关方法
     void PauseGame()
-    {
+        {
         pauseGame.SetActive(true);
         continueButton.onClick.AddListener(OnContinueButtonClicked);
         titleButton2.onClick.AddListener(OnTitleButtonClick);
         exitButton2.onClick.AddListener(OnExitButtomClick);
-    }
+        }
     void OnContinueButtonClicked()
-    {
+        {
         isPaused.SetValue(false);
         pauseGame.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(true);
-    }
+        }
     void OnPauseButtonClicked()
-    {
+        {
         PauseGame();
         isPaused.SetValue(true);
         pauseButton.gameObject.SetActive(false);
-    }
+        }
 
 
 
@@ -176,28 +176,28 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button tower9;
     [SerializeField] private Button tower10;
     [SerializeField] private Button showConstructionMenuButton;
-    
+
     // tower attributes
     [SerializeField] private TowerAttributes tower1Attributes;
     //ShowConstructionMenu相关方法
     void ShowConstructionMenu()
-    {
+        {
         showConstructionMenu.SetActive(true);
         closeConstructionMenu.onClick.AddListener(OnCloseConstructionMenuClicked);
 
 
 
-    }
+        }
     void OnCloseConstructionMenuClicked()
-    {
+        {
         showConstructionMenu.gameObject.SetActive(false);
         showConstructionMenuButton.gameObject.SetActive(true);
-    }//关闭
+        }//关闭
     void OnShowConstructionMenuButtonClicked()
-    {
+        {
         showConstructionMenuButton.gameObject.SetActive(false);
         ShowConstructionMenu();
-    }
+        }
 
 
     //**************************************************************
@@ -218,23 +218,23 @@ public class UiManager : MonoBehaviour
 
 
     public void ShowTowerMenu(Tower tower)
-    {
+        {
         selectedTower = tower;
         if (selectedTower != null && Camera.main != null)
-        {
+            {
             // 获取游戏对象的世界坐标  
             Vector3 worldPosition = selectedTower.transform.position;
             // 将世界坐标转换为屏幕坐标  
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
 
             Vector2 localPoint;
-            
+
             // 计算本地坐标
             RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, screenPosition, null, out localPoint);
 
             showTowerMenu.localPosition = localPoint;
-        }
-        
+            }
+
         // 在添加之前移除现有监听器
         closeTowerMenu.onClick.RemoveAllListeners();
         upgradeButton.onClick.RemoveAllListeners();
@@ -250,58 +250,61 @@ public class UiManager : MonoBehaviour
         deleteButton.onClick.AddListener(OnDeleteButtonClicked);
         showTowerMenu.gameObject.SetActive(true);
         HPtext = showTowerMenu.gameObject.GetComponentInChildren<TextMeshProUGUI>();
-    }
+        }
     void OnCloseTowerMenuClicked()
-    {
+        {
         showTowerMenu.gameObject.SetActive(false);//关闭面板
         selectedTower = null;
-    }
+        }
     void OnUpgradeButtonClicked()
-    {
-        if (selectedTower != null)
         {
+        Debug.LogWarning("OnUpgradeButtonClicked()升级按键检测成功");
+        if (selectedTower != null)
+            {
             _towerManager.UpgradeTower(selectedTower);
             showTowerMenu.gameObject.SetActive(false);
             selectedTower = null;
+            }
+        Debug.LogWarning("OnUpgradeButtonClicked()升级按键执行成功");
         }
-    }
     void OnClockwiseButtonClicked()
-    {
+        {
         //顺时针旋转
         if (selectedTower != null)
-        {
+            {
             _towerManager.RotateTower(selectedTower, false);
+            }
+
+
         }
-            
-            
-    }
-    void OnAnticlockwiseButtonClicked() 
-    {
+    void OnAnticlockwiseButtonClicked()
+        {
         //逆时针旋转的接口
         if (selectedTower != null)
-        {
+            {
             _towerManager.RotateTower(selectedTower, true);
+            }
+
         }
-            
-    }
     void OnDeleteButtonClicked()
-    {
-        if (selectedTower != null)
         {
+        if (selectedTower != null)
+            {
             _towerManager.RemoveTower(selectedTower);
             showTowerMenu.gameObject.SetActive(false);
             selectedTower = null;
+            }
+
         }
-            
-    }
     private void UpdateHP()
-    {
-        if (showTowerMenu.gameObject.activeInHierarchy)
         {
-            
-        
-        HPtext.text = "HP:" + selectedTower.gameObject.GetComponent<Tower>().GetHealth();}
-    }
+        if (showTowerMenu.gameObject.activeInHierarchy)
+            {
+
+
+            HPtext.text = "HP:" + selectedTower.gameObject.GetComponent<Tower>().GetHealth();
+            }
+        }
 
 
 
@@ -316,15 +319,15 @@ public class UiManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI waves;
     [SerializeField] private EnemyManager enemyManager;
     void OnRetractButtonClicked()//收起
-    {
+        {
         updateResources.SetActive(false);
         expandButton.gameObject.SetActive(true);
-    }
+        }
     void OnExpandButtonClicked()//展开
-    {
+        {
         updateResources.SetActive(true);
         expandButton.gameObject.SetActive(false);
-    }
+        }
 
     float tempsi;
     float tempna;
@@ -332,140 +335,146 @@ public class UiManager : MonoBehaviour
     float tempcs;
     float tempcu;
     float templi;
-    public void TempInitialise() {
+    public void TempInitialise()
+        {
         tempcs = _resourceManager.GetResourceNumber(element.cs);
         tempcu = _resourceManager.GetResourceNumber(element.cu);
         tempsi = _resourceManager.GetResourceNumber(element.si);
         tempk = _resourceManager.GetResourceNumber(element.k);
         templi = _resourceManager.GetResourceNumber(element.li);
         tempna = _resourceManager.GetResourceNumber(element.na);
-    }
+        }
     public void UpdateResources()//每帧更新
-    {
+        {
         resources[0].text = "Si" + " " + _resourceManager.GetResourceNumber(element.si);
         resources[1].text = "K" + " " + _resourceManager.GetResourceNumber(element.k);
         resources[2].text = "Na" + " " + _resourceManager.GetResourceNumber(element.na);
         resources[3].text = "Cu" + " " + _resourceManager.GetResourceNumber(element.cu);
         resources[4].text = "Li" + " " + _resourceManager.GetResourceNumber(element.li);
         resources[5].text = "Cs" + " " + _resourceManager.GetResourceNumber(element.cs);
-    }
-        //以上在实际应用中传递数值
+        }
+    //以上在实际应用中传递数值
 
-        //波次显示
+    //波次显示
 
-       
-        
-    
-    public void SiNumberChangeShow() {
-        if (tempsi < _resourceManager.GetResourceNumber(element.si))
+
+
+
+    public void SiNumberChangeShow()
         {
+        if (tempsi < _resourceManager.GetResourceNumber(element.si))
+            {
             resources[0].color = Color.green;
             resources[0].text = "Si" + " " + _resourceManager.GetResourceNumber(element.si) + " ↑";
             Invoke("ChangeTextColor", 0.5f);
-        }
-        else {
+            }
+        else
+            {
             resources[0].color = Color.red;
             resources[0].text = "Si" + " " + _resourceManager.GetResourceNumber(element.si) + " ↓";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         tempsi = _resourceManager.GetResourceNumber(element.si);
-    
-    }
-    public void NaNumberChangeShow() {
-        if (tempna < _resourceManager.GetResourceNumber(element.na))
+
+        }
+    public void NaNumberChangeShow()
         {
+        if (tempna < _resourceManager.GetResourceNumber(element.na))
+            {
             resources[2].color = Color.green;
             resources[2].text = "Na" + " " + _resourceManager.GetResourceNumber(element.na) + " ↑";
             Invoke("ChangeTextColor", 0.5f);
-        }
-        else {
+            }
+        else
+            {
             resources[2].color = Color.red;
             resources[2].text = "Na" + " " + _resourceManager.GetResourceNumber(element.na) + " ↓";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         tempna = _resourceManager.GetResourceNumber(element.na);
-    
-    }
+
+        }
     public void CuNumberChangeShow()
-    {
-        if (tempcu < _resourceManager.GetResourceNumber(element.cu))
         {
+        if (tempcu < _resourceManager.GetResourceNumber(element.cu))
+            {
             resources[3].color = Color.green;
             resources[3].text = "Cu" + " " + _resourceManager.GetResourceNumber(element.cu) + " ↑";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         else
-        {
+            {
             resources[3].color = Color.red;
             resources[3].text = "Cu" + " " + _resourceManager.GetResourceNumber(element.cu) + " ↓";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         tempcu = _resourceManager.GetResourceNumber(element.cu);
 
-    }
+        }
     public void LiNumberChangeShow()
-    {
-        if (templi < _resourceManager.GetResourceNumber(element.li))
         {
+        if (templi < _resourceManager.GetResourceNumber(element.li))
+            {
             resources[4].color = Color.green;
             resources[4].text = "Li" + " " + _resourceManager.GetResourceNumber(element.li) + " ↑";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         else
-        {
+            {
             resources[4].color = Color.red;
             resources[4].text = "Li" + " " + _resourceManager.GetResourceNumber(element.li) + " ↓";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         templi = _resourceManager.GetResourceNumber(element.li);
 
-    }
+        }
     public void CsNumberChangeShow()
-    {
-        if (tempcs < _resourceManager.GetResourceNumber(element.cs))
         {
+        if (tempcs < _resourceManager.GetResourceNumber(element.cs))
+            {
             resources[5].color = Color.green;
             resources[5].text = "Cs" + " " + _resourceManager.GetResourceNumber(element.cs) + " ↑";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         else
-        {
+            {
             resources[5].color = Color.red;
             resources[5].text = "Cs" + " " + _resourceManager.GetResourceNumber(element.cs) + " ↓";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         tempcs = _resourceManager.GetResourceNumber(element.cs);
 
-    }
+        }
     public void KNumberChangeShow()
-    {
-        if (tempk < _resourceManager.GetResourceNumber(element.k))
         {
+        if (tempk < _resourceManager.GetResourceNumber(element.k))
+            {
             resources[1].color = Color.green;
             resources[1].text = "K" + " " + _resourceManager.GetResourceNumber(element.k) + " ↑";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         else
-        {
+            {
             resources[1].color = Color.red;
             resources[1].text = "K" + " " + _resourceManager.GetResourceNumber(element.k) + " ↓";
             Invoke("ChangeTextColor", 0.5f);
-        }
+            }
         tempk = _resourceManager.GetResourceNumber(element.k);
 
-    }
-    public void ChangeTextColor() {
-        for (int i = 0; i < resources.Length; i++)
-        {
-            resources[i].color = Color.white;
         }
+    public void ChangeTextColor()
+        {
+        for (int i = 0; i < resources.Length; i++)
+            {
+            resources[i].color = Color.white;
+            }
         UpdateResources();
-    }
+        }
 
 
 
 
-    [Header("Countdown")] 
+    [Header("Countdown")]
     [SerializeField] private float countdownTime = 120.0f; // 设置倒计时时间  
     [SerializeField] private TextMeshProUGUI countdownText; // 引用用于显示倒计时的UI Text元素  
 
@@ -473,41 +482,41 @@ public class UiManager : MonoBehaviour
 
     // 开始倒计时  
     public void StartCountdown()
-    {
-        if (!isCountingDown)
         {
+        if (!isCountingDown)
+            {
             isCountingDown = true;
             StartCoroutine(Countdown());
+            }
         }
-    }
 
     // 停止倒计时  
     public void StopCountdown()
-    {
+        {
         StopAllCoroutines();
         isCountingDown = false;
-    }
+        }
 
     // 协程实现倒计时  
     private IEnumerator Countdown()
-    {
-        while (countdownTime > 0)
         {
-            if (countdownText != null)
+        while (countdownTime > 0)
             {
+            if (countdownText != null)
+                {
                 countdownText.text = countdownTime.ToString("F0"); // 显示倒计时时间，保留整数部分  
-            }
+                }
             yield return new WaitForSeconds(1.0f); // 等待1秒  
             countdownTime -= 1.0f;
-        }
+            }
 
         if (countdownText != null)
-        {
+            {
             countdownText.text = "Enemy is coming!!";// 倒计时结束
             yield return new WaitForSeconds(3.0f);
             countdownText.gameObject.SetActive(false);
-        }
+            }
 
         isCountingDown = false; // 重置状态  
+        }
     }
-}

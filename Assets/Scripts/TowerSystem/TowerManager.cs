@@ -34,7 +34,7 @@ public class TowerManager : MonoBehaviour
 
     IEnumerator CreatCoreTower()
         {
-        yield return new WaitForSeconds(1);//等1秒
+        yield return new WaitForSeconds(0.3f);//等0.3秒
         Debug.Log("调用协程创建核心塔中");
         AddTower(new Vector3(-1.5f, 1.5f, 0), coreTower);
 
@@ -78,9 +78,10 @@ public class TowerManager : MonoBehaviour
 
     public void UpgradeTower(Tower tower)
         {
+        Debug.LogWarning("UpgradeTower升级按键执行开始");
         tower.Upgrade();
 
-
+        Debug.LogWarning("UpgradeTower升级按键执行成功");
         }
     public void RotateTower(Tower tower, bool antiClockwise = true)
         {
@@ -114,12 +115,12 @@ public class TowerManager : MonoBehaviour
         Debug.Log($"Removing tower: {tower.name}, at position: {tower.transform.position}");
         if (musicManager != null)
             musicManager.PlaySound("DestructTower");
-        
+
         // ↓↓↓↓↓↓↓还要弹出一个“无法拆除核心塔”↓↓↓↓↓↓↓↓↓
         if (tower.attributes.towerName == "CoreTower_Lv1" || tower.attributes.towerName == "CoreTower_Lv2")
             return;
         // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑还要弹出一个“无法拆除核心塔”↑↑↑↑↑↑↑↑↑↑↑↑
-        
+
         laserManager.RemoveLaser(tower);
         tower.RemoveTower();
         towerPool.ReturnTower(tower);
@@ -140,24 +141,24 @@ public class TowerManager : MonoBehaviour
         }
 
     private void StartRotate(Tower tower)
-    {
+        {
         if (tower.attributes.towerName == "SplitterTower")
             return;
         laserManager.SetLaserActiveForTower(tower, false);
         if (musicManager != null)
             musicManager.PlaySound("TowerRotate");
-    }
+        }
 
     private void EndRotate(Tower tower, bool antiClockwise)
-    {
-        if (tower.attributes.towerName == "SplitterTower")
         {
+        if (tower.attributes.towerName == "SplitterTower")
+            {
             Debug.Log("splitter tower laser should not rotate");
             return;
-        }
-        
+            }
+
         laserManager.SetLaserActiveForTower(tower, true);
         laserManager.RotateLaser(tower, antiClockwise);
-    }
+        }
 
     }
