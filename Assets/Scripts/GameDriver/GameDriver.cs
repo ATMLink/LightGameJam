@@ -112,6 +112,13 @@ public class GameDriver : MonoBehaviour
         Debug.Log("game over");
     }
 
+    public void WonderWin()
+    {
+        if (wonderWinCount.Value == 3)
+        {
+            EndGame();
+        }
+    }
     public float GetGameTime()
     {
         return gameTime;

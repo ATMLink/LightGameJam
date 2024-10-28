@@ -2246,7 +2246,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1168804921}
         m_TargetAssemblyTypeName: GameDriver, Assembly-CSharp
-        m_MethodName: EndGame
+        m_MethodName: WonderWin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
