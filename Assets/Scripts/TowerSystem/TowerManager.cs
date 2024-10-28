@@ -15,6 +15,7 @@ public class TowerManager : MonoBehaviour
     [SerializeField] private LaserManager laserManager;
     [SerializeField] private MusicManager musicManager;
     [SerializeField] private ReflectionManager reflectionManager;
+    [SerializeField] private MainResourceManagement resourceManagement;
 
     //为了测试公开的
     [SerializeField]
@@ -127,13 +128,24 @@ public class TowerManager : MonoBehaviour
 
             
         // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑还要弹出一个“无法拆除核心塔”↑↑↑↑↑↑↑↑↑↑↑↑
-
+        
         laserManager.RemoveLaser(tower);
         tower.RemoveTower();
         towerPool.ReturnTower(tower);
         towers.Remove(tower);
+        ReturnResources(tower);
         }
 
+
+        public void ReturnResources(Tower tower)
+        {
+            for (int i = 0; i < tower.attributes.elements.Count; i++)
+            {
+                float elementNum = tower.attributes.elementSpendNumber[i];
+                float returnElement = elementNum * 0.5f *(tower.GetHealth() / tower.attributes.health.Value);
+                resourceManagement.CollectResource(tower.attributes.elements[i], returnElement);
+            }
+        }
     public Tower GetTowerAt(Vector3? position)
         {
         if (!position.HasValue)

@@ -290,9 +290,10 @@ public class UiManager : MonoBehaviour
         {
         if (selectedTower != null)
             {
-            _towerManager.RemoveTower(selectedTower);
-            showTowerMenu.gameObject.SetActive(false);
-            selectedTower = null;
+                showTowerMenu.gameObject.SetActive(false);
+                _towerManager.RemoveTower(selectedTower);
+            
+                selectedTower = null;
             }
 
         }
