@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 29869970}
   - component: {fileID: 29869972}
   - component: {fileID: 29869971}
+  - component: {fileID: 29869973}
   m_Layer: 0
   m_Name: Field3
   m_TagString: Untagged
@@ -268,7 +269,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 1118682005}
+  wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 10
+--- !u!114 &29869973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29869969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 29869972}
+        m_TargetAssemblyTypeName: EnemyGenerateField, Assembly-CSharp
+        m_MethodName: OnWonderBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &44910126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7999851432715399932, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
@@ -587,6 +617,7 @@ GameObject:
   - component: {fileID: 335344577}
   - component: {fileID: 335344579}
   - component: {fileID: 335344578}
+  - component: {fileID: 335344580}
   m_Layer: 0
   m_Name: Field1
   m_TagString: Untagged
@@ -672,7 +703,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 1624389999}
+  wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 0
+--- !u!114 &335344580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335344576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 335344579}
+        m_TargetAssemblyTypeName: EnemyGenerateField, Assembly-CSharp
+        m_MethodName: OnWonderBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &369856518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2757,7 @@ GameObject:
   - component: {fileID: 1331573786}
   - component: {fileID: 1331573788}
   - component: {fileID: 1331573787}
+  - component: {fileID: 1331573789}
   m_Layer: 0
   m_Name: Field4
   m_TagString: Untagged
@@ -2782,7 +2843,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 2025562786}
+  wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 15
+--- !u!114 &1331573789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331573785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1331573788}
+        m_TargetAssemblyTypeName: EnemyGenerateField, Assembly-CSharp
+        m_MethodName: OnWonderBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1363951893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3513,6 +3603,7 @@ GameObject:
   - component: {fileID: 1897878504}
   - component: {fileID: 1897878506}
   - component: {fileID: 1897878505}
+  - component: {fileID: 1897878507}
   m_Layer: 0
   m_Name: Field2
   m_TagString: Untagged
@@ -3598,7 +3689,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 119142080}
+  wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 5
+--- !u!114 &1897878507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897878503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1897878506}
+        m_TargetAssemblyTypeName: EnemyGenerateField, Assembly-CSharp
+        m_MethodName: OnWonderBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1912484480
 GameObject:
   m_ObjectHideFlags: 0

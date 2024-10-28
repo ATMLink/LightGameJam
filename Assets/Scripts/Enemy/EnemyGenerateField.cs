@@ -9,6 +9,7 @@ public class EnemyGenerateField : MonoBehaviour
     //出生点第一个路径点
     [SerializeField]
     public RoadPoint StartPos;
+    [SerializeField] private FloatVariable wonderCount;
 
     private List<string[]> levelTable = new List<string[]>();
     private PolygonCollider2D polygon;
@@ -24,6 +25,8 @@ public class EnemyGenerateField : MonoBehaviour
     private int turnDelay = 0;
     private List<int> roundInfinity = new List<int>() { 5, 7, 8, 10, 11, 13, 15 };
 
+    private float wonderCountSaving = 1;
+    private float wonderLevel = 1.2f;
 
     void Start()
     {
@@ -77,7 +80,7 @@ public class EnemyGenerateField : MonoBehaviour
                 string[] sp = levelTable[realTurn - 1][i].Split('*');
                 //Debug.Log(sp[0] + "  " + sp[1]);
                 enemyName.Add(sp[0]);
-                maxEnemyGenerateCD.Add(TurnCD / (float.Parse(sp[1]) * GetLevel(turn - turnDelay)));//随着难度改变会增加每波的怪物总量
+                maxEnemyGenerateCD.Add(TurnCD / (float.Parse(sp[1]) * GetLevel(turn - turnDelay) * Mathf.Pow(wonderLevel, wonderCountSaving)));//随着难度改变会增加每波的怪物总量
                 //立刻出怪
                 //float cd = maxEnemyGenerateCD[i - 2];
                 float cd = 0;
@@ -162,5 +165,10 @@ public class EnemyGenerateField : MonoBehaviour
     {
         turn -= GetTurnCount();
         return EnemyData.InfinityStrategy(turn);
+    }
+
+    public void OnWonderBuild()
+    {
+        wonderCountSaving = wonderCount.Value;
     }
 }   

@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 386517367}
   - component: {fileID: 386517366}
   - component: {fileID: 386517365}
+  - component: {fileID: 386517368}
   m_Layer: 0
   m_Name: Field
   m_TagString: Untagged
@@ -525,6 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 250412799}
+  wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 0
 --- !u!4 &386517367
 Transform:
@@ -541,6 +543,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &386517368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386517364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386517366}
+        m_TargetAssemblyTypeName: EnemyGenerateField, Assembly-CSharp
+        m_MethodName: OnWonderBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &479322819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1113,6 +1143,7 @@ GameObject:
   - component: {fileID: 1338360083}
   - component: {fileID: 1338360082}
   - component: {fileID: 1338360081}
+  - component: {fileID: 1338360084}
   m_Layer: 0
   m_Name: Field (2)
   m_TagString: Untagged
@@ -1183,6 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 264325355}
+  wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 8
 --- !u!4 &1338360083
 Transform:
@@ -1199,6 +1231,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1338360084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338360080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386517366}
+        m_TargetAssemblyTypeName: EnemyGenerateField, Assembly-CSharp
+        m_MethodName: OnWonderBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1344516649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1426,7 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 1344516652}
   sight1: {fileID: 2103598531}
+  reflectionManager: {fileID: 0}
   routerTowerList: []
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect
@@ -1381,6 +1442,7 @@ GameObject:
   - component: {fileID: 1364102891}
   - component: {fileID: 1364102890}
   - component: {fileID: 1364102889}
+  - component: {fileID: 1364102892}
   m_Layer: 0
   m_Name: Field (3)
   m_TagString: Untagged
@@ -1451,6 +1513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 1416926000}
+  wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 12
 --- !u!4 &1364102891
 Transform:
@@ -1467,6 +1530,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1364102892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364102888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386517366}
+        m_TargetAssemblyTypeName: EnemyGenerateField, Assembly-CSharp
+        m_MethodName: OnWonderBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1382430757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1590,8 @@ MonoBehaviour:
   towerPool: {fileID: 0}
   laserManager: {fileID: 0}
   musicManager: {fileID: 0}
+  reflectionManager: {fileID: 0}
+  resourceManagement: {fileID: 0}
   towers:
   - {fileID: 0}
   - {fileID: 0}
@@ -1859,6 +1952,7 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 1473002540}
   sight1: {fileID: 1832836080}
+  reflectionManager: {fileID: 0}
   routerTowerList: []
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect
@@ -2259,6 +2353,7 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 1608400632}
   sight1: {fileID: 304182372}
+  reflectionManager: {fileID: 0}
   routerTowerList: []
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect
@@ -2429,6 +2524,7 @@ GameObject:
   - component: {fileID: 1784229841}
   - component: {fileID: 1784229840}
   - component: {fileID: 1784229839}
+  - component: {fileID: 1784229842}
   m_Layer: 0
   m_Name: Field (1)
   m_TagString: Untagged
@@ -2499,6 +2595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {fileID: 913956190}
+  wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 4
 --- !u!4 &1784229841
 Transform:
@@ -2515,6 +2612,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1784229842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784229838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386517366}
+        m_TargetAssemblyTypeName: EnemyGenerateField, Assembly-CSharp
+        m_MethodName: OnWonderBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1803846525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,6 +3382,7 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 2064305355}
   sight1: {fileID: 1920671744}
+  reflectionManager: {fileID: 0}
   routerTowerList: []
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect
@@ -3648,6 +3774,7 @@ MonoBehaviour:
   resourceManagement: {fileID: 0}
   spriteRenderer: {fileID: 2109907537}
   sight1: {fileID: 1272574570}
+  reflectionManager: {fileID: 0}
   routerTowerList: []
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect
