@@ -4590,6 +4590,30 @@ PrefabInstance:
       propertyPath: _constructManager
       value: 
       objectReference: {fileID: 913605974}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: images.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: images.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e97230cc5e182e458870516b66f4170, type: 3}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: images.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 81fc736e3a6d0794daaf72b96cda0aeb, type: 3}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: images.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ef9968b8884bee43bba5021f93e72e2, type: 3}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: images.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: dad08fa9ef8ecfb4a8e68ad085017be0, type: 3}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: images.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0913603662a409a488f2d3cacd0da8bd, type: 3}
     - target: {fileID: 8297152740538447906, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
