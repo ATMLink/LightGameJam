@@ -23,7 +23,7 @@ public class UiManager : MonoBehaviour
 
     public void Initialize()//UI初始化
         {
-        introduction.SetActive(false);
+        introduction.SetActive(true);
         gameover.SetActive(false);
         pauseGame.SetActive(false);
         showConstructionMenu.SetActive(false);
@@ -478,6 +478,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] private float countdownTime = 120.0f; // 设置倒计时时间  
     [SerializeField] private TextMeshProUGUI countdownText; // 引用用于显示倒计时的UI Text元素  
 
+
+    [SerializeField] private EnemyManager EnemyManager;
     private bool isCountingDown = false;
 
     // 开始倒计时  
@@ -514,6 +516,7 @@ public class UiManager : MonoBehaviour
             {
             countdownText.text = "Enemy is coming!!";// 倒计时结束
             yield return new WaitForSeconds(3.0f);
+            EnemyManager.Generate();
             countdownText.gameObject.SetActive(false);
             }
 

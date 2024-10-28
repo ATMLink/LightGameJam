@@ -1434,7 +1434,7 @@ MonoBehaviour:
   - {fileID: 1331573788}
   musicManager: {fileID: 555020838}
   difficultLevel: 1
-  maxRestCD: 60
+  maxRestCD: 80
   currentTurn: 0
 --- !u!114 &659915093
 MonoBehaviour:
@@ -4581,6 +4581,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 252711560}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: EnemyManager
+      value: 
+      objectReference: {fileID: 659915092}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 659915092}
@@ -4594,7 +4598,7 @@ PrefabInstance:
       objectReference: {fileID: 945080038}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: countdownTime
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: _resourceManager
