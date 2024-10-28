@@ -1921,7 +1921,7 @@ MonoBehaviour:
   laserManager: {fileID: 415967692}
   musicManager: {fileID: 555020838}
   reflectionManager: {fileID: 1479371187}
-  resourceManagement: {fileID: 0}
+  resourceManagement: {fileID: 1202425554}
   towers: []
   coreTower: {fileID: 11400000, guid: 8f8a519aa44d8554ea12fae8737a4ae1, type: 2}
 --- !u!114 &972399227 stripped
