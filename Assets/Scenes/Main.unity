@@ -4462,6 +4462,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1967238063}
     - target: {fileID: 3663544463066784605, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: hoverSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 77aa78c89f213954480e178db7bca552, type: 3}
+    - target: {fileID: 3663544463066784605, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: displayImage
       value: 
       objectReference: {fileID: 972399227}
