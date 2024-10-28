@@ -73,17 +73,17 @@ public class TowerManager : MonoBehaviour
             if (towerAttributes.towerName == "CoreTower_Lv1")
                 {
                 laserManager.CreateLaser(newTower, position, new Vector3(0, -1, 0), 400);
-                Debug.Log("调用成功");
+                //Debug.Log("调用成功");
                 }
             }
         }
 
     public void UpgradeTower(Tower tower)
         {
-        Debug.LogWarning("UpgradeTower升级按键执行开始");
+        //Debug.LogWarning("UpgradeTower升级按键执行开始");
         tower.Upgrade();
 
-        Debug.LogWarning("UpgradeTower升级按键执行成功");
+        //Debug.LogWarning("UpgradeTower升级按键执行成功");
         }
     public void RotateTower(Tower tower, bool antiClockwise = true)
         {
