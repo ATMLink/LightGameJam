@@ -122,7 +122,8 @@ public class MainResourceManagement : MonoBehaviour
         return elementNumber;
         }
     public void CollectResource(element element, float number)
-        {
+    {
+        int numInt = (int)number;
         if (number <= 0) { Debug.LogError("collect number must bigger than 0"); return; }
         FloatVariable _element = null;
         switch (element)
@@ -134,7 +135,7 @@ public class MainResourceManagement : MonoBehaviour
             case element.li: _element = liNumber; break;
             case element.cs: _element = csNumber; break;
             }
-        _element.SetValue(_element.Value + number);
+        _element.SetValue(_element.Value + numInt);
 
 
         }

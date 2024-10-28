@@ -27,6 +27,8 @@ public class GameDriver : MonoBehaviour
     private float gameTime = 0f;
     private float gameSpeed = 1f;
     private float gameTwiceFastSpeed = 2f;
+    private int currentTurn;
+    private bool hasPlayedNervousMusic;
     
     // initialize
     private void Start()
@@ -46,7 +48,7 @@ public class GameDriver : MonoBehaviour
             //_laserManager.UpdateState();
             _uiManager.UpdateState();
             resourceManagement.UpdateState();
-            
+            ChangeNervousMusic();
         }
     }
 
@@ -71,6 +73,7 @@ public class GameDriver : MonoBehaviour
         _uiManager.Initialize();
         _laserManager.Initialize();
         resourceManagement.Initialize();
+        hasPlayedNervousMusic = false;
         _musicManager.PlayBGM("BattleBGM");
     }
 
@@ -107,7 +110,8 @@ public class GameDriver : MonoBehaviour
     public void EndGame()
     {
         gameIsRunning = false;
-        _musicManager.PlayBGM("WinBGM");
+        if(_musicManager!= null)
+            _musicManager.PlayBGM("FailedBGM");
         _uiManager.ShowGameOverScreen();
         Debug.Log("game over");
     }
@@ -116,11 +120,26 @@ public class GameDriver : MonoBehaviour
     {
         if (wonderWinCount.Value == 3)
         {
-            EndGame();
+            gameIsRunning = false;
+            if(_musicManager != null)
+                _musicManager.PlayBGM("WinBGM");
+            // uimanager
         }
     }
     public float GetGameTime()
     {
         return gameTime;
+    }
+
+    public void ChangeNervousMusic()
+    {
+        currentTurn = _enemyManager.GetCurrentTurn();
+        if(currentTurn >= 16&& !hasPlayedNervousMusic)
+        {
+            Debug.Log("start nervous bgm");
+            if (_musicManager != null)
+                _musicManager.PlayBGM("EnemyNervousBGM");
+            hasPlayedNervousMusic = true;
+        }
     }
 }
