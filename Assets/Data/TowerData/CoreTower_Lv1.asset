@@ -17,9 +17,9 @@ MonoBehaviour:
   attackSpeed: {fileID: 11400000, guid: 07df5cfa1d34d53498f9cef17ffd9adc, type: 2}
   attackRange: {fileID: 11400000, guid: 007103087382dcd4ab8fd9844a492884, type: 2}
   towerSprite: {fileID: 21300000, guid: 2183c9e1a6ce72846816b13ad2ca179e, type: 3}
-  withLight: 1
+  withLight: 0
   Prefab: {fileID: 6468066811811687904, guid: b7843fb5ac8db114bb27d6f1b5e28194, type: 3}
   towerName: CoreTower_Lv1
-  nextLevelAttributes: {fileID: 0}
+  nextLevelAttributes: {fileID: 11400000, guid: e4583b71562b7544d843529e9a0ca918, type: 2}
   elements: 
   elementSpendNumber: []
