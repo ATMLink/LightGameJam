@@ -3,11 +3,7 @@ Shader "Unlit/Laser"
     Properties
     {
         _LaserWidth("Laser Width",Float) = 1
-        _Color0("Color 0",Color) = (1,1,1,1)
-        _Color1("Color 1",Color) = (1,1,1,1)
-        _Color2("Color 2",Color) = (1,1,1,1)
-        _Color3("Color 3",Color) = (1,1,1,1)
-        _Intensity("Intensity",Range(0,1000)) = 0
+        _Color("Color ",Color) = (1,1,1,1)
         _NoiseScale("Noise Scale",Float) = 1
        
         _ClmapMin("Clmap Min",Range(0,1)) = 0
@@ -48,11 +44,7 @@ Shader "Unlit/Laser"
                 float4 vertex : SV_POSITION;
             };
             half _LaserWidth;
-            half4 _Color0;
-            half4 _Color1;
-            half4 _Color2;
-            half4 _Color3;
-            half _Intensity;
+            half4 _Color;
             half _NoiseScale;
             half _ClmapMin;
             half _SmoothStepMax;
@@ -102,13 +94,7 @@ Shader "Unlit/Laser"
                 half4 col;
                 col.a = exp(abs(i.uv.y-0.5f)*laserWidth) * noise;
                 //col.a = 1;
-                half range0 = smoothstep(0.0f, 333.3f, _Intensity);
-                half range1 = smoothstep(333.3f, 666.7f, _Intensity);
-                half range2 = smoothstep(666.7f, 1000.0f, _Intensity);
-                col.rgb = lerp(_Color0, _Color1.rgb, range0);
-                col.rgb = lerp(col.rgb, _Color2.rgb, range1);
-                col.rgb = lerp(col.rgb, _Color3.rgb, range2);
-                col.rgb = col.rgb * 1.25f;
+                col.rgb = _Color.rgb * 1.25f;
                // col.rgb = noise;
                 return col;
             }

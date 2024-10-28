@@ -233,7 +233,10 @@ public class Laser : MonoBehaviour
     public float maxDistance = 20f; // 激光最大距离
     [SerializeField] private LineRenderer lineRenderer; // 用于可视化激光
     [SerializeField] private ParticleSystem hitEffect; // 激光击中效果的粒子系统
-
+    [SerializeField] private Color color0;
+    [SerializeField] private Color color1;
+    [SerializeField] private Color color2;
+    [SerializeField] private Color color3;
     public List<Enemy> enemies;
     
     private BoxCollider2D boxCollider2D;
@@ -250,7 +253,10 @@ public class Laser : MonoBehaviour
         transform.position = new Vector3(position.x, position.y, 0);
         this.direction = direction;
         this.intensity = intensity;
-        lineRenderer.material.SetFloat("_Intensity", this.intensity);
+        lineRenderer.material.SetColor("_Color", ChangeColor());
+        ParticleSystem ps = transform.GetChild(1).GetComponent<ParticleSystem>();
+        ps.GetComponent<Renderer>().material.SetColor("_BaseColor", ChangeColor());
+        hitEffect.GetComponent<Renderer>().material.SetColor("_BaseColor", ChangeColor());
         boxCollider2D = GetComponent<BoxCollider2D>();
         textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
         hitObj.Clear();
@@ -438,7 +444,16 @@ public class Laser : MonoBehaviour
                 // 造成伤害
                 // hit.collider.GetComponent<Enemy>().OnHit(damage);
     }
-
+    private Color ChangeColor() {
+        Color returnColor;
+        float range0 = Mathf.SmoothStep(0.0f, 333.3f, intensity);
+        float range1 = Mathf.SmoothStep(333.3f, 666.7f, intensity);
+        float range2 = Mathf.SmoothStep(666.7f, 1000.0f, intensity);
+        returnColor =Color.Lerp(color0, color1, range0);
+        returnColor = Color.Lerp(returnColor, color2, range1);
+        returnColor = Color.Lerp(returnColor, color3, range2);
+        return returnColor;
+    }
     private void TriggerHitEffect(Vector3 position)
     {
         // 在激光击中位置播放粒子效果
@@ -461,7 +476,10 @@ public class Laser : MonoBehaviour
     public void SetLaserIntensity(float newIntensity)
     {
         intensity = newIntensity;
-        lineRenderer.material.SetFloat("_Intensity", intensity);
+        lineRenderer.material.SetColor("_Color", ChangeColor());
+        ParticleSystem ps = transform.GetChild(1).GetComponent<ParticleSystem>();
+        ps.GetComponent<Renderer>().material.SetColor("_BaseColor", ChangeColor());
+        hitEffect.GetComponent<Renderer>().material.SetColor("_BaseColor", ChangeColor());
         UpdateLaser();
     }
 
