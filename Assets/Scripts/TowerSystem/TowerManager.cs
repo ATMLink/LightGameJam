@@ -14,6 +14,7 @@ public class TowerManager : MonoBehaviour
     public TowerPool towerPool;
     [SerializeField] private LaserManager laserManager;
     [SerializeField] private MusicManager musicManager;
+    [SerializeField] private ReflectionManager reflectionManager;
 
     //为了测试公开的
     [SerializeField]
@@ -117,8 +118,14 @@ public class TowerManager : MonoBehaviour
             musicManager.PlaySound("DestructTower");
 
         // ↓↓↓↓↓↓↓还要弹出一个“无法拆除核心塔”↓↓↓↓↓↓↓↓↓
-        if (tower.attributes.towerName == "CoreTower_Lv1" || tower.attributes.towerName == "CoreTower_Lv2")
-            return;
+        if (tower.attributes.towerName == "CoreTower_Lv1" || tower.attributes.towerName == "CoreTower_Lv2") {
+
+            reflectionManager.Reflect("无法拆除核心塔");
+            return; 
+        
+        }
+
+            
         // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑还要弹出一个“无法拆除核心塔”↑↑↑↑↑↑↑↑↑↑↑↑
 
         laserManager.RemoveLaser(tower);

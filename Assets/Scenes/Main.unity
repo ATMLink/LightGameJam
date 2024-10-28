@@ -369,6 +369,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2680691337292502246, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
+      propertyPath: reflectionManager
+      value: 
+      objectReference: {fileID: 1479371187}
     - target: {fileID: 100338661431412229, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
       propertyPath: m_Name
       value: WonderSun
@@ -1430,7 +1434,7 @@ MonoBehaviour:
   - {fileID: 1331573788}
   musicManager: {fileID: 555020838}
   difficultLevel: 1
-  maxRestCD: 60
+  maxRestCD: 80
   currentTurn: 0
 --- !u!114 &659915093
 MonoBehaviour:
@@ -2055,10 +2059,8 @@ MonoBehaviour:
   towerManager: {fileID: 945080038}
   towerPool: {fileID: 864061134}
   _laserManager: {fileID: 415967692}
-  reflectionManager: {fileID: 0}
+  reflectionManager: {fileID: 1479371187}
   musicManager: {fileID: 555020838}
-  reflect: {fileID: 0}
-  reflectText: {fileID: 0}
 --- !u!1 &940748517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2141,7 @@ MonoBehaviour:
   towerPool: {fileID: 864061134}
   laserManager: {fileID: 415967692}
   musicManager: {fileID: 555020838}
+  reflectionManager: {fileID: 1479371187}
   towers: []
   coreTower: {fileID: 11400000, guid: 8f8a519aa44d8554ea12fae8737a4ae1, type: 2}
 --- !u!1 &985791170
@@ -3914,6 +3917,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
+      propertyPath: reflectionManager
+      value: 
+      objectReference: {fileID: 1479371187}
+    - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
       propertyPath: resourceManagement
       value: 
       objectReference: {fileID: 1202425554}
@@ -4349,6 +4356,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
+      propertyPath: reflectionManager
+      value: 
+      objectReference: {fileID: 1479371187}
+    - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
       propertyPath: resourceManagement
       value: 
       objectReference: {fileID: 1202425554}
@@ -4442,10 +4453,18 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 2115412958524366594, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 17.465088
+      objectReference: {fileID: 0}
     - target: {fileID: 2562811624667888655, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 3114043963463531974, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4498966838e3df1438ddb4fd5c9fceec, type: 3}
     - target: {fileID: 3175353361400266594, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4466,6 +4485,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 5029169971554921992, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5df161fd3efb68248bf34f926430842d, type: 3}
     - target: {fileID: 5044324225130133495, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4522,6 +4545,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 6627998248715535599, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c029dbf29f51fa84b9de814ac1523ad2, type: 3}
     - target: {fileID: 6660837245940389771, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4538,6 +4565,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 7333699668179351073, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 017d4f894b533c34d87654da37430dfe, type: 3}
     - target: {fileID: 7585410667364484438, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4555,6 +4586,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 252711560}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: EnemyManager
+      value: 
+      objectReference: {fileID: 659915092}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 659915092}
@@ -4568,7 +4603,7 @@ PrefabInstance:
       objectReference: {fileID: 945080038}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: countdownTime
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: _resourceManager

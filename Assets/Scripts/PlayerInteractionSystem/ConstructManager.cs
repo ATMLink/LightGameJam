@@ -15,8 +15,8 @@ public class ConstructManager : MonoBehaviour
     [SerializeField] private LaserManager _laserManager;
     [SerializeField] private ReflectionManager reflectionManager;
     [SerializeField] private MusicManager musicManager;
-    [SerializeField] private GameObject reflect;
-    [SerializeField] private Text reflectText;
+    //[SerializeField] private GameObject reflect;
+    //[SerializeField] private Text reflectText;
     //[SerializeField] private LightSystem lightSystem;
     private TowerAttributes selectedTowerAttributes;
     private void Start()
@@ -45,7 +45,6 @@ public class ConstructManager : MonoBehaviour
             }
             else
             {
-                reflectionManager.Reflect("无法放置塔");
                 //reflectText.text = "无法放置塔";
                 //reflect.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);
                 //reflect.SetActive(true);
@@ -65,9 +64,9 @@ public class ConstructManager : MonoBehaviour
         //Debug.LogWarning(resourceManagement.JudgeAfford(towerAttributes.spendElement_2, towerAttributes.elementNumber_2));
 
         for (int i = 0; i < towerAttributes.elements.Count; i++) {
-            if (!resourceManagement.JudgeAfford(towerAttributes.elements[i], towerAttributes.elementSpendNumber[i]))return false;
+            if (!resourceManagement.JudgeAfford(towerAttributes.elements[i], towerAttributes.elementSpendNumber[i])) { reflectionManager.Reflect("资源不足"); return false; }
         }
-        if (!LightSystem.Instance.IsIrradiated(new Vector2(position.x, position.y)))return false;
+        if (!LightSystem.Instance.IsIrradiated(new Vector2(position.x, position.y))) { reflectionManager.Reflect("太黑了"); return false; }
         //bool canConstruct = false;
         int tilecount = 0;
         int count = 0;
@@ -87,20 +86,18 @@ public class ConstructManager : MonoBehaviour
                 if (towerAttributes.name == "Miner" && temp.canMinerConstruct) return true;
                 if (!temp.canConstruct)
                 {
-
+                    reflectionManager.Reflect("采矿机只能建在矿脉上");
                     //Debug.LogWarning(1);
                     return false;
                 }
             }
             else if (foundObject.tag == "Tower")
             {
-
-
                 if (foundObject.transform.position == position)
                 {
                     count++;
                 }
-                if (count == 1) { return false; }
+                if (count == 1) { reflectionManager.Reflect("已经有塔了"); return false; }
 
             }
             }
