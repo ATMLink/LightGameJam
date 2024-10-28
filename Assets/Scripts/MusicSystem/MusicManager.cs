@@ -19,7 +19,8 @@ public class MusicManager : MonoBehaviour
     public AudioClip finishWonderBuild;
     public AudioClip towerDestroyed;
     public AudioClip destructTower;
-    public AudioClip towerRotate;
+    public AudioClip enemyNervousBGM;
+    public AudioClip failedBGM;
     public AudioClip enemyWaveBegin;
 
     void Start()
@@ -50,8 +51,9 @@ public class MusicManager : MonoBehaviour
             { "FinishWonderBuild", finishWonderBuild },
             { "TowerDestroyed", towerDestroyed },
             { "DestructTower", destructTower },
-            { "TowerRotate", towerRotate },
-            { "EnemyWaveBegin", enemyWaveBegin }
+            { "EnemyNervousBGM", enemyNervousBGM },
+            {"EnemyWaveBegin", enemyWaveBegin},
+            {"FailedBGM", failedBGM}
         };
     }
 

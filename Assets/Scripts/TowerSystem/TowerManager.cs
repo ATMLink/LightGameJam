@@ -135,21 +135,22 @@ public class TowerManager : MonoBehaviour
             return;
         }
         // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑还要弹出一个“无法拆除核心塔”↑↑↑↑↑↑↑↑↑↑↑↑
-        
+        ReturnResources(tower);
         laserManager.RemoveLaser(tower);
         tower.RemoveTower();
         towerPool.ReturnTower(tower);
         towers.Remove(tower);
-        ReturnResources(tower);
         }
 
 
         public void ReturnResources(Tower tower)
         {
-        for (int i = 0; i < tower.attributes.elements.Count; i++)
-        {
-            float elementNum = tower.attributes.elementSpendNumber[i];
-            float returnElement = (int)(elementNum * 0.5f * (tower.GetHealth() / tower.attributes.health.Value));
+            for (int i = 0; i < tower.attributes.elements.Count; i++)
+            {
+                float elementNum = tower.attributes.elementSpendNumber[i];
+                float returnElement = elementNum * 0.5f *(tower.GetHealth() / tower.attributes.health.Value);
+                // Debug.Log($"algorithm number = {elementNum * 0.5f *(tower.GetHealth() / tower.attributes.health.Value)}");
+                // Debug.Log($"return number = {returnElement}");
                 resourceManagement.CollectResource(tower.attributes.elements[i], returnElement);
             }
         }

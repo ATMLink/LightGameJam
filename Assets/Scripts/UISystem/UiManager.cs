@@ -44,6 +44,11 @@ public class UiManager : MonoBehaviour
         StartCountdown();
 
         }
+
+    [SerializeField] private GameObject WinPanel;
+    public void ShowWinPanel() { WinPanel.SetActive(true); }
+
+
     public void UpdateState()
         {
         UpdateHP();
@@ -224,15 +229,15 @@ public class UiManager : MonoBehaviour
         if (selectedTower != null && Camera.main != null)
             {
             if (tower.attributes.attackRange.Value != 1)
-            {
-                if (effect != null)
                 {
+                if (effect != null)
+                    {
                     EffectRemove();
-                }
+                    }
                 effect = EffectPool.instance.GetObjFromPool("TowerRangeEffect");
                 effect.StartEffect(tower.attributes.attackRange.Value);
                 effect.gameObject.transform.position = tower.transform.position;
-            }
+                }
             // 获取游戏对象的世界坐标  
             Vector3 worldPosition = selectedTower.transform.position;
             // 将世界坐标转换为屏幕坐标  
@@ -304,24 +309,24 @@ public class UiManager : MonoBehaviour
     void OnDeleteButtonClicked()
         {
         if (selectedTower != null)
-        {
+            {
             EffectRemove();
             showTowerMenu.gameObject.SetActive(false);
-                _towerManager.RemoveTower(selectedTower);
-            
-                selectedTower = null;
+            _towerManager.RemoveTower(selectedTower);
+
+            selectedTower = null;
             }
 
         }
     private void UpdateHP()
         {
         if (showTowerMenu.gameObject.activeInHierarchy)
-        {
-            if (selectedTower != null)
             {
+            if (selectedTower != null)
+                {
                 HPtext.text = "HP:" + selectedTower.gameObject.GetComponent<Tower>().GetHealth();
+                }
             }
-        }
         }
 
 
@@ -542,12 +547,12 @@ public class UiManager : MonoBehaviour
         }
 
     public void EffectRemove()
-    {
-        if (effect != null)
         {
+        if (effect != null)
+            {
             effect.EndEffect();
             effect = null;
+            }
         }
-    }
 
     }

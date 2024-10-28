@@ -1004,8 +1004,9 @@ MonoBehaviour:
   finishWonderBuild: {fileID: 8300000, guid: 47f798bfbafaf8741a4c0c2199a7ca83, type: 3}
   towerDestroyed: {fileID: 8300000, guid: 123e4adcabae1c44ba82cd5d0a13b673, type: 3}
   destructTower: {fileID: 8300000, guid: 4cc21d27aa8f2e048a6c4f4ab8336d27, type: 3}
-  towerRotate: {fileID: 0}
-  enemyWaveBegin: {fileID: 0}
+  enemyNervousBGM: {fileID: 8300000, guid: ac6baf9808943154bb44c001956f6cf1, type: 3}
+  failedBGM: {fileID: 8300000, guid: 8ef5d4788104e8743a41c5ddf4e7a933, type: 3}
+  enemyWaveBegin: {fileID: 8300000, guid: bbdbe0a88e355c14985d085993d91842, type: 3}
 --- !u!82 &555020839
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4570,10 +4571,6 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
-    - target: {fileID: 8027024273832180001, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8103020075571928829, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
