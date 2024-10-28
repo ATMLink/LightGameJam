@@ -123,7 +123,7 @@ public class GameDriver : MonoBehaviour
             gameIsRunning = false;
             if(_musicManager != null)
                 _musicManager.PlayBGM("WinBGM");
-            // uimanager
+            _uiManager.ShowWinPanel();
         }
     }
     public float GetGameTime()
