@@ -92,6 +92,7 @@ public class TowerManager : MonoBehaviour
             isRotating = true;  // 标记为旋转中
 
             StartRotate(tower);
+            tower.OnRotateStart();
 
             float angle = antiClockwise ? 45f : -45f;
             Vector3 targetRotation = tower.transform.eulerAngles + new Vector3(0, 0, angle);

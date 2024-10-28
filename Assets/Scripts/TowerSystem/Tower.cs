@@ -257,6 +257,10 @@ public class Tower : MonoBehaviour
         return closestEnemy;
         }
 
+    public virtual void OnRotateStart()
+    {
+
+    }
     public virtual void OnRotateEnd()
         {
 

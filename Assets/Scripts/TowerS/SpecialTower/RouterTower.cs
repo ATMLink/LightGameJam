@@ -14,9 +14,11 @@ public class RouterTower : Tower
 
     private int towerCount = 0;
 
+    private bool onRotate = false;
+
     public override void UpdateState()
     {
-        if (canShow)
+        if (canShow && onRotate == false)
         {
             var emission = particle.emission;
             emission.rateOverTime = 50;
@@ -63,6 +65,20 @@ public class RouterTower : Tower
         Effect effect = EffectPool.instance.GetObjFromPool(placeEffectName);
         effect.gameObject.transform.position = transform.position;
     }
+
+    public override void OnRotateStart()
+    {
+        particle.Clear();
+        onRotate = true;
+        base.OnRotateStart();
+    }
+
+    public override void OnRotateEnd()
+    {
+        onRotate = false;
+        base.OnRotateEnd();
+    }
+
 
 
     public override void OnLaserHit(Laser laser)

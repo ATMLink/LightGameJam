@@ -161,6 +161,7 @@ MonoBehaviour:
   maxDistance: 20
   lineRenderer: {fileID: 2343219634303855292}
   hitEffect: {fileID: 8269348522432679811}
+  enemies: []
   textMeshProUGUI: {fileID: 0}
 --- !u!61 &4331703481708549411
 BoxCollider2D:
@@ -5192,7 +5193,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.5221914, y: 2.4235778, z: -0.21311182, w: 2.272916}
+  m_margin: {x: -2.5078537, y: 2.4235778, z: -2.4910688, w: 2.272916}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
