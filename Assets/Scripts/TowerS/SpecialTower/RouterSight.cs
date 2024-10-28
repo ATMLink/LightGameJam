@@ -7,11 +7,17 @@ public class RouterSight : MonoBehaviour
 {
 
     public List<Tower> towerInSight = new List<Tower>();
+    [SerializeField]
+    private RouterTower router;
 
-    public void Clear()
-    {
-        towerInSight.Clear();
-    }
+    //public void ResetList()
+    //{
+    //    List<Tower> tempList = new List<Tower>(towerInSight);
+    //    foreach (Tower tower in tempList)
+    //    {
+
+    //    }
+    //}
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -34,7 +40,9 @@ public class RouterSight : MonoBehaviour
         {
             if (collision.transform.tag == "Tower")
             {
-                towerInSight.Remove(collision.gameObject.GetComponent<Tower>());
+                Tower tower = collision.gameObject.GetComponent<Tower>();
+                towerInSight.Remove(tower);
+                router.LeftTower(tower);
             }
         }
     }
