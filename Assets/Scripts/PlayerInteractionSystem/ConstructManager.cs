@@ -45,7 +45,6 @@ public class ConstructManager : MonoBehaviour
             }
             else
             {
-                reflectionManager.Reflect("无法放置塔");
                 //reflectText.text = "无法放置塔";
                 //reflect.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);
                 //reflect.SetActive(true);
@@ -87,7 +86,7 @@ public class ConstructManager : MonoBehaviour
                 if (towerAttributes.name == "Miner" && temp.canMinerConstruct) return true;
                 if (!temp.canConstruct)
                 {
-                    reflectionManager.Reflect("无法放置塔");
+                    reflectionManager.Reflect("采矿机只能建在矿脉上");
                     //Debug.LogWarning(1);
                     return false;
                 }
