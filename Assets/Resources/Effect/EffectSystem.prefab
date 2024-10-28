@@ -49,9 +49,5 @@ MonoBehaviour:
   - {fileID: 8297139433206674474, guid: 858076715e02693449872425e7b8742d, type: 3}
   - {fileID: 871087379605954837, guid: 5f77dbfd4d0d9d7438d889b0413b3e40, type: 3}
   - {fileID: 8297139433206674474, guid: 4a4b4f0c184c51f469b880e8064750d2, type: 3}
-  EffectName:
-  - EnemyDeathEffect
-  - TowerPlaceEffect
-  - TowerDeathEffect
-  - NaBoomEffect
+  - {fileID: 8297139433206674474, guid: e713fcb6dcac8014caa2e696ae310ce7, type: 3}
   originPoolSize: 5

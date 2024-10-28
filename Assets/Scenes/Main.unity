@@ -4408,6 +4408,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EffectSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 5197776889854692765, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: EffectPrefab.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197776889854692765, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
+      propertyPath: EffectPrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 8297139433206674474, guid: e713fcb6dcac8014caa2e696ae310ce7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
