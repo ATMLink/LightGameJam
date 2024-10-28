@@ -3626,6 +3626,7 @@ MonoBehaviour:
   maxBounds: {fileID: 11400000, guid: 72846aaef60511f46a3744d5eb96a6da, type: 2}
   tilemapManager: {fileID: 1424931871}
   FunctionMenu: {fileID: 44910126}
+  UIManager: {fileID: 180441133}
   isMoving: 0
   isRolling: 0
 --- !u!114 &1912484482
