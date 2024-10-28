@@ -8,6 +8,7 @@ using UnityEngine;
 public class MinerTower : Tower
     {
     //private MainResourceManagement resourceManagement;
+    bool a = true;
     float minIntensity;
     float medaltime = 0;
     float sitime = 0;
@@ -47,10 +48,11 @@ public class MinerTower : Tower
         {
         base.Upgrade();
         Tower tower = GetComponent<Tower>();
-        if (attributes.name == "LaserTower")
-            {
+        if (attributes.name == "LaserTower" && a)
+        {
             laserManager.CreateLaser(tower, transform.position, Vector3.down, 100);
-            }
+            a = false;
+        }
 
         }
     public void Generate()
