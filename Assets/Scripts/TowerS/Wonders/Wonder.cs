@@ -9,6 +9,8 @@ public class Wonder : Tower
     [SerializeField]
     private TowerAttributes destoryAttributes;
 
+    [SerializeField] private FloatVariable wonderWinCount;
+
 
     protected virtual void Update()
     {
@@ -47,6 +49,8 @@ public class Wonder : Tower
                 GameObject t2 = Instantiate(attributes.nextLevelAttributes.Prefab, transform.position, Quaternion.identity);
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
+                float wonderWinCountNum = wonderWinCount.Value+1;
+                wonderWinCount.SetValue(wonderWinCountNum);
             }
             else reflectionManager.Reflect("资源不足");
         }
@@ -62,6 +66,8 @@ public class Wonder : Tower
                 GameObject t2 = Instantiate(attributes.nextLevelAttributes.Prefab, transform.position, Quaternion.identity);
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
+                float wonderWinCountNum = wonderWinCount.Value+1;
+                wonderWinCount.SetValue(wonderWinCountNum);
             }
             else reflectionManager.Reflect("资源不足");
         }
@@ -75,6 +81,8 @@ public class Wonder : Tower
                 GameObject t2 = Instantiate(attributes.nextLevelAttributes.Prefab, transform.position, Quaternion.identity);
                 t2.GetComponent<Wonder>().Initialize();
                 Destroy(gameObject);
+                float wonderWinCountNum = wonderWinCount.Value+1;
+                wonderWinCount.SetValue(wonderWinCountNum);
             }
             else reflectionManager.Reflect("资源不足");
         }
@@ -97,6 +105,8 @@ public class Wonder : Tower
         GameObject t2 = Instantiate(destoryAttributes.Prefab, transform.position, Quaternion.identity);
         t2.GetComponent<Wonder>().Initialize();
         Destroy(gameObject);
+        float wonderWinCountNum = wonderWinCount.Value - 1;
+        wonderWinCount.SetValue(wonderWinCountNum);
     }
 
 }

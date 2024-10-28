@@ -322,6 +322,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2680691337292502246, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
+      propertyPath: wonderWinCount
+      value: 
+      objectReference: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
+    - target: {fileID: -2680691337292502246, guid: 2b9ef6d95ad146e46b96c4da7d122de2, type: 3}
       propertyPath: reflectionManager
       value: 
       objectReference: {fileID: 1479371187}
@@ -2138,6 +2142,7 @@ GameObject:
   - component: {fileID: 1168804922}
   - component: {fileID: 1168804921}
   - component: {fileID: 1168804923}
+  - component: {fileID: 1168804924}
   m_Layer: 0
   m_Name: GameDriver
   m_TagString: Untagged
@@ -2167,6 +2172,7 @@ MonoBehaviour:
   _musicManager: {fileID: 555020838}
   resourceManagement: {fileID: 1202425554}
   isPaused: {fileID: 11400000, guid: 00407812a3b11db42b1711f632fa20fe, type: 2}
+  wonderWinCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
 --- !u!4 &1168804922
 Transform:
   m_ObjectHideFlags: 0
@@ -2213,6 +2219,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1168804921}
         m_TargetAssemblyTypeName: GameDriver, Assembly-CSharp
         m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1168804924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168804920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0b820bb18fc04780d647dbb6f3053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventFloat: {fileID: 11400000, guid: 357508f22de6c9a48ad1a0171f45b869, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1168804921}
+        m_TargetAssemblyTypeName: GameDriver, Assembly-CSharp
+        m_MethodName: EndGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3755,6 +3789,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
+      propertyPath: wonderWinCount
+      value: 
+      objectReference: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
+    - target: {fileID: -4966153711465308936, guid: f8fb909ccbdc7ee4bb5732ab13463942, type: 3}
       propertyPath: reflectionManager
       value: 
       objectReference: {fileID: 1479371187}
@@ -4343,6 +4381,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
+      propertyPath: wonderWinCount
+      value: 
+      objectReference: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
     - target: {fileID: 8267522509092451530, guid: 1f51bbe85c8e7c74aa2b144642044e9d, type: 3}
       propertyPath: reflectionManager
       value: 

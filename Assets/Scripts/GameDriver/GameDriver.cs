@@ -22,7 +22,7 @@ public class GameDriver : MonoBehaviour
     // 游戏状态变量
     [Header("Variables")]
     [SerializeField] private BoolVariable isPaused;
-    
+    [SerializeField] private FloatVariable wonderWinCount;
     private bool gameIsRunning = true;
     private float gameTime = 0f;
     private float gameSpeed = 1f;
@@ -64,6 +64,7 @@ public class GameDriver : MonoBehaviour
     {
         gameTime = 0f;
         isPaused.SetValue(false);
+        wonderWinCount.SetValue(0);
         _cameraController.Initialize();
         _tilemapManager.Initialize();
         _towerManager.Initialize();
