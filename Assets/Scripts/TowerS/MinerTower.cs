@@ -2,6 +2,7 @@ using DG.Tweening.Core.Easing;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class MinerTower : Tower
@@ -71,14 +72,14 @@ public class MinerTower : Tower
 
                     for (int i = 0; i < 1; i++)
                         {
-                        int a = Random.Range(0, 5);//生成一个稀有资源
+                        int a = Random.Range(0, 5);//生成一个稀有资源 
                         switch (a)
                             {
-                            case 0: resourceManagement.CollectResource(element.na, 1); reflectionManager.Reflect("+1 Na", transform.position, Color.green); break;
-                            case 1: resourceManagement.CollectResource(element.k, 1); reflectionManager.Reflect("+1 K", transform.position, Color.green); break;
-                            case 2: resourceManagement.CollectResource(element.li, 1); reflectionManager.Reflect("+1 Li", transform.position, Color.green); break;
-                            case 3: resourceManagement.CollectResource(element.cu, 1); reflectionManager.Reflect("+1 Cu", transform.position, Color.green); break;
-                            case 4: resourceManagement.CollectResource(element.cs, 1); reflectionManager.Reflect("+1 Cs", transform.position, Color.green); break;
+                            case 0: resourceManagement.CollectResource(element.na, 1); reflectionManager.Reflect("+1 Na", transform.position, Color.yellow); break;
+                            case 1: resourceManagement.CollectResource(element.k, 1); reflectionManager.Reflect("+1 K", transform.position, new Color(155,0,155)); break;
+                            case 2: resourceManagement.CollectResource(element.li, 1); reflectionManager.Reflect("+1 Li", transform.position, Color.red); break;
+                            case 3: resourceManagement.CollectResource(element.cu, 1); reflectionManager.Reflect("+1 Cu", transform.position,new Color(0,65,30)); break;
+                            case 4: resourceManagement.CollectResource(element.cs, 1); reflectionManager.Reflect("+1 Cs", transform.position, Color.blue); break;
                             }
                         medaltime = 0;
                         }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: vein
   sprites:
-  - {fileID: 21300000, guid: c1f3a0737045f8641b11a67c1e9a7970, type: 3}
+  - {fileID: 21300000, guid: 8d44167b9e304834080f0989224c7f13, type: 3}
   canLightThrough: 1
   canEnemyThrough: 1
   canSlowEnemy: 0

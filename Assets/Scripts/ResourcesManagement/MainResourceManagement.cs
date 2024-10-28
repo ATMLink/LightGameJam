@@ -123,7 +123,7 @@ public class MainResourceManagement : MonoBehaviour
         }
     public void CollectResource(element element, float number)
         {
-        if (number <= 0) { Debug.LogError("collect number must bigger than 0"); return; }
+        if (number <= 0) { Debug.LogError("collect number must bigger than 0 "+number); return; }
         FloatVariable _element = null;
         switch (element)
             {
