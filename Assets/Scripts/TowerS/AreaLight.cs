@@ -104,7 +104,13 @@ public class AreaLight : Tower
     public override void DestroyTower()
     {
         base.DestroyTower();
-
+        LightSystem.Instance.RemoveLight(light2d);
     }
 
+    public override void RemoveTower()
+    {
+        Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
+        effect.gameObject.transform.position = transform.position;
+        LightSystem.Instance.RemoveLight(light2d);
+    }
 }

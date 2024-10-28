@@ -123,6 +123,10 @@ public class RouterTower : Tower
         }
     }
 
+    public void LeftTower(Tower tower)
+    {
+        tower.RemoveRouterToTower(this);
+    }
 
     public override void DestroyTower()
     {

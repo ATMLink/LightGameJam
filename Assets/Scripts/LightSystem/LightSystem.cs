@@ -38,6 +38,8 @@ public class LightSystem : MonoBehaviour
     public bool IsIrradiated(Vector2 position) {
         bool isIrradiated = false;
         foreach (Light2D light in lightList) {
+
+            if (light.enabled == false) continue;
            // Debug.Log("active");
             float radius = 1.0f / 4.0f * light.pointLightInnerRadius + light.pointLightOuterRadius * 3.0f / 4.0f;
             Vector2 lightPosition = new Vector2(light.transform.position.x, light.transform.position.y);
@@ -53,7 +55,7 @@ public class LightSystem : MonoBehaviour
            // Debug.Log(angle);
            // Debug.Log(Mathf.Cos(angle * Mathf.Deg2Rad));
             //&&dotValue > Mathf.Cos(angle)
-            if (light2Position.magnitude < radius && dotValue > Mathf.Cos(angle * Mathf.Deg2Rad)) {
+            if (light2Position.magnitude <= radius && dotValue >= Mathf.Cos(angle * Mathf.Deg2Rad)) {
                 isIrradiated = true;
                 break;
             }

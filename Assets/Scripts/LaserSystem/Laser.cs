@@ -427,7 +427,7 @@ public class Laser : MonoBehaviour
         {
             foreach (var enemy in enemies)
             {
-                enemy.OnHit(0.0001f*intensity);
+                enemy.OnHit(0.001f*intensity);
                 // enemy.OnHit(1000f);
             }
         }
@@ -468,7 +468,7 @@ public class Laser : MonoBehaviour
         lineRenderer.enabled = active; // 根据激光状态来显示或隐藏激光
         hitEffect.gameObject.SetActive(active);
         transform.GetChild(1).gameObject.SetActive(active);
-        Debug.Log($"Laser {gameObject.name} active: {active}"); // 输出激光的激活状态
+        //Debug.Log($"Laser {gameObject.name} active: {active}"); // 输出激光的激活状态
     }
 
 
