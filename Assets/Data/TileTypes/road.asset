@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: road
   sprites:
-  - {fileID: 21300000, guid: 0431f92586040db4482215eff2a08fbd, type: 3}
+  - {fileID: 21300000, guid: f0802ee68e47c4a42ae7d8f23bb2a94e, type: 3}
   canLightThrough: 1
   canEnemyThrough: 1
   canSlowEnemy: 0
