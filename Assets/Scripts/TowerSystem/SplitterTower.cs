@@ -164,14 +164,14 @@ public class SplitterTower : Tower
     {
         base.Initialize();
         laserManager = FindObjectOfType<LaserManager>();
-        Debug.Log("SplitterTower initialized.");
+        //Debug.Log("SplitterTower initialized.");
     }
 
     public override void UpdateState()
     {
         if (receivedLasers.Count > 0 && Time.time - lastUpdateTime >= updateInterval)
         {
-            Debug.Log($"received laser count {receivedLasers.Count}");
+            //Debug.Log($"received laser count {receivedLasers.Count}");
             UpdateLaserIntensity();
             ReceivedLaserIntensityIsZero();
             lastUpdateTime = Time.time;
@@ -187,7 +187,7 @@ public class SplitterTower : Tower
             if (receivedLasers.Count == 1)
                 return;
             receivedLasers.Add(laser);
-            Debug.Log("激光接收: " + laser.gameObject.name);
+            //Debug.Log("激光接收: " + laser.gameObject.name);
         }
 
         if (receivedLasers.Count == 1 || (laserManager.GetLaserForTower(this) == null && receivedLasers.Count == 2))
