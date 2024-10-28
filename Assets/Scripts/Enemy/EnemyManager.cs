@@ -57,6 +57,8 @@ public class EnemyManager : MonoBehaviour
         EnemyEventSystem.instance.onTurnNext += NextTurn;
         EnemyEventSystem.instance.onEnemyGenerating += EnemyGenerate;
         EnemyEventSystem.instance.onEnemyDestory += EnemyDestory;
+
+        state = GameState.None;
     }
 
     private void Update()
