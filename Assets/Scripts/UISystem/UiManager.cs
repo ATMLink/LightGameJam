@@ -277,7 +277,7 @@ public class UiManager : MonoBehaviour
         }
     void OnUpgradeButtonClicked()
         {
-        Debug.LogWarning("OnUpgradeButtonClicked()升级按键检测成功");
+        //Debug.LogWarning("OnUpgradeButtonClicked()升级按键检测成功");
         if (selectedTower != null)
             {
             _towerManager.UpgradeTower(selectedTower);
@@ -285,7 +285,7 @@ public class UiManager : MonoBehaviour
             showTowerMenu.gameObject.SetActive(false);
             selectedTower = null;
             }
-        Debug.LogWarning("OnUpgradeButtonClicked()升级按键执行成功");
+        //Debug.LogWarning("OnUpgradeButtonClicked()升级按键执行成功");
         }
     void OnClockwiseButtonClicked()
         {

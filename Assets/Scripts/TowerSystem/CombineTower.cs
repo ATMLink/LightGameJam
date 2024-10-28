@@ -196,14 +196,14 @@ public class CombineTower : Tower
     {
         if (laser.sourceTower == this || receivedLasers.Contains(laser))
         {
-            Debug.Log("忽略激光：自发或已添加。");
+            //Debug.Log("忽略激光：自发或已添加。");
             return;
         }
 
         if (receivedLasers.Count < maxLasers)
         {
             receivedLasers.Add(laser);
-            Debug.Log($"激光添加至 CombineTower。当前总激光数：{receivedLasers.Count}");
+            //Debug.Log($"激光添加至 CombineTower。当前总激光数：{receivedLasers.Count}");
 
             // 发射激光逻辑
             // if (receivedLasers.Count == 1 && emittedLaser == null)
@@ -221,14 +221,14 @@ public class CombineTower : Tower
         if (receivedLasers.Contains(laser))
         {
             receivedLasers.Remove(laser);
-            Debug.Log("激光从 CombineTower 移除。");
+            //Debug.Log("激光从 CombineTower 移除。");
         }
 
         if (receivedLasers.Count == 0)
         {
             laserManager.RemoveLaser(this);
             emittedLaser = null; // 确保移除发射激光
-            Debug.Log("没有收到激光，移除发射激光。");
+            //Debug.Log("没有收到激光，移除发射激光。");
         }
     }
 
@@ -238,20 +238,20 @@ public class CombineTower : Tower
         foreach (var receivedLaser in receivedLasers)
         {
             totalIntensity += receivedLaser.intensity;
-            Debug.Log($"接收的激光强度：{receivedLaser.intensity}，当前总强度：{totalIntensity}");
+            //Debug.Log($"接收的激光强度：{receivedLaser.intensity}，当前总强度：{totalIntensity}");
         }
 
         totalIntensity = Mathf.Min(totalIntensity, maxTotalIntensity);
-        Debug.Log($"总接收强度封顶后：{totalIntensity}");
+        //Debug.Log($"总接收强度封顶后：{totalIntensity}");
 
         if (emittedLaser != null)
         {
             emittedLaser.SetLaserIntensity(totalIntensity);
-            Debug.Log($"更新发射激光强度：{totalIntensity}，方向：{emittedDirection}");
+            //Debug.Log($"更新发射激光强度：{totalIntensity}，方向：{emittedDirection}");
         }
         else
         {
-            Debug.LogWarning("未找到发射激光来更新强度。");
+            //Debug.LogWarning("未找到发射激光来更新强度。");
         }
     }
 
