@@ -127,7 +127,13 @@ public class TowerManager : MonoBehaviour
         
         }
 
-            
+        if(tower.attributes.towerName == "WonderLaser" || tower.attributes.towerName == "WonderLaser_Fixed"
+           || tower.attributes.towerName == "WonderPropeller" || tower.attributes.towerName == "WonderPropeller_Fixed"||
+           tower.attributes.towerName == "WonderSun" || tower.attributes.towerName == "WonderSun_Fixed")
+        {
+            reflectionManager.Reflect("无法拆除奇观");
+            return;
+        }
         // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑还要弹出一个“无法拆除核心塔”↑↑↑↑↑↑↑↑↑↑↑↑
         
         laserManager.RemoveLaser(tower);
