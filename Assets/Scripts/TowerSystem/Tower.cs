@@ -77,7 +77,7 @@ public class Tower : MonoBehaviour
         attackCooldown = 1f / attackSpeed;
         attackTimer = 0f;
 
-        transform.rotation = Quaternion.Euler(Vector3.down);
+        transform.rotation = Quaternion.Euler(Vector3.zero);
 
         sight1.GetComponent<CircleCollider2D>().radius = attackRange;
 
@@ -172,20 +172,29 @@ public class Tower : MonoBehaviour
         }
 
     public virtual void OnLaserHit(Laser laser)
-        {
+    {
         Debug.Log($"{gameObject.name} 被激光击中了");
-        }
+    }
 
 
     public virtual void OnHit(int damage)
-        {
+    {
         health -= damage;
-        if (currentOnHitCoroutine != null)
-            {
-            StopCoroutine(currentOnHitCoroutine);
-            }
-        currentOnHitCoroutine = StartCoroutine(OnHitShow());
+        if (health <= 0)
+        {
+            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
+            effect.gameObject.transform.position = transform.position;
+            DestroyTower();
         }
+        else
+        {
+            if (currentOnHitCoroutine != null)
+            {
+                StopCoroutine(currentOnHitCoroutine);
+            }
+            currentOnHitCoroutine = StartCoroutine(OnHitShow());
+        }
+    }
     public float GetHealth()
         {
         return health;
@@ -193,12 +202,6 @@ public class Tower : MonoBehaviour
 
     protected virtual IEnumerator OnHitShow()
     {
-        if (health <= 0)
-        {
-            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
-            effect.gameObject.transform.position = transform.position;
-            DestroyTower();
-        }
         float elapsed = 0f;
         material.SetFloat("_FlashAmount", 1);
         while (elapsed < flashDuration)

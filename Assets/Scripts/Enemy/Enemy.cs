@@ -422,7 +422,17 @@ public class Enemy : EnemyBase
     public virtual void OnHit(float damage/*,…À∫¶¿‡–Õ*/)
     {
         currentHealth -= damage;
-        StartCoroutine(OnHitShow());
+        if (currentHealth <= 0)
+        {
+            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
+            effect.gameObject.transform.position = transform.position;
+            Destroy();
+        }
+        else
+        {
+            StartCoroutine(OnHitShow());
+        }
+
     }
 
     public virtual void OnHeal(float heal)
@@ -445,12 +455,6 @@ public class Enemy : EnemyBase
 
     protected virtual IEnumerator OnHitShow()
     {
-        if (currentHealth <= 0)
-        {
-            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
-            effect.gameObject.transform.position = transform.position;
-            Destroy();
-        }
         float elapsed = 0f;
         material.SetFloat("_FlashAmount", 1);
         while (elapsed < flashDuration)
