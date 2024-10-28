@@ -425,9 +425,13 @@ public class Laser : MonoBehaviour
     {
         if (enemies != null)
         {
-            foreach (var enemy in enemies)
+            List<Enemy> list = new List<Enemy>(enemies);
+            foreach (var enemy in list)
             {
-                enemy.OnHit(0.001f*intensity);
+                if (enemy.gameObject.activeInHierarchy)
+                {
+                    enemy.OnHit(0.001f * intensity);
+                }
                 // enemy.OnHit(1000f);
             }
         }
