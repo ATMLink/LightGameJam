@@ -2142,6 +2142,7 @@ MonoBehaviour:
   laserManager: {fileID: 415967692}
   musicManager: {fileID: 555020838}
   reflectionManager: {fileID: 1479371187}
+  resourceManagement: {fileID: 0}
   towers: []
   coreTower: {fileID: 11400000, guid: 8f8a519aa44d8554ea12fae8737a4ae1, type: 2}
 --- !u!1 &985791170
@@ -4485,6 +4486,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 5023756992452601259, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6a1f16dddd8191d48b2dd58966ae92f1, type: 3}
     - target: {fileID: 5029169971554921992, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: m_Sprite
       value: 
