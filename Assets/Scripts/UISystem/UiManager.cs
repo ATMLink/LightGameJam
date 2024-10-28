@@ -28,6 +28,7 @@ public class UiManager : MonoBehaviour
         pauseGame.SetActive(false);
         showConstructionMenu.SetActive(false);
         showTowerMenu.gameObject.SetActive(false);
+        effect = null;
         updateResources.SetActive(true);
         expandButton.gameObject.SetActive(false);
         pauseButton.onClick.AddListener(OnPauseButtonClicked);//暂停按钮
@@ -215,13 +216,23 @@ public class UiManager : MonoBehaviour
 
 
     private Tower selectedTower;
-
+    Effect effect;
 
     public void ShowTowerMenu(Tower tower)
         {
         selectedTower = tower;
         if (selectedTower != null && Camera.main != null)
             {
+            if (tower.attributes.attackRange.Value != 1)
+            {
+                if (effect != null)
+                {
+                    EffectRemove();
+                }
+                effect = EffectPool.instance.GetObjFromPool("TowerRangeEffect");
+                effect.StartEffect(tower.attributes.attackRange.Value);
+                effect.gameObject.transform.position = tower.transform.position;
+            }
             // 获取游戏对象的世界坐标  
             Vector3 worldPosition = selectedTower.transform.position;
             // 将世界坐标转换为屏幕坐标  
@@ -253,6 +264,9 @@ public class UiManager : MonoBehaviour
         }
     void OnCloseTowerMenuClicked()
         {
+
+
+        EffectRemove();
         showTowerMenu.gameObject.SetActive(false);//关闭面板
         selectedTower = null;
         }
@@ -262,6 +276,7 @@ public class UiManager : MonoBehaviour
         if (selectedTower != null)
             {
             _towerManager.UpgradeTower(selectedTower);
+            EffectRemove();
             showTowerMenu.gameObject.SetActive(false);
             selectedTower = null;
             }
@@ -289,8 +304,9 @@ public class UiManager : MonoBehaviour
     void OnDeleteButtonClicked()
         {
         if (selectedTower != null)
-            {
-                showTowerMenu.gameObject.SetActive(false);
+        {
+            EffectRemove();
+            showTowerMenu.gameObject.SetActive(false);
                 _towerManager.RemoveTower(selectedTower);
             
                 selectedTower = null;
@@ -524,4 +540,14 @@ public class UiManager : MonoBehaviour
 
         isCountingDown = false; // 重置状态  
         }
+
+    public void EffectRemove()
+    {
+        if (effect != null)
+        {
+            effect.EndEffect();
+            effect = null;
+        }
+    }
+
     }

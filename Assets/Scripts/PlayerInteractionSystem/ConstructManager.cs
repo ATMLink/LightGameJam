@@ -77,7 +77,7 @@ public class ConstructManager : MonoBehaviour
         foreach (Collider2D col in collider)
             {
                 GameObject foundObject = col.gameObject;
-                Debug.LogWarning(foundObject.transform.position);
+                //Debug.LogWarning(foundObject.transform.position);
             if (foundObject.tag == "Tilemap") continue;
             else if (foundObject.tag == "Tile")
             {

@@ -4,7 +4,7 @@ using System.Threading;
 using UnityEngine;
 
 public struct EnemyInfo
-{
+    {
     //依次为攻击力，生命值，攻击速度，攻击范围，移速,嘲讽等级
     public float attack;
     public float health;
@@ -18,7 +18,7 @@ public struct EnemyInfo
     public List<float> specialAbility;
 
     public EnemyInfo(float attack, float health, float attackSpeed, float attackRange, float moveSpeed, int priority = 100)
-    {
+        {
         this.attack = attack * EnemyData.globleAttackValue;
         this.health = health * EnemyData.globleHealthValue;
         this.attackSpeed = attackSpeed * EnemyData.globleAttackSpeedValue;
@@ -26,9 +26,9 @@ public struct EnemyInfo
         this.moveSpeed = moveSpeed * EnemyData.globleMoveSpeedValue;
         this.priority = priority;
         specialAbility = null;
-    }
+        }
     public EnemyInfo(float attack, float health, float attackSpeed, float attackRange, float moveSpeed, List<float> specialAbility)
-    {
+        {
         this.attack = attack * EnemyData.globleAttackValue;
         this.health = health * EnemyData.globleHealthValue;
         this.attackSpeed = attackSpeed * EnemyData.globleAttackSpeedValue;
@@ -36,9 +36,9 @@ public struct EnemyInfo
         this.moveSpeed = moveSpeed * EnemyData.globleMoveSpeedValue;
         this.priority = 100;
         this.specialAbility = specialAbility;
-    }
+        }
     public EnemyInfo(float attack, float health, float attackSpeed, float attackRange, float moveSpeed, int priority, List<float> specialAbility)
-    {
+        {
         this.attack = attack * EnemyData.globleAttackValue;
         this.health = health * EnemyData.globleHealthValue;
         this.attackSpeed = attackSpeed * EnemyData.globleAttackSpeedValue;
@@ -46,20 +46,20 @@ public struct EnemyInfo
         this.moveSpeed = moveSpeed * EnemyData.globleMoveSpeedValue;
         this.priority = priority;
         this.specialAbility = specialAbility;
+        }
     }
-}
 
 
 public static class EnemyData
-{
+    {
 
     //据说需要一个存储enemyType，但是目前疑似也只有可以阻挡和不可以阻挡激光这两种类型
     //也不需要频繁调整，因此就先搁在这
-    public enum EnemyType 
-    {
+    public enum EnemyType
+        {
         can,
         cant,
-    }
+        }
 
     public static float maxDarkSpeedUp = 8;
 
@@ -97,24 +97,24 @@ public static class EnemyData
 
     //enemy_Small
     //static List<float> sp1 = new List<float>(){1f};（例：回血速度，对于任何拥有特殊能力的怪都会将对应属性写在其基础属性上）
-    static EnemyInfo enemy_1 = new EnemyInfo(1, 15, 1.5f, 0, 3/*,sp1*/);
+    static EnemyInfo enemy_1 = new EnemyInfo(1, 10, 1.5f, 0, 3/*,sp1*/);
 
     //以上是一个完整的怪物信息
 
     //enemy_Middle
-    static EnemyInfo enemy_2 = new EnemyInfo(2, 30, 1f, 0, 1.5f);
+    static EnemyInfo enemy_2 = new EnemyInfo(2, 20, 1f, 0, 1.5f);
 
     //enemy_Huge
-    static EnemyInfo enemy_3 = new EnemyInfo(8, 64,0.8f, 0, 0.8f);
+    static EnemyInfo enemy_3 = new EnemyInfo(8, 64, 0.8f, 0, 0.8f);
 
     //enemy_Creeper
     static List<float> sp4 = new List<float>() { 25f, 2, 0.5f };//爆炸伤害,爆炸范围,爆炸前摇
-    static EnemyInfo enemy_4 = new EnemyInfo(2, 30, 0.7f, 0, 1.5f, sp4);
+    static EnemyInfo enemy_4 = new EnemyInfo(2, 20, 0.7f, 0, 1.5f, sp4);
 
     //enemy_Skeleton
     //理论上攻击时应该会停下来,但是目前没有攻击间隔和攻击花费时间的区别,因此随便定一个攻击花费时间
     static List<float> sp5 = new List<float>() { 0.2f };//攻击花费时间
-    static EnemyInfo enemy_5 = new EnemyInfo(2, 30, 1f, 4, 0.8f, sp5);
+    static EnemyInfo enemy_5 = new EnemyInfo(2, 20, 1f, 4, 0.8f, sp5);
 
     //enemy_Witch
     static List<float> sp6 = new List<float>() { 0.2f, 10, 0.2f, 10f };//攻击花费时间,召唤衍生物数量,召唤多个衍生物间隔,与下一次召唤衍生物间隔
@@ -128,14 +128,14 @@ public static class EnemyData
     static EnemyInfo enemy_8 = new EnemyInfo(8, 96, 0.7f, 0, 0.8f, 105);
 
     //enemy_Shell
-    static List<float> sp9 = new List<float>() {150f};//召唤障碍物血量
+    static List<float> sp9 = new List<float>() { 150f };//召唤障碍物血量
     static EnemyInfo enemy_9 = new EnemyInfo(2, 20, 1f, 0, 1.5f, sp9);
 
     //enemy_Box
     static EnemyInfo enemy_10 = new EnemyInfo(0, 150, 1f, 0, 0);
 
     static EnemyData()
-    {
+        {
         enemyDic = new Dictionary<string, EnemyInfo>
         {
             {enemyName[0],enemy_1},
@@ -149,7 +149,7 @@ public static class EnemyData
             {enemyName[8],enemy_9},
             {enemyName[9],enemy_10},
         };
-    }
+        }
 
     //感觉直接访问字典也没什么问题
     //public static EnemyInfo GetEnemyInfo(string name)
@@ -163,14 +163,15 @@ public static class EnemyData
 
 
     public static float GenerateStrategy(float x)
-    {
+        {
         float y = 1 - Mathf.Pow((x / 100), 2);
+        if (y <= 0.25) { y = 0.25f; }
         y *= globleGenerateOffset;
         return y;
-    }
+        }
 
     public static float InfinityStrategy(int extraTurn)
-    {
+        {
         //无尽模式的难度曲线
 
         if (extraTurn <= 0) return 1;
@@ -179,6 +180,6 @@ public static class EnemyData
         float level = 1 + 0.3f * count;
 
         return level;
-    }
+        }
 
-}
+    }

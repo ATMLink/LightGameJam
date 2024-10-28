@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Vector2Variable maxBounds;
     [SerializeField] private TilemapManager tilemapManager;
     [SerializeField] private GameObject FunctionMenu;
+    [SerializeField] private UiManager UIManager;
     public bool isMoving;
     public bool isRolling;
 
@@ -108,8 +109,12 @@ public class CameraController : MonoBehaviour
         ClampCameraPosition();
     }
     public void HideMenu() { 
-        if (isMoving || isRolling)FunctionMenu.gameObject.SetActive(false);
-    
-    
+        if (isMoving || isRolling)
+        {
+            FunctionMenu.gameObject.SetActive(false);
+            UIManager.EffectRemove();
+        }
+
+
     }
 }
