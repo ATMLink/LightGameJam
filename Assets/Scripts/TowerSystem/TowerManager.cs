@@ -146,10 +146,10 @@ public class TowerManager : MonoBehaviour
 
         public void ReturnResources(Tower tower)
         {
-            for (int i = 0; i < tower.attributes.elements.Count; i++)
-            {
-                float elementNum = tower.attributes.elementSpendNumber[i];
-                float returnElement = elementNum * 0.5f *(tower.GetHealth() / tower.attributes.health.Value);
+        for (int i = 0; i < tower.attributes.elements.Count; i++)
+        {
+            float elementNum = tower.attributes.elementSpendNumber[i];
+            float returnElement = (int)(elementNum * 0.5f * (tower.GetHealth() / tower.attributes.health.Value));
                 resourceManagement.CollectResource(tower.attributes.elements[i], returnElement);
             }
         }
