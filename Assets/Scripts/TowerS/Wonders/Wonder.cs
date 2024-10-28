@@ -31,8 +31,14 @@ public class Wonder : Tower
 
     public override void Upgrade()
     {
+        if (!LightSystem.Instance.IsIrradiated(transform.position))
+        {
+            reflectionManager.Reflect("太黑了不能升级");
+            return;
+        }
         if (attributes.name == "WonderPropeller")
         {
+            
             if (resourceManagement.JudgeAfford(element.si, 1000)
                 && resourceManagement.JudgeAfford(element.li, 20))
             {

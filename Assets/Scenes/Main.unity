@@ -1283,7 +1283,7 @@ Transform:
   m_GameObject: {fileID: 619394800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 1.5, z: 0}
+  m_LocalPosition: {x: -1.51, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2114,7 +2114,7 @@ MonoBehaviour:
   laserManager: {fileID: 415967692}
   musicManager: {fileID: 555020838}
   reflectionManager: {fileID: 1479371187}
-  resourceManagement: {fileID: 0}
+  resourceManagement: {fileID: 1202425554}
   towers: []
   coreTower: {fileID: 11400000, guid: 8f8a519aa44d8554ea12fae8737a4ae1, type: 2}
 --- !u!1 &985791170

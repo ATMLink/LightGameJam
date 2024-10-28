@@ -22,6 +22,7 @@ public class GameDriver : MonoBehaviour
     // 游戏状态变量
     [Header("Variables")]
     [SerializeField] private BoolVariable isPaused;
+    
     private bool gameIsRunning = true;
     private float gameTime = 0f;
     private float gameSpeed = 1f;
