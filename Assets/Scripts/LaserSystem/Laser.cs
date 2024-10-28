@@ -444,12 +444,24 @@ public class Laser : MonoBehaviour
         // 造成伤害
         // hit.collider.GetComponent<Enemy>().OnHit(damage);
         }
+    public float SmoothStep(float edge0, float edge1, float x)
+    {
+        // 限制 x 在 edge0 和 edge1 之间
+        if (x < edge0) return 0;
+        if (x > edge1) return 1;
+
+        // 归一化 x 到 [0, 1] 范围
+        float t = (x - edge0) / (edge1 - edge0);
+
+        // 使用平滑插值公式
+        return t * t * (3f - 2f * t);
+    }
     private Color ChangeColor()
         {
         Color returnColor;
-        float range0 = Mathf.SmoothStep(0.0f, 333.3f, intensity);
-        float range1 = Mathf.SmoothStep(333.3f, 666.7f, intensity);
-        float range2 = Mathf.SmoothStep(666.7f, 1000.0f, intensity);
+        float range0 = SmoothStep(0.0f, 333.3f, intensity);
+        float range1 = SmoothStep(333.3f, 666.7f, intensity);
+        float range2 = SmoothStep(666.7f, 1000.0f, intensity);
         returnColor = Color.Lerp(color0, color1, range0);
         returnColor = Color.Lerp(returnColor, color2, range1);
         returnColor = Color.Lerp(returnColor, color3, range2);
