@@ -22,7 +22,7 @@ public class EnemyGenerateField : MonoBehaviour
 
     [SerializeField]
     private int turnDelay = 0;
-    private List<int> roundInfinity = new List<int>() { 2,4,6,7,10 };
+    private List<int> roundInfinity = new List<int>() { 5, 7, 8, 10, 11, 13, 15 };
 
 
     void Start()

@@ -192,7 +192,13 @@ public class Tower : MonoBehaviour
         }
 
     protected virtual IEnumerator OnHitShow()
+    {
+        if (health <= 0)
         {
+            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
+            effect.gameObject.transform.position = transform.position;
+            DestroyTower();
+        }
         float elapsed = 0f;
         material.SetFloat("_FlashAmount", 1);
         while (elapsed < flashDuration)
@@ -202,12 +208,6 @@ public class Tower : MonoBehaviour
             yield return null;
             }
         material.SetFloat("_FlashAmount", 0);
-        if (health <= 0)
-            {
-            Effect effect = EffectPool.instance.GetObjFromPool(deathEffectName);
-            effect.gameObject.transform.position = transform.position;
-            DestroyTower();
-            }
         }
 
     public virtual void OnLaserOut(Laser laser)
