@@ -271,6 +271,7 @@ MonoBehaviour:
   StartPos: {fileID: 1118682005}
   wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 10
+  wonderCountSaving: 0
 --- !u!114 &29869973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +706,7 @@ MonoBehaviour:
   StartPos: {fileID: 1624389999}
   wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 0
+  wonderCountSaving: 0
 --- !u!114 &335344580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2845,6 +2847,7 @@ MonoBehaviour:
   StartPos: {fileID: 2025562786}
   wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 15
+  wonderCountSaving: 0
 --- !u!114 &1331573789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3691,6 +3694,7 @@ MonoBehaviour:
   StartPos: {fileID: 119142080}
   wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 5
+  wonderCountSaving: 0
 --- !u!114 &1897878507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4595,6 +4599,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 3114043963463531974, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c0655ba6746b534a887166607ef7616, type: 3}
     - target: {fileID: 3175353361400266594, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 
@@ -4663,6 +4671,10 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 1967238063}
+    - target: {fileID: 6234655858208127650, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dbfe33705c8337749a668857a1457d5d, type: 3}
     - target: {fileID: 6267752562968347558, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: inputManager
       value: 

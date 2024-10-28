@@ -33,14 +33,14 @@ public class MainResourceManagement : MonoBehaviour
         cuNumber.SetValue(00000);
         liNumber.SetValue(00000);
         csNumber.SetValue(00000);
-        /*
-        siNumber.SetValue(20000);
-        kNumber.SetValue(200000);
-        naNumber.SetValue(200000);
-        cuNumber.SetValue(200000);
-        liNumber.SetValue(200000);
-        csNumber.SetValue(200000);
-        */
+
+        //siNumber.SetValue(20000);
+        //kNumber.SetValue(200000);
+        //naNumber.SetValue(200000);
+        //cuNumber.SetValue(200000);
+        //liNumber.SetValue(200000);
+        //csNumber.SetValue(200000);
+
         }
     public void UpdateState()
         {
@@ -123,7 +123,7 @@ public class MainResourceManagement : MonoBehaviour
         }
     public void CollectResource(element element, float number)
         {
-        if (number <= 0) { Debug.LogError("collect number must bigger than 0 "+number); return; }
+        if (number <= 0) { Debug.LogError("collect number must bigger than 0 " + number); return; }
         FloatVariable _element = null;
         switch (element)
             {
