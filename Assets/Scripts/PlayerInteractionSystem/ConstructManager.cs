@@ -86,7 +86,7 @@ public class ConstructManager : MonoBehaviour
                 if (towerAttributes.name == "Miner" && temp.canMinerConstruct) return true;
                 if (!temp.canConstruct)
                 {
-                    reflectionManager.Reflect("采矿机只能建在矿脉上");
+                    reflectionManager.Reflect("这里不能建塔");
                     //Debug.LogWarning(1);
                     return false;
                 }
@@ -101,7 +101,10 @@ public class ConstructManager : MonoBehaviour
 
             }
             }
-        if (tilecount == 0 && towerAttributes.name == "Miner")return false;
+        if (tilecount == 0 && towerAttributes.name == "Miner")
+        {
+            reflectionManager.Reflect("采矿机只能建在矿脉上"); return false;
+        }
         return true; // 可以放置
     }
     
