@@ -4592,6 +4592,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 945080038}
     - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
+      propertyPath: countdownTime
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166775391349080337, guid: 54d12c242de04a74aa8c00bc94da6992, type: 3}
       propertyPath: _resourceManager
       value: 
       objectReference: {fileID: 1202425554}
