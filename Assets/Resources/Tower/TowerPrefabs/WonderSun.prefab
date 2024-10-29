@@ -58,6 +58,8 @@ MonoBehaviour:
   placeEffectName: TowerPlaceEffect
   deathEffectName: TowerDeathEffect
   destoryAttributes: {fileID: 0}
+  wonderWinCount: {fileID: 0}
+  light2: {fileID: 0}
 --- !u!50 &7867459719826588639
 Rigidbody2D:
   serializedVersion: 4
@@ -125,7 +127,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 20bfcb65be3f74a4099939f0e0685353, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
