@@ -27,21 +27,21 @@ public class MainResourceManagement : MonoBehaviour
     //}
     public void Initialize()
         {
-        siNumber.SetValue(1000);
-        kNumber.SetValue(0000);
-        naNumber.SetValue(00000);
-        cuNumber.SetValue(00000);
-        liNumber.SetValue(00000);
-        csNumber.SetValue(00000);
+        //siNumber.SetValue(1000);
+        //kNumber.SetValue(0000);
+        //naNumber.SetValue(00000);
+        //cuNumber.SetValue(00000);
+        //liNumber.SetValue(00000);
+        //csNumber.SetValue(00000);
 
-        //siNumber.SetValue(20000);
-        //kNumber.SetValue(200000);
-        //naNumber.SetValue(200000);
-        //cuNumber.SetValue(200000);
-        //liNumber.SetValue(200000);
-        //csNumber.SetValue(200000);
+        siNumber.SetValue(20000);
+        kNumber.SetValue(200000);
+        naNumber.SetValue(200000);
+        cuNumber.SetValue(200000);
+        liNumber.SetValue(200000);
+        csNumber.SetValue(200000);
 
-        }
+    }
     public void UpdateState()
         {
         time += Time.deltaTime;
