@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Project\\GameJam\\LightGameJam\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\resourcesmanagement\\mainresourcemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resourcesmanagement\\mainresourcemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\projectilesystem\\projectilechild\\prona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\projectilesystem\\projectilechild\\prona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|d:\\project\\gamejam\\lightgamejam\\assets\\scripts\\resourcesmanagement\\mainresourcemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resourcesmanagement\\mainresourcemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11CC1AF3-39A1-A7B8-5E2A-165AF654AF5F}|Assembly-CSharp.csproj|D:\\Project\\GameJam\\LightGameJam\\assets\\scripts\\towers\\minertower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -345,17 +345,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 306,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainResourceManagement.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
               "ToolTip": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
               "RelativeToolTip": "Assets\\Scripts\\ResourcesManagement\\MainResourceManagement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T08:00:11.802Z",
               "EditorCaption": ""
@@ -604,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "proNa.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\proNa.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ProjectileSystem\\ProjectileChild\\proNa.cs",
@@ -902,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EnemyManager.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\EnemyManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyManager.cs",
@@ -1232,7 +1232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\Project\\GameJam\\LightGameJam\\Assets\\Scripts\\Enemy\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy.cs",
