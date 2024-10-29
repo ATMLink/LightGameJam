@@ -16,7 +16,7 @@ public class LaserAt : MonoBehaviour
 
     private float maxPreTime = 1f;
     private float maxEndTime = 1f;
-    private float maxIntensity = 0.8f;
+    private float maxIntensity = 1.2f;
     private float minIntensity = 0f;
 
 
@@ -34,6 +34,7 @@ public class LaserAt : MonoBehaviour
     {
         EnemyInSight.Clear();
         light.enabled = true;
+        light.intensity = 0;
 
 
         float timer = 0;
@@ -65,10 +66,23 @@ public class LaserAt : MonoBehaviour
             //¸üÐÂÎ»ÖÃ£¬ÔÚ¹Ö´æ»îÊ±¸úËæ¹¥»÷£¬¹ÖËÀÍöºóÍ£Ö¹¸úËæ
 
             timer += Time.deltaTime;
+            if(light.intensity > maxIntensity)
+            {
+                light.intensity -= Time.deltaTime * 10f;
+            }
+            else
+            {
+                light.intensity = maxIntensity;
+            }
+
             if(timer > attackCD)
             {
                 timer = 0;
+                light.intensity = 5;
+
                 if (hitCount > maxHitCount) break;
+                Effect effect = EffectPool.instance.GetObjFromPool("WonderLazerEffect");
+                effect.gameObject.transform.position = transform.position;
                 List<Enemy> enemySaving = new List<Enemy>(EnemyInSight);
                 foreach (var en in enemySaving)
                 {

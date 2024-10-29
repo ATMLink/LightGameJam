@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Wonder : Tower
 {
@@ -11,25 +12,13 @@ public class Wonder : Tower
 
     [SerializeField] private FloatVariable wonderWinCount;
 
+    [SerializeField] private Light2D light2;
+
 
     protected virtual void Update()
     {
-        //≤‚ ‘”√
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    if (destoryAttributes != null)
-        //    {
-        //        Debug.Log("DestroyTower");
-        //        DestroyTower();
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("Upgrade");
-        //        Upgrade();
-        //    }
-        //}
-    }
 
+    }
 
     public override void Upgrade()
     {
@@ -97,6 +86,12 @@ public class Wonder : Tower
         reflectionManager = GameObject.Find("ReflectionManager").GetComponent<ReflectionManager>();
         gameObject.SetActive(true);
         material = GetComponent<Renderer>().material;
+
+        if (light2 != null)
+        {
+            StartCoroutine(LightOn());
+            light2.intensity = 0;
+        }
     }
 
 
@@ -107,6 +102,29 @@ public class Wonder : Tower
         Destroy(gameObject);
         float wonderWinCountNum = wonderWinCount.Value - 1;
         wonderWinCount.SetValue(wonderWinCountNum);
+
+        if (light2 != null)
+        {
+            LightSystem.Instance.RemoveLight(light2);
+        }
+    }
+
+    private IEnumerator LightOn()
+    {
+        float maxLight = 3;
+        while (true)
+        {
+            if (light2.intensity < maxLight)
+            {
+                light2.intensity += Time.deltaTime;
+            }
+            else
+            {
+                LightSystem.Instance.AddLight(light2);
+                break;
+            }
+            yield return null;
+        }
     }
 
 }

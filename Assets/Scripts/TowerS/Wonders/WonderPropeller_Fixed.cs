@@ -11,10 +11,8 @@ public class WonderPropeller_Fixed : Wonder
     private float maxAdvanceCD = 12;
     private float advanceCD = 12;
 
-
     protected override void Update()
     {
-        base.Update();
         UpdateState();
     }
 

@@ -271,6 +271,7 @@ MonoBehaviour:
   StartPos: {fileID: 1118682005}
   wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 10
+  wonderCountSaving: 0
 --- !u!114 &29869973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +706,7 @@ MonoBehaviour:
   StartPos: {fileID: 1624389999}
   wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 0
+  wonderCountSaving: 0
 --- !u!114 &335344580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2845,6 +2847,7 @@ MonoBehaviour:
   StartPos: {fileID: 2025562786}
   wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 15
+  wonderCountSaving: 0
 --- !u!114 &1331573789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3691,6 +3694,7 @@ MonoBehaviour:
   StartPos: {fileID: 119142080}
   wonderCount: {fileID: 11400000, guid: d5cbda2f1cadeb849b00b7066842ecac, type: 2}
   turnDelay: 5
+  wonderCountSaving: 0
 --- !u!114 &1897878507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4552,12 +4556,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5197776889854692765, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
       propertyPath: EffectPrefab.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5197776889854692765, guid: 7db385439e467e94289ae3e8a5022502, type: 3}
       propertyPath: EffectPrefab.Array.data[4]
       value: 
-      objectReference: {fileID: 8297139433206674474, guid: e713fcb6dcac8014caa2e696ae310ce7, type: 3}
+      objectReference: {fileID: 8297139433206674474, guid: 19918608770806e468ee6a6592616e06, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

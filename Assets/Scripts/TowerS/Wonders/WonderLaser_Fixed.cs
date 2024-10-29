@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class WonderLaser_Fixed : Wonder
 {
@@ -14,10 +15,8 @@ public class WonderLaser_Fixed : Wonder
 
     protected override void Update()
     {
-        base.Update();
         UpdateState();
     }
-
 
     public override void UpdateState()
     {
@@ -66,9 +65,6 @@ public class WonderLaser_Fixed : Wonder
             StartCoroutine(laser.SetTarget(target));
         }
     }
-
-
-
 
 
     public override void Attack()

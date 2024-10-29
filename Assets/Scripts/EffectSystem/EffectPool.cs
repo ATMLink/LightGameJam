@@ -16,6 +16,7 @@ public class EffectPool : MonoBehaviour
         "TowerDeathEffect",
         "NaBoomEffect",
         "TowerRangeEffect",
+        "WonderLazerEffect",
     };
 
     public int originPoolSize = 5;
@@ -33,6 +34,7 @@ public class EffectPool : MonoBehaviour
             {"TowerDeathEffect",new Queue<Effect>()},
             {"NaBoomEffect",new Queue<Effect>()},
             {"TowerRangeEffect",new Queue<Effect>()},
+            {"WonderLazerEffect",new Queue<Effect>()},
     };
 
     private void Start()
