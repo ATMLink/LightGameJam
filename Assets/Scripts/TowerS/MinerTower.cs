@@ -13,6 +13,11 @@ public class MinerTower : Tower
     float medaltime = 0;
     float sitime = 0;
     private float totalIntensity = 0;
+    public override void ResetAttributes()
+    {
+        base.ResetAttributes();
+        a= true;
+    }
     // private LaserManager laserManager;
     public override void Initialize()
         {
