@@ -22,10 +22,7 @@ public class proNa : Projectile
             // 确保投射物到达目标位置
             if (Vector3.Distance(transform.position, targetpos) < destoryDistance)
             {
-                if (target.gameObject.activeInHierarchy)
-                {
-                    HitTarget(damage); // 击中目标
-                }
+                HitTarget(damage); // 击中目标
                 ReturnToPool();
                 break;
             }

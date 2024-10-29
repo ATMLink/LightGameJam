@@ -63,6 +63,10 @@ public class EnemyManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Generate();
+        }
         switch (state)
         {
             case GameState.None:
