@@ -10,6 +10,7 @@ public class ConstructManager : MonoBehaviour
 {
     [SerializeField] private MainResourceManagement resourceManagement;
     public Light2D _light;
+    public GameObject lightgameobject;
     [SerializeField] private TowerManager towerManager;
     [SerializeField] private TowerPool towerPool;
     [SerializeField] private LaserManager _laserManager;

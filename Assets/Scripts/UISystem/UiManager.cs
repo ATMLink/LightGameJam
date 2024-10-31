@@ -49,7 +49,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private GameObject WinPanel;
     public void ShowWinPanel() { WinPanel.SetActive(true); }
 
-
+    
     public void UpdateState()
         {
         UpdateHP();

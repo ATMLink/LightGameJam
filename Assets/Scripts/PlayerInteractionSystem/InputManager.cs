@@ -26,10 +26,15 @@ public class InputManager : MonoBehaviour
         HandleClickedTower();
         // HandleSpacePauseGame();
         if (isDraggingTower)
-            {
+        {
+            Time.timeScale = 0.1f;
             //Debug.Log("Currently dragging a tower.");
             HandleTowerDragging();
-            }
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
         }
 
     public void CaptureInput()
