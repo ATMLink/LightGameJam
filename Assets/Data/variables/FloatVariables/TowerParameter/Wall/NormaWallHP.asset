@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aaa40c8c3afbd44896ffe0be7f46222, type: 3}
   m_Name: NormaWallHP
   m_EditorClassIdentifier: 
-  Value: 2000
+  Value: 1500
   valueChangedEvent: {fileID: 11400000, guid: 353ec95e920d5554db20d0f9361682bd, type: 2}

@@ -76,7 +76,7 @@ public class MinerTower : Tower
                     reflectionManager.Reflect("+5 Si", transform.position, Color.green);
                     sitime = 0;
                     }
-                if (medaltime >= 45)
+                if (medaltime >= 60)
                 {
                     StartCoroutine(getResource());
                     medaltime = 0;
@@ -102,7 +102,7 @@ public class MinerTower : Tower
                     {
                         case 0: resourceManagement.CollectResource(element.na, 1); reflectionManager.Reflect("+1 Na", transform.position, Color.yellow); break;
                         case 1: resourceManagement.CollectResource(element.k, 1); reflectionManager.Reflect("+1 K", transform.position, new Color(155, 0, 155)); break;
-                        case 2: resourceManagement.CollectResource(element.cu, 1); reflectionManager.Reflect("+1 Cu", transform.position, new Color(0, 65, 30)); break;
+                        case 2: resourceManagement.CollectResource(element.cu, 1); reflectionManager.Reflect("+1 Cu", transform.position, Color.green); break;
                             //case 3: resourceManagement.CollectResource(element.cs, 1); reflectionManager.Reflect("+1 Cs", transform.position, Color.blue); break;
                             //case 4: resourceManagement.CollectResource(element.li, 1); reflectionManager.Reflect("+1 Li", transform.position, Color.red); break;
                     }
@@ -123,7 +123,7 @@ public class MinerTower : Tower
                 int b = Random.Range(0, 2);//生成一个稀有资源 
                 switch (b)
                 {
-                    case 0: resourceManagement.CollectResource(element.cs, 1); reflectionManager.Reflect("+1 Cs", transform.position, Color.blue); break;
+                    case 0: resourceManagement.CollectResource(element.cs, 1); reflectionManager.Reflect("+1 Cs", transform.position, new Color(0, 65, 30)); break;
                     case 1: resourceManagement.CollectResource(element.li, 1); reflectionManager.Reflect("+1 Li", transform.position, Color.red); break;
                 }
                 break;

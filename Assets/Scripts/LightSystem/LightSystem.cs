@@ -75,9 +75,9 @@ public class LightSystem : MonoBehaviour
             LayerMask.GetMask("EnemySight") |
             LayerMask.GetMask("tile") |
             LayerMask.GetMask("Default"));
-
+        bool a = false;
         foreach (Light2D light in lightList)
-        {
+        {      
             Vector3 laserDirection = (light.transform.position - new Vector3(position.x,position.y,0)).normalized;
             Vector3 adjustedOrigin = new Vector3(position.x, position.y, 0) + (laserDirection.normalized * 0.1f); // 稍微偏移射线的起点
             Vector2 laserOrigin = new Vector2(adjustedOrigin.x, adjustedOrigin.y);
@@ -85,9 +85,11 @@ public class LightSystem : MonoBehaviour
             int towerLayer = LayerMask.NameToLayer("TowerWall");
             if (hit.collider != null && hit.collider.gameObject.layer == towerLayer)
             {
-                isIrradiated = false;
-            }
+                continue;
+            }else a= true;
+            
         }
+        if (!a) isIrradiated = false;
         return isIrradiated;
     }
     public static LightSystem Instance{
