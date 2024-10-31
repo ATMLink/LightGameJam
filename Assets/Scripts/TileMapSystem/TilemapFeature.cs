@@ -14,8 +14,8 @@ public class TilemapFeature : MonoBehaviour
     public bool canSlowEnemy;
     public bool canAttackTowerConstruct;
     public bool canMinerConstruct;
-    [SerializeField]private ShadowCaster2D shadowCaster;
-    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField]protected ShadowCaster2D shadowCaster;
+    [SerializeField]protected SpriteRenderer sprite;
     private void Start()
     {
         shadowCaster = GetComponent<ShadowCaster2D>();

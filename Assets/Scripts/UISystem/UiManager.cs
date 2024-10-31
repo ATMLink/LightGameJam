@@ -19,10 +19,11 @@ public class UiManager : MonoBehaviour
     [SerializeField] private InputManager _inputManager;
     [SerializeField] private TowerManager _towerManager;
     [SerializeField] private MainResourceManagement _resourceManager;
-
+    bool changeConstructMenu;
 
     public void Initialize()//UI初始化
         {
+        changeConstructMenu = false;
         introduction.SetActive(true);
         gameover.SetActive(false);
         pauseGame.SetActive(false);
@@ -52,6 +53,7 @@ public class UiManager : MonoBehaviour
     public void UpdateState()
         {
         UpdateHP();
+        ChangeConstructMenu();
         waves.text = " " + enemyManager.GetCurrentTurn();
         }
     //****************************************************************
@@ -182,6 +184,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button tower9;
     [SerializeField] private Button tower10;
     [SerializeField] private Button showConstructionMenuButton;
+    [SerializeField] private Button chooseAttackTower;
+    [SerializeField] private Button chooseFunctionTower;
 
     // tower attributes
     [SerializeField] private TowerAttributes tower1Attributes;
@@ -204,6 +208,22 @@ public class UiManager : MonoBehaviour
         showConstructionMenuButton.gameObject.SetActive(false);
         ShowConstructionMenu();
         }
+    public void ShowChooseAttackTower() { 
+        chooseFunctionTower.gameObject.SetActive(false);
+        chooseAttackTower.gameObject.SetActive(true);
+    }
+    public void ShowChooseFunctionTower() {
+        chooseAttackTower.gameObject.SetActive(false);
+        chooseFunctionTower.gameObject.SetActive(true);
+    }
+    void ChangeConstructMenu() {
+        if (Input.GetKeyDown(KeyCode.Tab)) {
+            if (changeConstructMenu) { ShowChooseFunctionTower();changeConstructMenu = false; }
+            else { ShowChooseAttackTower();changeConstructMenu = true; }
+        
+        }
+    
+    }
 
 
     //**************************************************************
