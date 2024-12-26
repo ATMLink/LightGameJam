@@ -142,4 +142,9 @@ public class GameDriver : MonoBehaviour
             hasPlayedNervousMusic = true;
         }
     }
+    public void SetTimeScale() {
+        Time.timeScale = 1;
+        gameIsRunning=true;
+        _musicManager.PlayBGM("BattleBGM");
+    }
 }
